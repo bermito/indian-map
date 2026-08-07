@@ -25,7 +25,21 @@
 }
 *{box-sizing:border-box}
 html,body{margin:0;height:100%;overflow:hidden;background:var(--paper)}
-#stage{background:var(--paper)}
+#grid{position:fixed;inset:-70px;z-index:0;pointer-events:none;will-change:transform,opacity}
+#grid .g{position:absolute;inset:0;
+  background-image:
+    repeating-linear-gradient(0deg,rgba(0,0,0,.26) 0 1px,transparent 1px 34px),
+    repeating-linear-gradient(90deg,rgba(0,0,0,.26) 0 1px,transparent 1px 34px);
+  opacity:.34}
+#grid .t{position:absolute;inset:0;
+  background:linear-gradient(180deg,#FF9933 0%,rgba(255,153,51,0) 32%,rgba(19,136,8,0) 68%,#138808 100%);
+  opacity:.9;
+  -webkit-mask-image:repeating-linear-gradient(0deg,#000 0 1px,transparent 1px 34px),repeating-linear-gradient(90deg,#000 0 1px,transparent 1px 34px);
+  mask-image:repeating-linear-gradient(0deg,#000 0 1px,transparent 1px 34px),repeating-linear-gradient(90deg,#000 0 1px,transparent 1px 34px)}
+#halo{position:fixed;inset:0;z-index:0;pointer-events:none;
+  --hx:50%; --hy:50%; --hr:42vmin;
+  background:radial-gradient(circle var(--hr) at var(--hx) var(--hy),
+    var(--paper) 0%, var(--paper) 60%, rgba(251,250,246,.85) 78%, rgba(251,250,246,0) 100%)}
 body{font-family:var(--sans);color:var(--ink);-webkit-font-smoothing:antialiased}
 
 
@@ -177,6 +191,9 @@ a.row:hover .ar{opacity:1}
 </style>
 </head>
 <body>
+
+<div id="grid"><div class="g"></div><div class="t"></div></div>
+<div id="halo"></div>
 
 <div id="stage">
   <canvas id="gl" aria-label="Three-dimensional relief map of India"></canvas>

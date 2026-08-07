@@ -75,7 +75,7 @@ function rampColor(t){
 }
 
 /* ===================== scene ===================== */
-let renderer,scene,camera,mesh,gridMesh,cells=[],instState=null,instElev=null;
+let renderer,scene,camera,mesh,cells=[],instState=null,instElev=null;
 const PAPER=0xFBFAF6;
 const group=new THREE.Group();
 const HREL=0.055;                 // gentle relief, like Kerala
@@ -87,21 +87,6 @@ function buildScene(){
   renderer.setClearColor(0x000000,0);
   scene=new THREE.Scene();
   camera=new THREE.PerspectiveCamera(30,1,1,20000);
-
-  // ---- curved grid backdrop that sits behind the terrain ----
-  const gw=GW*2.6, gh=GH*2.6;
-  const gg=new THREE.PlaneGeometry(gw,gh,40,40);
-  const pos=gg.attributes.position;
-  for(let i=0;i<pos.count;i++){            // bend it into a soft curve
-    const x=pos.getX(i), y=pos.getY(i);
-    pos.setZ(i, -(x*x/(gw*3.1) + y*y/(gh*3.4)));
-  }
-  gg.computeVertexNormals();
-  const gtex=makeGridTexture();
-  gridMesh=new THREE.Mesh(gg,new THREE.MeshBasicMaterial({map:gtex,transparent:true,opacity:.5,depthWrite:false}));
-  gridMesh.rotation.x=-Math.PI/2;
-  gridMesh.position.y=-GH*0.30;
-  scene.add(gridMesh);
 
   // ---- lighting: soft sky/ground fill plus one key light ----
   scene.add(new THREE.HemisphereLight(0xffffff,0xdcd8c8,1.05));
@@ -116,20 +101,6 @@ function buildScene(){
   buildTerrain(2);
 }
 
-function makeGridTexture(){
-  const S=1024, c=document.createElement('canvas'); c.width=c.height=S;
-  const x=c.getContext('2d');
-  x.clearRect(0,0,S,S);
-  x.strokeStyle='rgba(0,168,63,0.30)'; x.lineWidth=1.4;
-  const step=S/26;
-  for(let i=0;i<=26;i++){
-    x.beginPath(); x.moveTo(i*step,0); x.lineTo(i*step,S); x.stroke();
-    x.beginPath(); x.moveTo(0,i*step); x.lineTo(S,i*step); x.stroke();
-  }
-  const t=new THREE.CanvasTexture(c);
-  t.wrapS=t.wrapT=THREE.RepeatWrapping; t.repeat.set(9,9);
-  return t;
-}
 
 function buildTerrain(stride){
   if(mesh){ group.remove(mesh); mesh.geometry.dispose(); mesh.material.dispose(); mesh=null; }
@@ -231,6 +202,21 @@ function goState(name){
   recolour();
 }
 
+const _v=new THREE.Vector3();
+function updateHalo(cyC){
+  const el=document.getElementById('halo'); if(!el) return;
+  const w=cv.clientWidth,h=cv.clientHeight;
+  _v.set(0,cyC,0).project(camera);
+  const sx=(_v.x*0.5+0.5)*w, sy=(-_v.y*0.5+0.5)*h;
+  _v.set(Math.max(view.bx,view.bz),cyC,0).project(camera);
+  const ex=(_v.x*0.5+0.5)*w, ey=(-_v.y*0.5+0.5)*h;
+  let rad=Math.hypot(ex-sx,ey-sy);
+  if(!isFinite(rad)||rad<60) rad=Math.min(w,h)*0.42;
+  el.style.setProperty('--hx',sx.toFixed(0)+'px');
+  el.style.setProperty('--hy',sy.toFixed(0)+'px');
+  el.style.setProperty('--hr',(rad*1.12).toFixed(0)+'px');
+}
+
 const ray=new THREE.Raycaster(), ndc=new THREE.Vector2();
 function pickAt(px,py){
   if(!mesh) return 0;
@@ -291,10 +277,13 @@ function frame(time){
   camera.near=Math.max(1,dist*0.02); camera.far=dist*6+6000;
   camera.updateProjectionMatrix();
 
-  // grid sits behind and drifts with the map; dims when a state is open
-  gridMesh.position.y=-Math.max(view.bx,view.bz)*0.62;
-  gridMesh.rotation.z=vYaw*0.35;
-  gridMesh.material.opacity=0.5-0.34*selMix;
+  // paper checks drift with the map and dim when a state is open
+  const gEl=document.getElementById('grid');
+  if(gEl){
+    gEl.style.transform='translate('+(-vYaw*44).toFixed(1)+'px,'+((vPitch-TILT)*38).toFixed(1)+'px)';
+    gEl.style.opacity=(1-0.45*selMix).toFixed(3);
+  }
+  updateHalo(cyC);
 
   renderer.render(scene,camera);
   requestAnimationFrame(frame);
