@@ -299,9 +299,11 @@ function xform(m,p){const x=p[0],y=p[1],z=p[2];
 
 /* ============ shaders ============ */
 const VS=`
+precision highp float;
 attribute vec2 aG; attribute float aE; attribute float aS;
-uniform mat4 uVP; uniform vec2 uC; uniform float uH, uProj, uSel, uMix, uRamp, uPick, uPS;
-varying vec4 vCol;
+uniform mat4 uVP; uniform vec2 uC; uniform float uH, uProj, uSel, uMix, uRamp, uPS;
+uniform mediump float uPick;
+varying mediump vec4 vCol;
 vec3 ramp(float t){
   vec3 c0=vec3(.847,.933,.769), c1=vec3(.690,.859,.573), c2=vec3(.804,.796,.471),
        c3=vec3(.769,.580,.337), c4=vec3(.588,.400,.243), c5=vec3(.373,.243,.157);
@@ -325,13 +327,15 @@ void main(){
     vCol = vec4(c, 1.0-other*0.45);
   }
 }`;
-const FS=`precision mediump float; varying vec4 vCol; uniform float uPick;
+const FS=`precision mediump float;
+varying mediump vec4 vCol;
+uniform mediump float uPick;
 void main(){
   vec2 p = gl_PointCoord-0.5;
   float r = dot(p,p);
   if(r>0.25) discard;
   if(uPick>0.5){ gl_FragColor=vCol; return; }
-  float a = vCol.a * smoothstep(0.25,0.06,r);
+  float a = vCol.a * (1.0 - smoothstep(0.06,0.25,r));
   gl_FragColor = vec4(vCol.rgb, a);
 }`;
 
@@ -394,7 +398,7 @@ function sizePick(w,h){
 }
 
 /* ============ camera / view state ============ */
-const HREL=0.105, FOV=32*Math.PI/180, TILT=0.62;
+const HREL=0.105, FOV=32*Math.PI/180, TILT=0.62, ROT=2*Math.PI/95000;
 let hScale=0.009;   // vertical exaggeration, recomputed per view so relief reads the same at every zoom
 const view={cx:GW/2, cy:GH/2, sx:GW*1.06, sy:GH*1.06, ramp:INDIA_EMAX, mix:0};
 const target={cx:GW/2, cy:GH/2, sx:GW*1.06, sy:GH*1.06, ramp:INDIA_EMAX, mix:0};
@@ -435,8 +439,8 @@ function resize(){
 }
 function buildVP(time){
   const asp=cv.width/cv.height;
-  const drift=Math.sin(time*0.00013)*0.10, bob=Math.cos(time*0.00017)*0.045;
-  const yaw=drift+pmx*0.30, pitch=Math.max(0.22,Math.min(1.35,TILT+bob-pmy*0.20));
+  const bob=Math.cos(time*0.00017)*0.045;
+  const yaw=time*ROT + pmx*0.22, pitch=Math.max(0.26,Math.min(1.25,TILT+bob-pmy*0.16));
   // fit a bounding sphere -> always fits whatever the tilt or screen shape
   const maxSpan=Math.max(view.sx,view.sy);
   hScale = HREL*maxSpan/Math.max(view.ramp,1);
@@ -475,7 +479,6 @@ function draw(time){
   gl.uniform1f(loc.uPS,1.35);
   gl.drawArrays(gl.POINTS,0,nPts);
 
-  placePins();
   requestAnimationFrame(draw);
 }
 
@@ -660,7 +663,6 @@ document.getElementById('ld').textContent=JSON.stringify([
 emaxLbl.textContent=fmt(INDIA_EMAX);
 renderList();
 decodeTerrain(()=>{
-  buildPins();
   let ok=false;
   try{ ok=initGL(); }catch(e){ fail('WebGL init threw: '+(e&&e.message||e)); return; }
   if(!ok) return;
