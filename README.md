@@ -1,23 +1,20 @@
 # Specialty Coffee India
 
-An independent editorial map + directory of India's specialty coffee roasters and growing origins.
-Single static page — no build step.
+Interactive 3D relief map + directory of India's specialty coffee.
 
-## Files
-- `index.html` — the whole site (map, directory, origins, events, about)
-- `robots.txt`, `sitemap.xml` — SEO
-- `vercel.json` — clean URLs + basic headers
+## Files (all must be in the repo root, same folder)
+- `index.html` — page, styles, data
+- `app.js` — 3D map + directory logic (ES module)
+- `three.module.min.js` — Three.js r169, served locally (no CDN)
+- `robots.txt`, `sitemap.xml`, `vercel.json`
 
-## Deploy on Vercel (from GitHub)
-1. Push these files to the repository root (no subfolder).
-2. Vercel → New Project → import the repo.
-3. Framework Preset: **Other** · Root Directory: `/` · no build command.
-4. Deploy, then open the Vercel URL in a browser.
+## Deploy (Vercel / GitHub Pages)
+Push all files to the repository root. No build step.
+Vercel → New Project → Framework Preset: **Other** → Deploy.
 
-## Notes
-- The map (3D terrain) loads from public CDNs and needs a live browser + internet.
-  It will NOT render inside code-preview sandboxes — only on the deployed URL.
-- Terrain uses MapLibre's keyless demo terrain tiles. For heavy traffic, swap the
-  `dem` tile source in index.html for AWS terrarium tiles or a MapTiler key.
-- Data: 109 roasters + 16 origins, compiled from Indian Coffee Beans & Kaapi Brewing,
-  normalized and deduplicated. Boundaries use current Indian state data.
+Note: because `app.js` is an ES module, the site must be opened over http(s),
+not by double-clicking the file. Any static host works.
+
+## Data
+189 displayed records: 51 cafés, 109 roasters, 16 origins, 13 education.
+Elevation: ETOPO 2022 (NOAA NCEI) 60 arc-second. Boundaries: government state polygons.
