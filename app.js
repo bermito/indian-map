@@ -58,268 +58,192 @@ function decodeTerrain(cb){
   im.src=TERRAIN_PNG;
 }
 
-/* ===================== palette =====================
-   Kerala's ramp: light green coast → tan → brown highlands.
-   The overview ramp is keyed in METRES, not normalised, and the full
-   green→tan→brown spread is compressed into 0–2500 m so the Western Ghats
-   read exactly as they do on the Kerala map. Above 2500 m it carries on
-   into darker brown and then pale snow so the Himalaya still reads as the
-   high wall. Kerala tops out at ~2,700 m; India at 7,793 m — without the
-   compression every coffee-growing hill would flatten into one dull green.
+/* ===================== palette — Kerala's exact ramps =====================
+   Lifted verbatim from the Kerala build rather than reconstructed by eye.
+   Both the stop lists and the pow() gammas matter: the gamma is what pushes
+   the bulk of the country into green instead of leaving it pale.
    ------------------------------------------------------------------ */
-const OVER=[
-  [    0, 0.847,0.941,0.690],   // #d8f0b0  coast
-  [  300, 0.620,0.847,0.376],   // #9ed860  vivid green — most of India sits here
-  [  900, 0.725,0.761,0.306],   // #b9c24e  yellow-green
-  [ 1600, 0.788,0.541,0.235],   // #c98a3c  orange-tan, the Ghats
-  [ 2800, 0.541,0.353,0.188],   // #8a5a30  brown
-  [ 6500, 0.910,0.886,0.847]    // #e8e2d8  snow
-];
-/* per-state ramp, normalised 0–1 across that state's own range (Kerala's STOPS) */
-const STATE=[
-  [0.00, 0.847,0.941,0.690],
-  [0.28, 0.620,0.847,0.376],
-  [0.55, 0.725,0.761,0.306],
-  [0.78, 0.788,0.541,0.235],
-  [1.00, 0.541,0.353,0.188]
-];
-/* hover tint — deliberately soft, matching Kerala's GSTOPS */
-const GS=[
-  [0.00, 0.718,0.890,0.769],    // #b7e3c4
-  [1.00, 0.416,0.769,0.541]     // #6ac48a
-];
-const _c=new THREE.Color(), _g=new THREE.Color();
-function sample(stops,t,out){
-  const lo=stops[0][0], hi=stops[stops.length-1][0];
-  t=Math.max(lo,Math.min(hi,t));
-  for(let i=0;i<stops.length-1;i++){
-    const a=stops[i],b=stops[i+1];
-    if(t<=b[0]){
-      const u=(t-a[0])/Math.max(1e-6,b[0]-a[0]);
-      return out.setRGB(a[1]+(b[1]-a[1])*u, a[2]+(b[2]-a[2])*u, a[3]+(b[3]-a[3])*u);
+const STOPS=[[0.00,0x7cc98c],[0.13,0x59bb70],[0.30,0xb6c765],[0.48,0xd8a74c],
+             [0.66,0xb06a35],[0.83,0x7d472a],[1.00,0xefe4cf]];
+const GSTOPS=[[0.00,0xb7e3c4],[0.45,0x8ed4a6],[1.00,0x6ac48a]];
+const OVERSTOPS=[[0.00,0xdff2d4],[0.15,0xcfeabf],[0.32,0xb7e0a3],[0.50,0xa0d788],
+                 [0.62,0xb9cc7a],[0.80,0xc99a5b],[1.00,0xb06a35]];
+const tA=new THREE.Color(), tB=new THREE.Color(), col=new THREE.Color();
+function ramp(stops,t,out){
+  t=Math.max(0,Math.min(1,t));
+  for(let i=1;i<stops.length;i++){
+    if(t<=stops[i][0]){
+      const a=stops[i-1],b=stops[i],k=(t-a[0])/(b[0]-a[0]);
+      tA.setHex(a[1]); tB.setHex(b[1]);
+      return out.setRGB(tA.r+(tB.r-tA.r)*k, tA.g+(tB.g-tA.g)*k, tA.b+(tB.b-tA.b)*k);
     }
   }
-  const l=stops[stops.length-1]; return out.setRGB(l[1],l[2],l[3]);
+  return out.setHex(stops[stops.length-1][1]);
 }
-const overColor  = e      => sample(OVER, e, _c);
-const stateColor = (e,mx) => sample(STATE, e/Math.max(mx,320), _c);
-const hoverColor = (e,mx) => sample(GS, e/Math.max(mx,320), _g);
+/* Kerala tops out at 2,695 m and India at 7,793 m. Colour is normalised
+   against Kerala's ceiling so the plains read green and the Ghats read
+   brown exactly as they do there; depth uses India's own ceiling so the
+   Himalaya still stands proud. One ceiling for both would either bleach
+   the whole country or flatten the mountains. */
+const MAXE_C=2695, MAXE_D=7793;
+const depthOf = e => 0.16+0.62*Math.pow(Math.min(1,e/MAXE_D),0.62);
 
-/* ===================== scene ===================== */
-let renderer,scene,camera,mesh,cells=[],instState=null,instElev=null;
-const group=new THREE.Group();
-const HREL=0.090;                 // vertical exaggeration — raise for more relief
-const HKNEE=2500;                 // below this, height is linear; above, compressed
-const HSQUASH=0.20;               // how hard the Himalaya is flattened
-/* Scaling raw metres against India's 7,793 m ceiling left the Deccan with
-   ~3 units of lift on an 874-wide map — invisible. Everything up to the knee
-   now gets the full vertical range and the Himalaya is compressed above it,
-   so the Ghats actually stand up. */
-const hOf = e => e<=HKNEE ? e : HKNEE+(e-HKNEE)*HSQUASH;
-const EMAX_EFF = hOf(8000);
-let unit=1, hUnit=1;
-const SPAN=Math.max(GW,GH);
+/* ===================== scene =====================
+   Kerala is not an oblique landscape. The blocks extrude along +Z toward a
+   camera parked on the Z axis, and the whole plate rocks. That face-on
+   stance is the single biggest reason the two maps looked unrelated. */
+let renderer,scene,camera,mesh,cells=[],instState=null,instT=null;
+const mapGroup=new THREE.Group();
+const fineGroup=new THREE.Group();
+const dummy=new THREE.Object3D();
+let S=1, CELL=1;
+let curStride=2;
 
 function buildScene(){
   renderer=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true});
   renderer.setPixelRatio(Math.min(devicePixelRatio||1,2));
   renderer.setClearColor(0x000000,0);
   scene=new THREE.Scene();
-  camera=new THREE.PerspectiveCamera(30,1,1,20000);
+  camera=new THREE.PerspectiveCamera(32,1,0.1,200);
+  camera.position.set(0,0,14);
 
-  /* ---- lighting ----
-     NOTE ON THE NUMBERS. Kerala runs three r128, where useLegacyLights was
-     still on; this site runs r169, where physically-correct lighting is
-     forced and the escape hatch is gone. The same intensity value is NOT
-     the same brightness across the two, so Kerala's literal 0.34/0.62/0.25
-     would render this map dark.
-     What is ported is Kerala's BALANCE — 28% ambient, 51% key, 21% fill —
-     held at this renderer's existing total of 2.52. That ratio is what
-     shapes how the relief reads. If the map looks too hot or too flat on
-     screen, scale all three by the same factor and keep the ratio. */
-  const EXPOSURE=2.25;
-  scene.add(new THREE.AmbientLight(0xffffff, EXPOSURE*0.28));
-  const key=new THREE.DirectionalLight(0xffffff, EXPOSURE*0.51);
-  key.position.set(-0.55,1.0,0.55).multiplyScalar(1000);
-  scene.add(key);
-  const fill=new THREE.DirectionalLight(0xffffff, EXPOSURE*0.21);
-  fill.position.set(0.7,0.5,-0.7).multiplyScalar(1000);
-  scene.add(fill);
+  /* Kerala's light rig is ambient 0.34 + key 0.62 + fill 0.25 (tinted
+     0xd8ffe6). Those were tuned on r128 with legacy lighting; this build
+     runs r169 where lighting is physically correct, so the same numbers
+     render dark. GAIN restores the working exposure while keeping the
+     ratio between the three lights exactly as Kerala has it. */
+  const GAIN=2.08;
+  scene.add(new THREE.AmbientLight(0xffffff,0.34*GAIN));
+  const key=new THREE.DirectionalLight(0xffffff,0.62*GAIN);
+  key.position.set(-0.4,0.7,1.0).multiplyScalar(50); scene.add(key);
+  const fill=new THREE.DirectionalLight(0xd8ffe6,0.25*GAIN);
+  fill.position.set(0.6,-0.4,0.8).multiplyScalar(50); scene.add(fill);
 
-  scene.add(group);
-  group.add(fineGroup);
+  scene.add(mapGroup);
+  mapGroup.add(fineGroup);
   buildTerrain(curStride);
 }
 
 function buildTerrain(stride){
-  if(mesh){ group.remove(mesh); mesh.geometry.dispose(); mesh.material.dispose(); mesh=null; }
-  const S=stride;
+  if(mesh){ mapGroup.remove(mesh); mesh.geometry.dispose(); mesh.material.dispose(); }
+  S=6.6/GH; CELL=S*stride;
   cells=[];
-  for(let r=0;r<GH;r+=S) for(let c=0;c<GW;c+=S){
-    const i=r*GW+c; if(!SIDX[i]) continue;
-    cells.push(i);
+  for(let r=0;r<GH;r+=stride) for(let c=0;c<GW;c+=stride){
+    const i=r*GW+c; if(SIDX[i]) cells.push(i);
   }
   const n=cells.length;
-  const geo=new THREE.BoxGeometry(1,1,1);
-  const mat=new THREE.MeshLambertMaterial({vertexColors:false});
+  const geo=new THREE.BoxGeometry(CELL*0.985,CELL*0.985,1);
+  const mat=new THREE.MeshLambertMaterial({transparent:true,opacity:1});
   mesh=new THREE.InstancedMesh(geo,mat,n);
   mesh.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
-  instState=new Uint8Array(n); instElev=new Float32Array(n);
-  const m=new THREE.Matrix4();
-  hUnit=HREL*SPAN/EMAX_EFF;
-  for(let k=0;k<n;k++){
-    const i=cells[k], cx=i%GW, cy=(i/GW)|0, e=ELEV[i];
-    instState[k]=SIDX[i]; instElev[k]=e;
-    const h=Math.max(hOf(e)*hUnit, S*0.35);
-    m.makeScale(S*1.02,h,S*1.02);
-    m.setPosition(cx-GW/2, h/2, cy-GH/2);
-    mesh.setMatrixAt(k,m);
-    mesh.setColorAt(k, overColor(e));
+  instState=new Uint8Array(n); instT=new Float32Array(n);
+  for(let j=0;j<n;j++){
+    const i=cells[j], c=i%GW, r=(i/GW)|0, e=ELEV[i];
+    instState[j]=SIDX[i]; instT[j]=Math.min(1,e/MAXE_C);
+    const dep=depthOf(e);
+    dummy.position.set((c-GW/2)*S, -(r-GH/2)*S, dep/2);
+    dummy.scale.set(1,1,dep); dummy.updateMatrix();
+    mesh.setMatrixAt(j,dummy.matrix);
+    mesh.setColorAt(j, ramp(OVERSTOPS,Math.pow(instT[j],0.78),col));
   }
   mesh.instanceMatrix.needsUpdate=true;
   if(mesh.instanceColor) mesh.instanceColor.needsUpdate=true;
-  group.add(mesh);
+  mapGroup.add(mesh);
 }
 
-/* ===================== per-state bloom =====================
-   The decode already holds every cell at the native 0.035° grid; the
-   overview only draws every second one. Opening a state rebuilds just that
-   state at full resolution — four times the detail, from data already in
-   memory. Largest state (Rajasthan, 25,303 cells) sits under the 26,000
-   block cap, so stride 1 is safe everywhere; the loop below still steps up
-   if a future data drop pushes a state over.
-   ------------------------------------------------------------------ */
+/* hover: Kerala tints the whole district with GSTOPS at pow(t,0.62) */
+function recolour(){
+  if(!mesh) return;
+  for(let j=0;j<cells.length;j++){
+    if(!sel && hoverState && instState[j]===hoverState)
+      ramp(GSTOPS,Math.pow(instT[j],0.62),col);
+    else
+      ramp(OVERSTOPS,Math.pow(instT[j],0.78),col);
+    mesh.setColorAt(j,col);
+  }
+  if(mesh.instanceColor) mesh.instanceColor.needsUpdate=true;
+}
+
+/* ===================== per-state plate =====================
+   Opening a state fades the country out and fades in that state alone at
+   full 0.035° resolution, centred and scaled to the viewport — the same
+   move Kerala makes when a district is picked. */
 const FINE_CAP=26000;
-const fineGroup=new THREE.Group();
-let fineMesh=null, fineCells=null, fineElev=null, fineName='', fineHU=1, fineBase=1;
+let fineMesh=null, fineName='', fineW=0, fineH=0;
 
 function disposeFine(){
   if(!fineMesh) return;
   fineGroup.remove(fineMesh);
   fineMesh.geometry.dispose(); fineMesh.material.dispose();
-  fineMesh=null; fineCells=null; fineElev=null; fineName='';
-  fineGroup.position.y=0; fineGroup.scale.y=1;
+  fineMesh=null; fineName='';
 }
 
 function buildFine(name){
   disposeFine();
-  const sm=SMETA[name]; if(!sm||!ELEV) return;
-  const si=sm.i;
-  let S=1, list=[];
+  const m=SMETA[name]; if(!m||!ELEV) return;
+  const si=m.i;
+  let st=1, list=[];
   for(;;){
     list=[];
-    for(let r=sm.y0;r<=sm.y1;r+=S) for(let c=sm.x0;c<=sm.x1;c+=S){
+    for(let r=m.y0;r<=m.y1;r+=st) for(let c=m.x0;c<=m.x1;c+=st){
       const i=r*GW+c; if(SIDX[i]===si) list.push(i);
     }
-    if(list.length<=FINE_CAP||S>=curStride) break;
-    S++;
+    if(list.length<=FINE_CAP||st>=4) break;
+    st++;
   }
   const n=list.length; if(!n) return;
-  const stSpan=Math.max(sm.x1-sm.x0+1, sm.y1-sm.y0+1);
-  fineHU=HREL*stSpan/Math.max(hOf(sm.emax),1);
-  fineBase=hUnit/fineHU;                       // so it starts at overview height
-  fineCells=list; fineElev=new Float32Array(n);
+  const fs=S*st;
+  const cxm=(m.x0+m.x1)/2, cym=(m.y0+m.y1)/2;
+  fineW=(m.x1-m.x0+1)*S; fineH=(m.y1-m.y0+1)*S;
 
-  const geo=new THREE.BoxGeometry(1,1,1);
-  const mat=new THREE.MeshLambertMaterial({vertexColors:false});
+  const geo=new THREE.BoxGeometry(fs*0.985,fs*0.985,1);
+  const mat=new THREE.MeshLambertMaterial({transparent:true,opacity:0});
   fineMesh=new THREE.InstancedMesh(geo,mat,n);
-  fineMesh.instanceMatrix.setUsage(THREE.StaticDrawUsage);
-  const m=new THREE.Matrix4();
-  for(let k=0;k<n;k++){
-    const i=list[k], cx=i%GW, cy=(i/GW)|0, e=ELEV[i];
-    fineElev[k]=e;
-    const h=Math.max(hOf(e)*fineHU, S*0.35);
-    m.makeScale(S*1.02,h,S*1.02);
-    m.setPosition(cx-GW/2, h/2, cy-GH/2);
-    fineMesh.setMatrixAt(k,m);
-    fineMesh.setColorAt(k, stateColor(e, sm.emax));
+  for(let j=0;j<n;j++){
+    const i=list[j], c=i%GW, r=(i/GW)|0, e=ELEV[i];
+    const dep=depthOf(e), t=Math.min(1,e/Math.max(m.emax,320));
+    dummy.position.set((c-cxm)*S, -(r-cym)*S, dep/2);
+    dummy.scale.set(1,1,dep); dummy.updateMatrix();
+    fineMesh.setMatrixAt(j,dummy.matrix);
+    fineMesh.setColorAt(j, ramp(STOPS,Math.pow(t,0.78),col));
   }
   fineMesh.instanceMatrix.needsUpdate=true;
   if(fineMesh.instanceColor) fineMesh.instanceColor.needsUpdate=true;
   fineName=name;
-  fineGroup.scale.y=fineBase; fineGroup.position.y=0;
   fineGroup.add(fineMesh);
 }
 
-/* recolour instances: hover tint + selection fade */
-const FADE=new THREE.Color(0xf0f0f0);
-function recolour(){
-  if(!mesh) return;
-  const n=cells.length;
-  for(let k=0;k<n;k++){
-    const st=instState[k];
-    let col;
-    if(sel && st!==sel){ col=FADE; }
-    else{
-      col=overColor(instElev[k]).clone();
-      if(!sel && hoverState && st===hoverState){
-        const hm=SMETA[SNAMES[st-1]];
-        col.lerp(hoverColor(instElev[k], hm?hm.emax:INDIA_EMAX), 0.5);
-      }
-    }
-    mesh.setColorAt(k,col);
-  }
-  if(mesh.instanceColor) mesh.instanceColor.needsUpdate=true;
-}
-
-/* selected state lifts; the rest settle back and down */
-function reposition(t){
-  if(!mesh) return;
-  const S=curStride, m=new THREE.Matrix4();
-  for(let k=0;k<cells.length;k++){
-    const i=cells[k], cx=i%GW, cy=(i/GW)|0, e=instElev[k];
-    const isSel = sel && instState[k]===sel;
-    if(isSel && fineMesh && t>0.02){
-      m.makeScale(0,0,0); m.setPosition(cx-GW/2,0,cy-GH/2);
-      mesh.setMatrixAt(k,m); continue;
-    }
-    const other = (sel && !isSel) ? t : 0;
-    const h=Math.max(hOf(e)*hUnit*(1-0.25*other), S*0.35);
-    m.makeScale(S*1.02,h,S*1.02);
-    m.setPosition(cx-GW/2, h/2 - other*SPAN*0.035, cy-GH/2);
-    mesh.setMatrixAt(k,m);
-  }
-  mesh.instanceMatrix.needsUpdate=true;
-}
-let curStride=2;   // 2 reads smooth like Kerala/Saudi; raise only if perf demands it
-
-/* ===================== camera / motion ===================== */
-/* ---- camera stance ----
-   TILT is how far the view leans back. 0.92 looked at the map from the side,
-   so it read as lying on the floor and receding. 1.22 stands it up close to
-   overhead, like Kerala.
-   SPIN was a constant idle rotation that never settled; 0 holds it straight.
-   Drag still works — this only sets where it rests.
-   FIT is the framing margin; larger = the map sits smaller in frame. */
-const TILT=1.22;
-const SPIN=0;
-const PARX=0.05, PARY=0.035;   // mouse parallax — was 0.16/0.10, which wobbled
-const FIT=1.26;                // was 1.07
+/* ===================== motion ===================== */
 let sel=0, hoverState=0;
 let dragging=false, dragMoved=0, lastX=0, lastY=0;
-let yaw=0, pitch=TILT, velYaw=0, velPitch=0, mpx=0, mpy=0, tmpx=0, tmpy=0;
-const view={cx:GW/2,cy:GH/2,bx:GW/2,bz:GH/2,ramp:INDIA_EMAX,sel:0};
-const target={cx:GW/2,cy:GH/2,bx:GW/2,bz:GH/2,ramp:INDIA_EMAX,sel:0};
+let rotX=0, rotY=0, velX=0, velY=0, userX=0, userY=0, spinY=0, idle=0;
+let mouseX=0, mouseY=0, selMix=0, clock=0;
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-function stateTarget(name){
-  const m=SMETA[name]; if(!m) return null;
-  return {cx:(m.x0+m.x1)/2, cy:(m.y0+m.y1)/2,
-          bx:Math.max((m.x1-m.x0+1)/2,10), bz:Math.max((m.y1-m.y0+1)/2,10),
-          ramp:Math.max(m.emax,320), sel:1};
+function viewSize(){
+  const h=2*Math.tan(camera.fov*Math.PI/360)*camera.position.z;
+  return {h:h, w:h*camera.aspect};
 }
+function mapFit(){
+  const W=cv.clientWidth,H=cv.clientHeight;
+  return Math.min(1,(W/H)/0.78)*(W<760?0.8:1);
+}
+function fineFit(){
+  if(!fineMesh) return 1;
+  const v=viewSize();
+  return Math.min(v.h*0.72/Math.max(fineH,0.01), v.w*0.72/Math.max(fineW,0.01))/mapFit();
+}
+
 function goIndia(){
-  sel=0; Object.assign(target,{cx:GW/2,cy:GH/2,bx:GW/2,bz:GH/2,ramp:INDIA_EMAX,sel:0});
-  hoverName.textContent=''; hoverSub.textContent='';
+  sel=0; hoverName.textContent=''; hoverSub.textContent='';
   emaxLbl.textContent=fmt(INDIA_EMAX)+' m';
-  closeStatePanel();
-  disposeFine();
+  closeStatePanel(); userX=userY=0; spinY=0;
   if(stSel) stSel.value=''; shown=18; renderList();
   recolour();
 }
 function goState(name){
-  const t=stateTarget(name); if(!t) return;
-  sel=SMETA[name].i; Object.assign(target,t);
-  const m=SMETA[name];
+  const m=SMETA[name]; if(!m) return;
+  sel=m.i;
   hoverName.textContent=name.toUpperCase();
   hoverSub.textContent=fmt(m.emin)+'–'+fmt(m.emax)+' m';
   emaxLbl.textContent=fmt(m.emax)+' m';
@@ -329,113 +253,81 @@ function goState(name){
   recolour();
 }
 
-const _v=new THREE.Vector3();
-function updateHalo(cyC){
-  const el=document.getElementById('halo'); if(!el) return;
-  const w=cv.clientWidth,h=cv.clientHeight;
-  _v.set(0,cyC,0).project(camera);
-  const sx=(_v.x*0.5+0.5)*w, sy=(-_v.y*0.5+0.5)*h;
-  _v.set(Math.max(view.bx,view.bz),cyC,0).project(camera);
-  const ex=(_v.x*0.5+0.5)*w, ey=(-_v.y*0.5+0.5)*h;
-  let rad=Math.hypot(ex-sx,ey-sy);
-  if(!isFinite(rad)||rad<60) rad=Math.min(w,h)*0.42;
-  el.style.setProperty('--hx',sx.toFixed(0)+'px');
-  el.style.setProperty('--hy',sy.toFixed(0)+'px');
-  el.style.setProperty('--hr',(rad*1.12).toFixed(0)+'px');
-}
-
 const ray=new THREE.Raycaster(), ndc=new THREE.Vector2();
 function pickAt(px,py){
-  if(!mesh) return 0;
+  if(!mesh||sel) return 0;
   ndc.x=(px/cv.clientWidth)*2-1; ndc.y=-(py/cv.clientHeight)*2+1;
   ray.setFromCamera(ndc,camera);
   const hit=ray.intersectObject(mesh,false);
   if(!hit.length) return 0;
   const id=hit[0].instanceId;
-  return (id!=null && id<instState.length)? instState[id] : 0;
+  return (id!=null&&id<instState.length)?instState[id]:0;
 }
 
-let selMix=0;
-function frame(time){
-  const w=cv.clientWidth, h=cv.clientHeight;
+function frame(){
+  requestAnimationFrame(frame);
+  const w=cv.clientWidth,h=cv.clientHeight;
   if(cv.width!==Math.round(w*renderer.getPixelRatio())||cv.height!==Math.round(h*renderer.getPixelRatio())){
     renderer.setSize(w,h,false); camera.aspect=w/h; camera.updateProjectionMatrix();
   }
-  // ease view + selection
-  const k=0.075;
-  for(const p of ['cx','cy','bx','bz','ramp']) view[p]+=(target[p]-view[p])*k;
-  const prevMix=selMix;
-  selMix+=((sel?1:0)-selMix)*0.09;
-  if(Math.abs(selMix-prevMix)>0.0015) reposition(selMix);
+  clock+=0.006; idle++;
+  const open=!!sel;
+  selMix+=((open?1:0)-selMix)*0.085;
 
-  /* lift-and-breathe. Both are group transforms, so the cost is constant no
-     matter how many blocks the state holds — nothing is rewritten per frame. */
+  /* plate rocking — levelled while a state is open, drifting when it isn't */
+  if(open){ rotY+=(0-rotY)*0.07; rotX+=(0-rotX)*0.07; velX=velY=0; }
+  else{
+    rotY+=velY; rotX+=velX; velY*=0.90; velX*=0.90;
+    rotX=Math.max(-0.6,Math.min(0.6,rotX));
+    if(!dragging&&idle>90&&!reduce){
+      rotY+=(Math.sin(clock)*0.22-rotY)*0.012;
+      rotX+=(Math.sin(clock*0.7)*0.08-rotX)*0.012;
+    }
+  }
+  mapGroup.rotation.y=rotY; mapGroup.rotation.x=rotX;
+  const par=open?0:1;
+  mapGroup.position.x=mouseX*0.3*par;
+  mapGroup.position.y=-mouseY*0.22*par;
+  mapGroup.scale.setScalar(mapFit());
+
+  if(mesh) mesh.material.opacity=1-selMix;
+  if(mesh) mesh.visible=selMix<0.98;
+
   if(fineMesh){
-    const breathe=Math.sin(time*0.0011)*SPAN*0.005*selMix;
-    fineGroup.scale.y   = fineBase+(1-fineBase)*selMix;
-    fineGroup.position.y= selMix*SPAN*0.045 + breathe;
-    fineGroup.visible   = selMix>0.02;
+    fineMesh.material.opacity=selMix;
+    fineGroup.visible=selMix>0.02;
+    const k=fineFit();
+    fineGroup.scale.setScalar(1+(k-1)*selMix);
+    spinY+=reduce?0:0.0035;
+    fineGroup.rotation.y=(Math.sin(spinY)*0.62+userY)*selMix;
+    fineGroup.rotation.x=(0.22+Math.sin(spinY*0.7)*0.06+userX)*selMix;
   }
+  userY*=0.985; userX*=0.985;
 
-  // idle drift + inertia + parallax
-  if(!dragging){
-    yaw+=velYaw; pitch+=velPitch;
-    velYaw*=0.94; velPitch*=0.94;
-    yaw+=SPIN;
-  }
-  pitch=Math.max(-1.42,Math.min(1.42,pitch));
-  tmpx+=(mpx-tmpx)*0.045; tmpy+=(mpy-tmpy)*0.045;
-  const vYaw=yaw+tmpx*PARX, vPitch=Math.max(-1.42,Math.min(1.42,pitch-tmpy*PARY));
-
-  // exact framing so the map fills the screen without cropping
-  const maxSpan=Math.max(view.bx,view.bz)*2;
-  const hW=HREL*maxSpan;
-  const cyC=hW*0.30;
-  const ty=Math.tan(camera.fov*Math.PI/360), tx=ty*(w/h);
-  const dir=[Math.sin(vYaw)*Math.cos(vPitch), Math.sin(vPitch), Math.cos(vYaw)*Math.cos(vPitch)];
-  const upy=Math.cos(vPitch)>=0?1:-1;
-  let ax=[upy*dir[2],0,-upy*dir[0]];
-  const al=Math.hypot(ax[0],ax[1],ax[2])||1; ax=[ax[0]/al,ax[1]/al,ax[2]/al];
-  const ay=[dir[1]*ax[2]-dir[2]*ax[1], dir[2]*ax[0]-dir[0]*ax[2], dir[0]*ax[1]-dir[1]*ax[0]];
-  let need=0;
-  for(let i=0;i<8;i++){
-    const v=[(i&1?view.bx:-view.bx), ((i&2?hW:0)-cyC), (i&4?view.bz:-view.bz)];
-    const cxv=v[0]*ax[0]+v[1]*ax[1]+v[2]*ax[2];
-    const cyv=v[0]*ay[0]+v[1]*ay[1]+v[2]*ay[2];
-    const czv=v[0]*dir[0]+v[1]*dir[1]+v[2]*dir[2];
-    need=Math.max(need, czv+Math.abs(cxv)/tx, czv+Math.abs(cyv)/ty);
-  }
-  const dist=Math.max(need*FIT,12);
-  group.position.set(-(view.cx-GW/2), 0, -(view.cy-GH/2));
-  camera.position.set(dir[0]*dist, cyC+dir[1]*dist, dir[2]*dist);
-  camera.up.set(0,upy,0);
-  camera.lookAt(0,cyC,0);
-  camera.near=Math.max(1,dist*0.02); camera.far=dist*6+6000;
-  camera.updateProjectionMatrix();
-
-  // paper checks drift with the map and dim when a state is open
   const gEl=document.getElementById('grid');
   if(gEl){
-    gEl.style.transform='translate('+(-vYaw*44).toFixed(1)+'px,'+((vPitch-TILT)*38).toFixed(1)+'px)';
-    gEl.style.opacity=(1-0.45*selMix).toFixed(3);
+    gEl.style.transform='translate('+(-rotY*46).toFixed(1)+'px,'+(rotX*40).toFixed(1)+'px)';
+    gEl.style.opacity=(1-0.55*selMix).toFixed(3);
   }
-  updateHalo(cyC);
-
+  const halo=document.getElementById('halo');
+  if(halo){
+    halo.style.setProperty('--hx',(w/2).toFixed(0)+'px');
+    halo.style.setProperty('--hy',(h/2).toFixed(0)+'px');
+    halo.style.setProperty('--hr',(Math.min(w,h)*0.52).toFixed(0)+'px');
+  }
   renderer.render(scene,camera);
-  requestAnimationFrame(frame);
 }
 
 /* ===================== interaction ===================== */
 let pickT=0;
 function localXY(e){const r=cv.getBoundingClientRect();return [e.clientX-r.left,e.clientY-r.top];}
 cv.addEventListener('pointerdown',e=>{
-  dragging=true; dragMoved=0; lastX=e.clientX; lastY=e.clientY;
-  velYaw=velPitch=0;
-  cv.setPointerCapture&&cv.setPointerCapture(e.pointerId);
+  dragging=true; dragMoved=0; lastX=e.clientX; lastY=e.clientY; idle=0;
+  velX=velY=0; cv.setPointerCapture&&cv.setPointerCapture(e.pointerId);
   cv.style.cursor='grabbing';
 });
 addEventListener('pointerup',e=>{
-  if(!dragging)return; dragging=false; cv.style.cursor='grab';
+  if(!dragging) return; dragging=false; cv.style.cursor='grab';
   if(dragMoved<5){
     const [x,y]=localXY(e);
     if(x>=0&&y>=0&&x<=cv.clientWidth&&y<=cv.clientHeight){
@@ -446,13 +338,12 @@ addEventListener('pointerup',e=>{
 });
 cv.addEventListener('pointermove',e=>{
   const r=cv.getBoundingClientRect();
-  mpx=((e.clientX-r.left)/r.width-0.5)*2; mpy=((e.clientY-r.top)/r.height-0.5)*2;
+  mouseX=((e.clientX-r.left)/r.width-0.5)*2; mouseY=((e.clientY-r.top)/r.height-0.5)*2;
   if(dragging){
     const dx=e.clientX-lastX, dy=e.clientY-lastY;
-    lastX=e.clientX; lastY=e.clientY;
-    dragMoved+=Math.abs(dx)+Math.abs(dy);
-    yaw-=dx*0.0052; pitch-=dy*0.0042;
-    velYaw=-dx*0.0018; velPitch=-dy*0.0014;      // inertia carries on release
+    lastX=e.clientX; lastY=e.clientY; dragMoved+=Math.abs(dx)+Math.abs(dy); idle=0;
+    if(sel){ userY+=dx*0.006; userX+=dy*0.005; }
+    else{ velY=dx*0.0022; velX=dy*0.0018; rotY+=dx*0.004; rotX+=dy*0.003; }
     return;
   }
   const now=performance.now(); if(now-pickT<100) return; pickT=now;
@@ -465,12 +356,12 @@ cv.addEventListener('pointermove',e=>{
       if(st){const n=SNAMES[st-1],m=SMETA[n];
         hoverName.textContent=n.toUpperCase();
         hoverSub.textContent=m?fmt(m.emin)+'–'+fmt(m.emax)+' m':'';
-      } else {hoverName.textContent='';hoverSub.textContent='';}
+      }else{hoverName.textContent='';hoverSub.textContent='';}
     }
   }
 });
 cv.addEventListener('mouseleave',()=>{
-  mpx=mpy=0;
+  mouseX=mouseY=0;
   if(hoverState){hoverState=0;recolour();}
   if(!sel&&!dragging){hoverName.textContent='';hoverSub.textContent='';}
 });
@@ -584,7 +475,8 @@ renderList();
 decodeTerrain(()=>{
   try{
     buildScene();
+    camera.aspect=cv.clientWidth/cv.clientHeight; camera.updateProjectionMatrix();
     renderer.setSize(cv.clientWidth,cv.clientHeight,false);
-    requestAnimationFrame(frame);
+    frame();
   }catch(e){ fail('3D init failed: '+(e&&e.message||e)); }
 });
