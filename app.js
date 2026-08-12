@@ -68,17 +68,20 @@ function decodeTerrain(cb){
    compression every coffee-growing hill would flatten into one dull green.
    ------------------------------------------------------------------ */
 const OVER=[
-  [    0, 0.875,0.949,0.831],   // #dff2d4  coast and delta
-  [  500, 0.627,0.843,0.533],   // #a0d788  plains
-  [ 1500, 0.690,0.416,0.208],   // #b06a35  Ghats — brown by here, like Kerala
-  [ 3500, 0.490,0.322,0.188],   // #7d5230  high brown
+  [    0, 0.847,0.941,0.690],   // #d8f0b0  coast
+  [  300, 0.620,0.847,0.376],   // #9ed860  vivid green — most of India sits here
+  [  900, 0.725,0.761,0.306],   // #b9c24e  yellow-green
+  [ 1600, 0.788,0.541,0.235],   // #c98a3c  orange-tan, the Ghats
+  [ 2800, 0.541,0.353,0.188],   // #8a5a30  brown
   [ 6500, 0.910,0.886,0.847]    // #e8e2d8  snow
 ];
 /* per-state ramp, normalised 0–1 across that state's own range (Kerala's STOPS) */
 const STATE=[
-  [0.00, 0.875,0.949,0.831],
-  [0.50, 0.627,0.843,0.533],
-  [1.00, 0.690,0.416,0.208]
+  [0.00, 0.847,0.941,0.690],
+  [0.28, 0.620,0.847,0.376],
+  [0.55, 0.725,0.761,0.306],
+  [0.78, 0.788,0.541,0.235],
+  [1.00, 0.541,0.353,0.188]
 ];
 /* hover tint — deliberately soft, matching Kerala's GSTOPS */
 const GS=[
@@ -105,9 +108,9 @@ const hoverColor = (e,mx) => sample(GS, e/Math.max(mx,320), _g);
 /* ===================== scene ===================== */
 let renderer,scene,camera,mesh,cells=[],instState=null,instElev=null;
 const group=new THREE.Group();
-const HREL=0.115;                 // vertical exaggeration — raise for more relief
+const HREL=0.090;                 // vertical exaggeration — raise for more relief
 const HKNEE=2500;                 // below this, height is linear; above, compressed
-const HSQUASH=0.32;               // how hard the Himalaya is flattened
+const HSQUASH=0.20;               // how hard the Himalaya is flattened
 /* Scaling raw metres against India's 7,793 m ceiling left the Deccan with
    ~3 units of lift on an 874-wide map — invisible. Everything up to the knee
    now gets the full vertical range and the Himalaya is compressed above it,
@@ -278,10 +281,20 @@ function reposition(t){
   }
   mesh.instanceMatrix.needsUpdate=true;
 }
-let curStride=3;   // overview block size — 3 reads chunky like Kerala, 2 is smoother
+let curStride=2;   // 2 reads smooth like Kerala/Saudi; raise only if perf demands it
 
 /* ===================== camera / motion ===================== */
-const TILT=0.92;
+/* ---- camera stance ----
+   TILT is how far the view leans back. 0.92 looked at the map from the side,
+   so it read as lying on the floor and receding. 1.22 stands it up close to
+   overhead, like Kerala.
+   SPIN was a constant idle rotation that never settled; 0 holds it straight.
+   Drag still works — this only sets where it rests.
+   FIT is the framing margin; larger = the map sits smaller in frame. */
+const TILT=1.22;
+const SPIN=0;
+const PARX=0.05, PARY=0.035;   // mouse parallax — was 0.16/0.10, which wobbled
+const FIT=1.26;                // was 1.07
 let sel=0, hoverState=0;
 let dragging=false, dragMoved=0, lastX=0, lastY=0;
 let yaw=0, pitch=TILT, velYaw=0, velPitch=0, mpx=0, mpy=0, tmpx=0, tmpy=0;
@@ -368,11 +381,11 @@ function frame(time){
   if(!dragging){
     yaw+=velYaw; pitch+=velPitch;
     velYaw*=0.94; velPitch*=0.94;
-    yaw+=0.00022 + (sel?0.00040:0);           // selected state turns a little faster
+    yaw+=SPIN;
   }
   pitch=Math.max(-1.42,Math.min(1.42,pitch));
   tmpx+=(mpx-tmpx)*0.045; tmpy+=(mpy-tmpy)*0.045;
-  const vYaw=yaw+tmpx*0.16, vPitch=Math.max(-1.42,Math.min(1.42,pitch-tmpy*0.10));
+  const vYaw=yaw+tmpx*PARX, vPitch=Math.max(-1.42,Math.min(1.42,pitch-tmpy*PARY));
 
   // exact framing so the map fills the screen without cropping
   const maxSpan=Math.max(view.bx,view.bz)*2;
@@ -392,7 +405,7 @@ function frame(time){
     const czv=v[0]*dir[0]+v[1]*dir[1]+v[2]*dir[2];
     need=Math.max(need, czv+Math.abs(cxv)/tx, czv+Math.abs(cyv)/ty);
   }
-  const dist=Math.max(need*1.07,12);
+  const dist=Math.max(need*FIT,12);
   group.position.set(-(view.cx-GW/2), 0, -(view.cy-GH/2));
   camera.position.set(dir[0]*dist, cyC+dir[1]*dist, dir[2]*dist);
   camera.up.set(0,upy,0);
