@@ -68,11 +68,11 @@ function decodeTerrain(cb){
    compression every coffee-growing hill would flatten into one dull green.
    ------------------------------------------------------------------ */
 const OVER=[
-  [    0, 0.875,0.949,0.831],   // #dff2d4  coast
-  [ 1250, 0.627,0.843,0.533],   // #a0d788  midlands
-  [ 2500, 0.690,0.416,0.208],   // #b06a35  Ghats
-  [ 5200, 0.490,0.322,0.188],   // #7d5230  high brown
-  [ 7793, 0.910,0.886,0.847]    // #e8e2d8  snow
+  [    0, 0.875,0.949,0.831],   // #dff2d4  coast and delta
+  [  500, 0.627,0.843,0.533],   // #a0d788  plains
+  [ 1500, 0.690,0.416,0.208],   // #b06a35  Ghats — brown by here, like Kerala
+  [ 3500, 0.490,0.322,0.188],   // #7d5230  high brown
+  [ 6500, 0.910,0.886,0.847]    // #e8e2d8  snow
 ];
 /* per-state ramp, normalised 0–1 across that state's own range (Kerala's STOPS) */
 const STATE=[
@@ -105,7 +105,15 @@ const hoverColor = (e,mx) => sample(GS, e/Math.max(mx,320), _g);
 /* ===================== scene ===================== */
 let renderer,scene,camera,mesh,cells=[],instState=null,instElev=null;
 const group=new THREE.Group();
-const HREL=0.055;                 // gentle relief, like Kerala
+const HREL=0.115;                 // vertical exaggeration — raise for more relief
+const HKNEE=2500;                 // below this, height is linear; above, compressed
+const HSQUASH=0.32;               // how hard the Himalaya is flattened
+/* Scaling raw metres against India's 7,793 m ceiling left the Deccan with
+   ~3 units of lift on an 874-wide map — invisible. Everything up to the knee
+   now gets the full vertical range and the Himalaya is compressed above it,
+   so the Ghats actually stand up. */
+const hOf = e => e<=HKNEE ? e : HKNEE+(e-HKNEE)*HSQUASH;
+const EMAX_EFF = hOf(8000);
 let unit=1, hUnit=1;
 const SPAN=Math.max(GW,GH);
 
@@ -126,7 +134,7 @@ function buildScene(){
      held at this renderer's existing total of 2.52. That ratio is what
      shapes how the relief reads. If the map looks too hot or too flat on
      screen, scale all three by the same factor and keep the ratio. */
-  const EXPOSURE=2.52;
+  const EXPOSURE=2.25;
   scene.add(new THREE.AmbientLight(0xffffff, EXPOSURE*0.28));
   const key=new THREE.DirectionalLight(0xffffff, EXPOSURE*0.51);
   key.position.set(-0.55,1.0,0.55).multiplyScalar(1000);
@@ -137,7 +145,7 @@ function buildScene(){
 
   scene.add(group);
   group.add(fineGroup);
-  buildTerrain(2);
+  buildTerrain(curStride);
 }
 
 function buildTerrain(stride){
@@ -155,11 +163,11 @@ function buildTerrain(stride){
   mesh.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
   instState=new Uint8Array(n); instElev=new Float32Array(n);
   const m=new THREE.Matrix4();
-  hUnit=HREL*SPAN/Math.max(INDIA_EMAX,1);
+  hUnit=HREL*SPAN/EMAX_EFF;
   for(let k=0;k<n;k++){
     const i=cells[k], cx=i%GW, cy=(i/GW)|0, e=ELEV[i];
     instState[k]=SIDX[i]; instElev[k]=e;
-    const h=Math.max(e*hUnit, S*0.35);
+    const h=Math.max(hOf(e)*hUnit, S*0.35);
     m.makeScale(S*1.02,h,S*1.02);
     m.setPosition(cx-GW/2, h/2, cy-GH/2);
     mesh.setMatrixAt(k,m);
@@ -205,7 +213,7 @@ function buildFine(name){
   }
   const n=list.length; if(!n) return;
   const stSpan=Math.max(sm.x1-sm.x0+1, sm.y1-sm.y0+1);
-  fineHU=HREL*stSpan/Math.max(sm.emax,1);
+  fineHU=HREL*stSpan/Math.max(hOf(sm.emax),1);
   fineBase=hUnit/fineHU;                       // so it starts at overview height
   fineCells=list; fineElev=new Float32Array(n);
 
@@ -217,7 +225,7 @@ function buildFine(name){
   for(let k=0;k<n;k++){
     const i=list[k], cx=i%GW, cy=(i/GW)|0, e=ELEV[i];
     fineElev[k]=e;
-    const h=Math.max(e*fineHU, S*0.35);
+    const h=Math.max(hOf(e)*fineHU, S*0.35);
     m.makeScale(S*1.02,h,S*1.02);
     m.setPosition(cx-GW/2, h/2, cy-GH/2);
     fineMesh.setMatrixAt(k,m);
@@ -263,14 +271,14 @@ function reposition(t){
       mesh.setMatrixAt(k,m); continue;
     }
     const other = (sel && !isSel) ? t : 0;
-    const h=Math.max(e*hUnit*(1-0.25*other), S*0.35);
+    const h=Math.max(hOf(e)*hUnit*(1-0.25*other), S*0.35);
     m.makeScale(S*1.02,h,S*1.02);
     m.setPosition(cx-GW/2, h/2 - other*SPAN*0.035, cy-GH/2);
     mesh.setMatrixAt(k,m);
   }
   mesh.instanceMatrix.needsUpdate=true;
 }
-let curStride=2;
+let curStride=3;   // overview block size — 3 reads chunky like Kerala, 2 is smoother
 
 /* ===================== camera / motion ===================== */
 const TILT=0.92;
@@ -563,7 +571,6 @@ renderList();
 decodeTerrain(()=>{
   try{
     buildScene();
-    curStride=2;
     renderer.setSize(cv.clientWidth,cv.clientHeight,false);
     requestAnimationFrame(frame);
   }catch(e){ fail('3D init failed: '+(e&&e.message||e)); }
