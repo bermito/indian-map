@@ -7,7 +7,7 @@ const cafes   =(DATA.cafes||[]).slice().sort((a,b)=>a.name.localeCompare(b.name)
 const edu     =(DATA.edu||[]).slice().sort((a,b)=>a.name.localeCompare(b.name));
 const CATS=[
   {k:'c',label:'Specialty cafés',   items:cafes,    sub:d=>d.city+' · '+d.desc},
-  {k:'r',label:'Specialty roasters',items:roasters, sub:d=>(d.city?d.city+' · ':'')+d.source},
+  {k:'r',label:'Specialty roasters',items:roasters, sub:d=>(d.city||d.state)},
   {k:'o',label:'Specialty farms',   items:origins,  sub:d=>d.landscape+' · '+d.coffee},
   {k:'e',label:'Coffee education',  items:edu,      sub:d=>d.city+' · '+d.cat}
 ];
@@ -58,28 +58,56 @@ function decodeTerrain(cb){
   im.src=TERRAIN_PNG;
 }
 
-/* ===================== elevation palette (green → gold → brown) ===================== */
-const STOPS=[[0.00,0.847,0.933,0.769],[0.12,0.690,0.859,0.573],[0.30,0.804,0.796,0.471],
-             [0.52,0.769,0.580,0.337],[0.75,0.588,0.400,0.243],[1.00,0.373,0.243,0.157]];
-const _c=new THREE.Color();
-function rampColor(t){
-  t=Math.max(0,Math.min(1,t));
-  for(let i=0;i<STOPS.length-1;i++){
-    const a=STOPS[i],b=STOPS[i+1];
+/* ===================== palette =====================
+   Kerala's ramp: light green coast → tan → brown highlands.
+   The overview ramp is keyed in METRES, not normalised, and the full
+   green→tan→brown spread is compressed into 0–2500 m so the Western Ghats
+   read exactly as they do on the Kerala map. Above 2500 m it carries on
+   into darker brown and then pale snow so the Himalaya still reads as the
+   high wall. Kerala tops out at ~2,700 m; India at 7,793 m — without the
+   compression every coffee-growing hill would flatten into one dull green.
+   ------------------------------------------------------------------ */
+const OVER=[
+  [    0, 0.875,0.949,0.831],   // #dff2d4  coast
+  [ 1250, 0.627,0.843,0.533],   // #a0d788  midlands
+  [ 2500, 0.690,0.416,0.208],   // #b06a35  Ghats
+  [ 5200, 0.490,0.322,0.188],   // #7d5230  high brown
+  [ 7793, 0.910,0.886,0.847]    // #e8e2d8  snow
+];
+/* per-state ramp, normalised 0–1 across that state's own range (Kerala's STOPS) */
+const STATE=[
+  [0.00, 0.875,0.949,0.831],
+  [0.50, 0.627,0.843,0.533],
+  [1.00, 0.690,0.416,0.208]
+];
+/* hover tint — deliberately soft, matching Kerala's GSTOPS */
+const GS=[
+  [0.00, 0.718,0.890,0.769],    // #b7e3c4
+  [1.00, 0.416,0.769,0.541]     // #6ac48a
+];
+const _c=new THREE.Color(), _g=new THREE.Color();
+function sample(stops,t,out){
+  const lo=stops[0][0], hi=stops[stops.length-1][0];
+  t=Math.max(lo,Math.min(hi,t));
+  for(let i=0;i<stops.length-1;i++){
+    const a=stops[i],b=stops[i+1];
     if(t<=b[0]){
       const u=(t-a[0])/Math.max(1e-6,b[0]-a[0]);
-      return _c.setRGB(a[1]+(b[1]-a[1])*u, a[2]+(b[2]-a[2])*u, a[3]+(b[3]-a[3])*u);
+      return out.setRGB(a[1]+(b[1]-a[1])*u, a[2]+(b[2]-a[2])*u, a[3]+(b[3]-a[3])*u);
     }
   }
-  const l=STOPS[STOPS.length-1]; return _c.setRGB(l[1],l[2],l[3]);
+  const l=stops[stops.length-1]; return out.setRGB(l[1],l[2],l[3]);
 }
+const overColor  = e      => sample(OVER, e, _c);
+const stateColor = (e,mx) => sample(STATE, e/Math.max(mx,320), _c);
+const hoverColor = (e,mx) => sample(GS, e/Math.max(mx,320), _g);
 
 /* ===================== scene ===================== */
 let renderer,scene,camera,mesh,cells=[],instState=null,instElev=null;
-const PAPER=0xFBFAF6;
 const group=new THREE.Group();
 const HREL=0.055;                 // gentle relief, like Kerala
 let unit=1, hUnit=1;
+const SPAN=Math.max(GW,GH);
 
 function buildScene(){
   renderer=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true});
@@ -88,19 +116,29 @@ function buildScene(){
   scene=new THREE.Scene();
   camera=new THREE.PerspectiveCamera(30,1,1,20000);
 
-  // ---- lighting: soft sky/ground fill plus one key light ----
-  scene.add(new THREE.HemisphereLight(0xffffff,0xdcd8c8,1.05));
-  const key=new THREE.DirectionalLight(0xffffff,1.15);
+  /* ---- lighting ----
+     NOTE ON THE NUMBERS. Kerala runs three r128, where useLegacyLights was
+     still on; this site runs r169, where physically-correct lighting is
+     forced and the escape hatch is gone. The same intensity value is NOT
+     the same brightness across the two, so Kerala's literal 0.34/0.62/0.25
+     would render this map dark.
+     What is ported is Kerala's BALANCE — 28% ambient, 51% key, 21% fill —
+     held at this renderer's existing total of 2.52. That ratio is what
+     shapes how the relief reads. If the map looks too hot or too flat on
+     screen, scale all three by the same factor and keep the ratio. */
+  const EXPOSURE=2.52;
+  scene.add(new THREE.AmbientLight(0xffffff, EXPOSURE*0.28));
+  const key=new THREE.DirectionalLight(0xffffff, EXPOSURE*0.51);
   key.position.set(-0.55,1.0,0.55).multiplyScalar(1000);
   scene.add(key);
-  const rim=new THREE.DirectionalLight(0xffffff,0.32);
-  rim.position.set(0.7,0.5,-0.7).multiplyScalar(1000);
-  scene.add(rim);
+  const fill=new THREE.DirectionalLight(0xffffff, EXPOSURE*0.21);
+  fill.position.set(0.7,0.5,-0.7).multiplyScalar(1000);
+  scene.add(fill);
 
   scene.add(group);
+  group.add(fineGroup);
   buildTerrain(2);
 }
-
 
 function buildTerrain(stride){
   if(mesh){ group.remove(mesh); mesh.geometry.dispose(); mesh.material.dispose(); mesh=null; }
@@ -117,7 +155,7 @@ function buildTerrain(stride){
   mesh.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
   instState=new Uint8Array(n); instElev=new Float32Array(n);
   const m=new THREE.Matrix4();
-  hUnit=HREL*Math.max(GW,GH)/Math.max(INDIA_EMAX,1);
+  hUnit=HREL*SPAN/Math.max(INDIA_EMAX,1);
   for(let k=0;k<n;k++){
     const i=cells[k], cx=i%GW, cy=(i/GW)|0, e=ELEV[i];
     instState[k]=SIDX[i]; instElev[k]=e;
@@ -125,15 +163,75 @@ function buildTerrain(stride){
     m.makeScale(S*1.02,h,S*1.02);
     m.setPosition(cx-GW/2, h/2, cy-GH/2);
     mesh.setMatrixAt(k,m);
-    mesh.setColorAt(k, rampColor(e/INDIA_EMAX));
+    mesh.setColorAt(k, overColor(e));
   }
   mesh.instanceMatrix.needsUpdate=true;
   if(mesh.instanceColor) mesh.instanceColor.needsUpdate=true;
   group.add(mesh);
 }
 
+/* ===================== per-state bloom =====================
+   The decode already holds every cell at the native 0.035° grid; the
+   overview only draws every second one. Opening a state rebuilds just that
+   state at full resolution — four times the detail, from data already in
+   memory. Largest state (Rajasthan, 25,303 cells) sits under the 26,000
+   block cap, so stride 1 is safe everywhere; the loop below still steps up
+   if a future data drop pushes a state over.
+   ------------------------------------------------------------------ */
+const FINE_CAP=26000;
+const fineGroup=new THREE.Group();
+let fineMesh=null, fineCells=null, fineElev=null, fineName='', fineHU=1, fineBase=1;
+
+function disposeFine(){
+  if(!fineMesh) return;
+  fineGroup.remove(fineMesh);
+  fineMesh.geometry.dispose(); fineMesh.material.dispose();
+  fineMesh=null; fineCells=null; fineElev=null; fineName='';
+  fineGroup.position.y=0; fineGroup.scale.y=1;
+}
+
+function buildFine(name){
+  disposeFine();
+  const sm=SMETA[name]; if(!sm||!ELEV) return;
+  const si=sm.i;
+  let S=1, list=[];
+  for(;;){
+    list=[];
+    for(let r=sm.y0;r<=sm.y1;r+=S) for(let c=sm.x0;c<=sm.x1;c+=S){
+      const i=r*GW+c; if(SIDX[i]===si) list.push(i);
+    }
+    if(list.length<=FINE_CAP||S>=curStride) break;
+    S++;
+  }
+  const n=list.length; if(!n) return;
+  const stSpan=Math.max(sm.x1-sm.x0+1, sm.y1-sm.y0+1);
+  fineHU=HREL*stSpan/Math.max(sm.emax,1);
+  fineBase=hUnit/fineHU;                       // so it starts at overview height
+  fineCells=list; fineElev=new Float32Array(n);
+
+  const geo=new THREE.BoxGeometry(1,1,1);
+  const mat=new THREE.MeshLambertMaterial({vertexColors:false});
+  fineMesh=new THREE.InstancedMesh(geo,mat,n);
+  fineMesh.instanceMatrix.setUsage(THREE.StaticDrawUsage);
+  const m=new THREE.Matrix4();
+  for(let k=0;k<n;k++){
+    const i=list[k], cx=i%GW, cy=(i/GW)|0, e=ELEV[i];
+    fineElev[k]=e;
+    const h=Math.max(e*fineHU, S*0.35);
+    m.makeScale(S*1.02,h,S*1.02);
+    m.setPosition(cx-GW/2, h/2, cy-GH/2);
+    fineMesh.setMatrixAt(k,m);
+    fineMesh.setColorAt(k, stateColor(e, sm.emax));
+  }
+  fineMesh.instanceMatrix.needsUpdate=true;
+  if(fineMesh.instanceColor) fineMesh.instanceColor.needsUpdate=true;
+  fineName=name;
+  fineGroup.scale.y=fineBase; fineGroup.position.y=0;
+  fineGroup.add(fineMesh);
+}
+
 /* recolour instances: hover tint + selection fade */
-const HOVER=new THREE.Color(0x39c06a), FADE=new THREE.Color(0xF2EFE7);
+const FADE=new THREE.Color(0xf0f0f0);
 function recolour(){
   if(!mesh) return;
   const n=cells.length;
@@ -142,26 +240,32 @@ function recolour(){
     let col;
     if(sel && st!==sel){ col=FADE; }
     else{
-      col=rampColor(instElev[k]/(sel?Math.max(SMETA[SNAMES[sel-1]].emax,320):INDIA_EMAX)).clone();
-      if(!sel && hoverState && st===hoverState) col.lerp(HOVER,0.55);
+      col=overColor(instElev[k]).clone();
+      if(!sel && hoverState && st===hoverState){
+        const hm=SMETA[SNAMES[st-1]];
+        col.lerp(hoverColor(instElev[k], hm?hm.emax:INDIA_EMAX), 0.5);
+      }
     }
     mesh.setColorAt(k,col);
   }
   if(mesh.instanceColor) mesh.instanceColor.needsUpdate=true;
 }
-/* push non-selected states back and down; lift the selected one */
+
+/* selected state lifts; the rest settle back and down */
 function reposition(t){
   if(!mesh) return;
   const S=curStride, m=new THREE.Matrix4();
-  const selName=sel?SNAMES[sel-1]:null;
-  const sm=selName?SMETA[selName]:null;
-  const hu = sel? HREL*Math.max(sm.x1-sm.x0+1,sm.y1-sm.y0+1)/Math.max(sm.emax,1) : hUnit;
   for(let k=0;k<cells.length;k++){
     const i=cells[k], cx=i%GW, cy=(i/GW)|0, e=instElev[k];
-    const other = sel && instState[k]!==sel ? t : 0;
-    const h=Math.max(e*hu*(1-0.75*other), S*0.35);
+    const isSel = sel && instState[k]===sel;
+    if(isSel && fineMesh && t>0.02){
+      m.makeScale(0,0,0); m.setPosition(cx-GW/2,0,cy-GH/2);
+      mesh.setMatrixAt(k,m); continue;
+    }
+    const other = (sel && !isSel) ? t : 0;
+    const h=Math.max(e*hUnit*(1-0.25*other), S*0.35);
     m.makeScale(S*1.02,h,S*1.02);
-    m.setPosition(cx-GW/2, h/2 - other*Math.max(GW,GH)*0.10, cy-GH/2);
+    m.setPosition(cx-GW/2, h/2 - other*SPAN*0.035, cy-GH/2);
     mesh.setMatrixAt(k,m);
   }
   mesh.instanceMatrix.needsUpdate=true;
@@ -187,6 +291,7 @@ function goIndia(){
   hoverName.textContent=''; hoverSub.textContent='';
   emaxLbl.textContent=fmt(INDIA_EMAX)+' m';
   closeStatePanel();
+  disposeFine();
   if(stSel) stSel.value=''; shown=18; renderList();
   recolour();
 }
@@ -198,6 +303,7 @@ function goState(name){
   hoverSub.textContent=fmt(m.emin)+'–'+fmt(m.emax)+' m';
   emaxLbl.textContent=fmt(m.emax)+' m';
   openStatePanel(name);
+  buildFine(name);
   if(stSel) stSel.value=dataStates.includes(name)?name:''; shown=18; renderList();
   recolour();
 }
@@ -240,6 +346,15 @@ function frame(time){
   const prevMix=selMix;
   selMix+=((sel?1:0)-selMix)*0.09;
   if(Math.abs(selMix-prevMix)>0.0015) reposition(selMix);
+
+  /* lift-and-breathe. Both are group transforms, so the cost is constant no
+     matter how many blocks the state holds — nothing is rewritten per frame. */
+  if(fineMesh){
+    const breathe=Math.sin(time*0.0011)*SPAN*0.005*selMix;
+    fineGroup.scale.y   = fineBase+(1-fineBase)*selMix;
+    fineGroup.position.y= selMix*SPAN*0.045 + breathe;
+    fineGroup.visible   = selMix>0.02;
+  }
 
   // idle drift + inertia + parallax
   if(!dragging){
