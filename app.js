@@ -144,7 +144,7 @@ function buildTerrain(stride){
     dummy.position.set((c-GW/2)*S, -(r-GH/2)*S, dep/2);
     dummy.scale.set(1,1,dep); dummy.updateMatrix();
     mesh.setMatrixAt(j,dummy.matrix);
-    mesh.setColorAt(j, ramp(OVERSTOPS,Math.pow(instT[j],0.78),col));
+    mesh.setColorAt(j, ramp(STOPS,Math.pow(instT[j],0.78),col));
   }
   mesh.instanceMatrix.needsUpdate=true;
   if(mesh.instanceColor) mesh.instanceColor.needsUpdate=true;
@@ -158,7 +158,7 @@ function recolour(){
     if(!sel && hoverState && instState[j]===hoverState)
       ramp(GSTOPS,Math.pow(instT[j],0.62),col);
     else
-      ramp(OVERSTOPS,Math.pow(instT[j],0.78),col);
+      ramp(STOPS,Math.pow(instT[j],0.78),col);
     mesh.setColorAt(j,col);
   }
   if(mesh.instanceColor) mesh.instanceColor.needsUpdate=true;
@@ -168,8 +168,14 @@ function recolour(){
    Opening a state fades the country out and fades in that state alone at
    full 0.035° resolution, centred and scaled to the viewport — the same
    move Kerala makes when a district is picked. */
-const FINE_CAP=26000;
+/* Upsampling budget. A state plate is bilinear-interpolated up to this many
+   blocks; small states get a lot of subdivision, big ones stay coarse.
+   No elevation is invented — values between samples are interpolated from
+   the samples either side, and the state mask still comes from the source
+   grid, so no cell appears where the data says there is none. */
+const UP_CAP=90000, UP_MAX=6;
 let fineMesh=null, fineName='', fineW=0, fineH=0;
+let homeX=0, homeY=0;                 // where this state sits on the India plate
 
 function disposeFine(){
   if(!fineMesh) return;
@@ -178,34 +184,69 @@ function disposeFine(){
   fineMesh=null; fineName='';
 }
 
+function bilin(a,w,h,fx,fy){
+  const x=Math.max(0,Math.min(w-1.001,fx)), y=Math.max(0,Math.min(h-1.001,fy));
+  const c0=x|0, r0=y|0, dx=x-c0, dy=y-r0;
+  const c1=Math.min(w-1,c0+1), r1=Math.min(h-1,r0+1);
+  const v00=a[r0*w+c0], v10=a[r0*w+c1], v01=a[r1*w+c0], v11=a[r1*w+c1];
+  return v00+(v10-v00)*dx + (v01-v00)*dy + (v00-v10-v01+v11)*dx*dy;
+}
+
 function buildFine(name){
   disposeFine();
   const m=SMETA[name]; if(!m||!ELEV) return;
-  const si=m.i;
-  let st=1, list=[];
-  for(;;){
-    list=[];
-    for(let r=m.y0;r<=m.y1;r+=st) for(let c=m.x0;c<=m.x1;c+=st){
-      const i=r*GW+c; if(SIDX[i]===si) list.push(i);
-    }
-    if(list.length<=FINE_CAP||st>=4) break;
-    st++;
+  const si=m.i, x0=m.x0, y0=m.y0, bw=m.x1-x0+1, bh=m.y1-y0+1;
+
+  const src=new Float32Array(bw*bh), msk=new Uint8Array(bw*bh);
+  let owned=0;
+  for(let r=0;r<bh;r++) for(let c=0;c<bw;c++){
+    const i=(y0+r)*GW+(x0+c), k=r*bw+c;
+    src[k]=ELEV[i];
+    if(SIDX[i]===si){ msk[k]=1; owned++; }
   }
-  const n=list.length; if(!n) return;
-  const fs=S*st;
-  const cxm=(m.x0+m.x1)/2, cym=(m.y0+m.y1)/2;
-  fineW=(m.x1-m.x0+1)*S; fineH=(m.y1-m.y0+1)*S;
+  if(!owned) return;
+
+  /* light centre-weighted smoothing over in-state neighbours only. ETOPO at
+     0.035 deg carries real sampling noise, which is what made the Ghats read
+     as spikes; this settles it without flattening the range. */
+  const sm=new Float32Array(bw*bh);
+  for(let r=0;r<bh;r++) for(let c=0;c<bw;c++){
+    let acc=0,wt=0;
+    for(let dr=-1;dr<=1;dr++) for(let dc=-1;dc<=1;dc++){
+      const rr=r+dr, cc=c+dc;
+      if(rr<0||cc<0||rr>=bh||cc>=bw) continue;
+      const k=rr*bw+cc; if(!msk[k]) continue;
+      const w=(dr===0&&dc===0)?4:1; acc+=src[k]*w; wt+=w;
+    }
+    sm[r*bw+c]=wt?acc/wt:src[r*bw+c];
+  }
+
+  let F=1; while(F<UP_MAX && owned*(F+1)*(F+1)<=UP_CAP) F++;
+
+  const cxm=(x0+m.x1)/2, cym=(y0+m.y1)/2;
+  const fs=S/F, RW=bw*F, RH=bh*F;
+  const pos=[], els=[];
+  for(let r=0;r<RH;r++) for(let c=0;c<RW;c++){
+    const fx=(c+0.5)/F-0.5, fy=(r+0.5)/F-0.5;
+    const nc=Math.max(0,Math.min(bw-1,Math.round(fx)));
+    const nr=Math.max(0,Math.min(bh-1,Math.round(fy)));
+    if(!msk[nr*bw+nc]) continue;
+    pos.push(x0+fx, y0+fy); els.push(bilin(sm,bw,bh,fx,fy));
+  }
+  const n=els.length; if(!n) return;
+  fineW=bw*S; fineH=bh*S;
+  homeX=(cxm-GW/2)*S; homeY=-(cym-GH/2)*S;
 
   const geo=new THREE.BoxGeometry(fs*0.985,fs*0.985,1);
   const mat=new THREE.MeshLambertMaterial({transparent:true,opacity:0});
   fineMesh=new THREE.InstancedMesh(geo,mat,n);
+  const emax=Math.max(m.emax,320);
   for(let j=0;j<n;j++){
-    const i=list[j], c=i%GW, r=(i/GW)|0, e=ELEV[i];
-    const dep=depthOf(e), t=Math.min(1,e/Math.max(m.emax,320));
-    dummy.position.set((c-cxm)*S, -(r-cym)*S, dep/2);
+    const e=els[j], dep=depthOf(e);
+    dummy.position.set((pos[j*2]-cxm)*S, -(pos[j*2+1]-cym)*S, dep/2);
     dummy.scale.set(1,1,dep); dummy.updateMatrix();
     fineMesh.setMatrixAt(j,dummy.matrix);
-    fineMesh.setColorAt(j, ramp(STOPS,Math.pow(t,0.78),col));
+    fineMesh.setColorAt(j, ramp(STOPS,Math.pow(Math.min(1,e/emax),0.78),col));
   }
   fineMesh.instanceMatrix.needsUpdate=true;
   if(fineMesh.instanceColor) fineMesh.instanceColor.needsUpdate=true;
@@ -298,6 +339,9 @@ function frame(){
     fineGroup.visible=selMix>0.02;
     const k=fineFit();
     fineGroup.scale.setScalar(1+(k-1)*selMix);
+    /* Kerala eases each district from its home square to centre. Without
+       this every state grew out of the middle of the country. */
+    fineGroup.position.set(homeX*(1-selMix), homeY*(1-selMix), 0);
     spinY+=reduce?0:0.0035;
     fineGroup.rotation.y=(Math.sin(spinY)*0.62+userY)*selMix;
     fineGroup.rotation.x=(0.22+Math.sin(spinY*0.7)*0.06+userX)*selMix;
