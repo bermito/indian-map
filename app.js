@@ -86,13 +86,31 @@ function ramp(stops,t,out){
    Himalaya still stands proud. One ceiling for both would either bleach
    the whole country or flatten the mountains. */
 const MAXE_C=2695, MAXE_D=7793;
+
+/* Precomputed ramps. ramp() allocates and does two setHex calls per block;
+   at 60k blocks that alone was a visible hitch. Sampling a flat table is a
+   couple of array reads. */
+const LUT_N=512;
+function makeLUT(stops,gamma){
+  const a=new Float32Array(LUT_N*3), c=new THREE.Color();
+  for(let i=0;i<LUT_N;i++){
+    ramp(stops,Math.pow(i/(LUT_N-1),gamma),c);
+    a[i*3]=c.r; a[i*3+1]=c.g; a[i*3+2]=c.b;
+  }
+  return a;
+}
+let LUT_T=null, LUT_G=null;
+function lut(a,t,out){
+  const i=Math.max(0,Math.min(LUT_N-1,(t*(LUT_N-1))|0));
+  return out.setRGB(a[i*3],a[i*3+1],a[i*3+2]);
+}
 const depthOf = e => 0.16+0.62*Math.pow(Math.min(1,e/MAXE_D),0.62);
 
 /* ===================== scene =====================
    Kerala is not an oblique landscape. The blocks extrude along +Z toward a
    camera parked on the Z axis, and the whole plate rocks. That face-on
    stance is the single biggest reason the two maps looked unrelated. */
-let renderer,scene,camera,mesh,cells=[],instState=null,instT=null;
+let renderer,scene,camera,mesh,cells=[],instState=null,instT=null,stateRows=null;
 const mapGroup=new THREE.Group();
 const fineGroup=new THREE.Group();
 const dummy=new THREE.Object3D();
@@ -119,6 +137,7 @@ function buildScene(){
   const fill=new THREE.DirectionalLight(0xd8ffe6,0.25*GAIN);
   fill.position.set(0.6,-0.4,0.8).multiplyScalar(50); scene.add(fill);
 
+  LUT_T=makeLUT(STOPS,0.78); LUT_G=makeLUT(GSTOPS,0.62);
   scene.add(mapGroup);
   mapGroup.add(fineGroup);
   buildTerrain(curStride);
@@ -144,24 +163,39 @@ function buildTerrain(stride){
     dummy.position.set((c-GW/2)*S, -(r-GH/2)*S, dep/2);
     dummy.scale.set(1,1,dep); dummy.updateMatrix();
     mesh.setMatrixAt(j,dummy.matrix);
-    mesh.setColorAt(j, ramp(STOPS,Math.pow(instT[j],0.78),col));
+    mesh.setColorAt(j, lut(LUT_T,instT[j],col));
   }
   mesh.instanceMatrix.needsUpdate=true;
   if(mesh.instanceColor) mesh.instanceColor.needsUpdate=true;
+  const tally=new Int32Array(256);
+  for(let j=0;j<n;j++) tally[instState[j]]++;
+  stateRows=new Array(256);
+  for(let i=0;i<256;i++) stateRows[i]=new Int32Array(tally[i]);
+  const ptr=new Int32Array(256);
+  for(let j=0;j<n;j++){ const st=instState[j]; stateRows[st][ptr[st]++]=j; }
   mapGroup.add(mesh);
 }
 
-/* hover: Kerala tints the whole district with GSTOPS at pow(t,0.62) */
-function recolour(){
-  if(!mesh) return;
-  for(let j=0;j<cells.length;j++){
-    if(!sel && hoverState && instState[j]===hoverState)
-      ramp(GSTOPS,Math.pow(instT[j],0.62),col);
-    else
-      ramp(STOPS,Math.pow(instT[j],0.78),col);
-    mesh.setColorAt(j,col);
+/* hover: Kerala tints the district with GSTOPS at pow(t,0.62). Only the
+   state entering or leaving hover is repainted — repainting all 60k blocks
+   on every pointer move was most of the hover lag. */
+let painted=0;
+function tintState(si,green){
+  if(!mesh||!stateRows||!si) return;
+  const rows=stateRows[si]; if(!rows) return;
+  const tbl=green?LUT_G:LUT_T;
+  for(let k=0;k<rows.length;k++){
+    const j=rows[k];
+    mesh.setColorAt(j,lut(tbl,instT[j],col));
   }
   if(mesh.instanceColor) mesh.instanceColor.needsUpdate=true;
+}
+function recolour(){
+  const want=sel?0:hoverState;
+  if(want===painted) return;
+  if(painted) tintState(painted,false);
+  if(want) tintState(want,true);
+  painted=want;
 }
 
 /* ===================== per-state plate =====================
@@ -174,6 +208,7 @@ function recolour(){
    the samples either side, and the state mask still comes from the source
    grid, so no cell appears where the data says there is none. */
 const UP_CAP=90000, UP_MAX=6;
+let fineJob=null;
 let fineMesh=null, fineName='', fineW=0, fineH=0;
 let homeX=0, homeY=0;                 // where this state sits on the India plate
 
@@ -181,7 +216,7 @@ function disposeFine(){
   if(!fineMesh) return;
   fineGroup.remove(fineMesh);
   fineMesh.geometry.dispose(); fineMesh.material.dispose();
-  fineMesh=null; fineName='';
+  fineMesh=null; fineName=''; fineJob=null;
 }
 
 function bilin(a,w,h,fx,fy){
@@ -221,37 +256,55 @@ function buildFine(name){
     sm[r*bw+c]=wt?acc/wt:src[r*bw+c];
   }
 
+  /* Walk only the cells this state owns and emit F x F subcells inside each.
+     Scanning the bounding box instead threw away 71% of the work on a shape
+     as narrow as Kerala. Block count is now exactly owned * F^2. */
+  const own=new Int32Array(owned);
+  let p=0;
+  for(let r=0;r<bh;r++) for(let c=0;c<bw;c++) if(msk[r*bw+c]) own[p++]=r*bw+c;
+
   let F=1; while(F<UP_MAX && owned*(F+1)*(F+1)<=UP_CAP) F++;
+  const n=owned*F*F;
 
   const cxm=(x0+m.x1)/2, cym=(y0+m.y1)/2;
-  const fs=S/F, RW=bw*F, RH=bh*F;
-  const pos=[], els=[];
-  for(let r=0;r<RH;r++) for(let c=0;c<RW;c++){
-    const fx=(c+0.5)/F-0.5, fy=(r+0.5)/F-0.5;
-    const nc=Math.max(0,Math.min(bw-1,Math.round(fx)));
-    const nr=Math.max(0,Math.min(bh-1,Math.round(fy)));
-    if(!msk[nr*bw+nc]) continue;
-    pos.push(x0+fx, y0+fy); els.push(bilin(sm,bw,bh,fx,fy));
-  }
-  const n=els.length; if(!n) return;
   fineW=bw*S; fineH=bh*S;
   homeX=(cxm-GW/2)*S; homeY=-(cym-GH/2)*S;
 
-  const geo=new THREE.BoxGeometry(fs*0.985,fs*0.985,1);
+  const geo=new THREE.BoxGeometry((S/F)*0.985,(S/F)*0.985,1);
   const mat=new THREE.MeshLambertMaterial({transparent:true,opacity:0});
   fineMesh=new THREE.InstancedMesh(geo,mat,n);
-  const emax=Math.max(m.emax,320);
-  for(let j=0;j<n;j++){
-    const e=els[j], dep=depthOf(e);
-    dummy.position.set((pos[j*2]-cxm)*S, -(pos[j*2+1]-cym)*S, dep/2);
-    dummy.scale.set(1,1,dep); dummy.updateMatrix();
-    fineMesh.setMatrixAt(j,dummy.matrix);
-    fineMesh.setColorAt(j, ramp(STOPS,Math.pow(Math.min(1,e/emax),0.78),col));
-  }
-  fineMesh.instanceMatrix.needsUpdate=true;
-  if(fineMesh.instanceColor) fineMesh.instanceColor.needsUpdate=true;
+  fineMesh.count=0;                     // only draw what has been filled
   fineName=name;
   fineGroup.add(fineMesh);
+
+  /* Filled in slices from frame(). count rises as blocks land, so nothing
+     renders half-initialised, and the plate is fading in over the same
+     window anyway — the fill is invisible instead of a freeze. */
+  fineJob={ own:own, sm:sm, bw:bw, bh:bh, x0:x0, y0:y0, cxm:cxm, cym:cym,
+            F:F, i:0, out:0, emax:Math.max(m.emax,320),
+            per:Math.max(1,Math.ceil(9000/(F*F))) };
+}
+
+function stepFine(){
+  const jb=fineJob; if(!jb||!fineMesh) return;
+  const {own,sm,bw,bh,x0,y0,cxm,cym,F,emax}=jb;
+  const inv=1/F, end=Math.min(own.length, jb.i+jb.per);
+  for(; jb.i<end; jb.i++){
+    const k=own[jb.i], lr=(k/bw)|0, lc=k%bw;
+    for(let sy=0;sy<F;sy++) for(let sx=0;sx<F;sx++){
+      const fx=lc-0.5+(sx+0.5)*inv, fy=lr-0.5+(sy+0.5)*inv;
+      const e=bilin(sm,bw,bh,fx,fy), dep=depthOf(e);
+      dummy.position.set((x0+fx-cxm)*S, -(y0+fy-cym)*S, dep/2);
+      dummy.scale.set(1,1,dep); dummy.updateMatrix();
+      fineMesh.setMatrixAt(jb.out,dummy.matrix);
+      fineMesh.setColorAt(jb.out,lut(LUT_T,Math.min(1,e/emax),col));
+      jb.out++;
+    }
+  }
+  fineMesh.count=jb.out;
+  fineMesh.instanceMatrix.needsUpdate=true;
+  if(fineMesh.instanceColor) fineMesh.instanceColor.needsUpdate=true;
+  if(jb.i>=own.length) fineJob=null;
 }
 
 /* ===================== motion ===================== */
@@ -312,6 +365,7 @@ function frame(){
     renderer.setSize(w,h,false); camera.aspect=w/h; camera.updateProjectionMatrix();
   }
   clock+=0.006; idle++;
+  if(fineJob) stepFine();
   const open=!!sel;
   selMix+=((open?1:0)-selMix)*0.085;
 
@@ -331,7 +385,7 @@ function frame(){
   mapGroup.position.y=-mouseY*0.22*par;
   mapGroup.scale.setScalar(mapFit());
 
-  if(mesh) mesh.material.opacity=1-selMix;
+  if(mesh){ mesh.material.opacity=1-selMix; mesh.material.transparent=selMix>0.01; }
   if(mesh) mesh.visible=selMix<0.98;
 
   if(fineMesh){
