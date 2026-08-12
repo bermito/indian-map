@@ -561,11 +561,12 @@ function renderList(){
 document.getElementById('ebody').innerHTML=
   '<div class="evt"><div class="d">Add your event</div><h3>Cuppings &amp; producer days</h3>'+
   '<div class="v">Across India</div><p>Placeholder. Community cuppings, producer days, roaster meetups and training will be listed here.</p></div>';
-document.getElementById('ld').textContent=JSON.stringify([
- {"@context":"https://schema.org","@type":"Organization","name":"Specialty Coffee India","url":"https://specialtycoffeeindia.blog/"},
- {"@context":"https://schema.org","@type":"WebSite","name":"Specialty Coffee India","url":"https://specialtycoffeeindia.blog/"},
- {"@context":"https://schema.org","@type":"ItemList","name":"India specialty coffee directory","numberOfItems":TOTAL}
-]);
+/* WebSite and Organization are static in index.html so crawlers see them
+   without running JS; only the item count needs the data loaded. */
+const _ld=document.getElementById('ld');
+if(_ld) _ld.textContent=JSON.stringify(
+ {"@context":"https://schema.org","@type":"ItemList",
+  "name":"India specialty coffee directory","numberOfItems":TOTAL});
 
 /* ===================== boot ===================== */
 emaxLbl.textContent=fmt(INDIA_EMAX)+' m';
