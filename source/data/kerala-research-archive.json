@@ -1,0 +1,3132 @@
+{
+  "directory": [
+    {
+      "id": "IND-df1c33a074cd",
+      "name": "90Million Coffee",
+      "category": "Café / venue",
+      "kind": "cafes",
+      "state": "Kerala",
+      "district": "Ernakulam",
+      "city": "Kochi",
+      "country": "India",
+      "address": "Edward Square, Stadium Link Road, Kaloor, Kochi 682025",
+      "url": "https://90million.in/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=90Million+Coffee+Edward+Square%2C+Stadium+Link+Road%2C+Kaloor%2C+Kochi+682025",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Specialty Coffee Keralam directory"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/places/90million-coffee/",
+        "https://90million.in/"
+      ],
+      "sourceIds": [
+        "KL-010"
+      ],
+      "sourceLocations": [
+        "Edward Square, Stadium Link Road, Kaloor, Kochi 682025"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Kochi"
+      ],
+      "status": "primary_confirmed_business_and_city",
+      "evidenceLabel": "Primary source checked",
+      "verifiedFields": "specialty cafe; Kaloor Kochi",
+      "specialtyStatus": "directory_classification_only",
+      "geographyNote": "district_from_directory; exact_address_not_independently_verified",
+      "notes": "Official site confirms specialty Arabica and manual brews in Kaloor, Kochi. Full street address remains from directory.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-df7c6e28f2e2",
+      "name": "Bermito Coffee Roasters",
+      "category": "Café / venue",
+      "kind": "cafes",
+      "state": "Kerala",
+      "district": "Kozhikode",
+      "city": "Kozhikode",
+      "country": "India",
+      "address": "Bermito Coffee Roasters, Kozhikode, Kerala, India",
+      "mapUrl": "https://www.google.com/maps?cid=10875462897301442120",
+      "lat": 11.255566799999999,
+      "lng": 75.8108154,
+      "hasPin": true,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Arpan (coffee.devout) — Specialty Coffee Shops"
+      ],
+      "sourceUrls": [
+        "https://www.google.com/maps?cid=10875462897301442120"
+      ],
+      "sourceIds": [
+        "ARPAN-027"
+      ],
+      "sourceLocations": [
+        "Bermito Coffee Roasters, Kozhikode, Kerala, India"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Kozhikode"
+      ],
+      "status": "Public Google Maps shared-list record observed; business not independently verified",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "Directory or curator inclusion; not independently assessed",
+      "geographyNote": "Explicit source address; city normalized from source address; district read from source location",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-4e411709d026",
+      "name": "Brewmorphia Speciality Coffee",
+      "category": "Café / venue",
+      "kind": "cafes",
+      "state": "Kerala",
+      "district": "Kozhikode",
+      "city": "Kozhikode",
+      "country": "India",
+      "address": "Silk Street, behind Beach Post Office, Mananchira, Kozhikode",
+      "url": "https://brewmorphia.in/",
+      "mapUrl": "https://maps.app.goo.gl/DPR11avt6TMK5b6W7",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Specialty Coffee Keralam directory"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/places/brewmorphia-speciality-coffee/",
+        "https://brewmorphia.in/"
+      ],
+      "sourceIds": [
+        "KL-004"
+      ],
+      "sourceLocations": [
+        "Silk Street, behind Beach Post Office, Mananchira, Kozhikode"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Kozhikode"
+      ],
+      "status": "directory_only",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "directory_classification_only",
+      "geographyNote": "district_from_directory; exact_address_not_independently_verified",
+      "notes": "Official domain exists but body not readable in extraction. Public source spelling is Brewmorphia; Brewmophia from prior user context requires owner confirmation.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-94ad989bd6ae",
+      "name": "BRWLAB",
+      "category": "Café / venue",
+      "kind": "cafes",
+      "state": "Kerala",
+      "district": "Kannur",
+      "city": "Kannur",
+      "country": "India",
+      "address": "Payyambalam Beach Road, Chalad, Kannur",
+      "url": "https://brwlab.in/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=BRWLAB+Payyambalam+Beach+Road%2C+Chalad%2C+Kannur",
+      "lat": 11.873014,
+      "lng": 75.3507463,
+      "hasPin": true,
+      "sourceCount": 2,
+      "sourceNames": [
+        "Specialty Coffee Keralam directory; Arpan (coffee.devout) — Specialty Coffee Shops"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/places/brwlab/",
+        "https://www.tripadvisor.in/Restaurant_Review-g777115-d34649718-Reviews-Brwlab-Kannur_Kannur_District_Kerala.html",
+        "https://www.google.com/maps?cid=17869120411097649200"
+      ],
+      "sourceIds": [
+        "KL-032; ARPAN-132"
+      ],
+      "sourceLocations": [
+        "Payyambalam Beach Road, Chalad, Kannur",
+        "Payyambalam Beach Road, Chalad, Kannur, Kerala 670014"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Kannur"
+      ],
+      "status": "primary_confirms_cafe; address_conflict",
+      "evidenceLabel": "Primary source checked",
+      "verifiedFields": "cafe; Kannur; espresso/pour-over",
+      "specialtyStatus": "directory_classification_only",
+      "geographyNote": "address_conflict",
+      "notes": "Official site confirms Kannur and manual brewing but gives nearest Fort Road; directory/Tripadvisor give Payyambalam Beach Road, Chalad. Do not publish coordinates until resolved.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-77972f148fef",
+      "name": "Buna Kaapi",
+      "category": "Café / venue",
+      "kind": "cafes",
+      "state": "Kerala",
+      "district": "Alappuzha",
+      "city": "Alappuzha",
+      "country": "India",
+      "address": "14/2298 A, Janaki Building, Erezha, Mullakkal, Alappuzha 688011",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Tripadvisor"
+      ],
+      "sourceUrls": [
+        "https://www.tripadvisor.in/Restaurant_Review-g608471-d34021314-Reviews-Buna_kaapi-Alappuzha_Alappuzha_District_Kerala.html",
+        "https://www.quickerala.com/alleppey/restaurant/cafe/sbct-124-dt-1"
+      ],
+      "sourceIds": [
+        "KL-055"
+      ],
+      "sourceLocations": [
+        "14/2298 A, Janaki Building, Erezha, Mullakkal, Alappuzha 688011"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Alappuzha"
+      ],
+      "status": "third_party_coffee_shop_lead; specialty_unconfirmed",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "traditional_coffee_cafe; specialty_unconfirmed",
+      "geographyNote": "source_geography; exact_pin_unverified",
+      "notes": "Third-party listing and review support a women-led coffee shop and Alappuzha address. Filter-coffee focus is described in other directories; specialty and pour-over tags are not independently confirmed.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-cd03a0044cd0",
+      "name": "Cafe Addict — Thrissur",
+      "category": "Café / venue",
+      "kind": "cafes",
+      "state": "Kerala",
+      "district": "Thrissur",
+      "city": "Thrissur",
+      "country": "India",
+      "address": "Kizhakkumpattukara, Thrissur",
+      "url": "https://cafeaddict.in/",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Zomato"
+      ],
+      "sourceUrls": [
+        "https://www.zomato.com/cs/thrissur/cafe-addict-kizhakkumpattukara/order",
+        "https://www.swiggy.com/city/thrissur/cafe-addict-aristo-road-uday-nagar-rest924074"
+      ],
+      "sourceIds": [
+        "KL-052"
+      ],
+      "sourceLocations": [
+        "Kizhakkumpattukara, Thrissur"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Thrissur"
+      ],
+      "status": "third_party_menu_lead",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "not_independently_scored",
+      "geographyNote": "source_geography; exact_pin_unverified",
+      "notes": "Ordering menu lists V60 pour-over under specialty coffee; exact address and branch operation need official confirmation.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-adf95beab5b4",
+      "name": "Cafe Addict Kochi",
+      "category": "Café / venue",
+      "kind": "cafes",
+      "state": "Kerala",
+      "district": "Ernakulam",
+      "city": "Kochi",
+      "country": "India",
+      "address": "31/256, Pookattupady Road, Unnichira, Edappally, Ernakulam 682021",
+      "url": "https://cafeaddict.in/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Cafe+Addict+Kochi+31%2F256%2C+Pookattupady+Road%2C+Unnichira%2C+Edappally%2C+Ernakulam+682021",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Specialty Coffee Keralam directory"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/places/cafe-addict-kochi/",
+        "https://cafeaddict.in/"
+      ],
+      "sourceIds": [
+        "KL-012"
+      ],
+      "sourceLocations": [
+        "31/256, Pookattupady Road, Unnichira, Edappally, Ernakulam 682021"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Kochi"
+      ],
+      "status": "directory_only",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "directory_classification_only",
+      "geographyNote": "district_from_directory; exact_address_not_independently_verified",
+      "notes": "Listed in Keralam directory; primary business confirmation pending.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-4e528ca07f5e",
+      "name": "Cafe Paradiso Espresso Coffee Bar",
+      "category": "Café / venue",
+      "kind": "cafes",
+      "state": "Kerala",
+      "district": "Alappuzha",
+      "city": "Alappuzha",
+      "country": "India",
+      "address": "Near Foot Bridge, Hanuman Temple Road, Alappuzha 688013",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Tripadvisor"
+      ],
+      "sourceUrls": [
+        "https://www.tripadvisor.in/Restaurant_Review-g608471-d3658606-Reviews-Cafe_Paradiso_Espresso_Coffee_Bar-Alappuzha_Alappuzha_District_Kerala.html"
+      ],
+      "sourceIds": [
+        "KL-058"
+      ],
+      "sourceLocations": [
+        "Near Foot Bridge, Hanuman Temple Road, Alappuzha 688013"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Alappuzha"
+      ],
+      "status": "claimed_third_party_business_listing",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "espresso_coffee_bar; specialty_unconfirmed",
+      "geographyNote": "source_geography; exact_pin_unverified",
+      "notes": "Claimed business listing describes an espresso coffee bar serving Italian coffee and gives Alappuzha address. No independent specialty or traceable-bean evidence established.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-b204dcc9af21",
+      "name": "Cafficana",
+      "category": "Café / venue",
+      "kind": "cafes",
+      "state": "Kerala",
+      "district": "Ernakulam",
+      "city": "Kochi",
+      "country": "India",
+      "address": "56/3317, 5th Cross Road, opposite Mammootty Palam, KV Nagar, Panampilly Nagar, Kochi, Kerala 682036",
+      "url": "https://cafficana.com/menu/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Cafficana+56%2F3317+5th+Cross+Road+Panampilly+Nagar+Kochi",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Indian Coffee Stories"
+      ],
+      "sourceUrls": [
+        "https://www.indiancoffeestories.com/cafes#cafe-kochi-cafficana"
+      ],
+      "sourceIds": [
+        "ics-cafe-1741928643ee"
+      ],
+      "sourceLocations": [
+        "Kochi"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Kochi"
+      ],
+      "status": "directory_evidence_only",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "Directory or curator inclusion; not independently assessed",
+      "geographyNote": "Source location label; not independently geocoded. May name multiple places or a region.; state read from location text; district from Kerala city mapping, no boundary geocode",
+      "notes": "Official URL is the directory-labelled source link, not independently checked. District and state require normalization and verification.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-d71bf63144d3",
+      "name": "Cafficana Kochi",
+      "category": "Café / venue",
+      "kind": "cafes",
+      "state": "Kerala",
+      "district": "Ernakulam",
+      "city": "Kochi",
+      "country": "India",
+      "address": "56/3317, 5th Cross Road, opposite Mammootty Palam, Panampilly Nagar, Kochi 682036",
+      "url": "https://cafficana.com/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Cafficana+Kochi+56%2F3317%2C+5th+Cross+Road%2C+opposite+Mammootty+Palam%2C+Panampilly+Nagar%2C+Kochi+682036",
+      "lat": 9.9624369,
+      "lng": 76.2977226,
+      "hasPin": true,
+      "sourceCount": 2,
+      "sourceNames": [
+        "Specialty Coffee Keralam directory; Arpan (coffee.devout) — Specialty Coffee Shops"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/places/cafficana-kochi/",
+        "https://www.district.in/dining/kochi/cafficana-panampilly-nagar",
+        "https://www.google.com/maps?cid=14222622993148076980"
+      ],
+      "sourceIds": [
+        "KL-011; ARPAN-269"
+      ],
+      "sourceLocations": [
+        "56/3317, 5th Cross Road, opposite Mammootty Palam, Panampilly Nagar, Kochi 682036",
+        "opposite Mammooty Palam, 56/3317, 5th Cross Road, Panampilly Nagar, Kochi, Kerala 682036"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Kochi"
+      ],
+      "status": "directory_only",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "directory_classification_only",
+      "geographyNote": "district_from_directory; exact_address_not_independently_verified",
+      "notes": "Listed in Keralam directory; primary business confirmation pending.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-5f15afd0e48b",
+      "name": "Cafficana Kozhikode",
+      "category": "Café / venue",
+      "kind": "cafes",
+      "state": "Kerala",
+      "district": "Kozhikode",
+      "city": "Kozhikode",
+      "country": "India",
+      "address": "Kozhikode Bypass Road, near UL Cyber Park, Thondayad, Kozhikode",
+      "url": "https://cafficana.com/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Cafficana+Kozhikode+Kozhikode+Bypass+Road%2C+near+UL+Cyber+Park%2C+Thondayad%2C+Kozhikode",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Specialty Coffee Keralam directory"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/places/cafficana-kozhikode/",
+        "https://cafficana.com/"
+      ],
+      "sourceIds": [
+        "KL-006"
+      ],
+      "sourceLocations": [
+        "Kozhikode Bypass Road, near UL Cyber Park, Thondayad, Kozhikode"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Kozhikode"
+      ],
+      "status": "primary_confirmed_business_and_address",
+      "evidenceLabel": "Primary source checked",
+      "verifiedFields": "cafe; Kozhikode address; manual brew methods",
+      "specialtyStatus": "directory_classification_only",
+      "geographyNote": "district_from_directory; exact_address_not_independently_verified",
+      "notes": "Official site names Kozhikode Bypass Road near UL Cyber Park and Chemex, V60, Aeropress, French Press and Moka Pot.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-4d37c0b64b5f",
+      "name": "Epic Poetry Cafe & Patisserie",
+      "category": "Café / venue",
+      "kind": "cafes",
+      "state": "Kerala",
+      "district": "Ernakulam",
+      "city": "Kochi",
+      "country": "India",
+      "address": "Opposite Pillar 841, Janatha Junction, Vyttila, Kochi, Kerala 682019",
+      "url": "https://epicpoetry.in/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Epic+Poetry+Cafe+Patisserie+Pillar+841+Vyttila+Kochi",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Indian Coffee Stories"
+      ],
+      "sourceUrls": [
+        "https://www.indiancoffeestories.com/cafes#cafe-kochi-epic-poetry-cafe-patisserie"
+      ],
+      "sourceIds": [
+        "ics-cafe-e9db083448be"
+      ],
+      "sourceLocations": [
+        "Kochi"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Kochi"
+      ],
+      "status": "directory_evidence_only",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "Directory or curator inclusion; not independently assessed",
+      "geographyNote": "Source location label; not independently geocoded. May name multiple places or a region.; state read from location text; district from Kerala city mapping, no boundary geocode",
+      "notes": "Official URL is the directory-labelled source link, not independently checked. District and state require normalization and verification.",
+      "checkedDate": "2026-11-15",
+      "originalWebsiteReferences": [
+        "LEGACY-3ee7d634ae19"
+      ]
+    },
+    {
+      "id": "IND-d329b91867d1",
+      "name": "FFox coffee",
+      "category": "Café / venue",
+      "kind": "cafes",
+      "state": "Kerala",
+      "country": "India",
+      "address": "Metro Pillar No. 117, Companypady, Kerala 683106",
+      "mapUrl": "https://www.google.com/maps?cid=3882672325081072091",
+      "lat": 10.0981875,
+      "lng": 76.35871879999999,
+      "hasPin": true,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Arpan (coffee.devout) — Specialty Coffee Shops"
+      ],
+      "sourceUrls": [
+        "https://www.google.com/maps?cid=3882672325081072091"
+      ],
+      "sourceIds": [
+        "ARPAN-394"
+      ],
+      "sourceLocations": [
+        "Metro Pillar No. 117, Companypady, Kerala 683106"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "status": "Public Google Maps shared-list record observed; business not independently verified",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "Directory or curator inclusion; not independently assessed",
+      "geographyNote": "Explicit source address",
+      "reviewNeeded": "District not yet verified",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-1b7120e7b44f",
+      "name": "Haneen Cafe",
+      "category": "Café / venue",
+      "kind": "cafes",
+      "state": "Kerala",
+      "district": "Malappuram",
+      "city": "Manjeri",
+      "country": "India",
+      "address": "Rajiv Gandhi Bypass, near Malabar Hospital, Manjeri",
+      "url": "https://www.instagram.com/haneencafe_/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Haneen+Cafe+Rajiv+Gandhi+Bypass%2C+near+Malabar+Hospital%2C+Manjeri",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Specialty Coffee Keralam directory"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/places/haneen-cafe/",
+        "https://www.zomato.com/manjeri/haneen-cafe-1-manjeri-locality/order"
+      ],
+      "sourceIds": [
+        "KL-028"
+      ],
+      "sourceLocations": [
+        "Rajiv Gandhi Bypass, near Malabar Hospital, Manjeri"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Manjeri"
+      ],
+      "status": "directory_only",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "directory_classification_only",
+      "geographyNote": "district_from_directory; exact_address_not_independently_verified",
+      "notes": "Listed in Keralam directory; primary business confirmation pending.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-eaf7199ef73a",
+      "name": "Kaapi Street",
+      "category": "Café / venue",
+      "kind": "cafes",
+      "state": "Kerala",
+      "district": "Ernakulam",
+      "city": "Kochi",
+      "country": "India",
+      "address": "Queens Walkway, Ernakulam, Kochi, Kerala",
+      "url": "https://www.kaapistreet.com/",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Kaapi Street"
+      ],
+      "sourceUrls": [
+        "https://www.kaapistreet.com/"
+      ],
+      "sourceIds": [
+        "KL-048"
+      ],
+      "sourceLocations": [
+        "Queens Walkway, Ernakulam, Kochi, Kerala"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Kochi"
+      ],
+      "status": "primary_confirmed_business_and_address",
+      "evidenceLabel": "Primary source checked",
+      "specialtyStatus": "not_independently_scored",
+      "geographyNote": "source_geography; exact_pin_unverified",
+      "notes": "Official site confirms specialty coffee cart/cafe and Queens Walkway address.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-0c0b86c679f2",
+      "name": "Kashi Art Cafe",
+      "category": "Café / venue",
+      "kind": "cafes",
+      "state": "Kerala",
+      "district": "Ernakulam",
+      "city": "Kochi",
+      "country": "India",
+      "address": "1/440, Burger Street, Fort Nagar, Fort Kochi, Kochi, Kerala 682001",
+      "url": "https://www.kashihalleguahouse.com/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Kashi+Art+Cafe+1%2F440+Burger+Street+Fort+Kochi",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Indian Coffee Stories"
+      ],
+      "sourceUrls": [
+        "https://www.indiancoffeestories.com/cafes#cafe-kochi-kashi-art-cafe"
+      ],
+      "sourceIds": [
+        "ics-cafe-29b6cad9184b"
+      ],
+      "sourceLocations": [
+        "Kochi"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Kochi"
+      ],
+      "status": "directory_evidence_only",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "Directory or curator inclusion; not independently assessed",
+      "geographyNote": "Source location label; not independently geocoded. May name multiple places or a region.; state read from location text; district from Kerala city mapping, no boundary geocode",
+      "notes": "Official URL is the directory-labelled source link, not independently checked. District and state require normalization and verification.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-8eab82f9f7c5",
+      "name": "Kochi Kapital Kafe",
+      "category": "Café / venue",
+      "kind": "cafes",
+      "state": "Kerala",
+      "district": "Ernakulam",
+      "city": "Kochi",
+      "country": "India",
+      "address": "Peter Celli Street, Fort Nagar, Fort Kochi, Kochi, Kerala 682001",
+      "url": "https://www.kochikapitalkafe.com/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Kochi+Kapital+Kafe+Peter+Celli+Street+Fort+Kochi",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Indian Coffee Stories"
+      ],
+      "sourceUrls": [
+        "https://www.indiancoffeestories.com/cafes#cafe-kochi-kochi-kapital-kafe"
+      ],
+      "sourceIds": [
+        "ics-cafe-f031b5c66eaa"
+      ],
+      "sourceLocations": [
+        "Kochi"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Kochi"
+      ],
+      "status": "directory_evidence_only",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "Directory or curator inclusion; not independently assessed",
+      "geographyNote": "Source location label; not independently geocoded. May name multiple places or a region.; state read from location text; district from Kerala city mapping, no boundary geocode",
+      "notes": "Official URL is the directory-labelled source link, not independently checked. District and state require normalization and verification.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-3440c749415e",
+      "name": "Overdose Cafe",
+      "category": "Café / venue",
+      "kind": "cafes",
+      "state": "Kerala",
+      "district": "Kozhikode",
+      "city": "Kozhikode",
+      "country": "India",
+      "address": "Kuttichira, Kozhikode",
+      "mapUrl": "https://maps.app.goo.gl/e5cCiFrJhbHj2m188",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Specialty Coffee Keralam directory"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/places/overdose-cafe/",
+        "https://echai.ventures/grid/kozhikode/tours/cafes"
+      ],
+      "sourceIds": [
+        "KL-008"
+      ],
+      "sourceLocations": [
+        "Kuttichira, Kozhikode"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Kozhikode"
+      ],
+      "status": "directory_only",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "directory_classification_only",
+      "geographyNote": "district_from_directory; exact_address_not_independently_verified",
+      "notes": "Listed in Keralam directory; primary business confirmation pending.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-29905f4a0724",
+      "name": "Pepper House",
+      "category": "Café / venue",
+      "kind": "cafes",
+      "state": "Kerala",
+      "district": "Ernakulam",
+      "city": "Kochi",
+      "country": "India",
+      "address": "11/10 A&B, Calvathy Rd, near Hotel Seagull, Fort Kochi, Kochi, Kerala 682001",
+      "mapUrl": "https://www.google.com/maps?cid=6266547905633857724",
+      "lat": 9.968859,
+      "lng": 76.250199,
+      "hasPin": true,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Arpan (coffee.devout) — Specialty Coffee Shops"
+      ],
+      "sourceUrls": [
+        "https://www.google.com/maps?cid=6266547905633857724"
+      ],
+      "sourceIds": [
+        "ARPAN-135"
+      ],
+      "sourceLocations": [
+        "11/10 A&B, Calvathy Rd, near Hotel Seagull, Fort Kochi, Kochi, Kerala 682001"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Kochi"
+      ],
+      "status": "Public Google Maps shared-list record observed; business not independently verified",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "Directory or curator inclusion; not independently assessed",
+      "geographyNote": "Explicit source address; city normalized from source address; district from Kerala city mapping, no boundary geocode",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-0cd7676b139d",
+      "name": "POUR OVER LAB",
+      "category": "Café / venue",
+      "kind": "cafes",
+      "state": "Kerala",
+      "district": "Ernakulam",
+      "country": "India",
+      "address": "Melangth Ln, Kaloor, Ernakulam, Kerala 682017",
+      "mapUrl": "https://www.google.com/maps?cid=6083024756640137357",
+      "lat": 9.9943092,
+      "lng": 76.2931661,
+      "hasPin": true,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Arpan (coffee.devout) — Specialty Coffee Shops"
+      ],
+      "sourceUrls": [
+        "https://www.google.com/maps?cid=6083024756640137357"
+      ],
+      "sourceIds": [
+        "ARPAN-146"
+      ],
+      "sourceLocations": [
+        "Melangth Ln, Kaloor, Ernakulam, Kerala 682017"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "status": "Public Google Maps shared-list record observed; business not independently verified",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "Directory or curator inclusion; not independently assessed",
+      "geographyNote": "Explicit source address; district read from source location",
+      "checkedDate": "2026-11-15",
+      "originalWebsiteReferences": [
+        "LEGACY-dc07e16ddc76"
+      ]
+    },
+    {
+      "id": "IND-f2fe174bca10",
+      "name": "Slolabs by Cafficana",
+      "category": "Café / venue",
+      "kind": "cafes",
+      "state": "Kerala",
+      "district": "Kozhikode",
+      "city": "Kozhikode",
+      "country": "India",
+      "address": "62/1155, PT Usha Road, near Lakeshore Medical Centre, 4th Gate, Vellayil, Kozhikode 673032",
+      "url": "https://slolabs.in/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Slolabs+by+Cafficana+62%2F1155%2C+PT+Usha+Road%2C+near+Lakeshore+Medical+Centre%2C+4th+Gate%2C+Vellayil%2C+Kozhikode+673032",
+      "lat": 11.258209899999999,
+      "lng": 75.7754666,
+      "hasPin": true,
+      "sourceCount": 2,
+      "sourceNames": [
+        "Specialty Coffee Keralam directory; Arpan (coffee.devout) — Specialty Coffee Shops"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/places/slolabs-by-cafficana/",
+        "https://www.calicutcafeteria.com/cafes-in-calicut/slolabs-by-cafficana",
+        "https://www.google.com/maps?cid=16149731757821416137"
+      ],
+      "sourceIds": [
+        "KL-009; ARPAN-195"
+      ],
+      "sourceLocations": [
+        "62/1155, PT Usha Road, near Lakeshore Medical Centre, 4th Gate, Vellayil, Kozhikode 673032"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Kozhikode"
+      ],
+      "status": "directory_only",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "directory_classification_only",
+      "geographyNote": "district_from_directory; exact_address_not_independently_verified",
+      "notes": "Directory and third-party cafe guide support listing. Official domain currently shows only Launching Soon; this does not establish that venue is closed. | Supplementary directory evidence; not independently verified from business in this pass",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-9858ee7eccf3",
+      "name": "Sukoru Specialty Coffee",
+      "category": "Café / venue",
+      "kind": "cafes",
+      "state": "Kerala",
+      "district": "Kozhikode",
+      "city": "Kozhikode",
+      "country": "India",
+      "address": "English Parambil, near District Court, Kozhikode Beach, Kozhikode",
+      "url": "https://sukoru.coffee/",
+      "mapUrl": "https://maps.app.goo.gl/FkgBVuDVj9qhmLfd9?g_st=ic",
+      "lat": 11.252165699999999,
+      "lng": 75.77411959999999,
+      "hasPin": true,
+      "sourceCount": 2,
+      "sourceNames": [
+        "Specialty Coffee Keralam directory; Arpan (coffee.devout) — Specialty Coffee Shops"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/places/sukoru/",
+        "https://sukoru.coffee/",
+        "https://www.google.com/maps?cid=14701565897965806187"
+      ],
+      "sourceIds": [
+        "KL-005; ARPAN-133"
+      ],
+      "sourceLocations": [
+        "English Parambil, near District Court, Kozhikode Beach, Kozhikode",
+        "A English parambil, 61/751, near Dist. court, Mananchira, Kozhikode, Kerala 673032, India"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Kozhikode"
+      ],
+      "status": "directory_only",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "directory_classification_only",
+      "geographyNote": "district_from_directory; exact_address_not_independently_verified",
+      "notes": "Listed in Keralam directory; primary business confirmation pending.",
+      "checkedDate": "2026-11-15",
+      "originalWebsiteReferences": [
+        "LEGACY-090886ce4091"
+      ]
+    },
+    {
+      "id": "IND-7aea20bfa097",
+      "name": "Third Wave Coffee — Airport",
+      "category": "Café / venue",
+      "kind": "cafes",
+      "state": "Kerala",
+      "district": "Thiruvananthapuram",
+      "city": "Thiruvananthapuram",
+      "country": "India",
+      "address": "L1-60, Terminal 2 departures, Thiruvananthapuram International Airport, Airport Road, Chackai",
+      "url": "https://stores.thirdwavecoffeeroasters.com/store-pages/third-wave-coffee-trivandrum-airport-thiruvananthapuram",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Third+Wave+Coffee+T2+Departure+Trivandrum&query_place_id=ChIJu3A_Cs67BTsRSJZbCUAz7rA",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Specialty Coffee Keralam directory"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/places/third-wave-coffee-airport/",
+        "https://stores.thirdwavecoffeeroasters.com/store-pages/third-wave-coffee-trivandrum-airport-thiruvananthapuram"
+      ],
+      "sourceIds": [
+        "KL-033"
+      ],
+      "sourceLocations": [
+        "L1-60, Terminal 2 departures, Thiruvananthapuram International Airport, Airport Road, Chackai"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Thiruvananthapuram"
+      ],
+      "status": "primary_confirmed_branch_and_address",
+      "evidenceLabel": "Primary source checked",
+      "verifiedFields": "cafe branch; address",
+      "specialtyStatus": "directory_classification_only",
+      "geographyNote": "official_store_address",
+      "notes": "Official store page confirms branch and address. Classified as cafe branch, not separate roasting business. Airside Terminal 2 departure access; not a general street-access cafe.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-64f11123fcb0",
+      "name": "Third Wave Coffee — Noel Focus Mall, Kakkanad",
+      "category": "Café / venue",
+      "kind": "cafes",
+      "state": "Kerala",
+      "district": "Ernakulam",
+      "city": "Kochi",
+      "country": "India",
+      "address": "Unit 2, door 18/1155, ground floor, Noel Focus Mall, Seaport–Airport Road, Chittethukara, Kakkanad",
+      "url": "https://stores.thirdwavecoffeeroasters.com/store-pages/third-wave-coffee-noel-mall-kochi",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Third+Wave+Coffee+Noel+Focus+Mall%2C+Kakkanad+Unit+2%2C+door+18%2F1155%2C+ground+floor%2C+Noel+Focus+Mall%2C+Seaport%E2%80%93Airport+Road%2C+Chittethukara%2C+Kakkanad",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Specialty Coffee Keralam directory"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/places/third-wave-coffee-noel-mall-kakkanad/",
+        "https://stores.thirdwavecoffeeroasters.com/store-pages/third-wave-coffee-noel-mall-kochi"
+      ],
+      "sourceIds": [
+        "KL-014"
+      ],
+      "sourceLocations": [
+        "Unit 2, door 18/1155, ground floor, Noel Focus Mall, Seaport–Airport Road, Chittethukara, Kakkanad"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Kochi"
+      ],
+      "status": "primary_confirmed_branch_and_address",
+      "evidenceLabel": "Primary source checked",
+      "verifiedFields": "cafe branch; address",
+      "specialtyStatus": "directory_classification_only",
+      "geographyNote": "official_store_address",
+      "notes": "Official store page confirms branch and address. Classified as cafe branch, not separate roasting business.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-3a3741153e82",
+      "name": "Third Wave Coffee — Panampilly Nagar",
+      "category": "Café / venue",
+      "kind": "cafes",
+      "state": "Kerala",
+      "district": "Ernakulam",
+      "city": "Kochi",
+      "country": "India",
+      "address": "Ground floor, 56/2988, HIG 36, Murikkummootil, Panampilly Nagar, Kochi",
+      "url": "https://stores.thirdwavecoffeeroasters.com/store-pages/third-wave-coffee-panampilly-kochi",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Third+Wave+Coffee+%E2%80%94+Panampilly+Nagar+Ground+floor%2C+56%2F2988%2C+HIG+36%2C+Murikkummootil%2C+Panampilly+Nagar%2C+Kochi",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Specialty Coffee Keralam directory"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/places/third-wave-coffee-panampilly-nagar/",
+        "https://stores.thirdwavecoffeeroasters.com/store-pages/third-wave-coffee-panampilly-kochi"
+      ],
+      "sourceIds": [
+        "KL-013"
+      ],
+      "sourceLocations": [
+        "Ground floor, 56/2988, HIG 36, Murikkummootil, Panampilly Nagar, Kochi"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Kochi"
+      ],
+      "status": "primary_confirmed_branch_and_address",
+      "evidenceLabel": "Primary source checked",
+      "verifiedFields": "cafe branch; address",
+      "specialtyStatus": "directory_classification_only",
+      "geographyNote": "official_store_address",
+      "notes": "Official store page confirms branch and address. Classified as cafe branch, not separate roasting business.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-808e12016597",
+      "name": "Trouvaille",
+      "category": "Café / venue",
+      "kind": "cafes",
+      "state": "Kerala",
+      "district": "Ernakulam",
+      "city": "Kochi",
+      "country": "India",
+      "address": "Princess Street, Fort Nagar, Fort Kochi, Kochi, Kerala 682001",
+      "url": "https://trouvaillecafe.in/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Trouvaille+Princess+Street+Fort+Kochi",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Indian Coffee Stories"
+      ],
+      "sourceUrls": [
+        "https://www.indiancoffeestories.com/cafes#cafe-kochi-trouvaille"
+      ],
+      "sourceIds": [
+        "ics-cafe-1ce2bb323c89"
+      ],
+      "sourceLocations": [
+        "Kochi"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Kochi"
+      ],
+      "status": "directory_evidence_only",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "Directory or curator inclusion; not independently assessed",
+      "geographyNote": "Source location label; not independently geocoded. May name multiple places or a region.; state read from location text; district from Kerala city mapping, no boundary geocode",
+      "notes": "Official URL is the directory-labelled source link, not independently checked. District and state require normalization and verification.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-2a1c317ea628",
+      "name": "Turf Cafe",
+      "category": "Café / venue",
+      "kind": "cafes",
+      "state": "Kerala",
+      "district": "Thiruvananthapuram",
+      "city": "Thiruvananthapuram",
+      "country": "India",
+      "url": "https://www.turfcafe.in/",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Turf Cafe"
+      ],
+      "sourceUrls": [
+        "https://www.turfcafe.in/_files/ugd/0f37ec_ef2bdea451ed449cbb08af15164ee0cf.pdf"
+      ],
+      "sourceIds": [
+        "KL-053"
+      ],
+      "sourceLocations": [
+        "Thiruvananthapuram"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Thiruvananthapuram"
+      ],
+      "status": "official_menu_lead",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "not_independently_scored",
+      "geographyNote": "source_geography; exact_pin_unverified",
+      "notes": "Official menu PDF identifies specialty coffee / Trivandrum blend. Exact address and current coffee programme require follow-up.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-5f7c9214bc8c",
+      "name": "Underblu Coffee",
+      "category": "Café / venue",
+      "kind": "cafes",
+      "state": "Kerala",
+      "district": "Kozhikode",
+      "city": "Kozhikode",
+      "country": "India",
+      "address": "Silk St, near South Beach Road, Mananchira, Kozhikode, Kerala 673001, India",
+      "mapUrl": "https://www.google.com/maps?cid=8312172885149286833",
+      "lat": 11.2528273,
+      "lng": 75.774773,
+      "hasPin": true,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Arpan (coffee.devout) — Specialty Coffee Shops"
+      ],
+      "sourceUrls": [
+        "https://www.google.com/maps?cid=8312172885149286833"
+      ],
+      "sourceIds": [
+        "ARPAN-270"
+      ],
+      "sourceLocations": [
+        "Silk St, near South Beach Road, Mananchira, Kozhikode, Kerala 673001, India"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Kozhikode"
+      ],
+      "status": "Public Google Maps shared-list record observed; business not independently verified",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "Directory or curator inclusion; not independently assessed",
+      "geographyNote": "Explicit source address; city normalized from source address; district read from source location",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-9424f567cb5d",
+      "name": "Underblu Specialty Coffee",
+      "category": "Café / venue",
+      "kind": "cafes",
+      "state": "Kerala",
+      "district": "Kozhikode",
+      "city": "Kozhikode",
+      "country": "India",
+      "address": "Kozhikode (Calicut) · current visiting address unconfirmed",
+      "url": "https://www.underblu.in/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Underblu+Specialty+Coffee+Kozhikode",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Specialty Coffee Keralam directory"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/places/underblu-specialty-coffee/",
+        "https://www.underblu.in/"
+      ],
+      "sourceIds": [
+        "KL-007"
+      ],
+      "sourceLocations": [
+        "Kozhikode (Calicut) · current visiting address unconfirmed"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Kozhikode"
+      ],
+      "status": "directory_only",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "directory_classification_only",
+      "geographyNote": "district_from_directory; exact_address_not_independently_verified",
+      "notes": "Official domain title confirms Underblu name but public body not readable. Keep Underbrew as an unconfirmed historic/transcription alias, not a separate automatic entity.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-812b4874923f",
+      "name": "Understory Cafe",
+      "category": "Café / venue",
+      "kind": "cafes",
+      "state": "Kerala",
+      "district": "Malappuram",
+      "city": "Manjeri",
+      "country": "India",
+      "address": "Thurakkal Baputty Bypass Road, Patterkulam, Manjeri",
+      "mapUrl": "https://maps.app.goo.gl/cvAJQD5CuF4JD3qz8",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Specialty Coffee Keralam directory"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/places/understory-cafe/"
+      ],
+      "sourceIds": [
+        "KL-027"
+      ],
+      "sourceLocations": [
+        "Thurakkal Baputty Bypass Road, Patterkulam, Manjeri"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Manjeri"
+      ],
+      "status": "directory_only",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "directory_classification_only",
+      "geographyNote": "district_from_directory; exact_address_not_independently_verified",
+      "notes": "Listed in Keralam directory; primary business confirmation pending.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-a7a3c1e88a27",
+      "name": "Wishlist Coffee",
+      "category": "Café / venue",
+      "kind": "cafes",
+      "state": "Kerala",
+      "district": "Wayanad",
+      "city": "Kalpetta",
+      "country": "India",
+      "address": "Green Land Nagar, opposite Leo Hospital Road, next to Laquire Restaurant, Kalpetta, Wayanad 673121",
+      "url": "https://wishlist.coffee/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Wishlist+Coffee+Green+Land+Nagar%2C+opposite+Leo+Hospital+Road%2C+next+to+Laquire+Restaurant%2C+Kalpetta%2C+Wayanad+673121",
+      "lat": 11.6043709,
+      "lng": 76.0834058,
+      "hasPin": true,
+      "sourceCount": 2,
+      "sourceNames": [
+        "Specialty Coffee Keralam directory; Arpan (coffee.devout) — Specialty Coffee Shops"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/places/wishlist-coffee/",
+        "https://www.tripadvisor.in/Restaurant_Review-g1232778-d34251346-Reviews-Wishlist_Coffee-Kalpetta_Wayanad_District_Kerala.html",
+        "https://www.google.com/maps?cid=8832285828920204935"
+      ],
+      "sourceIds": [
+        "KL-017; ARPAN-127"
+      ],
+      "sourceLocations": [
+        "Green Land Nagar, opposite Leo Hospital Road, next to Laquire Restaurant, Kalpetta, Wayanad 673121",
+        "opp. to Leo Hospital Road, next to Laquire Restaurant, Green Land Nagar, Kalpetta, Kerala 673121"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Kalpetta"
+      ],
+      "status": "directory_only",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "directory_classification_only",
+      "geographyNote": "district_from_directory; exact_address_not_independently_verified; city normalized from source address",
+      "notes": "Listed in Keralam directory; primary business confirmation pending.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-b11e05a13e1b",
+      "name": "Beans of Bodhi",
+      "category": "Coffee brand / other",
+      "kind": "brands",
+      "state": "Kerala",
+      "district": "Wayanad",
+      "country": "India",
+      "address": "Wayanad, Kerala 673721",
+      "url": "https://www.beansofbodhi.com/",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Beans of Bodhi company profile"
+      ],
+      "sourceUrls": [
+        "https://in.linkedin.com/company/beans-of-bodhi"
+      ],
+      "sourceIds": [
+        "KL-047"
+      ],
+      "sourceLocations": [
+        "Wayanad, Kerala 673721"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "status": "public_company_profile; facility_unverified",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "not_independently_scored",
+      "geographyNote": "source_geography; exact_pin_unverified",
+      "notes": "Company profile lists Wayanad location and London headquarters. Roasting-facility address not established.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-b535a7e027d8",
+      "name": "Castle Coffee",
+      "category": "Coffee brand / other",
+      "kind": "brands",
+      "state": "Kerala",
+      "district": "Pathanamthitta",
+      "city": "Kunnamthanam",
+      "country": "India",
+      "address": "Kunnamthanam, Mallapally, Pathanamthitta, Kerala",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "The Company Check / Kerala Taxes"
+      ],
+      "sourceUrls": [
+        "https://www.thecompanycheck.com/org/castle-coffee/9278e894ae",
+        "https://keralataxes.gov.in/wp-content/uploads/2017/12/GST_Tax_Payer_Division_Order.pdf"
+      ],
+      "sourceIds": [
+        "KL-057"
+      ],
+      "sourceLocations": [
+        "Kunnamthanam, Mallapally, Pathanamthitta, Kerala"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Kunnamthanam"
+      ],
+      "status": "registry_aggregator_and_historical_government_lead; current_operations_unverified",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "broad_coffee_trade; specialty_unconfirmed",
+      "geographyNote": "source_geography; exact_pin_unverified",
+      "notes": "Public enterprise profile records coffee curing, roasting, grinding, blending and manufacturing in Pathanamthitta, with classification dated 2023-24. Historical government tax record also names the firm. Current operation and exact facility address require confirmation; sources disagree on postcode, so it is omitted.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-53511e8038e2",
+      "name": "Elements Homestead Products",
+      "category": "Coffee brand / other",
+      "kind": "brands",
+      "state": "Kerala",
+      "district": "Kozhikode",
+      "city": "Kozhikode",
+      "country": "India",
+      "address": "4/1418-B, Customs Road, Kozhikode",
+      "url": "https://elementsshop.in/",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Elements"
+      ],
+      "sourceUrls": [
+        "https://elementsshop.in/pages/contact"
+      ],
+      "sourceIds": [
+        "KL-050"
+      ],
+      "sourceLocations": [
+        "4/1418-B, Customs Road, Kozhikode"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Kozhikode"
+      ],
+      "status": "primary_confirmed_business_and_address",
+      "evidenceLabel": "Primary source checked",
+      "specialtyStatus": "not_independently_scored",
+      "geographyNote": "source_geography; exact_pin_unverified",
+      "notes": "Official coffee collection and contact page confirm retailer/address; distinct from assumed cafe branches.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-86f5cf998aaf",
+      "name": "Saji Coffee Works",
+      "category": "Coffee brand / other",
+      "kind": "brands",
+      "state": "Kerala",
+      "district": "Alappuzha",
+      "city": "Chengannur",
+      "country": "India",
+      "address": "Chengannur, Alappuzha, Kerala 689109",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "The Company Check"
+      ],
+      "sourceUrls": [
+        "https://www.thecompanycheck.com/org/saji-coffee-works/60b5830d80"
+      ],
+      "sourceIds": [
+        "KL-056"
+      ],
+      "sourceLocations": [
+        "Chengannur, Alappuzha, Kerala 689109"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Chengannur"
+      ],
+      "status": "registry_aggregator_lead; current_operations_unverified",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "broad_coffee_trade; specialty_unconfirmed",
+      "geographyNote": "source_geography; exact_pin_unverified",
+      "notes": "Public enterprise profile records coffee curing, roasting, grinding, blending and manufacturing in Chengannur. Underlying classification is dated 2022-23; current operation and specialty offering require confirmation.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-844df91c3fc5",
+      "name": "Thomas K V",
+      "category": "Coffee professional",
+      "kind": "people",
+      "state": "Kerala",
+      "district": "Idukki",
+      "country": "India",
+      "url": "https://www.instagram.com/thomas__kv/",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Specialty Coffee Keralam directory"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/places/thomas-k-v/",
+        "https://www.instagram.com/thomas__kv/"
+      ],
+      "sourceIds": [
+        "KL-026"
+      ],
+      "sourceLocations": [
+        "Idukki"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "status": "directory_only",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "directory_classification_only",
+      "geographyNote": "district_from_directory; exact_address_not_independently_verified",
+      "notes": "Listed in Keralam directory; primary business confirmation pending.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-5a9cf52e2ec2",
+      "name": "Kerala Coffee Collective",
+      "category": "Community",
+      "kind": "community",
+      "state": "Kerala",
+      "country": "India",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Pour Over Lab"
+      ],
+      "sourceUrls": [
+        "https://www.pouroverlab.in/products/coffee-from-zero-a-fun-interactive-session"
+      ],
+      "sourceIds": [
+        "KL-045"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "status": "primary_host_mentions_community",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "not_independently_scored",
+      "geographyNote": "district_unresolved",
+      "reviewNeeded": "District not yet verified",
+      "notes": "Named as a community initiative in host education page. Public group link and current meetup schedule need confirmation.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-d065612d4049",
+      "name": "Kerala Origins",
+      "category": "Community",
+      "kind": "community",
+      "state": "Kerala",
+      "country": "India",
+      "url": "https://www.keralaoriginscoffee.com/",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Kerala Origins"
+      ],
+      "sourceUrls": [
+        "https://www.keralaoriginscoffee.com/"
+      ],
+      "sourceIds": [
+        "KL-043"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "status": "primary_confirmed_community",
+      "evidenceLabel": "Primary source checked",
+      "specialtyStatus": "not_independently_scored",
+      "geographyNote": "district_unresolved",
+      "reviewNeeded": "District not yet verified",
+      "notes": "Statewide producer community and coffee showcases; no single fixed visitor location.",
+      "checkedDate": "2026-11-15",
+      "originalWebsiteReferences": [
+        "LEGACY-80e36358f438"
+      ]
+    },
+    {
+      "id": "IND-d7e4d8b7ff52",
+      "name": "Let’s Brew Kochi",
+      "category": "Community",
+      "kind": "community",
+      "state": "Kerala",
+      "district": "Ernakulam",
+      "city": "Kochi",
+      "country": "India",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Pour Over Lab"
+      ],
+      "sourceUrls": [
+        "https://www.pouroverlab.in/pages/coffee-from-zero"
+      ],
+      "sourceIds": [
+        "KL-044"
+      ],
+      "sourceLocations": [
+        "Kochi"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Kochi"
+      ],
+      "status": "primary_host_mentions_community",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "not_independently_scored",
+      "geographyNote": "source_geography; exact_pin_unverified",
+      "notes": "Pour Over Lab identifies its founder with this Kochi community initiative. Direct public group URL not collected.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-ec55840fbc7e",
+      "name": "Brewell Coffee Lab",
+      "category": "Education",
+      "kind": "education",
+      "state": "Kerala",
+      "district": "Malappuram",
+      "city": "Malappuram",
+      "country": "India",
+      "mapUrl": "https://maps.app.goo.gl/RoPvsB8kzQwJdzUt5",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Specialty Coffee Keralam directory"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/places/brewell-coffee-lab/",
+        "https://maps.app.goo.gl/RoPvsB8kzQwJdzUt5"
+      ],
+      "sourceIds": [
+        "KL-029"
+      ],
+      "sourceLocations": [
+        "Malappuram"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Malappuram"
+      ],
+      "status": "directory_only",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "directory_classification_only",
+      "geographyNote": "district_from_directory; exact_address_not_independently_verified; city normalized from source address",
+      "notes": "Listed in Keralam directory; primary business confirmation pending.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-784f699d777e",
+      "name": "Pour Over Lab",
+      "category": "Education",
+      "kind": "education",
+      "state": "Kerala",
+      "district": "Ernakulam",
+      "city": "Kochi",
+      "country": "India",
+      "address": "Melangth Lane, Kaloor, Ernakulam, Kerala 682017",
+      "url": "https://www.pouroverlab.in/",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Specialty Coffee Keralam directory"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/places/pour-over-lab/",
+        "https://www.pouroverlab.in/pages/contact"
+      ],
+      "sourceIds": [
+        "KL-015"
+      ],
+      "sourceLocations": [
+        "Ernakulam"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Kochi"
+      ],
+      "status": "primary_confirmed_business_and_address",
+      "evidenceLabel": "Primary source checked",
+      "verifiedFields": "education; workshops; Kaloor address",
+      "specialtyStatus": "directory_classification_only",
+      "geographyNote": "district_from_directory; exact_address_not_independently_verified",
+      "notes": "Official contact and course pages confirm Kochi learning space. Booking required; dated workshop pages are not automatically upcoming.",
+      "checkedDate": "2026-11-15",
+      "originalWebsiteReferences": [
+        "LEGACY-2faed810f445"
+      ]
+    },
+    {
+      "id": "IND-d017e2be3e3d",
+      "name": "Regional Coffee Research Station — Chundale",
+      "category": "Education",
+      "kind": "education",
+      "state": "Kerala",
+      "district": "Wayanad",
+      "city": "Chundale",
+      "country": "India",
+      "address": "Perumthatta, Chundale, Wayanad 673123",
+      "url": "https://coffeeboard.gov.in/research.aspx",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Coffee Board / Kerala Tourism"
+      ],
+      "sourceUrls": [
+        "https://www.keralatourism.org/wayanad/coffee-board-chundale.php"
+      ],
+      "sourceIds": [
+        "KL-049"
+      ],
+      "sourceLocations": [
+        "Perumthatta, Chundale, Wayanad 673123"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Chundale"
+      ],
+      "status": "government_confirmed",
+      "evidenceLabel": "Primary source checked",
+      "specialtyStatus": "not_independently_scored",
+      "geographyNote": "source_geography; exact_pin_unverified",
+      "notes": "Coffee Board and Kerala Tourism identify coffee research/extension station. Training dates and visitor access need confirmation.",
+      "checkedDate": "2026-11-15",
+      "originalWebsiteReferences": [
+        "LEGACY-22f8449f1c11",
+        "LEGACY-8da6e84289e9"
+      ]
+    },
+    {
+      "id": "IND-a3b45de2a2fe",
+      "name": "The Brew School",
+      "category": "Education",
+      "kind": "education",
+      "state": "Kerala",
+      "district": "Ernakulam",
+      "city": "Kochi",
+      "country": "India",
+      "address": "2nd Floor, Daffodils, KP Vallon Road, Giri Nagar, Kadavanthra, Ernakulam, Kerala 682020",
+      "url": "https://thebrewschool.in/",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Specialty Coffee Keralam directory"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/places/the-brew-school/",
+        "https://thebrewschool.in/"
+      ],
+      "sourceIds": [
+        "KL-016"
+      ],
+      "sourceLocations": [
+        "Ernakulam"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Kochi"
+      ],
+      "status": "primary_confirmed_business_and_address",
+      "evidenceLabel": "Primary source checked",
+      "verifiedFields": "barista education; Kadavanthra address",
+      "specialtyStatus": "directory_classification_only",
+      "geographyNote": "district_from_directory; exact_address_not_independently_verified",
+      "notes": "Official website confirms barista school and Kochi branch. Marketing accreditation claims were not independently verified.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-34acd4c27f34",
+      "name": "17AD Coffee",
+      "category": "Estate-linked brand / producer lead",
+      "kind": "producer-leads",
+      "state": "Kerala",
+      "district": "Wayanad",
+      "country": "India",
+      "url": "https://17adcoffee.com",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "compareyourcoffee.com"
+      ],
+      "sourceUrls": [
+        "https://www.compareyourcoffee.com/source/17ad-coffee"
+      ],
+      "sourceIds": [
+        "SRC-317910ce1387"
+      ],
+      "sourceLocations": [
+        "Wayanad, Kerala"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "originRegion": "Wayanad, Kerala",
+      "status": "Directory-listed; official location and current operation unverified",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "Unverified",
+      "geographyNote": "district read from source location",
+      "notes": "Directory profile supplies estate/brand relationship; any geographic attribution remains unverified. Origin and head office are distinct.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-1d2aff0c85f4",
+      "name": "Bluhills Spices & Beans",
+      "category": "Estate-linked brand / producer lead",
+      "kind": "producer-leads",
+      "state": "Kerala",
+      "district": "Wayanad",
+      "country": "India",
+      "url": "https://bluhillsbeans.in",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "compareyourcoffee.com"
+      ],
+      "sourceUrls": [
+        "https://www.compareyourcoffee.com/source/bluhills-beans"
+      ],
+      "sourceIds": [
+        "SRC-0456a21b2011"
+      ],
+      "sourceLocations": [
+        "Wayanad, Kerala"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "originRegion": "Wayanad, Kerala",
+      "status": "Directory-listed; official location and current operation unverified",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "Unverified",
+      "geographyNote": "district read from source location",
+      "notes": "Directory profile supplies estate/brand relationship; any geographic attribution remains unverified. Origin and head office are distinct.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-2ba98b2d9f28",
+      "name": "Mountain Brewed Coffee",
+      "category": "Estate-linked brand / producer lead",
+      "kind": "producer-leads",
+      "state": "Kerala",
+      "district": "Wayanad",
+      "country": "India",
+      "url": "https://mountainbrewedcoffee.com",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "compareyourcoffee.com"
+      ],
+      "sourceUrls": [
+        "https://www.compareyourcoffee.com/source/mountain-brewed-coffee"
+      ],
+      "sourceIds": [
+        "SRC-626a05dc300e"
+      ],
+      "sourceLocations": [
+        "Wayanad, Kerala"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "originRegion": "Wayanad, Kerala",
+      "status": "Directory-listed; official location and current operation unverified",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "Unverified",
+      "geographyNote": "district read from source location",
+      "notes": "Directory profile supplies estate/brand relationship; any geographic attribution remains unverified. Origin and head office are distinct.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-4d56244f101a",
+      "name": "Shop Wayanad (Wayanad Spices & Natural Products)",
+      "category": "Estate-linked brand / producer lead",
+      "kind": "producer-leads",
+      "state": "Kerala",
+      "district": "Wayanad",
+      "country": "India",
+      "url": "https://shop.wayanad.co.in",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "compareyourcoffee.com"
+      ],
+      "sourceUrls": [
+        "https://www.compareyourcoffee.com/source/shop-wayanad"
+      ],
+      "sourceIds": [
+        "SRC-f0db2c20be62"
+      ],
+      "sourceLocations": [
+        "Wayanad, Kerala"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "originRegion": "Wayanad, Kerala",
+      "status": "Directory-listed; official location and current operation unverified",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "Unverified",
+      "geographyNote": "district read from source location",
+      "notes": "Directory profile supplies estate/brand relationship; any geographic attribution remains unverified. Origin and head office are distinct.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-de25e344a98e",
+      "name": "Wayanadcraft",
+      "category": "Estate-linked brand / producer lead",
+      "kind": "producer-leads",
+      "state": "Kerala",
+      "district": "Wayanad",
+      "country": "India",
+      "url": "https://wayanadcraft.com",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "compareyourcoffee.com"
+      ],
+      "sourceUrls": [
+        "https://www.compareyourcoffee.com/source/wayanadcraft"
+      ],
+      "sourceIds": [
+        "SRC-b4098800f591"
+      ],
+      "sourceLocations": [
+        "Wayanad, Kerala"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "originRegion": "Wayanad, Kerala",
+      "status": "Directory-listed; official location and current operation unverified",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "Unverified",
+      "geographyNote": "district read from source location",
+      "notes": "Directory profile supplies estate/brand relationship; any geographic attribution remains unverified. Origin and head office are distinct.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-517f22d27031",
+      "name": "Erel Spices Experience Centre",
+      "category": "Experience",
+      "kind": "experiences",
+      "state": "Kerala",
+      "district": "Idukki",
+      "city": "Kumily",
+      "country": "India",
+      "address": "KP XVI/16, KK Road, Chelimada, Kumily, Idukki 685509",
+      "url": "https://erelspices.com/experience-center/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Erel+Spices+Experience+Centre+KP+XVI%2F16%2C+KK+Road%2C+Chelimada%2C+Kumily%2C+Idukki+685509",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Specialty Coffee Keralam directory"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/places/erel-spices-experience-centre/",
+        "https://erelspices.com/experience-center/"
+      ],
+      "sourceIds": [
+        "KL-023"
+      ],
+      "sourceLocations": [
+        "KP XVI/16, KK Road, Chelimada, Kumily, Idukki 685509"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Kumily"
+      ],
+      "status": "primary_confirmed_business_and_address",
+      "evidenceLabel": "Primary source checked",
+      "verifiedFields": "coffee brewing experience; Kumily Idukki address",
+      "specialtyStatus": "directory_classification_only",
+      "geographyNote": "district_from_directory; exact_address_not_independently_verified",
+      "notes": "Official experience page confirms coffee brewing sessions and Kumily address. Do not assume specialty certification.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-507fb2554847",
+      "name": "Black Baza Coffee — Smallholder Network",
+      "category": "Farm / estate",
+      "kind": "farms",
+      "state": "Kerala",
+      "district": "Wayanad",
+      "country": "India",
+      "url": "https://www.blackbazacoffee.com/blogs/origins-communities/wayanad-kerala",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Specialty Coffee Keralam directory"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/places/black-baza-coffee-smallholder-network/",
+        "https://www.blackbazacoffee.com/blogs/origins-communities/wayanad-kerala"
+      ],
+      "sourceIds": [
+        "KL-020"
+      ],
+      "sourceLocations": [
+        "Wayanad"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "status": "primary_confirmed_regional_network",
+      "evidenceLabel": "Primary source checked",
+      "verifiedFields": "Wayanad smallholder sourcing network",
+      "specialtyStatus": "directory_classification_only",
+      "geographyNote": "regional_network_no_single_pin",
+      "notes": "Official sourcing account confirms Wayanad Robusta and work with Elements/FTAK. This is a network, not a single visitor-address farm.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-88f19265e735",
+      "name": "Kelachandra Coffee — Brahmagiri Estate",
+      "category": "Farm / estate",
+      "kind": "farms",
+      "state": "Kerala",
+      "district": "Wayanad",
+      "city": "Thirunelly",
+      "country": "India",
+      "url": "https://kelachandracoffee.com/brahmagiri/",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Specialty Coffee Keralam directory"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/places/kelachandra-coffee-brahmagiri-estate/",
+        "https://kelachandracoffee.com/brahmagiri/"
+      ],
+      "sourceIds": [
+        "KL-018"
+      ],
+      "sourceLocations": [
+        "Wayanad"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Thirunelly"
+      ],
+      "status": "primary_confirmed_producer; location_conflict",
+      "evidenceLabel": "Primary source checked",
+      "verifiedFields": "Robusta coffee estate; Thirunelly Wayanad in detailed heading",
+      "specialtyStatus": "directory_classification_only",
+      "geographyNote": "conflicting_primary_page_labels",
+      "notes": "Official detailed heading gives Thirunelly, Wayanad, but page also contains a conflicting Mudigere/Chikmagalur heading. Exact location must be resolved before pins.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-7fc6d1b251de",
+      "name": "Komban Kampini / Vernacular",
+      "category": "Farm / estate",
+      "kind": "farms",
+      "state": "Kerala",
+      "district": "Wayanad",
+      "country": "India",
+      "address": "Wayanad, Keralam",
+      "url": "https://linktr.ee/vernacular.live",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Specialty Coffee Keralam directory"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/places/komban-kampini/",
+        "https://in.linkedin.com/company/komban-kampini",
+        "https://linktr.ee/vernacular.live"
+      ],
+      "sourceIds": [
+        "KL-022"
+      ],
+      "sourceLocations": [
+        "Wayanad, Keralam"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "status": "directory_only",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "directory_classification_only",
+      "geographyNote": "district_from_directory; exact_address_not_independently_verified",
+      "notes": "Listed in Keralam directory; primary business confirmation pending.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-942ff6eff3bd",
+      "name": "Krishnagiri Estate",
+      "category": "Farm / estate",
+      "kind": "farms",
+      "state": "Kerala",
+      "district": "Wayanad",
+      "country": "India",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Kerala Origins"
+      ],
+      "sourceUrls": [
+        "https://www.keralaoriginscoffee.com/producers"
+      ],
+      "sourceIds": [
+        "KL-040"
+      ],
+      "sourceLocations": [
+        "Wayanad"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "status": "organiser_confirmed_district",
+      "evidenceLabel": "Organiser supplied",
+      "specialtyStatus": "not_independently_scored",
+      "geographyNote": "source_geography; exact_pin_unverified",
+      "notes": "Organiser identifies Wayanad producer Gayathri M S and Canephora coffee.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-40f26a54f45b",
+      "name": "Kuruvinakunnel Estate",
+      "category": "Farm / estate",
+      "kind": "farms",
+      "state": "Kerala",
+      "district": "Idukki",
+      "city": "Vandanmedu",
+      "country": "India",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Keralam"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/blog/kerala-coffee-producers/"
+      ],
+      "sourceIds": [
+        "KL-039"
+      ],
+      "sourceLocations": [
+        "Vandanmedu"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Vandanmedu"
+      ],
+      "status": "organiser_supplied_location; independent_check_pending",
+      "evidenceLabel": "Organiser supplied",
+      "specialtyStatus": "not_independently_scored",
+      "geographyNote": "source_geography; exact_pin_unverified",
+      "notes": "Regional article attributes Vandanmedu/Idukki lot details to organiser. Do not conflate this with similarly named Kottayam heritage homestay.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-e4c4bb771fc9",
+      "name": "Old Babbler Coffee",
+      "category": "Farm / estate",
+      "kind": "farms",
+      "state": "Kerala",
+      "district": "Wayanad",
+      "country": "India",
+      "url": "https://www.oldbabbler.com",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Specialty Coffee Keralam directory"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/places/old-babbler-coffee/",
+        "https://www.oldbabbler.com"
+      ],
+      "sourceIds": [
+        "KL-021"
+      ],
+      "sourceLocations": [
+        "Wayanad"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "status": "directory_only",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "directory_classification_only",
+      "geographyNote": "district_from_directory; exact_address_not_independently_verified",
+      "notes": "Listed in Keralam directory; primary business confirmation pending.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-7eeb666a792f",
+      "name": "On Ground Farm",
+      "category": "Farm / estate",
+      "kind": "farms",
+      "state": "Kerala",
+      "country": "India",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Kerala Origins"
+      ],
+      "sourceUrls": [
+        "https://www.keralaoriginscoffee.com/producers"
+      ],
+      "sourceIds": [
+        "KL-038"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "status": "organiser_confirmed; district_unresolved",
+      "evidenceLabel": "Organiser supplied",
+      "specialtyStatus": "not_independently_scored",
+      "geographyNote": "district_unresolved",
+      "reviewNeeded": "District not yet verified",
+      "notes": "Public organiser lists On Ground Farm and Nihal Parambath. Exact district/locality not stated on checked page; do not infer from event city.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-1f4222ce2ea9",
+      "name": "Pampadumpara Estate",
+      "category": "Farm / estate",
+      "kind": "farms",
+      "state": "Kerala",
+      "district": "Idukki",
+      "city": "Pampadumpara",
+      "country": "India",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Kerala Origins / Keralam"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/blog/kerala-coffee-producers/"
+      ],
+      "sourceIds": [
+        "KL-035"
+      ],
+      "sourceLocations": [
+        "Pampadumpara"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Pampadumpara"
+      ],
+      "status": "organiser_and_editorial_lead",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "not_independently_scored",
+      "geographyNote": "source_geography; exact_pin_unverified",
+      "notes": "Estate and washed Arabica are named in organiser programme; district supplied by regional producer article. Exact estate address pending.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-080c9f0ecbff",
+      "name": "Poabs Organic Estates — Seethargundu",
+      "category": "Farm / estate",
+      "kind": "farms",
+      "state": "Kerala",
+      "district": "Palakkad",
+      "city": "Nelliyampathy",
+      "country": "India",
+      "url": "https://www.poabsestates.com/produce/coffee/",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Specialty Coffee Keralam directory"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/places/poabs-seethargundu/",
+        "https://www.poabsestates.com/produce/coffee/"
+      ],
+      "sourceIds": [
+        "KL-030"
+      ],
+      "sourceLocations": [
+        "Palakkad"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Nelliyampathy"
+      ],
+      "status": "primary_confirmed_producer_and_locality",
+      "evidenceLabel": "Primary source checked",
+      "verifiedFields": "Arabica/Robusta producer; Nelliyampathy",
+      "specialtyStatus": "directory_classification_only",
+      "geographyNote": "district_from_directory; exact_address_not_independently_verified",
+      "notes": "Official coffee page confirms on-estate coffee growing and processing in Nelliyampathy.",
+      "checkedDate": "2026-11-15",
+      "originalWebsiteReferences": [
+        "LEGACY-de2f59e99d15",
+        "LEGACY-985065e4cd9f"
+      ]
+    },
+    {
+      "id": "IND-d9ca80c7839d",
+      "name": "Puliyarmala Estate",
+      "category": "Farm / estate",
+      "kind": "farms",
+      "state": "Kerala",
+      "country": "India",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Kerala Origins"
+      ],
+      "sourceUrls": [
+        "https://www.keralaoriginscoffee.com/producers"
+      ],
+      "sourceIds": [
+        "KL-041"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "status": "organiser_confirmed; district_unresolved",
+      "evidenceLabel": "Organiser supplied",
+      "specialtyStatus": "not_independently_scored",
+      "geographyNote": "district_unresolved",
+      "reviewNeeded": "District not yet verified",
+      "notes": "Named in organiser producer programme. Exact farm identity and district still need verification; event venue is not farm location.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-906d25e85a07",
+      "name": "Rosegarden Group of Farming Community",
+      "category": "Farm / estate",
+      "kind": "farms",
+      "state": "Kerala",
+      "district": "Wayanad",
+      "city": "Meppadi",
+      "country": "India",
+      "address": "Meppadi, Wayanad",
+      "url": "https://ccri100.org/Joseph-Kuruvilla",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "CCRI"
+      ],
+      "sourceUrls": [
+        "https://ccri100.org/Joseph-Kuruvilla"
+      ],
+      "sourceIds": [
+        "KL-037"
+      ],
+      "sourceLocations": [
+        "Meppadi, Wayanad"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Meppadi"
+      ],
+      "status": "institutional_profile_confirmed",
+      "evidenceLabel": "Primary source checked",
+      "specialtyStatus": "not_independently_scored",
+      "geographyNote": "source_geography; exact_pin_unverified",
+      "notes": "CCRI profile identifies farming community, formerly Rose Garden Estate, in Meppadi. Kerala Origins lists Rose Garden.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-774255bd67ca",
+      "name": "Sanjay Garden / Bluhills Spices & Beans",
+      "category": "Farm / estate",
+      "kind": "farms",
+      "state": "Kerala",
+      "district": "Wayanad",
+      "country": "India",
+      "url": "https://bluhillsbeans.in/",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Specialty Coffee Keralam directory"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/places/sanjay-garden-bluhills-spices-beans/",
+        "https://bluhillsbeans.in/"
+      ],
+      "sourceIds": [
+        "KL-019"
+      ],
+      "sourceLocations": [
+        "Wayanad"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "status": "primary_confirmed_business_and_district",
+      "evidenceLabel": "Primary source checked",
+      "verifiedFields": "estate coffee; Wayanad",
+      "specialtyStatus": "directory_classification_only",
+      "geographyNote": "district_confirmed; locality_conflict_or_uncertainty",
+      "notes": "Official Bluhills site confirms estate coffee in Wayanad and mentions Koottamunda. Directory association with Sanjay Garden requires separate confirmation.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-9e2156a9abd4",
+      "name": "Silent Valley Estate",
+      "category": "Farm / estate",
+      "kind": "farms",
+      "state": "Kerala",
+      "district": "Palakkad",
+      "city": "Palakkad",
+      "country": "India",
+      "url": "https://silentvalley.coffee",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Specialty Coffee Keralam directory"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/places/silent-valley-estate/",
+        "https://silentvalley.coffee"
+      ],
+      "sourceIds": [
+        "KL-031"
+      ],
+      "sourceLocations": [
+        "Palakkad"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Palakkad"
+      ],
+      "status": "directory_only",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "directory_classification_only",
+      "geographyNote": "district_from_directory; exact_address_not_independently_verified; city normalized from source address",
+      "notes": "Listed in Keralam directory; primary business confirmation pending.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-c9fb56608678",
+      "name": "Terra Vagamon Conservancy",
+      "category": "Farm / estate",
+      "kind": "farms",
+      "state": "Kerala",
+      "district": "Idukki",
+      "country": "India",
+      "url": "https://www.instagram.com/terravagamon/",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Specialty Coffee Keralam directory"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/places/terra-vagamon/",
+        "https://www.instagram.com/terravagamon/"
+      ],
+      "sourceIds": [
+        "KL-024"
+      ],
+      "sourceLocations": [
+        "Idukki"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "status": "directory_only",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "directory_classification_only",
+      "geographyNote": "district_from_directory; exact_address_not_independently_verified",
+      "notes": "Listed in Keralam directory; primary business confirmation pending.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-0bbe76887afc",
+      "name": "Thumpassery Estate",
+      "category": "Farm / estate",
+      "kind": "farms",
+      "state": "Kerala",
+      "country": "India",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Keralam"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/blog/kerala-coffee-producers/"
+      ],
+      "sourceIds": [
+        "KL-042"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "status": "editorial_lead; district_unresolved",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "not_independently_scored",
+      "geographyNote": "district_unresolved",
+      "reviewNeeded": "District not yet verified",
+      "notes": "Regional producer article links KoffyKraft estate material but explicitly states estate location is unconfirmed.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-fdc6529bc658",
+      "name": "Windermere Estate",
+      "category": "Farm / estate",
+      "kind": "farms",
+      "state": "Kerala",
+      "district": "Idukki",
+      "city": "Munnar",
+      "country": "India",
+      "address": "Pothamedu, Munnar 685612, Idukki",
+      "url": "https://windermeremunnar.com/",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Specialty Coffee Keralam directory"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/places/windermere-estate/",
+        "https://www.keralatourism.org/resorts/windermere-estate/3654"
+      ],
+      "sourceIds": [
+        "KL-025"
+      ],
+      "sourceLocations": [
+        "Pothamedu, Munnar 685612, Idukki"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Munnar"
+      ],
+      "status": "government_tourism_confirms_estate",
+      "evidenceLabel": "Primary source checked",
+      "verifiedFields": "coffee/cardamom estate; Munnar",
+      "specialtyStatus": "directory_classification_only",
+      "geographyNote": "district_from_directory; exact_address_not_independently_verified",
+      "notes": "Kerala Tourism confirms a working coffee/cardamom plantation at Munnar; current farm access needs host confirmation.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-60e91b7b3748",
+      "name": "Woodlands Estate",
+      "category": "Farm / estate",
+      "kind": "farms",
+      "state": "Kerala",
+      "country": "India",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Kerala Origins"
+      ],
+      "sourceUrls": [
+        "https://www.keralaoriginscoffee.com/producers"
+      ],
+      "sourceIds": [
+        "KL-034"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "status": "organiser_confirmed; district_unresolved",
+      "evidenceLabel": "Organiser supplied",
+      "specialtyStatus": "not_independently_scored",
+      "geographyNote": "district_unresolved",
+      "reviewNeeded": "District not yet verified",
+      "notes": "Named in organiser producer programme; no exact district resolved because several estates share this name.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-ca8fc1d40846",
+      "name": "Beans of Bodhi",
+      "category": "Roaster / brand",
+      "kind": "roasters",
+      "state": "Kerala",
+      "country": "India",
+      "url": "https://beansofbodhi.com/",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Kaapi Brewing"
+      ],
+      "sourceUrls": [
+        "https://kaapibrewing.com/indian-coffee-roasters/"
+      ],
+      "sourceIds": [
+        "kaapi_1e7416139aa7"
+      ],
+      "sourceLocations": [
+        "Kerala"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "status": "directory_observed_not_primary_verified",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "Directory or curator inclusion; not independently assessed",
+      "reviewNeeded": "District not yet verified",
+      "checkedDate": "2026-11-15",
+      "originalWebsiteReferences": [
+        "LEGACY-a83af49d9a24"
+      ]
+    },
+    {
+      "id": "IND-ab2bf4257522",
+      "name": "Bermito Coffee Roasters",
+      "category": "Roaster / brand",
+      "kind": "roasters",
+      "state": "Kerala",
+      "district": "Kozhikode",
+      "city": "Kozhikode",
+      "country": "India",
+      "address": "Kozhikode, Keralam",
+      "url": "https://bermito.com/",
+      "hasPin": false,
+      "sourceCount": 4,
+      "sourceNames": [
+        "Specialty Coffee Keralam directory; Indian Coffee Beans; Indian Coffee Stories; Caffeine Letter"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/places/bermito/",
+        "https://bermito.com/pages/roastery",
+        "https://www.indiancoffeebeans.com/roasters/bermito-coffee-roasters",
+        "https://www.indiancoffeestories.com/roasters/bermito-coffee-roasters",
+        "https://caffeineletter.com/baazar/roasters/bermito-coffee-roasters"
+      ],
+      "sourceIds": [
+        "KL-001; icb_1746e690972b; ics-roaster-e3a6a31b3cb1; caffeineletter_1746e690972b"
+      ],
+      "sourceLocations": [
+        "Kozhikode, Keralam",
+        "Kozhikode, Kerala, India",
+        "Kozhikode, Kerala"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Kozhikode; Kozhikode, Kerala"
+      ],
+      "status": "primary_confirmed_business_and_city",
+      "evidenceLabel": "Primary source checked",
+      "verifiedFields": "roaster; Kozhikode; tastings and workshops",
+      "specialtyStatus": "directory_classification_only",
+      "geographyNote": "district_from_directory; exact_address_not_independently_verified",
+      "notes": "Official roastery page confirms roasting in Kozhikode, whole beans, tastings and workshops. No first-in-Kerala claim adopted. | Official URL is the directory-labelled source link, not independently checked. District and state require normalization and verification.",
+      "checkedDate": "2026-11-15",
+      "originalWebsiteReferences": [
+        "LEGACY-ee7a97d8b80f"
+      ]
+    },
+    {
+      "id": "IND-1d47065a0458",
+      "name": "CAPI Specialty Coffee Roasters",
+      "category": "Roaster / brand",
+      "kind": "roasters",
+      "state": "Kerala",
+      "district": "Ernakulam",
+      "city": "Kochi",
+      "country": "India",
+      "url": "https://capiroast.com/",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Specialty Coffee Keralam directory"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/places/capi/",
+        "https://capiroast.com/"
+      ],
+      "sourceIds": [
+        "KL-003"
+      ],
+      "sourceLocations": [
+        "Ernakulam"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Kochi"
+      ],
+      "status": "primary_confirmed_business_and_city",
+      "evidenceLabel": "Primary source checked",
+      "verifiedFields": "roaster; Kochi",
+      "specialtyStatus": "directory_classification_only",
+      "geographyNote": "district_from_directory; exact_address_not_independently_verified",
+      "notes": "Official site describes Kochi roastery and coffee studio. Its demo product concepts were excluded from collection.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-7023a65a2e2e",
+      "name": "FFox Coffee",
+      "category": "Roaster / brand",
+      "kind": "roasters",
+      "state": "Kerala",
+      "district": "Ernakulam",
+      "city": "Kochi",
+      "country": "India",
+      "url": "https://ffoxcoffee.com/",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Good Coffee List"
+      ],
+      "sourceUrls": [
+        "https://goodcoffeelist.com/coffee/my/",
+        "https://ffoxcoffee.com/"
+      ],
+      "sourceIds": [
+        "SRC-74a47f142597"
+      ],
+      "sourceLocations": [
+        "Kochi"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Kochi"
+      ],
+      "status": "directory_observed_not_primary_verified",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "Directory or curator inclusion; not independently assessed",
+      "geographyNote": "city normalized from source address; state inferred from unambiguous source city; district from Kerala city mapping, no boundary geocode",
+      "notes": "Directory extracted the generic shop title My. Business name corrected from official FFox website; roastery location still requires confirmation.",
+      "checkedDate": "2026-11-15",
+      "originalWebsiteReferences": [
+        "LEGACY-368dcdd4151f"
+      ]
+    },
+    {
+      "id": "IND-832dfb3fa488",
+      "name": "KoffyKraft",
+      "category": "Roaster / brand",
+      "kind": "roasters",
+      "state": "Kerala",
+      "district": "Kollam",
+      "city": "Karavaloor",
+      "country": "India",
+      "address": "Karavaloor, Kerala",
+      "url": "https://koffykraft.coffee/",
+      "hasPin": false,
+      "sourceCount": 2,
+      "sourceNames": [
+        "KoffyKraft; Indian Coffee Roasters"
+      ],
+      "sourceUrls": [
+        "https://koffykraft.coffee/",
+        "https://www.indiancoffeeroasters.com/"
+      ],
+      "sourceIds": [
+        "KL-036; icr-koffykraft"
+      ],
+      "sourceLocations": [
+        "Karavaloor, Kerala",
+        "Karavaloor"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Karavaloor"
+      ],
+      "status": "primary_confirmed_business_and_town",
+      "evidenceLabel": "Primary source checked",
+      "specialtyStatus": "not_independently_scored",
+      "geographyNote": "source_geography; exact_pin_unverified",
+      "notes": "Official roaster page names Karavaloor; Kerala Origins identifies small-batch roasting. Roastery location must not be assigned to Thumpassery Estate. | Directory location may be a city or growing region; state/district need normalization. Directory verification claims are not independent verification here.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-27416bf4b418",
+      "name": "SeasonSync",
+      "category": "Roaster / brand",
+      "kind": "roasters",
+      "state": "Kerala",
+      "district": "Wayanad",
+      "city": "Mananthavady",
+      "country": "India",
+      "url": "https://seasonsync.in",
+      "hasPin": false,
+      "sourceCount": 3,
+      "sourceNames": [
+        "Indian Coffee Beans; Indian Coffee Stories; Indian Coffee Guide"
+      ],
+      "sourceUrls": [
+        "https://www.indiancoffeebeans.com/roasters/seasonsync",
+        "https://www.indiancoffeestories.com/roasters/seasonsync",
+        "https://www.indiancoffeeguide.com/roasters/season-sync-coffee"
+      ],
+      "sourceIds": [
+        "icb_cff97c0be7f4; ics-roaster-c32540195baa; SRC-59807938bf21"
+      ],
+      "sourceLocations": [
+        "Mananthavady, Kerala, India",
+        "Kerala and South India",
+        "Wayanad, Kerala"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Mananthavady; Kerala and South India"
+      ],
+      "status": "directory_observed_not_primary_verified",
+      "evidenceLabel": "Directory listed",
+      "specialtyStatus": "Directory or curator inclusion; not independently assessed",
+      "geographyNote": "district from Kerala city mapping, no boundary geocode",
+      "notes": "Official URL is the directory-labelled source link, not independently checked. District and state require normalization and verification.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-c71459f255c8",
+      "name": "Urban Hippie Coffee Roasters",
+      "category": "Roaster / brand",
+      "kind": "roasters",
+      "state": "Kerala",
+      "district": "Kozhikode",
+      "city": "Kozhikode",
+      "country": "India",
+      "address": "Kozhikode (Calicut) · public visiting address unconfirmed",
+      "url": "https://www.urbanhippiecoffee.in/",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Specialty Coffee Keralam directory"
+      ],
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/places/urban-hippie/",
+        "https://www.urbanhippiecoffee.in/about.html",
+        "https://www.urbanhippiecoffee.in/contact.html"
+      ],
+      "sourceIds": [
+        "KL-002"
+      ],
+      "sourceLocations": [
+        "Kozhikode (Calicut) · public visiting address unconfirmed"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Kozhikode"
+      ],
+      "status": "primary_confirmed_business; directory_location",
+      "evidenceLabel": "Primary source checked",
+      "verifiedFields": "roaster; wholesale; training",
+      "specialtyStatus": "directory_classification_only",
+      "geographyNote": "district_from_directory; exact_address_not_independently_verified",
+      "notes": "Official site confirms roastery, roast-to-order, wholesale and training. Public visit address remains unconfirmed.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-b59aa34a1909",
+      "name": "Wild Ghats Coffee",
+      "category": "Roaster / brand",
+      "kind": "roasters",
+      "state": "Kerala",
+      "district": "Wayanad",
+      "country": "India",
+      "url": "https://wildghatscoffee.com/",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Wild Ghats"
+      ],
+      "sourceUrls": [
+        "https://wildghatscoffee.com/"
+      ],
+      "sourceIds": [
+        "KL-054"
+      ],
+      "sourceLocations": [
+        "Wayanad"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "status": "primary_confirmed_business_and_district",
+      "evidenceLabel": "Primary source checked",
+      "specialtyStatus": "not_independently_scored",
+      "geographyNote": "source_geography; exact_pin_unverified",
+      "notes": "Official site says its coffee is grown and roasted in Wayanad, with small-batch roasting to order. Exact estate and roasting-facility addresses are not supplied in the checked page.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-982a530ee8ed",
+      "name": "Fair Trade Alliance Kerala",
+      "category": "Trade / organisation",
+      "kind": "trade",
+      "state": "Kerala",
+      "district": "Kannur",
+      "city": "Kannur",
+      "country": "India",
+      "url": "https://ftak.in/",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "FTAK / Fairtrade"
+      ],
+      "sourceUrls": [
+        "https://www.fairtrade.org.uk/farmers-and-workers/coffee/fair-trade-alliance-kerala-india/"
+      ],
+      "sourceIds": [
+        "KL-051"
+      ],
+      "sourceLocations": [
+        "Kannur"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Kannur"
+      ],
+      "status": "organisation_sources_confirmed",
+      "evidenceLabel": "Primary source checked",
+      "specialtyStatus": "not_independently_scored",
+      "geographyNote": "source_geography; exact_pin_unverified",
+      "notes": "Coffee-producing farmer organisation with regional network across northern Kerala; Kannur base in official site. Do not map all members to office.",
+      "checkedDate": "2026-11-15"
+    },
+    {
+      "id": "IND-f709e1cc6e81",
+      "name": "Plantrich Agritech",
+      "category": "Trade / organisation",
+      "kind": "trade",
+      "state": "Kerala",
+      "district": "Kottayam",
+      "city": "Manarcadu",
+      "country": "India",
+      "address": "Mini Industrial Estate, Manarcadu P.O., Kottayam 686019",
+      "url": "https://www.plantrich.com/",
+      "hasPin": false,
+      "sourceCount": 1,
+      "sourceNames": [
+        "Plantrich"
+      ],
+      "sourceUrls": [
+        "https://www.plantrich.com/contact-us"
+      ],
+      "sourceIds": [
+        "KL-046"
+      ],
+      "sourceLocations": [
+        "Mini Industrial Estate, Manarcadu P.O., Kottayam 686019"
+      ],
+      "reportedStates": [
+        "Kerala"
+      ],
+      "reportedCities": [
+        "Manarcadu"
+      ],
+      "status": "primary_confirmed_business_and_address",
+      "evidenceLabel": "Primary source checked",
+      "specialtyStatus": "not_independently_scored",
+      "geographyNote": "source_geography; exact_pin_unverified",
+      "notes": "Official business site confirms green coffee processing/supply and Manarcadu address. Broad coffee trade, not automatically specialty-only.",
+      "checkedDate": "2026-11-15"
+    }
+  ],
+  "events": [
+    {
+      "id": "event-4fe2262b5328",
+      "name": "Hario V60 Brewers Cup India 2026 — Calicut Regional Stage",
+      "kind": "event",
+      "category": "Event",
+      "city": "Kozhikode",
+      "state": "Kerala",
+      "date": "2026-11-07",
+      "status": "past_listed",
+      "verification": "third_party_indexed_listing",
+      "evidenceLabel": "Directory listed",
+      "sourceUrls": [
+        "https://caffeinecollective.coffee/events",
+        "https://www.keralacoffeefestival.com/",
+        "https://www.specialtycoffeekerala.com/blog/kerala-coffee-festival-2026/"
+      ],
+      "notes": "Competition date corroborated by festival coverage. Aggregator text incorrectly associates venue with Kochi; festival organiser places Aspin Courtyards in Calicut. Midnight excluded; competition-specific primary page not accessed.",
+      "checkedDate": "2026-11-15",
+      "venue": "Aspin Courtyards, Beach Road, Calicut",
+      "conflictStatus": "venue_city_resolved_using_festival_organiser",
+      "sourceRawLocation": "Aspin Courtyards, Beach Road, Kochi",
+      "sourceRawTime": "12:00 AM",
+      "calendarEligible": false
+    },
+    {
+      "id": "event-ca362a387211",
+      "name": "BREW BURN × Splyn — Kerala Coffee Festival Community Run",
+      "kind": "event",
+      "category": "Event",
+      "city": "Kozhikode",
+      "state": "Kerala",
+      "date": "2026-10-04",
+      "status": "past_listed",
+      "verification": "third_party_indexed_listing",
+      "evidenceLabel": "Directory listed",
+      "sourceUrls": [
+        "https://caffeinecollective.coffee/events"
+      ],
+      "notes": "Past scheduled listing in indexed third-party calendar; occurrence and organiser details not independently confirmed.",
+      "checkedDate": "2026-11-15",
+      "venue": "KTDC Café Politan, Calicut Beach",
+      "time": "06:30",
+      "timezone": "Asia/Kolkata",
+      "calendarEligible": false
+    },
+    {
+      "id": "event-f58f9a0125c7",
+      "name": "Kerala Coffee Festival 2026",
+      "kind": "event",
+      "category": "Event",
+      "city": "Kozhikode",
+      "state": "Kerala",
+      "date": "2026-11-07",
+      "endDate": "2026-11-08",
+      "status": "past_organiser_schedule",
+      "verification": "official_schedule_observed",
+      "evidenceLabel": "Primary source checked",
+      "url": "https://www.keralacoffeefestival.com/",
+      "sourceUrls": [
+        "https://www.keralacoffeefestival.com/"
+      ],
+      "notes": "Organiser records 7–8 November and marks day passes closed.",
+      "checkedDate": "2026-11-15",
+      "venue": "Aspin Courtyards, Beach Road, Calicut",
+      "calendarEligible": true
+    },
+    {
+      "id": "event-0330c82b9ea4",
+      "name": "Barista Championship presented by Kaapi Solutions",
+      "kind": "event",
+      "category": "Event",
+      "city": "Kozhikode",
+      "state": "Kerala",
+      "date": "2026-11-08",
+      "status": "past_organiser_schedule",
+      "verification": "official_schedule_observed",
+      "evidenceLabel": "Primary source checked",
+      "url": "https://www.keralacoffeefestival.com/",
+      "sourceUrls": [
+        "https://www.keralacoffeefestival.com/"
+      ],
+      "notes": "Dated programme item on festival organiser site; results/attendance not inferred.",
+      "checkedDate": "2026-11-15",
+      "venue": "Aspin Courtyards, Beach Road, Calicut",
+      "time": "10:00",
+      "timezone": "Asia/Kolkata",
+      "calendarEligible": true
+    },
+    {
+      "id": "event-b0e989393372",
+      "name": "Aroma Master Championship 2026",
+      "kind": "event",
+      "category": "Event",
+      "city": "Kozhikode",
+      "state": "Kerala",
+      "date": "2026-11-08",
+      "status": "past_organiser_schedule",
+      "verification": "official_schedule_observed",
+      "evidenceLabel": "Primary source checked",
+      "url": "https://www.keralacoffeefestival.com/",
+      "sourceUrls": [
+        "https://www.keralacoffeefestival.com/"
+      ],
+      "notes": "Dated programme item on festival organiser site; results/attendance not inferred.",
+      "checkedDate": "2026-11-15",
+      "venue": "Aspin Courtyards, Beach Road, Calicut",
+      "time": "11:00",
+      "timezone": "Asia/Kolkata",
+      "calendarEligible": true
+    },
+    {
+      "id": "event-9930d181237d",
+      "name": "The Signature Lab",
+      "kind": "event",
+      "category": "Event",
+      "city": "Kozhikode",
+      "state": "Kerala",
+      "date": "2026-11-08",
+      "status": "past_organiser_schedule",
+      "verification": "official_schedule_observed",
+      "evidenceLabel": "Primary source checked",
+      "url": "https://www.keralacoffeefestival.com/",
+      "sourceUrls": [
+        "https://www.keralacoffeefestival.com/"
+      ],
+      "notes": "Dated programme item on festival organiser site; results/attendance not inferred.",
+      "checkedDate": "2026-11-15",
+      "venue": "Aspin Courtyards, Beach Road, Calicut",
+      "time": "14:00",
+      "timezone": "Asia/Kolkata",
+      "calendarEligible": true
+    },
+    {
+      "id": "event-5af34e31c711",
+      "name": "Pour Over Workshop",
+      "kind": "event",
+      "category": "Event",
+      "city": "Kochi",
+      "state": "Kerala",
+      "date": "2026-09-27",
+      "status": "past_organiser_schedule",
+      "verification": "official_schedule_observed",
+      "evidenceLabel": "Primary source checked",
+      "url": "https://www.pouroverlab.in/",
+      "sourceUrls": [
+        "https://www.pouroverlab.in/"
+      ],
+      "notes": "Homepage calls this upcoming/booking open, but displayed date is past on 15 November 2026; canonical status is past scheduled.",
+      "checkedDate": "2026-11-15",
+      "venue": "Pour Over Lab, Kochi",
+      "time": "14:00–16:00",
+      "timezone": "Asia/Kolkata",
+      "conflictStatus": "stale_upcoming_label_corrected_by_date",
+      "calendarEligible": true
+    },
+    {
+      "id": "event-7cd8a59c4f3b",
+      "name": "Coffee Foundation Course",
+      "kind": "event",
+      "category": "Event",
+      "city": "Kochi",
+      "state": "Kerala",
+      "date": "2026-10-10",
+      "endDate": "2026-10-11",
+      "status": "past_organiser_schedule",
+      "verification": "official_schedule_observed",
+      "evidenceLabel": "Primary source checked",
+      "url": "https://www.pouroverlab.in/",
+      "sourceUrls": [
+        "https://www.pouroverlab.in/"
+      ],
+      "notes": "Homepage calls this upcoming/booking open, but displayed date is past on 15 November 2026; canonical status is past scheduled.",
+      "checkedDate": "2026-11-15",
+      "venue": "Pour Over Lab, Kochi",
+      "time": "10:00–17:00",
+      "timezone": "Asia/Kolkata",
+      "conflictStatus": "stale_upcoming_label_corrected_by_date",
+      "calendarEligible": true
+    }
+  ],
+  "learn": [
+    {
+      "id": "education_provider-52d8904919de",
+      "name": "Pour Over Lab",
+      "kind": "education_provider",
+      "category": "Education Provider",
+      "city": "Kochi",
+      "state": "Kerala",
+      "status": "resource_available",
+      "verification": "publisher_page_observed",
+      "evidenceLabel": "Directory listed",
+      "url": "https://www.pouroverlab.in/",
+      "sourceUrls": [
+        "https://www.pouroverlab.in/"
+      ],
+      "notes": "Malayalam and hands-on coffee learning. Homepage still labels September/October 2026 courses upcoming; dates are past as of this check.",
+      "checkedDate": "2026-11-15",
+      "calendarEligible": false,
+      "originalWebsiteReferences": [
+        "LEGACY-2faed810f445"
+      ]
+    },
+    {
+      "id": "education_provider-da27515b4775",
+      "name": "Kaapi Brewing workshops",
+      "kind": "education_provider",
+      "category": "Education Provider",
+      "state": "Kerala",
+      "status": "resource_available",
+      "verification": "publisher_page_observed",
+      "evidenceLabel": "Directory listed",
+      "url": "https://workshop.kaapibrewing.com/",
+      "sourceUrls": [
+        "https://workshop.kaapibrewing.com/"
+      ],
+      "notes": "Home-brewing workshops for Kerala and wider India; waiting list visible, no future date assumed.",
+      "checkedDate": "2026-11-15",
+      "calendarEligible": false
+    }
+  ],
+  "communities": [
+    {
+      "id": "community-ae831e42e429",
+      "name": "Kerala Brewers Club",
+      "kind": "community",
+      "category": "Community",
+      "state": "Kerala",
+      "status": "public_join_link_listed",
+      "verification": "third_party_directory_only",
+      "evidenceLabel": "Directory listed",
+      "url": "https://chat.whatsapp.com/IqJwm82RFcM5PNINpuhBzr",
+      "sourceUrls": [
+        "https://www.indiancoffeebeans.com/communities"
+      ],
+      "notes": "Public directory listing; join link and activity not independently checked. ",
+      "checkedDate": "2026-11-15",
+      "platform": "WhatsApp",
+      "tags": [
+        "kerala",
+        "specialty-coffee",
+        "community",
+        "brewing"
+      ],
+      "geographicScope": "local_or_state",
+      "geographyNote": "City from name or description; state normalized from city when applicable.",
+      "calendarEligible": false
+    }
+  ]
+}

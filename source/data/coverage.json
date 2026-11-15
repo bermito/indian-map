@@ -1,0 +1,573 @@
+{
+  "states": [
+    {
+      "state": "Andhra Pradesh",
+      "type": "State",
+      "directory_entries": 5,
+      "cafes": 3,
+      "roasters": 2,
+      "farms": 0,
+      "broad_leads": 26,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    },
+    {
+      "state": "Arunachal Pradesh",
+      "type": "State",
+      "directory_entries": 0,
+      "cafes": 0,
+      "roasters": 0,
+      "farms": 0,
+      "broad_leads": 0,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    },
+    {
+      "state": "Assam",
+      "type": "State",
+      "directory_entries": 0,
+      "cafes": 0,
+      "roasters": 0,
+      "farms": 0,
+      "broad_leads": 9,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    },
+    {
+      "state": "Bihar",
+      "type": "State",
+      "directory_entries": 1,
+      "cafes": 1,
+      "roasters": 0,
+      "farms": 0,
+      "broad_leads": 12,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    },
+    {
+      "state": "Chhattisgarh",
+      "type": "State",
+      "directory_entries": 1,
+      "cafes": 1,
+      "roasters": 0,
+      "farms": 0,
+      "broad_leads": 6,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    },
+    {
+      "state": "Goa",
+      "type": "State",
+      "directory_entries": 23,
+      "cafes": 20,
+      "roasters": 3,
+      "farms": 0,
+      "broad_leads": 4,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    },
+    {
+      "state": "Gujarat",
+      "type": "State",
+      "directory_entries": 65,
+      "cafes": 46,
+      "roasters": 19,
+      "farms": 0,
+      "broad_leads": 63,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    },
+    {
+      "state": "Haryana",
+      "type": "State",
+      "directory_entries": 21,
+      "cafes": 16,
+      "roasters": 5,
+      "farms": 0,
+      "broad_leads": 46,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    },
+    {
+      "state": "Himachal Pradesh",
+      "type": "State",
+      "directory_entries": 2,
+      "cafes": 1,
+      "roasters": 1,
+      "farms": 0,
+      "broad_leads": 7,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    },
+    {
+      "state": "Jharkhand",
+      "type": "State",
+      "directory_entries": 2,
+      "cafes": 1,
+      "roasters": 1,
+      "farms": 0,
+      "broad_leads": 4,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    },
+    {
+      "state": "Karnataka",
+      "type": "State",
+      "directory_entries": 208,
+      "cafes": 104,
+      "roasters": 65,
+      "farms": 11,
+      "broad_leads": 194,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    },
+    {
+      "state": "Kerala",
+      "type": "State",
+      "directory_entries": 33,
+      "cafes": 17,
+      "roasters": 3,
+      "farms": 9,
+      "broad_leads": 91,
+      "notes": "33 unique places from the corrected Kerala editorial source; other research preserved separately as leads."
+    },
+    {
+      "state": "Madhya Pradesh",
+      "type": "State",
+      "directory_entries": 18,
+      "cafes": 16,
+      "roasters": 2,
+      "farms": 0,
+      "broad_leads": 28,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    },
+    {
+      "state": "Maharashtra",
+      "type": "State",
+      "directory_entries": 160,
+      "cafes": 126,
+      "roasters": 33,
+      "farms": 0,
+      "broad_leads": 142,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    },
+    {
+      "state": "Manipur",
+      "type": "State",
+      "directory_entries": 0,
+      "cafes": 0,
+      "roasters": 0,
+      "farms": 0,
+      "broad_leads": 0,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    },
+    {
+      "state": "Meghalaya",
+      "type": "State",
+      "directory_entries": 2,
+      "cafes": 0,
+      "roasters": 2,
+      "farms": 0,
+      "broad_leads": 0,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    },
+    {
+      "state": "Mizoram",
+      "type": "State",
+      "directory_entries": 0,
+      "cafes": 0,
+      "roasters": 0,
+      "farms": 0,
+      "broad_leads": 0,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    },
+    {
+      "state": "Nagaland",
+      "type": "State",
+      "directory_entries": 9,
+      "cafes": 5,
+      "roasters": 3,
+      "farms": 0,
+      "broad_leads": 2,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    },
+    {
+      "state": "Odisha",
+      "type": "State",
+      "directory_entries": 13,
+      "cafes": 10,
+      "roasters": 3,
+      "farms": 0,
+      "broad_leads": 13,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    },
+    {
+      "state": "Punjab",
+      "type": "State",
+      "directory_entries": 2,
+      "cafes": 1,
+      "roasters": 1,
+      "farms": 0,
+      "broad_leads": 16,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    },
+    {
+      "state": "Rajasthan",
+      "type": "State",
+      "directory_entries": 41,
+      "cafes": 33,
+      "roasters": 8,
+      "farms": 0,
+      "broad_leads": 47,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    },
+    {
+      "state": "Sikkim",
+      "type": "State",
+      "directory_entries": 1,
+      "cafes": 0,
+      "roasters": 1,
+      "farms": 0,
+      "broad_leads": 2,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    },
+    {
+      "state": "Tamil Nadu",
+      "type": "State",
+      "directory_entries": 57,
+      "cafes": 36,
+      "roasters": 14,
+      "farms": 0,
+      "broad_leads": 105,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    },
+    {
+      "state": "Telangana",
+      "type": "State",
+      "directory_entries": 83,
+      "cafes": 79,
+      "roasters": 4,
+      "farms": 0,
+      "broad_leads": 54,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    },
+    {
+      "state": "Tripura",
+      "type": "State",
+      "directory_entries": 0,
+      "cafes": 0,
+      "roasters": 0,
+      "farms": 0,
+      "broad_leads": 0,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    },
+    {
+      "state": "Uttar Pradesh",
+      "type": "State",
+      "directory_entries": 30,
+      "cafes": 26,
+      "roasters": 4,
+      "farms": 0,
+      "broad_leads": 57,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    },
+    {
+      "state": "Uttarakhand",
+      "type": "State",
+      "directory_entries": 2,
+      "cafes": 0,
+      "roasters": 2,
+      "farms": 0,
+      "broad_leads": 10,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    },
+    {
+      "state": "West Bengal",
+      "type": "State",
+      "directory_entries": 14,
+      "cafes": 11,
+      "roasters": 3,
+      "farms": 0,
+      "broad_leads": 47,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    },
+    {
+      "state": "Andaman and Nicobar Islands",
+      "type": "Union territory",
+      "directory_entries": 0,
+      "cafes": 0,
+      "roasters": 0,
+      "farms": 0,
+      "broad_leads": 5,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    },
+    {
+      "state": "Chandigarh",
+      "type": "Union territory",
+      "directory_entries": 8,
+      "cafes": 6,
+      "roasters": 2,
+      "farms": 0,
+      "broad_leads": 3,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    },
+    {
+      "state": "Dadra and Nagar Haveli and Daman and Diu",
+      "type": "Union territory",
+      "directory_entries": 0,
+      "cafes": 0,
+      "roasters": 0,
+      "farms": 0,
+      "broad_leads": 0,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    },
+    {
+      "state": "Delhi",
+      "type": "Union territory",
+      "directory_entries": 57,
+      "cafes": 43,
+      "roasters": 13,
+      "farms": 0,
+      "broad_leads": 89,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    },
+    {
+      "state": "Jammu and Kashmir",
+      "type": "Union territory",
+      "directory_entries": 1,
+      "cafes": 1,
+      "roasters": 0,
+      "farms": 0,
+      "broad_leads": 4,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    },
+    {
+      "state": "Ladakh",
+      "type": "Union territory",
+      "directory_entries": 1,
+      "cafes": 1,
+      "roasters": 0,
+      "farms": 0,
+      "broad_leads": 1,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    },
+    {
+      "state": "Lakshadweep",
+      "type": "Union territory",
+      "directory_entries": 0,
+      "cafes": 0,
+      "roasters": 0,
+      "farms": 0,
+      "broad_leads": 0,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    },
+    {
+      "state": "Puducherry",
+      "type": "Union territory",
+      "directory_entries": 2,
+      "cafes": 1,
+      "roasters": 1,
+      "farms": 0,
+      "broad_leads": 4,
+      "notes": "Researched directory candidates only. Unverified original-website entries remain in the separate legacy archive."
+    }
+  ],
+  "keralaDistricts": [
+    {
+      "district": "Kasaragod",
+      "displayName": "Kasaragod",
+      "aliases": [],
+      "entries": 0,
+      "cafes": 0,
+      "roasters": 0,
+      "buyroasted": 0,
+      "farms": 0,
+      "education": 0,
+      "baristas": 0,
+      "equipment": 0,
+      "notes": "No approved listing yet; suggest a place for review."
+    },
+    {
+      "district": "Kannur",
+      "displayName": "Kannur",
+      "aliases": [],
+      "entries": 1,
+      "cafes": 1,
+      "roasters": 0,
+      "buyroasted": 0,
+      "farms": 0,
+      "education": 0,
+      "baristas": 0,
+      "equipment": 0,
+      "notes": "Editorial listings from Specialty Coffee Keralam."
+    },
+    {
+      "district": "Wayanad",
+      "displayName": "Wayanad",
+      "aliases": [],
+      "entries": 6,
+      "cafes": 1,
+      "roasters": 0,
+      "buyroasted": 0,
+      "farms": 5,
+      "education": 0,
+      "baristas": 0,
+      "equipment": 0,
+      "notes": "Editorial listings from Specialty Coffee Keralam."
+    },
+    {
+      "district": "Kozhikode",
+      "displayName": "Kozhikode (Calicut)",
+      "aliases": [
+        "Calicut",
+        "കോഴിക്കോട്"
+      ],
+      "entries": 8,
+      "cafes": 6,
+      "roasters": 2,
+      "buyroasted": 3,
+      "farms": 0,
+      "education": 0,
+      "baristas": 0,
+      "equipment": 0,
+      "notes": "Editorial listings from Specialty Coffee Keralam."
+    },
+    {
+      "district": "Malappuram",
+      "displayName": "Malappuram",
+      "aliases": [],
+      "entries": 3,
+      "cafes": 2,
+      "roasters": 0,
+      "buyroasted": 0,
+      "farms": 0,
+      "education": 1,
+      "baristas": 0,
+      "equipment": 0,
+      "notes": "Editorial listings from Specialty Coffee Keralam."
+    },
+    {
+      "district": "Palakkad",
+      "displayName": "Palakkad",
+      "aliases": [],
+      "entries": 2,
+      "cafes": 0,
+      "roasters": 0,
+      "buyroasted": 0,
+      "farms": 2,
+      "education": 0,
+      "baristas": 0,
+      "equipment": 0,
+      "notes": "Editorial listings from Specialty Coffee Keralam."
+    },
+    {
+      "district": "Thrissur",
+      "displayName": "Thrissur",
+      "aliases": [],
+      "entries": 0,
+      "cafes": 0,
+      "roasters": 0,
+      "buyroasted": 0,
+      "farms": 0,
+      "education": 0,
+      "baristas": 0,
+      "equipment": 0,
+      "notes": "No approved listing yet; suggest a place for review."
+    },
+    {
+      "district": "Ernakulam",
+      "displayName": "Ernakulam · Kochi",
+      "aliases": [
+        "Kochi",
+        "Cochin",
+        "കൊച്ചി",
+        "എറണാകുളം"
+      ],
+      "entries": 8,
+      "cafes": 5,
+      "roasters": 1,
+      "buyroasted": 0,
+      "farms": 0,
+      "education": 2,
+      "baristas": 0,
+      "equipment": 0,
+      "notes": "Editorial listings from Specialty Coffee Keralam."
+    },
+    {
+      "district": "Idukki",
+      "displayName": "Idukki",
+      "aliases": [],
+      "entries": 4,
+      "cafes": 1,
+      "roasters": 0,
+      "buyroasted": 0,
+      "farms": 2,
+      "education": 0,
+      "baristas": 1,
+      "equipment": 0,
+      "notes": "Editorial listings from Specialty Coffee Keralam."
+    },
+    {
+      "district": "Kottayam",
+      "displayName": "Kottayam",
+      "aliases": [],
+      "entries": 0,
+      "cafes": 0,
+      "roasters": 0,
+      "buyroasted": 0,
+      "farms": 0,
+      "education": 0,
+      "baristas": 0,
+      "equipment": 0,
+      "notes": "No approved listing yet; suggest a place for review."
+    },
+    {
+      "district": "Alappuzha",
+      "displayName": "Alappuzha",
+      "aliases": [],
+      "entries": 0,
+      "cafes": 0,
+      "roasters": 0,
+      "buyroasted": 0,
+      "farms": 0,
+      "education": 0,
+      "baristas": 0,
+      "equipment": 0,
+      "notes": "No approved listing yet; suggest a place for review."
+    },
+    {
+      "district": "Pathanamthitta",
+      "displayName": "Pathanamthitta",
+      "aliases": [],
+      "entries": 0,
+      "cafes": 0,
+      "roasters": 0,
+      "buyroasted": 0,
+      "farms": 0,
+      "education": 0,
+      "baristas": 0,
+      "equipment": 0,
+      "notes": "No approved listing yet; suggest a place for review."
+    },
+    {
+      "district": "Kollam",
+      "displayName": "Kollam",
+      "aliases": [],
+      "entries": 0,
+      "cafes": 0,
+      "roasters": 0,
+      "buyroasted": 0,
+      "farms": 0,
+      "education": 0,
+      "baristas": 0,
+      "equipment": 0,
+      "notes": "No approved listing yet; suggest a place for review."
+    },
+    {
+      "district": "Thiruvananthapuram",
+      "displayName": "Thiruvananthapuram (Trivandrum)",
+      "aliases": [
+        "Trivandrum",
+        "തിരുവനന്തപുരം"
+      ],
+      "entries": 1,
+      "cafes": 1,
+      "roasters": 0,
+      "buyroasted": 0,
+      "farms": 0,
+      "education": 0,
+      "baristas": 0,
+      "equipment": 0,
+      "notes": "Editorial listings from Specialty Coffee Keralam."
+    }
+  ]
+}

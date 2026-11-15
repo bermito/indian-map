@@ -8,7 +8,7 @@ const json=name=>JSON.parse(fs.readFileSync(path.join(root,'data',name+'.json'),
 const manifest=json('manifest'), coverage=json('coverage'), directory=json('directory');
 let checks=0;
 function check(condition,message){assert.ok(condition,message);checks++;}
-const expected={directory:1034,products:5219,events:18,communities:19,learn:24,equipment:1607,'other-products':524,experiences:2,leads:1368,arpan:412,legacy:379};
+const expected={directory:991,products:5219,events:21,communities:19,learn:33,equipment:1607,'other-products':524,experiences:2,leads:1416,arpan:412,legacy:379};
 for(const [name,n]of Object.entries(expected)){
  const rows=json(name);check(rows.length===n,`${name}: expected ${n}, got ${rows.length}`);
  check(manifest.counts[name]===rows.length,`${name}: manifest count mismatch`);
@@ -26,8 +26,24 @@ const states=coverage.states.map(r=>r.state);
 check(states.length===36&&new Set(states).size===36,'Coverage must contain 36 unique states/UTs');
 check(coverage.states.filter(r=>r.type==='State').length===28,'Expected 28 state entries');
 check(coverage.keralaDistricts.length===14,'Expected 14 Kerala districts');
-check(directory.filter(r=>r.state==='Kerala').length===76,'Expected 76 Kerala core records');
-check(directory.filter(r=>!r.district).length===966,'Unknown district count unexpectedly changed');
+const kerala=directory.filter(r=>r.state==='Kerala'), authority=json('kerala-authority-source'), keralaMeta=json('kerala-authority');
+check(kerala.length===33,'Expected 33 unique corrected Kerala records');
+check(directory.filter(r=>!r.district).length===958,'Unknown district count unexpectedly changed');
+check(kerala.every(r=>r.authorityId),'Every Kerala core record must retain its authority ID');
+for(const a of authority.places){
+ const r=kerala.find(r=>r.authorityId===a.id);
+ check(Boolean(r),`Missing approved Kerala place ${a.id}`);
+ for(const [dest,src]of [['name','n'],['district','district'],['description','m'],['mapUrl','mapUrl'],['hours','hours'],['visitNote','visitNote'],['editorNote','editorNote']])check((r[dest]||'')===(a[src]||''),`${a.id}: corrected ${dest} changed`);
+ check(!r.hasPin,`${a.id}: coordinates must not be inferred from an old observation`);
+}
+check(kerala.filter(r=>r.kind==='roasters').length===3,'Expected three corrected Kerala roaster entries');
+check(kerala.filter(r=>r.categories?.includes('buyroasted')).length===3,'Expected three buy-roasted facets without duplicate places');
+check(coverage.keralaDistricts.filter(d=>!d.entries).length===6,'Expected six Kerala coverage gaps');
+const districtSvg=fs.readFileSync(path.join(root,'assets/map/kerala-districts.svg'),'utf8');
+const svgDistricts=[...districtSvg.matchAll(/data-kerala-district="([^"]+)"/g)].map(m=>m[1]);
+check(svgDistricts.length===14&&new Set(svgDistricts).size===14,'District map needs 14 unique selectable shapes');
+check(svgDistricts.every(d=>coverage.keralaDistricts.some(x=>x.district===d)),'District map contains a noncanonical district key');
+check(json('kerala-research-archive').directory.length===76,'Original Kerala research records must be retained');
 check(directory.every(r=>!r.state||states.includes(r.state)),'Unknown state label in core directory');
 check(directory.every(r=>!r.country||r.country==='India'),'Overseas venue in India directory');
 check(directory.every(r=>!r.id.startsWith('LEGACY-')),'Legacy observations mixed into core directory');
@@ -42,10 +58,13 @@ for(const s of coverage.states)check(directory.filter(r=>r.state===s.state).leng
 for(const d of coverage.keralaDistricts)check(directory.filter(r=>r.state==='Kerala'&&r.district===d.district).length===d.entries,`${d.district}: district count mismatch`);
 const leads=json('leads');check(leads.every(r=>r.hasPin===false),'Unverified broad leads must not gain pins');
 const events=json('events'), eligible=events.filter(r=>r.calendarEligible);
-check(eligible.length===8,'Expected eight organiser-supported event records');
+check(eligible.length===2,'Expected two retained organiser-supported calendar records');
 check(eligible.every(r=>['official_schedule_observed','organiser_page_and_ticket_listing_agree'].includes(r.verification)),'Unconfirmed event was made calendar-eligible');
 check(eligible.every(r=>/^\d{4}-\d{2}-\d{2}$/.test(r.date)&&!Number.isNaN(Date.parse(r.date))),'Calendar event has invalid date');
 check(eligible.filter(r=>(r.endDate||r.date)>='2026-11-15').length===2,'Expected two confirmed upcoming events at research snapshot');
+const archivedKerala=events.filter(r=>r.state==='Kerala');
+check(archivedKerala.length===11,'Expected eleven Kerala editorial event archives');
+check(archivedKerala.every(r=>r.status==='past_editorial_archive'&&!r.calendarEligible&&r.registrationClosed&&(r.endDate||r.date)<'2026-11-15'),'Kerala past events must stay archived with registration closed');
 const hoffmann=events.find(r=>r.name.includes('James Hoffmann'));
 check(hoffmann?.date==='2026-11-21'&&hoffmann?.sourceRawDate==='2026-11-22','Hoffmann date conflict provenance was lost');
 const slug=s=>s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
@@ -64,6 +83,9 @@ for(const file of files.filter(f=>f.endsWith('.html'))){
  check(/<html[^>]*lang="en(?:-IN)?"/.test(html),`${file}: missing English language`);
 }
 check(!broken.length,'Broken local references:\n'+broken.join('\n'));
+const keralaHtml=fs.readFileSync(path.join(root,'dist/states/kerala/index.html'),'utf8');
+for(const d of coverage.keralaDistricts)check(keralaHtml.includes('/states/kerala/?district='+encodeURIComponent(d.district)),`Static Kerala preview lacks ${d.district} link`);
+for(const r of kerala)check(keralaHtml.includes(r.name.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;')),`Static Kerala preview lacks ${r.name}`);
 for(const file of walk(path.join(root,'assets')).filter(f=>f.endsWith('.js')))execFileSync(process.execPath,['--check',file],{stdio:'pipe'});
 checks++;
 const source=fs.readFileSync(path.join(root,'assets/app.js'),'utf8');

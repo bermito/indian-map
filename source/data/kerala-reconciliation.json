@@ -1,0 +1,430 @@
+{
+  "originalKeralaRecords": 76,
+  "matchedResearchRecords": 37,
+  "uniqueApprovedPlaces": 33,
+  "unmatchedDirectoryLeads": 39,
+  "researchArchive": "kerala-research-archive.json",
+  "oldIdToNewId": {
+    "IND-df1c33a074cd": "90million-coffee",
+    "IND-df7c6e28f2e2": "bermito",
+    "IND-ab2bf4257522": "bermito",
+    "IND-4e411709d026": "brewmorphia-speciality-coffee",
+    "IND-94ad989bd6ae": "brwlab",
+    "IND-adf95beab5b4": "cafe-addict-kochi",
+    "IND-b204dcc9af21": "cafficana-kochi",
+    "IND-d71bf63144d3": "cafficana-kochi",
+    "IND-5f15afd0e48b": "cafficana-kozhikode",
+    "IND-1b7120e7b44f": "haneen-cafe",
+    "IND-3440c749415e": "overdose-cafe",
+    "IND-0cd7676b139d": "pour-over-lab",
+    "IND-784f699d777e": "pour-over-lab",
+    "IND-f2fe174bca10": "slolabs-by-cafficana",
+    "IND-9858ee7eccf3": "sukoru",
+    "IND-7aea20bfa097": "third-wave-coffee-airport",
+    "IND-64f11123fcb0": "third-wave-coffee-noel-mall-kakkanad",
+    "IND-3a3741153e82": "third-wave-coffee-panampilly-nagar",
+    "IND-5f7c9214bc8c": "underblu-specialty-coffee",
+    "IND-9424f567cb5d": "underblu-specialty-coffee",
+    "IND-812b4874923f": "understory-cafe",
+    "IND-a7a3c1e88a27": "wishlist-coffee",
+    "IND-844df91c3fc5": "thomas-k-v",
+    "IND-ec55840fbc7e": "brewell-coffee-lab",
+    "IND-a3b45de2a2fe": "the-brew-school",
+    "IND-517f22d27031": "erel-spices-experience-centre",
+    "IND-507fb2554847": "black-baza-coffee-smallholder-network",
+    "IND-88f19265e735": "kelachandra-coffee-brahmagiri-estate",
+    "IND-7fc6d1b251de": "komban-kampini",
+    "IND-e4c4bb771fc9": "old-babbler-coffee",
+    "IND-080c9f0ecbff": "poabs-seethargundu",
+    "IND-774255bd67ca": "sanjay-garden-bluhills-spices-beans",
+    "IND-9e2156a9abd4": "silent-valley-estate",
+    "IND-c9fb56608678": "terra-vagamon",
+    "IND-fdc6529bc658": "windermere-estate",
+    "IND-1d47065a0458": "capi",
+    "IND-c71459f255c8": "urban-hippie"
+  },
+  "matchedRecords": [
+    {
+      "previousId": "IND-df1c33a074cd",
+      "previousName": "90Million Coffee",
+      "authorityId": "90million-coffee"
+    },
+    {
+      "previousId": "IND-df7c6e28f2e2",
+      "previousName": "Bermito Coffee Roasters",
+      "authorityId": "bermito"
+    },
+    {
+      "previousId": "IND-ab2bf4257522",
+      "previousName": "Bermito Coffee Roasters",
+      "authorityId": "bermito"
+    },
+    {
+      "previousId": "IND-4e411709d026",
+      "previousName": "Brewmorphia Speciality Coffee",
+      "authorityId": "brewmorphia-speciality-coffee"
+    },
+    {
+      "previousId": "IND-94ad989bd6ae",
+      "previousName": "BRWLAB",
+      "authorityId": "brwlab"
+    },
+    {
+      "previousId": "IND-adf95beab5b4",
+      "previousName": "Cafe Addict Kochi",
+      "authorityId": "cafe-addict-kochi"
+    },
+    {
+      "previousId": "IND-b204dcc9af21",
+      "previousName": "Cafficana",
+      "authorityId": "cafficana-kochi"
+    },
+    {
+      "previousId": "IND-d71bf63144d3",
+      "previousName": "Cafficana Kochi",
+      "authorityId": "cafficana-kochi"
+    },
+    {
+      "previousId": "IND-5f15afd0e48b",
+      "previousName": "Cafficana Kozhikode",
+      "authorityId": "cafficana-kozhikode"
+    },
+    {
+      "previousId": "IND-1b7120e7b44f",
+      "previousName": "Haneen Cafe",
+      "authorityId": "haneen-cafe"
+    },
+    {
+      "previousId": "IND-3440c749415e",
+      "previousName": "Overdose Cafe",
+      "authorityId": "overdose-cafe"
+    },
+    {
+      "previousId": "IND-0cd7676b139d",
+      "previousName": "POUR OVER LAB",
+      "authorityId": "pour-over-lab"
+    },
+    {
+      "previousId": "IND-784f699d777e",
+      "previousName": "Pour Over Lab",
+      "authorityId": "pour-over-lab"
+    },
+    {
+      "previousId": "IND-f2fe174bca10",
+      "previousName": "Slolabs by Cafficana",
+      "authorityId": "slolabs-by-cafficana"
+    },
+    {
+      "previousId": "IND-9858ee7eccf3",
+      "previousName": "Sukoru Specialty Coffee",
+      "authorityId": "sukoru"
+    },
+    {
+      "previousId": "IND-7aea20bfa097",
+      "previousName": "Third Wave Coffee — Airport",
+      "authorityId": "third-wave-coffee-airport"
+    },
+    {
+      "previousId": "IND-64f11123fcb0",
+      "previousName": "Third Wave Coffee — Noel Focus Mall, Kakkanad",
+      "authorityId": "third-wave-coffee-noel-mall-kakkanad"
+    },
+    {
+      "previousId": "IND-3a3741153e82",
+      "previousName": "Third Wave Coffee — Panampilly Nagar",
+      "authorityId": "third-wave-coffee-panampilly-nagar"
+    },
+    {
+      "previousId": "IND-5f7c9214bc8c",
+      "previousName": "Underblu Coffee",
+      "authorityId": "underblu-specialty-coffee"
+    },
+    {
+      "previousId": "IND-9424f567cb5d",
+      "previousName": "Underblu Specialty Coffee",
+      "authorityId": "underblu-specialty-coffee"
+    },
+    {
+      "previousId": "IND-812b4874923f",
+      "previousName": "Understory Cafe",
+      "authorityId": "understory-cafe"
+    },
+    {
+      "previousId": "IND-a7a3c1e88a27",
+      "previousName": "Wishlist Coffee",
+      "authorityId": "wishlist-coffee"
+    },
+    {
+      "previousId": "IND-844df91c3fc5",
+      "previousName": "Thomas K V",
+      "authorityId": "thomas-k-v"
+    },
+    {
+      "previousId": "IND-ec55840fbc7e",
+      "previousName": "Brewell Coffee Lab",
+      "authorityId": "brewell-coffee-lab"
+    },
+    {
+      "previousId": "IND-a3b45de2a2fe",
+      "previousName": "The Brew School",
+      "authorityId": "the-brew-school"
+    },
+    {
+      "previousId": "IND-517f22d27031",
+      "previousName": "Erel Spices Experience Centre",
+      "authorityId": "erel-spices-experience-centre"
+    },
+    {
+      "previousId": "IND-507fb2554847",
+      "previousName": "Black Baza Coffee — Smallholder Network",
+      "authorityId": "black-baza-coffee-smallholder-network"
+    },
+    {
+      "previousId": "IND-88f19265e735",
+      "previousName": "Kelachandra Coffee — Brahmagiri Estate",
+      "authorityId": "kelachandra-coffee-brahmagiri-estate"
+    },
+    {
+      "previousId": "IND-7fc6d1b251de",
+      "previousName": "Komban Kampini / Vernacular",
+      "authorityId": "komban-kampini"
+    },
+    {
+      "previousId": "IND-e4c4bb771fc9",
+      "previousName": "Old Babbler Coffee",
+      "authorityId": "old-babbler-coffee"
+    },
+    {
+      "previousId": "IND-080c9f0ecbff",
+      "previousName": "Poabs Organic Estates — Seethargundu",
+      "authorityId": "poabs-seethargundu"
+    },
+    {
+      "previousId": "IND-774255bd67ca",
+      "previousName": "Sanjay Garden / Bluhills Spices & Beans",
+      "authorityId": "sanjay-garden-bluhills-spices-beans"
+    },
+    {
+      "previousId": "IND-9e2156a9abd4",
+      "previousName": "Silent Valley Estate",
+      "authorityId": "silent-valley-estate"
+    },
+    {
+      "previousId": "IND-c9fb56608678",
+      "previousName": "Terra Vagamon Conservancy",
+      "authorityId": "terra-vagamon"
+    },
+    {
+      "previousId": "IND-fdc6529bc658",
+      "previousName": "Windermere Estate",
+      "authorityId": "windermere-estate"
+    },
+    {
+      "previousId": "IND-1d47065a0458",
+      "previousName": "CAPI Specialty Coffee Roasters",
+      "authorityId": "capi"
+    },
+    {
+      "previousId": "IND-c71459f255c8",
+      "previousName": "Urban Hippie Coffee Roasters",
+      "authorityId": "urban-hippie"
+    }
+  ],
+  "researchLeads": [
+    {
+      "previousId": "IND-77972f148fef",
+      "name": "Buna Kaapi",
+      "leadId": "kerala-review-IND-77972f148fef"
+    },
+    {
+      "previousId": "IND-cd03a0044cd0",
+      "name": "Cafe Addict — Thrissur",
+      "leadId": "kerala-review-IND-cd03a0044cd0"
+    },
+    {
+      "previousId": "IND-4e528ca07f5e",
+      "name": "Cafe Paradiso Espresso Coffee Bar",
+      "leadId": "kerala-review-IND-4e528ca07f5e"
+    },
+    {
+      "previousId": "IND-4d37c0b64b5f",
+      "name": "Epic Poetry Cafe & Patisserie",
+      "leadId": "kerala-review-IND-4d37c0b64b5f"
+    },
+    {
+      "previousId": "IND-d329b91867d1",
+      "name": "FFox coffee",
+      "leadId": "kerala-review-IND-d329b91867d1"
+    },
+    {
+      "previousId": "IND-eaf7199ef73a",
+      "name": "Kaapi Street",
+      "leadId": "kerala-review-IND-eaf7199ef73a"
+    },
+    {
+      "previousId": "IND-0c0b86c679f2",
+      "name": "Kashi Art Cafe",
+      "leadId": "kerala-review-IND-0c0b86c679f2"
+    },
+    {
+      "previousId": "IND-8eab82f9f7c5",
+      "name": "Kochi Kapital Kafe",
+      "leadId": "kerala-review-IND-8eab82f9f7c5"
+    },
+    {
+      "previousId": "IND-29905f4a0724",
+      "name": "Pepper House",
+      "leadId": "kerala-review-IND-29905f4a0724"
+    },
+    {
+      "previousId": "IND-808e12016597",
+      "name": "Trouvaille",
+      "leadId": "kerala-review-IND-808e12016597"
+    },
+    {
+      "previousId": "IND-2a1c317ea628",
+      "name": "Turf Cafe",
+      "leadId": "kerala-review-IND-2a1c317ea628"
+    },
+    {
+      "previousId": "IND-b11e05a13e1b",
+      "name": "Beans of Bodhi",
+      "leadId": "kerala-review-IND-b11e05a13e1b"
+    },
+    {
+      "previousId": "IND-b535a7e027d8",
+      "name": "Castle Coffee",
+      "leadId": "kerala-review-IND-b535a7e027d8"
+    },
+    {
+      "previousId": "IND-53511e8038e2",
+      "name": "Elements Homestead Products",
+      "leadId": "kerala-review-IND-53511e8038e2"
+    },
+    {
+      "previousId": "IND-86f5cf998aaf",
+      "name": "Saji Coffee Works",
+      "leadId": "kerala-review-IND-86f5cf998aaf"
+    },
+    {
+      "previousId": "IND-5a9cf52e2ec2",
+      "name": "Kerala Coffee Collective",
+      "leadId": "kerala-review-IND-5a9cf52e2ec2"
+    },
+    {
+      "previousId": "IND-d065612d4049",
+      "name": "Kerala Origins",
+      "leadId": "kerala-review-IND-d065612d4049"
+    },
+    {
+      "previousId": "IND-d7e4d8b7ff52",
+      "name": "Let’s Brew Kochi",
+      "leadId": "kerala-review-IND-d7e4d8b7ff52"
+    },
+    {
+      "previousId": "IND-d017e2be3e3d",
+      "name": "Regional Coffee Research Station — Chundale",
+      "leadId": "kerala-review-IND-d017e2be3e3d"
+    },
+    {
+      "previousId": "IND-34acd4c27f34",
+      "name": "17AD Coffee",
+      "leadId": "kerala-review-IND-34acd4c27f34"
+    },
+    {
+      "previousId": "IND-1d2aff0c85f4",
+      "name": "Bluhills Spices & Beans",
+      "leadId": "kerala-review-IND-1d2aff0c85f4"
+    },
+    {
+      "previousId": "IND-2ba98b2d9f28",
+      "name": "Mountain Brewed Coffee",
+      "leadId": "kerala-review-IND-2ba98b2d9f28"
+    },
+    {
+      "previousId": "IND-4d56244f101a",
+      "name": "Shop Wayanad (Wayanad Spices & Natural Products)",
+      "leadId": "kerala-review-IND-4d56244f101a"
+    },
+    {
+      "previousId": "IND-de25e344a98e",
+      "name": "Wayanadcraft",
+      "leadId": "kerala-review-IND-de25e344a98e"
+    },
+    {
+      "previousId": "IND-942ff6eff3bd",
+      "name": "Krishnagiri Estate",
+      "leadId": "kerala-review-IND-942ff6eff3bd"
+    },
+    {
+      "previousId": "IND-40f26a54f45b",
+      "name": "Kuruvinakunnel Estate",
+      "leadId": "kerala-review-IND-40f26a54f45b"
+    },
+    {
+      "previousId": "IND-7eeb666a792f",
+      "name": "On Ground Farm",
+      "leadId": "kerala-review-IND-7eeb666a792f"
+    },
+    {
+      "previousId": "IND-1f4222ce2ea9",
+      "name": "Pampadumpara Estate",
+      "leadId": "kerala-review-IND-1f4222ce2ea9"
+    },
+    {
+      "previousId": "IND-d9ca80c7839d",
+      "name": "Puliyarmala Estate",
+      "leadId": "kerala-review-IND-d9ca80c7839d"
+    },
+    {
+      "previousId": "IND-906d25e85a07",
+      "name": "Rosegarden Group of Farming Community",
+      "leadId": "kerala-review-IND-906d25e85a07"
+    },
+    {
+      "previousId": "IND-0bbe76887afc",
+      "name": "Thumpassery Estate",
+      "leadId": "kerala-review-IND-0bbe76887afc"
+    },
+    {
+      "previousId": "IND-60e91b7b3748",
+      "name": "Woodlands Estate",
+      "leadId": "kerala-review-IND-60e91b7b3748"
+    },
+    {
+      "previousId": "IND-ca8fc1d40846",
+      "name": "Beans of Bodhi",
+      "leadId": "kerala-review-IND-ca8fc1d40846"
+    },
+    {
+      "previousId": "IND-7023a65a2e2e",
+      "name": "FFox Coffee",
+      "leadId": "kerala-review-IND-7023a65a2e2e"
+    },
+    {
+      "previousId": "IND-832dfb3fa488",
+      "name": "KoffyKraft",
+      "leadId": "kerala-review-IND-832dfb3fa488"
+    },
+    {
+      "previousId": "IND-27416bf4b418",
+      "name": "SeasonSync",
+      "leadId": "kerala-review-IND-27416bf4b418"
+    },
+    {
+      "previousId": "IND-b59aa34a1909",
+      "name": "Wild Ghats Coffee",
+      "leadId": "kerala-review-IND-b59aa34a1909"
+    },
+    {
+      "previousId": "IND-982a530ee8ed",
+      "name": "Fair Trade Alliance Kerala",
+      "leadId": "kerala-review-IND-982a530ee8ed"
+    },
+    {
+      "previousId": "IND-f709e1cc6e81",
+      "name": "Plantrich Agritech",
+      "leadId": "kerala-review-IND-f709e1cc6e81"
+    }
+  ]
+}
