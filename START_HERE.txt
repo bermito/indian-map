@@ -1,0 +1,15 @@
+SPECIALTY COFFEE INDIA — COMPLETE ROOT UPLOAD PACKAGE
+15 November 2026
+
+This revised ZIP has ONE complete project directly inside it.
+Extract it, then upload all extracted files and folders to the ROOT of bermito/indian-map, alongside the existing root README. Replace index.html and vercel.json. The assets/, data/ and scripts/ folders must be complete.
+
+After extraction you should immediately see index.html, vercel.json, package.json, README.md, assets/, data/ and scripts/. There is no website/ or source/ wrapper folder in this package.
+
+Vercel configuration: repository root; build command node scripts/build.mjs; output directory dist. No package installation is required. Run node scripts/check.mjs after building.
+
+The previous nested uploads left the original root homepage active. The new source/ upload was also missing essential scripts/styles/map assets. This package fixes that file structure. It does not change the live website automatically.
+
+Read INDIA-WEBSITE-AUDIT.md for the full audit. The nationwide district research remains incomplete: all 958 non-Kerala directory records lack districts, and eight state/UT pages have no core entries. Reviewed catalogue and interface bugs have been corrected without inventing missing information.
+
+validation.json records the local checks. The package was extracted into a clean folder and built/tested there. Keep all files together. Do not open index.html using file://; interactive loading requires an HTTP server.

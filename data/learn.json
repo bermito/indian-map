@@ -1,0 +1,799 @@
+[
+  {
+    "id": "learning_resource-4e76b85dea4d",
+    "name": "Indian Coffee Beans Field Guide",
+    "kind": "learning_resource",
+    "category": "Learning Resource",
+    "status": "resource_available",
+    "verification": "publisher_page_observed",
+    "evidenceLabel": "Directory listed",
+    "url": "https://www.indiancoffeebeans.com/learn",
+    "sourceUrls": [
+      "https://www.indiancoffeebeans.com/learn"
+    ],
+    "notes": "Online guides covering brewing, origins, processing, buying and industry topics.",
+    "checkedDate": "2026-11-15",
+    "geographicScope": "India",
+    "deliveryMode": "online",
+    "calendarEligible": false
+  },
+  {
+    "id": "learning_resource-0489b527ddbc",
+    "name": "Indian Coffee Beans Glossary",
+    "kind": "learning_resource",
+    "category": "Learning Resource",
+    "status": "resource_available",
+    "verification": "publisher_page_observed",
+    "evidenceLabel": "Directory listed",
+    "url": "https://www.indiancoffeebeans.com/learn/glossary",
+    "sourceUrls": [
+      "https://www.indiancoffeebeans.com/learn/glossary"
+    ],
+    "notes": "Coffee terminology reference.",
+    "checkedDate": "2026-11-15",
+    "geographicScope": "India",
+    "deliveryMode": "online",
+    "calendarEligible": false
+  },
+  {
+    "id": "learning_resource-4d76f8db3197",
+    "name": "Indian Coffee Stories learning guide",
+    "kind": "learning_resource",
+    "category": "Learning Resource",
+    "status": "resource_available",
+    "verification": "publisher_page_observed",
+    "evidenceLabel": "Directory listed",
+    "url": "https://www.indiancoffeestories.com/blog/start-here-indian-coffee-stories",
+    "sourceUrls": [
+      "https://www.indiancoffeestories.com/blog/start-here-indian-coffee-stories"
+    ],
+    "notes": "Home-brewing guides and equipment education.",
+    "checkedDate": "2026-11-15",
+    "geographicScope": "India",
+    "deliveryMode": "online",
+    "calendarEligible": false
+  },
+  {
+    "id": "publication-e9003e49ac6a",
+    "name": "Caffeine Letter newsletter",
+    "kind": "publication",
+    "category": "Publication",
+    "status": "resource_available",
+    "verification": "publisher_page_observed",
+    "evidenceLabel": "Directory listed",
+    "url": "https://caffeineletter.com/",
+    "sourceUrls": [
+      "https://caffeineletter.com/"
+    ],
+    "notes": "Weekly brewing and coffee newsletter; last homepage issue observed 7 November 2026.",
+    "checkedDate": "2026-11-15",
+    "geographicScope": "India",
+    "deliveryMode": "online",
+    "calendarEligible": false
+  },
+  {
+    "id": "publication-131b6cf38b41",
+    "name": "Indian Coffee Beans newsletter",
+    "kind": "publication",
+    "category": "Publication",
+    "status": "resource_available",
+    "verification": "publisher_page_observed",
+    "evidenceLabel": "Directory listed",
+    "url": "https://www.indiancoffeebeans.com/newsletter",
+    "sourceUrls": [
+      "https://www.indiancoffeebeans.com/newsletter"
+    ],
+    "notes": "Fortnightly archive covering roasters, product releases and coffee topics.",
+    "checkedDate": "2026-11-15",
+    "geographicScope": "India",
+    "deliveryMode": "online",
+    "calendarEligible": false
+  },
+  {
+    "id": "publication-5e96230360b6",
+    "name": "India Coffee E-Magazine — Coffee Board",
+    "kind": "publication",
+    "category": "Publication",
+    "status": "resource_available",
+    "verification": "publisher_page_observed",
+    "evidenceLabel": "Directory listed",
+    "url": "https://coffeeboard.gov.in/EmagazineAboutUs.aspx",
+    "sourceUrls": [
+      "https://coffeeboard.gov.in/EmagazineAboutUs.aspx"
+    ],
+    "notes": "Research and coffee value-chain publication; issue dates must be retained.",
+    "checkedDate": "2026-11-15",
+    "geographicScope": "India",
+    "deliveryMode": "online",
+    "calendarEligible": false
+  },
+  {
+    "id": "learning_resource-b8173a970aff",
+    "name": "Your First Month with Indian Specialty Coffee",
+    "kind": "learning_resource",
+    "category": "Learning Resource",
+    "status": "resource_available",
+    "verification": "publisher_page_observed",
+    "evidenceLabel": "Directory listed",
+    "url": "https://www.indiancoffeebeans.com/learn/series/your-first-month-with-indian-specialty-coffee",
+    "sourceUrls": [
+      "https://www.indiancoffeebeans.com/learn/series"
+    ],
+    "notes": "Structured reading series; metadata extracted from the publisher index.",
+    "checkedDate": "2026-11-15",
+    "geographicScope": "India",
+    "deliveryMode": "online",
+    "calendarEligible": false
+  },
+  {
+    "id": "learning_resource-4a6e10ab41bc",
+    "name": "Brew Method Manuals",
+    "kind": "learning_resource",
+    "category": "Learning Resource",
+    "status": "resource_available",
+    "verification": "publisher_page_observed",
+    "evidenceLabel": "Directory listed",
+    "url": "https://www.indiancoffeebeans.com/learn/series/brew-method-manuals",
+    "sourceUrls": [
+      "https://www.indiancoffeebeans.com/learn/series"
+    ],
+    "notes": "Structured reading series; metadata extracted from the publisher index.",
+    "checkedDate": "2026-11-15",
+    "geographicScope": "India",
+    "deliveryMode": "online",
+    "calendarEligible": false
+  },
+  {
+    "id": "learning_resource-37bb6eb26b85",
+    "name": "The Price of a Bag",
+    "kind": "learning_resource",
+    "category": "Learning Resource",
+    "status": "resource_available",
+    "verification": "publisher_page_observed",
+    "evidenceLabel": "Directory listed",
+    "url": "https://www.indiancoffeebeans.com/learn/series/the-price-of-a-bag",
+    "sourceUrls": [
+      "https://www.indiancoffeebeans.com/learn/series"
+    ],
+    "notes": "Structured reading series; metadata extracted from the publisher index.",
+    "checkedDate": "2026-11-15",
+    "geographicScope": "India",
+    "deliveryMode": "online",
+    "calendarEligible": false
+  },
+  {
+    "id": "learning_resource-68cdad2540bc",
+    "name": "Cherry to Cup: How Indian Coffee Gets Made",
+    "kind": "learning_resource",
+    "category": "Learning Resource",
+    "status": "resource_available",
+    "verification": "publisher_page_observed",
+    "evidenceLabel": "Directory listed",
+    "url": "https://www.indiancoffeebeans.com/learn/series/cherry-to-cup-how-indian-coffee-gets-made",
+    "sourceUrls": [
+      "https://www.indiancoffeebeans.com/learn/series"
+    ],
+    "notes": "Structured reading series; metadata extracted from the publisher index.",
+    "checkedDate": "2026-11-15",
+    "geographicScope": "India",
+    "deliveryMode": "online",
+    "calendarEligible": false
+  },
+  {
+    "id": "learning_resource-07958743b38f",
+    "name": "Dialing In: Fixing Extraction at Home",
+    "kind": "learning_resource",
+    "category": "Learning Resource",
+    "status": "resource_available",
+    "verification": "publisher_page_observed",
+    "evidenceLabel": "Directory listed",
+    "url": "https://www.indiancoffeebeans.com/learn/series/dialing-in-fixing-extraction-at-home",
+    "sourceUrls": [
+      "https://www.indiancoffeebeans.com/learn/series"
+    ],
+    "notes": "Structured reading series; metadata extracted from the publisher index.",
+    "checkedDate": "2026-11-15",
+    "geographicScope": "India",
+    "deliveryMode": "online",
+    "calendarEligible": false
+  },
+  {
+    "id": "learning_resource-74c6888818aa",
+    "name": "Processing, Explained",
+    "kind": "learning_resource",
+    "category": "Learning Resource",
+    "status": "resource_available",
+    "verification": "publisher_page_observed",
+    "evidenceLabel": "Directory listed",
+    "url": "https://www.indiancoffeebeans.com/learn/series/processing-explained",
+    "sourceUrls": [
+      "https://www.indiancoffeebeans.com/learn/series"
+    ],
+    "notes": "Structured reading series; metadata extracted from the publisher index.",
+    "checkedDate": "2026-11-15",
+    "geographicScope": "India",
+    "deliveryMode": "online",
+    "calendarEligible": false
+  },
+  {
+    "id": "learning_resource-2a7d13fd3d35",
+    "name": "An Atlas of Indian Coffee Regions",
+    "kind": "learning_resource",
+    "category": "Learning Resource",
+    "status": "resource_available",
+    "verification": "publisher_page_observed",
+    "evidenceLabel": "Directory listed",
+    "url": "https://www.indiancoffeebeans.com/learn/series/atlas-of-indian-coffee-regions",
+    "sourceUrls": [
+      "https://www.indiancoffeebeans.com/learn/series"
+    ],
+    "notes": "Structured reading series; metadata extracted from the publisher index.",
+    "checkedDate": "2026-11-15",
+    "geographicScope": "India",
+    "deliveryMode": "online",
+    "calendarEligible": false
+  },
+  {
+    "id": "learning_resource-e2fad7f531d5",
+    "name": "State of Indian Specialty Coffee",
+    "kind": "learning_resource",
+    "category": "Learning Resource",
+    "status": "resource_available",
+    "verification": "publisher_page_observed",
+    "evidenceLabel": "Directory listed",
+    "url": "https://www.indiancoffeebeans.com/learn/series/state-of-indian-specialty-coffee",
+    "sourceUrls": [
+      "https://www.indiancoffeebeans.com/learn/series"
+    ],
+    "notes": "Structured reading series; metadata extracted from the publisher index.",
+    "checkedDate": "2026-11-15",
+    "geographicScope": "India",
+    "deliveryMode": "online",
+    "calendarEligible": false
+  },
+  {
+    "id": "education_provider-e98f587b9dee",
+    "name": "Specialty Coffee Academy of India — Bengaluru",
+    "kind": "education_provider",
+    "category": "Education Provider",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "status": "resource_available",
+    "verification": "publisher_page_observed",
+    "evidenceLabel": "Directory listed",
+    "url": "https://www.scai.coffee/",
+    "sourceUrls": [
+      "https://www.scai.coffee/collections/scai-workshops"
+    ],
+    "notes": "Training centre/contact location listed by academy. Course availability and schedules vary; no dates inferred.",
+    "checkedDate": "2026-11-15",
+    "address": "335/15, 1st Floor, 36th A Cross, 9th Main, Jayanagar 5th Block, Bengaluru 560041",
+    "calendarEligible": false,
+    "originalWebsiteReferences": [
+      "LEGACY-407e16f828e7",
+      "LEGACY-1a4324ee8564",
+      "LEGACY-8e36b15ca327",
+      "LEGACY-c75590ffbb97",
+      "LEGACY-de51040af2e6",
+      "LEGACY-c08f2f7f102b",
+      "LEGACY-67f6f4f036cc"
+    ]
+  },
+  {
+    "id": "education_provider-48de5d2a83cf",
+    "name": "Specialty Coffee Academy of India — Delhi",
+    "kind": "education_provider",
+    "category": "Education Provider",
+    "city": "Delhi",
+    "state": "Delhi",
+    "status": "resource_available",
+    "verification": "publisher_page_observed",
+    "evidenceLabel": "Directory listed",
+    "url": "https://www.scai.coffee/",
+    "sourceUrls": [
+      "https://www.scai.coffee/collections/scai-workshops"
+    ],
+    "notes": "Training centre/contact location listed by academy. Course availability and schedules vary; no dates inferred.",
+    "checkedDate": "2026-11-15",
+    "address": "Plot 8, Khasra 261, Ground floor, right side, Westend Marg, Saidulajaib, New Delhi 110030",
+    "calendarEligible": false,
+    "originalWebsiteReferences": [
+      "LEGACY-407e16f828e7",
+      "LEGACY-1a4324ee8564",
+      "LEGACY-8e36b15ca327",
+      "LEGACY-c75590ffbb97",
+      "LEGACY-de51040af2e6",
+      "LEGACY-c08f2f7f102b",
+      "LEGACY-67f6f4f036cc"
+    ]
+  },
+  {
+    "id": "education_provider-5d2fcc68e39d",
+    "name": "Specialty Coffee Academy of India — Jaipur",
+    "kind": "education_provider",
+    "category": "Education Provider",
+    "city": "Jaipur",
+    "state": "Rajasthan",
+    "status": "resource_available",
+    "verification": "publisher_page_observed",
+    "evidenceLabel": "Directory listed",
+    "url": "https://www.scai.coffee/",
+    "sourceUrls": [
+      "https://www.scai.coffee/collections/scai-workshops"
+    ],
+    "notes": "Training centre/contact location listed by academy. Course availability and schedules vary; no dates inferred.",
+    "checkedDate": "2026-11-15",
+    "address": "11B, Ground Floor, RSEB Officers Colony, opposite Inox, D Block, Vaishali Nagar, Jaipur 302021",
+    "calendarEligible": false,
+    "originalWebsiteReferences": [
+      "LEGACY-407e16f828e7",
+      "LEGACY-1a4324ee8564",
+      "LEGACY-8e36b15ca327",
+      "LEGACY-c75590ffbb97",
+      "LEGACY-de51040af2e6",
+      "LEGACY-c08f2f7f102b",
+      "LEGACY-67f6f4f036cc"
+    ]
+  },
+  {
+    "id": "education_provider-9dca9ba02ff1",
+    "name": "Specialty Coffee Academy of India — Aizawl",
+    "kind": "education_provider",
+    "category": "Education Provider",
+    "city": "Aizawl",
+    "state": "Mizoram",
+    "status": "resource_available",
+    "verification": "publisher_page_observed",
+    "evidenceLabel": "Directory listed",
+    "url": "https://www.scai.coffee/",
+    "sourceUrls": [
+      "https://www.scai.coffee/collections/scai-workshops"
+    ],
+    "notes": "Training centre/contact location listed by academy. Course availability and schedules vary; no dates inferred.",
+    "checkedDate": "2026-11-15",
+    "address": "Benki Brewing Tools, Zonuam, near Zonuam Police Outpost, Aizawl 796014",
+    "calendarEligible": false,
+    "originalWebsiteReferences": [
+      "LEGACY-407e16f828e7",
+      "LEGACY-1a4324ee8564",
+      "LEGACY-8e36b15ca327",
+      "LEGACY-c75590ffbb97",
+      "LEGACY-de51040af2e6",
+      "LEGACY-c08f2f7f102b",
+      "LEGACY-67f6f4f036cc"
+    ]
+  },
+  {
+    "id": "education_provider-09338c207169",
+    "name": "Specialty Coffee Academy of India — Hyderabad",
+    "kind": "education_provider",
+    "category": "Education Provider",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "status": "resource_available",
+    "verification": "publisher_page_observed",
+    "evidenceLabel": "Directory listed",
+    "url": "https://www.scai.coffee/",
+    "sourceUrls": [
+      "https://www.scai.coffee/collections/scai-workshops"
+    ],
+    "notes": "Training centre/contact location listed by academy. Course availability and schedules vary; no dates inferred.",
+    "checkedDate": "2026-11-15",
+    "address": "Benki Brewing Tools, 8-2-681/A/1, Road 12, Banjara Hills, Hyderabad 500034",
+    "calendarEligible": false,
+    "originalWebsiteReferences": [
+      "LEGACY-407e16f828e7",
+      "LEGACY-1a4324ee8564",
+      "LEGACY-8e36b15ca327",
+      "LEGACY-c75590ffbb97",
+      "LEGACY-de51040af2e6",
+      "LEGACY-c08f2f7f102b",
+      "LEGACY-67f6f4f036cc"
+    ]
+  },
+  {
+    "id": "education_provider-89eb45f4d2aa",
+    "name": "ARAKU World Specialty Coffee Academy",
+    "kind": "education_provider",
+    "category": "Education Provider",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "status": "resource_available",
+    "verification": "publisher_page_observed",
+    "evidenceLabel": "Directory listed",
+    "url": "https://www.arakucoffee.in/pages/cafe-events",
+    "sourceUrls": [
+      "https://www.arakucoffee.in/pages/cafe-events"
+    ],
+    "notes": "Coffee skills and barista/sensory training at the Bengaluru flagship; accreditation claim belongs to provider and was not separately audited.",
+    "checkedDate": "2026-11-15",
+    "calendarEligible": false,
+    "originalWebsiteReferences": [
+      "LEGACY-b19e234afdfd",
+      "LEGACY-d3a43f04ce02"
+    ]
+  },
+  {
+    "id": "education_provider-ce4bfc7d306c",
+    "name": "Coffee Board — Kaapi Shastra",
+    "kind": "education_provider",
+    "category": "Education Provider",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "status": "resource_available",
+    "verification": "publisher_page_observed",
+    "evidenceLabel": "Directory listed",
+    "url": "https://coffeeboard.gov.in/kaapi-shastra.html",
+    "sourceUrls": [
+      "https://coffeeboard.gov.in/kaapi-shastra.html"
+    ],
+    "notes": "Official five-day programme covering roasting, brewing and retailing.",
+    "checkedDate": "2026-11-15",
+    "calendarEligible": false,
+    "originalWebsiteReferences": [
+      "LEGACY-22f8449f1c11",
+      "LEGACY-8da6e84289e9"
+    ]
+  },
+  {
+    "id": "education_provider-b3293282e626",
+    "name": "BerryCo",
+    "kind": "education_provider",
+    "category": "Education Provider",
+    "status": "resource_available",
+    "verification": "publisher_page_observed",
+    "evidenceLabel": "Directory listed",
+    "url": "https://in.linkedin.com/company/berrycoiscoffee",
+    "sourceUrls": [
+      "https://in.linkedin.com/company/berrycoiscoffee"
+    ],
+    "notes": "Provider profile lists coffee training and certification, sensory, processing and consulting; schedule-specific records need separate verification.",
+    "checkedDate": "2026-11-15",
+    "calendarEligible": false
+  },
+  {
+    "id": "kerala-education-brewell-coffee-lab",
+    "authorityId": "brewell-coffee-lab",
+    "name": "Brewell Coffee Lab",
+    "name_ml": "ബ്രൂവെൽ കോഫി ലാബ്",
+    "nameMl": "ബ്രൂവെൽ കോഫി ലാബ്",
+    "kind": "education_provider",
+    "category": "Education provider",
+    "categories": [
+      "education"
+    ],
+    "authorityCategoryLabels": [
+      "Coffee education"
+    ],
+    "state": "Kerala",
+    "stateAliases": [
+      "Keralam",
+      "കേരളം"
+    ],
+    "district": "Malappuram",
+    "country": "India",
+    "districtAliases": [],
+    "description": "Manjeri · learning, experimenting, coffee & beverage development",
+    "notes": "Manjeri · learning, experimenting, coffee & beverage development",
+    "description_ml": "മഞ്ചേരി · കാപ്പി പഠനം, പരീക്ഷണങ്ങൾ, പാനീയ വികസനം",
+    "descriptionMl": "മഞ്ചേരി · കാപ്പി പഠനം, പരീക്ഷണങ്ങൾ, പാനീയ വികസനം",
+    "url": "https://maps.app.goo.gl/RoPvsB8kzQwJdzUt5",
+    "authorityUrl": "https://www.specialtycoffeekerala.com/places/brewell-coffee-lab/",
+    "sourceNames": [
+      "Specialty Coffee Keralam"
+    ],
+    "sourceUrls": [
+      "https://www.specialtycoffeekerala.com/places/brewell-coffee-lab/"
+    ],
+    "sourceIds": [
+      "brewell-coffee-lab"
+    ],
+    "status": "resource_available",
+    "evidenceLabel": "Kerala editorial source",
+    "specialtyStatus": "Editorial selection in the user-approved Kerala directory; not a quality certification.",
+    "checkedDate": "2026-11-15",
+    "authorityImportedDate": "2026-11-15",
+    "hasPin": false,
+    "geographyNote": "District and visiting details follow the corrected Kerala source. No coordinates inferred.",
+    "sourceAuthority": {
+      "name": "Specialty Coffee Keralam",
+      "url": "https://www.specialtycoffeekerala.com",
+      "commit": "63889f1ace9b987bf2f4b2251f40276a13fde001",
+      "checkedDate": "2026-11-15"
+    },
+    "previousResearchIds": [
+      "IND-ec55840fbc7e"
+    ],
+    "mapUrl": "https://maps.app.goo.gl/RoPvsB8kzQwJdzUt5",
+    "sourceCount": 1,
+    "relationships": [],
+    "calendarEligible": false
+  },
+  {
+    "id": "kerala-education-pour-over-lab",
+    "authorityId": "pour-over-lab",
+    "name": "Pour Over Lab",
+    "name_ml": "പോർ ഓവർ ലാബ്",
+    "nameMl": "പോർ ഓവർ ലാബ്",
+    "kind": "education_provider",
+    "category": "Education provider",
+    "categories": [
+      "education"
+    ],
+    "authorityCategoryLabels": [
+      "Coffee education"
+    ],
+    "state": "Kerala",
+    "stateAliases": [
+      "Keralam",
+      "കേരളം"
+    ],
+    "district": "Ernakulam",
+    "country": "India",
+    "districtAliases": [
+      "Kochi",
+      "Cochin",
+      "കൊച്ചി",
+      "എറണാകുളം"
+    ],
+    "description": "Kaloor · workshops, courses, experience space",
+    "notes": "Kaloor · workshops, courses, experience space",
+    "description_ml": "കലൂർ · ശിൽപ്പശാലകൾ, പഠനപരിപാടികൾ, കാപ്പി അനുഭവങ്ങൾ",
+    "descriptionMl": "കലൂർ · ശിൽപ്പശാലകൾ, പഠനപരിപാടികൾ, കാപ്പി അനുഭവങ്ങൾ",
+    "url": "https://www.pouroverlab.in/",
+    "authorityUrl": "https://www.specialtycoffeekerala.com/places/pour-over-lab/",
+    "sourceNames": [
+      "Specialty Coffee Keralam"
+    ],
+    "sourceUrls": [
+      "https://www.specialtycoffeekerala.com/places/pour-over-lab/"
+    ],
+    "sourceIds": [
+      "pour-over-lab"
+    ],
+    "status": "resource_available",
+    "evidenceLabel": "Kerala editorial source",
+    "specialtyStatus": "Editorial selection in the user-approved Kerala directory; not a quality certification.",
+    "checkedDate": "2026-11-15",
+    "authorityImportedDate": "2026-11-15",
+    "hasPin": false,
+    "geographyNote": "District and visiting details follow the corrected Kerala source. No coordinates inferred.",
+    "sourceAuthority": {
+      "name": "Specialty Coffee Keralam",
+      "url": "https://www.specialtycoffeekerala.com",
+      "commit": "63889f1ace9b987bf2f4b2251f40276a13fde001",
+      "checkedDate": "2026-11-15"
+    },
+    "previousResearchIds": [
+      "IND-0cd7676b139d",
+      "IND-784f699d777e"
+    ],
+    "city": "Kochi",
+    "sourceCount": 1,
+    "relationships": [],
+    "calendarEligible": false
+  },
+  {
+    "id": "kerala-education-the-brew-school",
+    "authorityId": "the-brew-school",
+    "name": "The Brew School",
+    "name_ml": "ദി ബ്രൂ സ്കൂൾ",
+    "nameMl": "ദി ബ്രൂ സ്കൂൾ",
+    "kind": "education_provider",
+    "category": "Education provider",
+    "categories": [
+      "education"
+    ],
+    "authorityCategoryLabels": [
+      "Coffee education"
+    ],
+    "state": "Kerala",
+    "stateAliases": [
+      "Keralam",
+      "കേരളം"
+    ],
+    "district": "Ernakulam",
+    "country": "India",
+    "districtAliases": [
+      "Kochi",
+      "Cochin",
+      "കൊച്ചി",
+      "എറണാകുളം"
+    ],
+    "description": "Kadavanthra · professional barista training",
+    "notes": "Kadavanthra · professional barista training",
+    "description_ml": "കടവന്ത്ര · തൊഴിൽപരമായ കാപ്പി തയ്യാറാക്കൽ പരിശീലനം",
+    "descriptionMl": "കടവന്ത്ര · തൊഴിൽപരമായ കാപ്പി തയ്യാറാക്കൽ പരിശീലനം",
+    "url": "https://thebrewschool.in/",
+    "authorityUrl": "https://www.specialtycoffeekerala.com/places/the-brew-school/",
+    "sourceNames": [
+      "Specialty Coffee Keralam"
+    ],
+    "sourceUrls": [
+      "https://www.specialtycoffeekerala.com/places/the-brew-school/"
+    ],
+    "sourceIds": [
+      "the-brew-school"
+    ],
+    "status": "resource_available",
+    "evidenceLabel": "Kerala editorial source",
+    "specialtyStatus": "Editorial selection in the user-approved Kerala directory; not a quality certification.",
+    "checkedDate": "2026-11-15",
+    "authorityImportedDate": "2026-11-15",
+    "hasPin": false,
+    "geographyNote": "District and visiting details follow the corrected Kerala source. No coordinates inferred.",
+    "sourceAuthority": {
+      "name": "Specialty Coffee Keralam",
+      "url": "https://www.specialtycoffeekerala.com",
+      "commit": "63889f1ace9b987bf2f4b2251f40276a13fde001",
+      "checkedDate": "2026-11-15"
+    },
+    "previousResearchIds": [
+      "IND-a3b45de2a2fe"
+    ],
+    "city": "Kochi",
+    "sourceCount": 1,
+    "relationships": [],
+    "calendarEligible": false
+  },
+  {
+    "id": "kerala-guide-kerala-coffee-festival-2026",
+    "name": "Kerala Coffee Festival 2026 and Kozhikode’s Coffee Weekend",
+    "kind": "learning_resource",
+    "category": "Kerala coffee guide",
+    "state": "Kerala",
+    "url": "https://www.specialtycoffeekerala.com/blog/kerala-coffee-festival-2026/",
+    "notes": "An archive of the November 2026 festival programme and independently organised Kozhikode coffee events.",
+    "sourceUrls": [
+      "https://www.specialtycoffeekerala.com/blog/kerala-coffee-festival-2026/"
+    ],
+    "sourceNames": [
+      "Specialty Coffee Keralam"
+    ],
+    "checkedDate": "2026-11-15",
+    "evidenceLabel": "Kerala editorial source",
+    "status": "resource_available",
+    "calendarEligible": false,
+    "authorityId": "kerala-coffee-festival-2026"
+  },
+  {
+    "id": "kerala-guide-kerala-coffee-festivals-events",
+    "name": "Kerala Coffee Festivals & Events: Cuppings, Workshops & Community",
+    "kind": "learning_resource",
+    "category": "Kerala coffee guide",
+    "state": "Kerala",
+    "url": "https://www.specialtycoffeekerala.com/blog/kerala-coffee-festivals-events/",
+    "notes": "A guide to Kerala cuppings, workshops, festivals and community coffee gatherings.",
+    "sourceUrls": [
+      "https://www.specialtycoffeekerala.com/blog/kerala-coffee-festivals-events/"
+    ],
+    "sourceNames": [
+      "Specialty Coffee Keralam"
+    ],
+    "checkedDate": "2026-11-15",
+    "evidenceLabel": "Kerala editorial source",
+    "status": "resource_available",
+    "calendarEligible": false,
+    "authorityId": "kerala-coffee-festivals-events"
+  },
+  {
+    "id": "kerala-guide-kerala-coffee-guide",
+    "name": "Keralam Coffee Guide: Growing Regions, Producers & Culture",
+    "kind": "learning_resource",
+    "category": "Kerala coffee guide",
+    "state": "Kerala",
+    "url": "https://www.specialtycoffeekerala.com/blog/kerala-coffee-guide/",
+    "notes": "Learn about Kerala growing regions, coffee species, producers, roasters and community gatherings.",
+    "sourceUrls": [
+      "https://www.specialtycoffeekerala.com/blog/kerala-coffee-guide/"
+    ],
+    "sourceNames": [
+      "Specialty Coffee Keralam"
+    ],
+    "checkedDate": "2026-11-15",
+    "evidenceLabel": "Kerala editorial source",
+    "status": "resource_available",
+    "calendarEligible": false,
+    "authorityId": "kerala-coffee-guide"
+  },
+  {
+    "id": "kerala-guide-kerala-coffee-producers",
+    "name": "Keralam Coffee Producers: Meet the People Behind the Beans",
+    "kind": "learning_resource",
+    "category": "Kerala coffee guide",
+    "state": "Kerala",
+    "url": "https://www.specialtycoffeekerala.com/blog/kerala-coffee-producers/",
+    "notes": "Meet eleven Kerala producer stories, with sources distinguishing growers, processors and roasters.",
+    "sourceUrls": [
+      "https://www.specialtycoffeekerala.com/blog/kerala-coffee-producers/"
+    ],
+    "sourceNames": [
+      "Specialty Coffee Keralam"
+    ],
+    "checkedDate": "2026-11-15",
+    "evidenceLabel": "Kerala editorial source",
+    "status": "resource_available",
+    "calendarEligible": false,
+    "authorityId": "kerala-coffee-producers"
+  },
+  {
+    "id": "kerala-guide-kozhikode-specialty-coffee-culture",
+    "name": "Kozhikode’s Specialty Coffee Boom: Cafés, Roasters & Community",
+    "kind": "learning_resource",
+    "category": "Kerala coffee guide",
+    "state": "Kerala",
+    "url": "https://www.specialtycoffeekerala.com/blog/kozhikode-specialty-coffee-culture/",
+    "notes": "Explore Kozhikode cafés, roasters and the community around specialty coffee.",
+    "sourceUrls": [
+      "https://www.specialtycoffeekerala.com/blog/kozhikode-specialty-coffee-culture/"
+    ],
+    "sourceNames": [
+      "Specialty Coffee Keralam"
+    ],
+    "checkedDate": "2026-11-15",
+    "evidenceLabel": "Kerala editorial source",
+    "status": "resource_available",
+    "calendarEligible": false,
+    "authorityId": "kozhikode-specialty-coffee-culture"
+  },
+  {
+    "id": "kerala-guide-specialty-coffee-kochi",
+    "name": "Specialty coffee in Kochi: plan a thoughtful café visit",
+    "kind": "learning_resource",
+    "category": "Kerala coffee guide",
+    "state": "Kerala",
+    "url": "https://www.specialtycoffeekerala.com/blog/specialty-coffee-kochi/",
+    "notes": "Plan a café visit in Kochi and follow source links for branches, brewing and current visiting details.",
+    "sourceUrls": [
+      "https://www.specialtycoffeekerala.com/blog/specialty-coffee-kochi/"
+    ],
+    "sourceNames": [
+      "Specialty Coffee Keralam"
+    ],
+    "checkedDate": "2026-11-15",
+    "evidenceLabel": "Kerala editorial source",
+    "status": "resource_available",
+    "calendarEligible": false,
+    "authorityId": "specialty-coffee-kochi"
+  },
+  {
+    "id": "kerala-guide-wayanad-coffee-guide",
+    "name": "Wayanad coffee: meet the region behind the cup",
+    "kind": "learning_resource",
+    "category": "Kerala coffee guide",
+    "state": "Kerala",
+    "url": "https://www.specialtycoffeekerala.com/blog/wayanad-coffee-guide/",
+    "notes": "Explore Wayanad coffee growing, producers and ways to follow a coffee back to its origin.",
+    "sourceUrls": [
+      "https://www.specialtycoffeekerala.com/blog/wayanad-coffee-guide/"
+    ],
+    "sourceNames": [
+      "Specialty Coffee Keralam"
+    ],
+    "checkedDate": "2026-11-15",
+    "evidenceLabel": "Kerala editorial source",
+    "status": "resource_available",
+    "calendarEligible": false,
+    "authorityId": "wayanad-coffee-guide"
+  },
+  {
+    "id": "kerala-guide-what-is-specialty-coffee",
+    "name": "What is specialty coffee? A practical guide for Keralam",
+    "kind": "learning_resource",
+    "category": "Kerala coffee guide",
+    "state": "Kerala",
+    "url": "https://www.specialtycoffeekerala.com/blog/what-is-specialty-coffee/",
+    "notes": "An introduction to coffee origins, sensory quality and useful questions to ask when choosing a cup.",
+    "sourceUrls": [
+      "https://www.specialtycoffeekerala.com/blog/what-is-specialty-coffee/"
+    ],
+    "sourceNames": [
+      "Specialty Coffee Keralam"
+    ],
+    "checkedDate": "2026-11-15",
+    "evidenceLabel": "Kerala editorial source",
+    "status": "resource_available",
+    "calendarEligible": false,
+    "authorityId": "what-is-specialty-coffee"
+  }
+]

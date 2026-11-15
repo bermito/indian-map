@@ -1,7 +1,1 @@
-{
-  "cleanUrls": true,
-  "headers": [
-    { "source": "/(.*)", "headers": [ { "key": "X-Content-Type-Options", "value": "nosniff" } ] },
-    { "source": "/(og-image.png|icon-192.png|icon-512.png|apple-touch-icon.png|favicon.ico)", "headers": [ { "key": "Cache-Control", "value": "public, max-age=604800" } ] }
-  ]
-}
+{"buildCommand":"node scripts/build.mjs","outputDirectory":"dist","cleanUrls":true,"headers":[{"source":"/(.*)","headers":[{"key":"X-Content-Type-Options","value":"nosniff"},{"key":"Referrer-Policy","value":"strict-origin-when-cross-origin"}]},{"source":"/data/(.*)","headers":[{"key":"Cache-Control","value":"public, max-age=0, must-revalidate"}]}]}

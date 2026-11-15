@@ -1,0 +1,706 @@
+[
+  {
+    "id": "event-b579e19695b5",
+    "name": "James Hoffmann Live in Hyderabad",
+    "kind": "event",
+    "category": "Event",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "date": "2026-11-21",
+    "status": "upcoming_organiser_confirmed",
+    "verification": "organiser_page_and_ticket_listing_agree",
+    "evidenceLabel": "Primary source checked",
+    "url": "https://brewinggadgets.in/pages/james-hoffmann",
+    "sourceUrls": [
+      "https://caffeinecollective.coffee/events",
+      "https://www.district.in/events/james-hoffmann-live-in-hyderabad-nov21-2026-buy-tickets"
+    ],
+    "notes": "Organiser and ticket page confirm 21 November; aggregator says 22 November. Canonical date uses organiser. Seat availability not checked.",
+    "checkedDate": "2026-11-15",
+    "venue": "Roast CCx, Banjara Hills",
+    "time": "15:00; 19:00",
+    "timezone": "Asia/Kolkata",
+    "conflictStatus": "resolved_using_organiser",
+    "conflicts": [
+      {
+        "field": "date",
+        "source_url": "https://caffeinecollective.coffee/events",
+        "raw_value": "22 November 2026",
+        "canonical_value": "21 November 2026"
+      }
+    ],
+    "sourceRawDate": "2026-11-22",
+    "sourceRawTime": "7:00 PM",
+    "calendarEligible": true
+  },
+  {
+    "id": "event-497903ebc7d1",
+    "name": "Processing ≠ just method. It's a market decision.",
+    "kind": "event",
+    "category": "Event",
+    "state": "Karnataka",
+    "date": "2026-11-21",
+    "status": "upcoming_needs_confirmation",
+    "verification": "third_party_indexed_listing",
+    "evidenceLabel": "Directory listed",
+    "url": "https://www.indiacoffeefestival.com/workshops/processing-decisions-market-mindset",
+    "sourceUrls": [
+      "https://caffeinecollective.coffee/events"
+    ],
+    "notes": "Organizer target could not be opened. Two alternative estate venues are named; Bengaluru label is inconsistent with those venues. Suspicious equal start/end time excluded.",
+    "checkedDate": "2026-11-15",
+    "venue": "Biccode Estate, Belur OR Harley Estate, Sakleshpur",
+    "conflictStatus": "unresolved_venue_and_time",
+    "sourceRawDate": "2026-11-21",
+    "sourceRawLocation": "Biccode Estate, Belur OR Harley Estate, Sakleshpur, Bengaluru",
+    "sourceRawTime": "9:16 AM - 9:16 AM",
+    "calendarEligible": false
+  },
+  {
+    "id": "event-cbb127b975bc",
+    "name": "CQI Fermentation: From Microbes to Flavours",
+    "kind": "event",
+    "category": "Event",
+    "city": "Chikkamagaluru",
+    "state": "Karnataka",
+    "date": "2026-12-03",
+    "endDate": "2026-12-06",
+    "status": "upcoming_needs_confirmation",
+    "verification": "third_party_indexed_listing",
+    "evidenceLabel": "Directory listed",
+    "sourceUrls": [
+      "https://caffeinecollective.coffee/events",
+      "https://in.linkedin.com/in/sanskriti-sindhu-5666471a0"
+    ],
+    "notes": "Aggregator plus a public repost of BerryCo announcement indicate 3–6 December. Original dated provider post not opened. CCRI location requires precise confirmation; aggregator appends Bengaluru. Midnight excluded.",
+    "checkedDate": "2026-11-15",
+    "venue": "CCRI, Chikmagalur",
+    "conflictStatus": "unresolved_exact_venue_and_time",
+    "sourceRawLocation": "CCRI, Chikamagalur, Bengaluru",
+    "sourceRawTime": "12:00 AM",
+    "calendarEligible": false
+  },
+  {
+    "id": "event-a67430a7a86a",
+    "name": "Hario V60 Brewers Cup — Mumbai Regional Round",
+    "kind": "event",
+    "category": "Event",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "date": "2026-10-10",
+    "status": "past_listed",
+    "verification": "third_party_indexed_listing",
+    "evidenceLabel": "Directory listed",
+    "url": "https://harioindia.com/v60-brewers-cup/mumbai",
+    "sourceUrls": [
+      "https://caffeinecollective.coffee/events"
+    ],
+    "notes": "Past scheduled listing in indexed third-party calendar; occurrence and organiser details not independently confirmed.",
+    "checkedDate": "2026-11-15",
+    "venue": "The Craftery by Subko",
+    "time": "08:00–17:00",
+    "timezone": "Asia/Kolkata",
+    "calendarEligible": false
+  },
+  {
+    "id": "event-fdb4ef14e3cf",
+    "name": "Coffee Recycling — The Circular Economy",
+    "kind": "event",
+    "category": "Event",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "date": "2026-10-04",
+    "status": "past_listed",
+    "verification": "third_party_indexed_listing",
+    "evidenceLabel": "Directory listed",
+    "sourceUrls": [
+      "https://caffeinecollective.coffee/events"
+    ],
+    "notes": "Past scheduled listing in indexed third-party calendar; occurrence and organiser details not independently confirmed.",
+    "checkedDate": "2026-11-15",
+    "venue": "Big Gallery, Rangoli Art Centre, MG Road Metro Station",
+    "time": "15:00–17:00",
+    "timezone": "Asia/Kolkata",
+    "calendarEligible": false
+  },
+  {
+    "id": "event-65b040b9c613",
+    "name": "Find Your Perfect Cup",
+    "kind": "event",
+    "category": "Event",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "date": "2026-10-04",
+    "status": "past_listed",
+    "verification": "third_party_indexed_listing",
+    "evidenceLabel": "Directory listed",
+    "sourceUrls": [
+      "https://caffeinecollective.coffee/events"
+    ],
+    "notes": "Past scheduled listing in indexed third-party calendar; occurrence and organiser details not independently confirmed.",
+    "checkedDate": "2026-11-15",
+    "venue": "Bäcker & Charlie, Indiranagar",
+    "time": "11:00–14:00",
+    "timezone": "Asia/Kolkata",
+    "calendarEligible": false
+  },
+  {
+    "id": "event-bd97812ac6a2",
+    "name": "Hoffmann Cupping Socials",
+    "kind": "event",
+    "category": "Event",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "date": "2026-10-03",
+    "status": "past_listed",
+    "verification": "third_party_indexed_listing",
+    "evidenceLabel": "Directory listed",
+    "sourceUrls": [
+      "https://caffeinecollective.coffee/events"
+    ],
+    "notes": "Past scheduled listing in indexed third-party calendar; occurrence and organiser details not independently confirmed.",
+    "checkedDate": "2026-11-15",
+    "venue": "Bangalore; exact venue not listed",
+    "time": "19:00",
+    "timezone": "Asia/Kolkata",
+    "calendarEligible": false
+  },
+  {
+    "id": "event-2fe7697062b8",
+    "name": "Cup Along with James Hoffmann",
+    "kind": "event",
+    "category": "Event",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "date": "2026-10-03",
+    "status": "past_listed",
+    "verification": "third_party_indexed_listing",
+    "evidenceLabel": "Directory listed",
+    "sourceUrls": [
+      "https://caffeinecollective.coffee/events"
+    ],
+    "notes": "Past scheduled listing in indexed third-party calendar; occurrence and organiser details not independently confirmed.",
+    "checkedDate": "2026-11-15",
+    "venue": "Mary Lodge, Bandra",
+    "time": "19:00",
+    "timezone": "Asia/Kolkata",
+    "calendarEligible": false
+  },
+  {
+    "id": "event-af9c0e1e7fbe",
+    "name": "International Coffee Day Fireside Chat — Coffee is a Part of the Solution",
+    "kind": "event",
+    "category": "Event",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "date": "2026-10-01",
+    "status": "past_listed",
+    "verification": "third_party_indexed_listing",
+    "evidenceLabel": "Directory listed",
+    "sourceUrls": [
+      "https://caffeinecollective.coffee/events"
+    ],
+    "notes": "Past scheduled listing in indexed third-party calendar; occurrence and organiser details not independently confirmed.",
+    "checkedDate": "2026-11-15",
+    "venue": "Parijata Hall, BIEC",
+    "time": "16:00–19:00",
+    "timezone": "Asia/Kolkata",
+    "calendarEligible": false
+  },
+  {
+    "id": "event-48e1f88da8eb",
+    "name": "Kaapi Shastra Training Programme",
+    "kind": "event",
+    "category": "Event",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "date": "2026-11-30",
+    "endDate": "2026-12-04",
+    "status": "upcoming_organiser_confirmed",
+    "verification": "official_schedule_observed",
+    "evidenceLabel": "Primary source checked",
+    "url": "https://coffeeboard.gov.in/kaapi-shastra.html",
+    "sourceUrls": [
+      "https://coffeeboard.gov.in/kaapi-shastra.html"
+    ],
+    "notes": "Official Coffee Board schedule lists 30 November–4 December 2026. Start time not stated; booking availability not verified.",
+    "checkedDate": "2026-11-15",
+    "venue": "Coffee Board, 1 Dr. B. R. Ambedkar Veedhi, Bengaluru 560001",
+    "calendarEligible": true
+  },
+  {
+    "id": "nas-jaseem-sukoru-takeover",
+    "authorityId": "nas-jaseem-sukoru-takeover",
+    "name": "NAS × Jaseem — Sukoru Bar Takeover",
+    "name_ml": "NAS × ജസീം — സുകോരു ബാർ ടേക്കോവർ",
+    "kind": "event",
+    "category": "Event archive",
+    "state": "Kerala",
+    "district": "Kozhikode",
+    "date": "2026-11-08",
+    "status": "past_editorial_archive",
+    "archived": true,
+    "historicalStatus": "Source-listed past event; archived by the Kerala editor",
+    "verification": "kerala_editorial_source",
+    "evidenceLabel": "Kerala editorial source",
+    "url": "https://www.specialtycoffeekerala.com/events/nas-jaseem-sukoru-takeover/",
+    "sourceUrls": [
+      "https://www.specialtycoffeekerala.com/events/nas-jaseem-sukoru-takeover/",
+      "https://www.specialtycoffeekerala.com/assets/nas-sukoru-takeover-2026.webp",
+      "https://www.specialtycoffeekerala.com/assets/nas-sukoru-takeover-2026.webp"
+    ],
+    "sourceNames": [
+      "Specialty Coffee Keralam"
+    ],
+    "checkedDate": "2026-11-14",
+    "calendarEligible": false,
+    "registrationClosed": true,
+    "timezone": "Asia/Kolkata",
+    "notes": "Past-event archive: NAS and Jaseem at Sukoru on 8 November 2026, serving Kerala Origins coffees roasted by Bermito. An independently organised gathering during Kozhikode’s coffee weekend.",
+    "venue": "Sukoru, English Parambil, near District Court, Kozhikode",
+    "sourceNote": "Date, time and venue are from the supplied NAS poster. Jaseem’s participation and the Kerala Origins coffees roasted by Bermito were confirmed by the site editor.",
+    "sourceAuthority": {
+      "name": "Specialty Coffee Keralam",
+      "url": "https://www.specialtycoffeekerala.com",
+      "commit": "63889f1ace9b987bf2f4b2251f40276a13fde001"
+    },
+    "endDate": "2026-11-08",
+    "timeNote": "8 November 2026 · 10 AM–1 PM IST · past event",
+    "profileIds": [
+      "sukoru",
+      "bermito"
+    ],
+    "profileConnectionLabel": "Bar takeover collaboration",
+    "city": "Kozhikode"
+  },
+  {
+    "id": "omakase-naser-kozhikode-2026",
+    "authorityId": "omakase-naser-kozhikode-2026",
+    "name": "Omakasé with Naser — Sukoru × Bermito",
+    "name_ml": "നാസറിനൊപ്പം ഒമകാസേ — സുകോരു × ബെർമിറ്റോ",
+    "kind": "event",
+    "category": "Event archive",
+    "state": "Kerala",
+    "district": "Kozhikode",
+    "date": "2026-11-07",
+    "status": "past_editorial_archive",
+    "archived": true,
+    "historicalStatus": "Source-listed past event; archived by the Kerala editor",
+    "verification": "kerala_editorial_source",
+    "evidenceLabel": "Kerala editorial source",
+    "url": "https://www.specialtycoffeekerala.com/events/omakase-naser-kozhikode-2026/",
+    "sourceUrls": [
+      "https://www.specialtycoffeekerala.com/events/omakase-naser-kozhikode-2026/",
+      "https://www.specialtycoffeekerala.com/assets/omakase-naser-kozhikode-2026.webp",
+      "https://www.specialtycoffeekerala.com/assets/omakase-naser-kozhikode-2026.webp"
+    ],
+    "sourceNames": [
+      "Specialty Coffee Keralam"
+    ],
+    "checkedDate": "2026-11-01",
+    "calendarEligible": false,
+    "registrationClosed": true,
+    "timezone": "Asia/Kolkata",
+    "notes": "Past-event archive: the 7 November 2026 coffee omakase with NAS, Sukoru, Bermito Coffee Roasters and Crafted Coffee Experience. The original announcement advertised two sessions of six seats at ₹1,999 per person.",
+    "venue": "Kozhikode (Calicut) · exact venue not recorded in the supplied announcement",
+    "sourceNote": "Date, price, seating and guest credentials are from the organiser-supplied poster. Exact session times, venue and registration link were not supplied. Enquiries use Bermito’s published business number.",
+    "sourceAuthority": {
+      "name": "Specialty Coffee Keralam",
+      "url": "https://www.specialtycoffeekerala.com",
+      "commit": "63889f1ace9b987bf2f4b2251f40276a13fde001"
+    },
+    "timeNote": "Past event. Session times were not recorded in the supplied announcement.",
+    "entry": "₹1,999 per person · two sessions · six seats per session.",
+    "profileIds": [
+      "sukoru",
+      "bermito"
+    ],
+    "profileConnectionLabel": "Event collaboration",
+    "city": "Kozhikode"
+  },
+  {
+    "id": "bake-expo-2026",
+    "authorityId": "bake-expo-2026",
+    "name": "BAKE EXPO 2026",
+    "name_ml": "ബേക്ക് എക്സ്പോ 2026",
+    "kind": "event",
+    "category": "Event archive",
+    "state": "Kerala",
+    "district": "Ernakulam",
+    "date": "2026-10-09",
+    "status": "past_editorial_archive",
+    "archived": true,
+    "historicalStatus": "Source-listed past event; archived by the Kerala editor",
+    "verification": "kerala_editorial_source",
+    "evidenceLabel": "Kerala editorial source",
+    "url": "https://www.specialtycoffeekerala.com/events/bake-expo-2026/",
+    "sourceUrls": [
+      "https://www.specialtycoffeekerala.com/events/bake-expo-2026/",
+      "https://bakeexpo.in/",
+      "https://ticketforevents.com/event/bake-expo-2026"
+    ],
+    "sourceNames": [
+      "Specialty Coffee Keralam"
+    ],
+    "checkedDate": "2026-10-03",
+    "calendarEligible": false,
+    "registrationClosed": true,
+    "timezone": "Asia/Kolkata",
+    "notes": "A bakery, food and hospitality trade exhibition organised by Bakers Association Kerala. Relevant to café owners sourcing equipment and supplies; this is an industry trade fair, not a specialty coffee festival.",
+    "venue": "Adlux International Convention & Exhibition Center, Angamaly, Kochi",
+    "sourceNote": "",
+    "sourceAuthority": {
+      "name": "Specialty Coffee Keralam",
+      "url": "https://www.specialtycoffeekerala.com",
+      "commit": "63889f1ace9b987bf2f4b2251f40276a13fde001"
+    },
+    "endDate": "2026-10-11",
+    "timeNote": "See the organiser’s daily programme for visiting hours.",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Adlux+International+Convention+Centre+Karukutty+Angamaly",
+    "organizerName": "Bakers Association Kerala",
+    "organizerUrl": "https://bakeexpo.in/",
+    "entry": "Pass categories, eligibility and current prices are on the booking page. Check trade-visitor access before booking.",
+    "city": "Kochi"
+  },
+  {
+    "id": "hario-v60-brewers-cup-calicut-2026",
+    "authorityId": "hario-v60-brewers-cup-calicut-2026",
+    "name": "Hario V60 Brewers Cup — Calicut",
+    "name_ml": "ഹാരിയോ വി അറുപത് കാപ്പി തയ്യാറാക്കൽ മത്സരം — കോഴിക്കോട്",
+    "kind": "event",
+    "category": "Event archive",
+    "state": "Kerala",
+    "district": "Kozhikode",
+    "date": "2026-11-07",
+    "status": "past_editorial_archive",
+    "archived": true,
+    "historicalStatus": "Source-listed past event; archived by the Kerala editor",
+    "verification": "kerala_editorial_source",
+    "evidenceLabel": "Kerala editorial source",
+    "url": "https://www.specialtycoffeekerala.com/events/hario-v60-brewers-cup-calicut-2026/",
+    "sourceUrls": [
+      "https://www.specialtycoffeekerala.com/events/hario-v60-brewers-cup-calicut-2026/",
+      "https://harioindia.com/v60-brewers-cup/calicut",
+      "https://harioindia.com/v60-brewers-cup/calicut"
+    ],
+    "sourceNames": [
+      "Specialty Coffee Keralam"
+    ],
+    "checkedDate": "2026-10-03",
+    "calendarEligible": false,
+    "registrationClosed": true,
+    "timezone": "Asia/Kolkata",
+    "notes": "Archive of the Calicut chapter of Hario’s national V60 brewing competition, held during Kerala Coffee Festival on 7 November 2026.",
+    "venue": "Aspin Courtyards, Beach Road, Calicut",
+    "sourceNote": "",
+    "sourceAuthority": {
+      "name": "Specialty Coffee Keralam",
+      "url": "https://www.specialtycoffeekerala.com",
+      "commit": "63889f1ace9b987bf2f4b2251f40276a13fde001"
+    },
+    "startTime": "09:00",
+    "endTime": "17:00",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Aspin+Courtyards+Beach+Road+Kozhikode",
+    "organizerName": "Hario India",
+    "organizerUrl": "https://harioindia.com/",
+    "entry": "Competitor registration is listed at ₹1,499. Check the competition rules and current availability on Hario’s page; this is a competition entry, not a festival audience pass.",
+    "time": "09:00–17:00",
+    "city": "Kozhikode"
+  },
+  {
+    "id": "kerala-coffee-festival-2026",
+    "authorityId": "kerala-coffee-festival-2026",
+    "name": "Kerala Coffee Festival 2026",
+    "name_ml": "കേരള കാപ്പിമേള 2026",
+    "kind": "event",
+    "category": "Event archive",
+    "state": "Kerala",
+    "district": "Kozhikode",
+    "date": "2026-11-07",
+    "status": "past_editorial_archive",
+    "archived": true,
+    "historicalStatus": "Source-listed past event; archived by the Kerala editor",
+    "verification": "kerala_editorial_source",
+    "evidenceLabel": "Kerala editorial source",
+    "url": "https://www.specialtycoffeekerala.com/events/kerala-coffee-festival-2026/",
+    "sourceUrls": [
+      "https://www.specialtycoffeekerala.com/events/kerala-coffee-festival-2026/",
+      "https://keralacoffeefestival.com/"
+    ],
+    "sourceNames": [
+      "Specialty Coffee Keralam"
+    ],
+    "checkedDate": "2026-10-03",
+    "calendarEligible": false,
+    "registrationClosed": true,
+    "timezone": "Asia/Kolkata",
+    "notes": "A gathering of roasters, cafés, brewers and coffee lovers, with workshops, discussions, competitions and a trade exhibition.",
+    "venue": "Aspin Courtyards, Beach Road, Calicut",
+    "sourceNote": "Dates and venue are corroborated by the festival listing and Hario’s Calicut chapter page. Festival ticket details remain unconfirmed.",
+    "sourceAuthority": {
+      "name": "Specialty Coffee Keralam",
+      "url": "https://www.specialtycoffeekerala.com",
+      "commit": "63889f1ace9b987bf2f4b2251f40276a13fde001"
+    },
+    "endDate": "2026-11-08",
+    "timeNote": "Daily programme and visiting hours to be confirmed by the organiser.",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Aspin+Courtyards+Beach+Road+Vellayil+Kozhikode",
+    "organizerName": "Kerala Coffee Festival",
+    "organizerUrl": "https://keralacoffeefestival.com/",
+    "entry": "A direct festival ticket link has not been confirmed. Check the organiser’s website for pass availability and prices. Hario competition registration is separate.",
+    "city": "Kozhikode"
+  },
+  {
+    "id": "kerala-origins-kochi-2026",
+    "authorityId": "kerala-origins-kochi-2026",
+    "name": "Kerala Origins — Kochi",
+    "name_ml": "കേരള ഒറിജിൻസ് — കൊച്ചി",
+    "kind": "event",
+    "category": "Event archive",
+    "state": "Kerala",
+    "district": "Ernakulam",
+    "date": "2026-10-10",
+    "status": "past_editorial_archive",
+    "archived": true,
+    "historicalStatus": "Source-listed past event; archived by the Kerala editor",
+    "verification": "kerala_editorial_source",
+    "evidenceLabel": "Kerala editorial source",
+    "url": "https://www.specialtycoffeekerala.com/events/kerala-origins-kochi-2026/",
+    "sourceUrls": [
+      "https://www.specialtycoffeekerala.com/events/kerala-origins-kochi-2026/",
+      "https://bermito.com/blogs/events/kerala-origins-kochi-coffee-cupping-10-october-2026",
+      "https://bermito.com/blogs/events/kerala-origins-kochi-coffee-cupping-10-october-2026"
+    ],
+    "sourceNames": [
+      "Specialty Coffee Keralam"
+    ],
+    "checkedDate": "2026-10-14",
+    "calendarEligible": false,
+    "registrationClosed": true,
+    "timezone": "Asia/Kolkata",
+    "notes": "An archived Keralam coffee showcase and cupping at Cochin Club, Fort Kochi, bringing growers, roasters and coffee drinkers together.",
+    "venue": "Cochin Club, Fort Kochi",
+    "sourceNote": "",
+    "sourceAuthority": {
+      "name": "Specialty Coffee Keralam",
+      "url": "https://www.specialtycoffeekerala.com",
+      "commit": "63889f1ace9b987bf2f4b2251f40276a13fde001"
+    },
+    "startTime": "14:00",
+    "endTime": "18:00",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Cochin+Club+Fort+Kochi",
+    "organizerName": "Bermito Coffee Roasters",
+    "organizerUrl": "https://bermito.com/",
+    "entry": "This event has ended. Registration is closed.",
+    "profileIds": [
+      "bermito",
+      "komban-kampini",
+      "windermere-estate",
+      "silent-valley-estate",
+      "terra-vagamon",
+      "poabs-seethargundu"
+    ],
+    "time": "14:00–18:00",
+    "city": "Kochi"
+  },
+  {
+    "id": "bean-curious-calicut-2026",
+    "authorityId": "bean-curious-calicut-2026",
+    "name": "Bean Curious — An Introduction to Specialty Coffee",
+    "name_ml": "ബീൻ ക്യൂരിയസ് — സ്പെഷ്യാൽറ്റി കാപ്പിക്ക് ഒരു ആമുഖം",
+    "kind": "event",
+    "category": "Event archive",
+    "state": "Kerala",
+    "district": "Kozhikode",
+    "date": "2026-08-30",
+    "status": "past_editorial_archive",
+    "archived": true,
+    "historicalStatus": "Source-listed past event; archived by the Kerala editor",
+    "verification": "kerala_editorial_source",
+    "evidenceLabel": "Kerala editorial source",
+    "url": "https://www.specialtycoffeekerala.com/events/bean-curious-calicut-2026/",
+    "sourceUrls": [
+      "https://www.specialtycoffeekerala.com/events/bean-curious-calicut-2026/",
+      "https://bermito.com/blogs/events/bean-curious-specialty-coffee-workshop-calicut",
+      "https://bermito.com/blogs/events/bean-curious-specialty-coffee-workshop-calicut"
+    ],
+    "sourceNames": [
+      "Specialty Coffee Keralam"
+    ],
+    "checkedDate": "2026-10-03",
+    "calendarEligible": false,
+    "registrationClosed": true,
+    "timezone": "Asia/Kolkata",
+    "notes": "A beginner-friendly session explored coffee growing, roasting and processing, followed by pour-over, French press and AeroPress brewing and a tasting flight.",
+    "venue": "Sukoru Concept Store, Kozhikode",
+    "sourceNote": "",
+    "sourceAuthority": {
+      "name": "Specialty Coffee Keralam",
+      "url": "https://www.specialtycoffeekerala.com",
+      "commit": "63889f1ace9b987bf2f4b2251f40276a13fde001"
+    },
+    "timeNote": "The original poster and article give different session times. No single time is confirmed in this archive.",
+    "mapUrl": "https://maps.app.goo.gl/FkgBVuDVj9qhmLfd9?g_st=ic",
+    "organizerName": "Bermito Coffee Roasters",
+    "organizerUrl": "https://bermito.com/",
+    "city": "Kozhikode"
+  },
+  {
+    "id": "kerala-masters-pour-over-2026",
+    "authorityId": "kerala-masters-pour-over-2026",
+    "name": "Kerala Masters Pour Over Championship — Season 2",
+    "name_ml": "കേരള മാസ്റ്റേഴ്സ് പോർ ഓവർ ചാമ്പ്യൻഷിപ്പ് — സീസൺ 2",
+    "kind": "event",
+    "category": "Event archive",
+    "state": "Kerala",
+    "district": "Ernakulam",
+    "date": "2026-09-05",
+    "status": "past_editorial_archive",
+    "archived": true,
+    "historicalStatus": "Source-listed past event; archived by the Kerala editor",
+    "verification": "kerala_editorial_source",
+    "evidenceLabel": "Kerala editorial source",
+    "url": "https://www.specialtycoffeekerala.com/events/kerala-masters-pour-over-2026/",
+    "sourceUrls": [
+      "https://www.specialtycoffeekerala.com/events/kerala-masters-pour-over-2026/",
+      "https://thebrewschool.in/"
+    ],
+    "sourceNames": [
+      "Specialty Coffee Keralam"
+    ],
+    "checkedDate": "2026-11-15",
+    "calendarEligible": false,
+    "registrationClosed": true,
+    "timezone": "Asia/Kolkata",
+    "notes": "The second season of the pour-over championship brought together baristas and home brewers in Kochi.",
+    "venue": "Kochi · The Brew School",
+    "sourceNote": "An archived calendar listing. The original event announcement and poster have not been located.",
+    "sourceAuthority": {
+      "name": "Specialty Coffee Keralam",
+      "url": "https://www.specialtycoffeekerala.com",
+      "commit": "63889f1ace9b987bf2f4b2251f40276a13fde001"
+    },
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=The+Brew+School+Daffodils+KP+Vallon+Road+Kadavanthra+Kochi",
+    "organizerName": "The Brew School",
+    "organizerUrl": "https://thebrewschool.in/",
+    "city": "Kochi"
+  },
+  {
+    "id": "beyond-the-cup-kochi-2026",
+    "authorityId": "beyond-the-cup-kochi-2026",
+    "name": "Beyond the Cup — one roaster, one brewer, one table",
+    "name_ml": "ബിയോണ്ട് ദി കപ്പ് — ഒരു റോസ്റ്റർ, ഒരു ബ്രൂവർ, ഒരു മേശ",
+    "kind": "event",
+    "category": "Event archive",
+    "state": "Kerala",
+    "district": "Ernakulam",
+    "date": "2026-09-06",
+    "status": "past_editorial_archive",
+    "archived": true,
+    "historicalStatus": "Source-listed past event; archived by the Kerala editor",
+    "verification": "kerala_editorial_source",
+    "evidenceLabel": "Kerala editorial source",
+    "url": "https://www.specialtycoffeekerala.com/events/beyond-the-cup-kochi-2026/",
+    "sourceUrls": [
+      "https://www.specialtycoffeekerala.com/events/beyond-the-cup-kochi-2026/",
+      "https://cafeaddict.in/"
+    ],
+    "sourceNames": [
+      "Specialty Coffee Keralam"
+    ],
+    "checkedDate": "2026-10-03",
+    "calendarEligible": false,
+    "registrationClosed": true,
+    "timezone": "Asia/Kolkata",
+    "notes": "A coffee gathering with Urban Hippie Coffee Roasters and Underblu Specialty Coffee explored origin, roasting and brewing, followed by an afternoon bar takeover.",
+    "venue": "Café Addict, Kochi · 10am–12pm and 4–6pm",
+    "sourceNote": "Archived event. Café Addict’s website lists the morning session; the afternoon bar takeover is retained from the original calendar.",
+    "sourceAuthority": {
+      "name": "Specialty Coffee Keralam",
+      "url": "https://www.specialtycoffeekerala.com",
+      "commit": "63889f1ace9b987bf2f4b2251f40276a13fde001"
+    },
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Cafe+Addict+Unnichira+Edappally+Kochi",
+    "city": "Kochi"
+  },
+  {
+    "id": "coffee-talk-roast-brew-kochi-2026",
+    "authorityId": "coffee-talk-roast-brew-kochi-2026",
+    "name": "Coffee Talk #001 — The Roast–Brew Connection",
+    "name_ml": "കോഫി ടോക്ക് #001 — റോസ്റ്റിങ്ങും ബ്രൂയിങ്ങും തമ്മിലുള്ള ബന്ധം",
+    "kind": "event",
+    "category": "Event archive",
+    "state": "Kerala",
+    "district": "Ernakulam",
+    "date": "2026-09-06",
+    "status": "past_editorial_archive",
+    "archived": true,
+    "historicalStatus": "Source-listed past event; archived by the Kerala editor",
+    "verification": "kerala_editorial_source",
+    "evidenceLabel": "Kerala editorial source",
+    "url": "https://www.specialtycoffeekerala.com/events/coffee-talk-roast-brew-kochi-2026/",
+    "sourceUrls": [
+      "https://www.specialtycoffeekerala.com/events/coffee-talk-roast-brew-kochi-2026/"
+    ],
+    "sourceNames": [
+      "Specialty Coffee Keralam"
+    ],
+    "checkedDate": "2026-11-15",
+    "calendarEligible": false,
+    "registrationClosed": true,
+    "timezone": "Asia/Kolkata",
+    "notes": "Coffee roaster Aparna Sankar discussed how roast profiles influence extraction, brewing choices and the flavours in the cup.",
+    "venue": "Kochi · Let's Brew Kochi",
+    "sourceNote": "Retained from the original event calendar. The original announcement, poster and precise venue address have not been located.",
+    "sourceAuthority": {
+      "name": "Specialty Coffee Keralam",
+      "url": "https://www.specialtycoffeekerala.com",
+      "commit": "63889f1ace9b987bf2f4b2251f40276a13fde001"
+    },
+    "city": "Kochi"
+  },
+  {
+    "id": "kerala-origins-calicut-2026",
+    "authorityId": "kerala-origins-calicut-2026",
+    "name": "Kerala Origins — Calicut",
+    "name_ml": "കേരള ഒറിജിൻസ് — കോഴിക്കോട്",
+    "kind": "event",
+    "category": "Event archive",
+    "state": "Kerala",
+    "district": "Kozhikode",
+    "date": "2026-07-11",
+    "status": "past_editorial_archive",
+    "archived": true,
+    "historicalStatus": "Source-listed past event; archived by the Kerala editor",
+    "verification": "kerala_editorial_source",
+    "evidenceLabel": "Kerala editorial source",
+    "url": "https://www.specialtycoffeekerala.com/events/kerala-origins-calicut-2026/",
+    "sourceUrls": [
+      "https://www.specialtycoffeekerala.com/events/kerala-origins-calicut-2026/",
+      "https://bermito.com/blogs/events/kerala-origins-specialty-coffee-calicut",
+      "https://bermito.com/blogs/events/kerala-origins-specialty-coffee-calicut"
+    ],
+    "sourceNames": [
+      "Specialty Coffee Keralam"
+    ],
+    "checkedDate": "2026-10-03",
+    "calendarEligible": false,
+    "registrationClosed": true,
+    "timezone": "Asia/Kolkata",
+    "notes": "A Kerala coffee showcase with cupping, producer conversations and a brew bar at Sukoru. The gathering brought growers and coffee drinkers together around locally grown coffees.",
+    "venue": "Sukoru Specialty Coffee, Kozhikode",
+    "sourceNote": "",
+    "sourceAuthority": {
+      "name": "Specialty Coffee Keralam",
+      "url": "https://www.specialtycoffeekerala.com",
+      "commit": "63889f1ace9b987bf2f4b2251f40276a13fde001"
+    },
+    "startTime": "14:00",
+    "endTime": "17:00",
+    "mapUrl": "https://maps.app.goo.gl/FkgBVuDVj9qhmLfd9?g_st=ic",
+    "organizerName": "Bermito Coffee Roasters",
+    "organizerUrl": "https://bermito.com/",
+    "time": "14:00–17:00",
+    "city": "Kozhikode"
+  }
+]

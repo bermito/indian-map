@@ -1,0 +1,1714 @@
+{
+  "meta": {
+    "repository": "https://github.com/bermito/kerala-map",
+    "commit": "63889f1ace9b987bf2f4b2251f40276a13fde001",
+    "commitDate": "2026-11-15T14:32:29+05:30",
+    "canonicalUrl": "https://www.specialtycoffeekerala.com",
+    "extractedDate": "2026-11-15",
+    "runtimeSha256": "e4919cf82f63803ac50479789c2775e48540ea694992846bc4573d2fcf68f857",
+    "currentAuthorityFiles": [
+      "assets/content.js",
+      "generated HTML pages"
+    ],
+    "staleInputs": [
+      "content/data.json",
+      "content/events.json",
+      "content/posts.json",
+      "CONTENT-SOURCES.md",
+      "README.md",
+      "seo-generate.js"
+    ],
+    "libraryBundleMatches": true
+  },
+  "districts": [
+    {
+      "name": "Kasaragod",
+      "district": "Kasaragod",
+      "displayName": "Kasaragod",
+      "nameMl": "കാസർഗോഡ്",
+      "aliases": [],
+      "description": "Coastal north · Kanhangad–Bekal belt",
+      "descriptionMl": "വടക്കൻ തീരം · കാഞ്ഞങ്ങാട്–ബേക്കൽ പ്രദേശം",
+      "count": 0,
+      "counts": {
+        "cafes": 0,
+        "roasters": 0,
+        "buyroasted": 0,
+        "farms": 0,
+        "education": 0,
+        "baristas": 0,
+        "equipment": 0
+      },
+      "coverageNote": "No approved listing yet; suggest a place for review."
+    },
+    {
+      "name": "Kannur",
+      "district": "Kannur",
+      "displayName": "Kannur",
+      "nameMl": "കണ്ണൂർ",
+      "aliases": [],
+      "description": "Coastal north · Thalassery–Kannur",
+      "descriptionMl": "വടക്കൻ തീരം · തലശ്ശേരി–കണ്ണൂർ",
+      "count": 1,
+      "counts": {
+        "cafes": 1,
+        "roasters": 0,
+        "buyroasted": 0,
+        "farms": 0,
+        "education": 0,
+        "baristas": 0,
+        "equipment": 0
+      },
+      "coverageNote": "Editorial listings from Specialty Coffee Keralam."
+    },
+    {
+      "name": "Wayanad",
+      "district": "Wayanad",
+      "displayName": "Wayanad",
+      "nameMl": "വയനാട്",
+      "aliases": [],
+      "description": "Keralam's main growing highland",
+      "descriptionMl": "കേരളത്തിലെ പ്രധാന കാപ്പിക്കൃഷി മേഖല",
+      "count": 6,
+      "counts": {
+        "cafes": 1,
+        "roasters": 0,
+        "buyroasted": 0,
+        "farms": 5,
+        "education": 0,
+        "baristas": 0,
+        "equipment": 0
+      },
+      "coverageNote": "Editorial listings from Specialty Coffee Keralam."
+    },
+    {
+      "name": "Kozhikode",
+      "district": "Kozhikode",
+      "displayName": "Kozhikode (Calicut)",
+      "nameMl": "കോഴിക്കോട്",
+      "aliases": [
+        "Calicut",
+        "കോഴിക്കോട്"
+      ],
+      "description": "Coast · roastery and café cluster",
+      "descriptionMl": "തീരദേശം · കാപ്പിശാലകളും കാപ്പിവറുക്കൽ കേന്ദ്രങ്ങളും",
+      "count": 8,
+      "counts": {
+        "cafes": 6,
+        "roasters": 2,
+        "buyroasted": 3,
+        "farms": 0,
+        "education": 0,
+        "baristas": 0,
+        "equipment": 0
+      },
+      "coverageNote": "Editorial listings from Specialty Coffee Keralam."
+    },
+    {
+      "name": "Malappuram",
+      "district": "Malappuram",
+      "displayName": "Malappuram",
+      "nameMl": "മലപ്പുറം",
+      "aliases": [],
+      "description": "Coast to the Nilambur valley",
+      "descriptionMl": "തീരത്തുനിന്ന് നിലമ്പൂർ താഴ്‌വരയിലേക്ക്",
+      "count": 3,
+      "counts": {
+        "cafes": 2,
+        "roasters": 0,
+        "buyroasted": 0,
+        "farms": 0,
+        "education": 1,
+        "baristas": 0,
+        "equipment": 0
+      },
+      "coverageNote": "Editorial listings from Specialty Coffee Keralam."
+    },
+    {
+      "name": "Palakkad",
+      "district": "Palakkad",
+      "displayName": "Palakkad",
+      "nameMl": "പാലക്കാട്",
+      "aliases": [],
+      "description": "The Gap · Attappadi highlands",
+      "descriptionMl": "പാലക്കാട് ചുരം · അട്ടപ്പാടി മലനിരകൾ",
+      "count": 2,
+      "counts": {
+        "cafes": 0,
+        "roasters": 0,
+        "buyroasted": 0,
+        "farms": 2,
+        "education": 0,
+        "baristas": 0,
+        "equipment": 0
+      },
+      "coverageNote": "Editorial listings from Specialty Coffee Keralam."
+    },
+    {
+      "name": "Thrissur",
+      "district": "Thrissur",
+      "displayName": "Thrissur",
+      "nameMl": "തൃശ്ശൂർ",
+      "aliases": [],
+      "description": "Central Keralam · café town",
+      "descriptionMl": "മധ്യകേരളം · തൃശ്ശൂർ നഗരം",
+      "count": 0,
+      "counts": {
+        "cafes": 0,
+        "roasters": 0,
+        "buyroasted": 0,
+        "farms": 0,
+        "education": 0,
+        "baristas": 0,
+        "equipment": 0
+      },
+      "coverageNote": "No approved listing yet; suggest a place for review."
+    },
+    {
+      "name": "Ernakulam",
+      "district": "Ernakulam",
+      "displayName": "Ernakulam · Kochi",
+      "nameMl": "എറണാകുളം",
+      "aliases": [
+        "Kochi",
+        "Cochin",
+        "കൊച്ചി",
+        "എറണാകുളം"
+      ],
+      "description": "Kochi · the state's biggest café market",
+      "descriptionMl": "കൊച്ചി · കാപ്പിശാലകളും പരിശീലനകേന്ദ്രങ്ങളും",
+      "count": 8,
+      "counts": {
+        "cafes": 5,
+        "roasters": 1,
+        "buyroasted": 0,
+        "farms": 0,
+        "education": 2,
+        "baristas": 0,
+        "equipment": 0
+      },
+      "coverageNote": "Editorial listings from Specialty Coffee Keralam."
+    },
+    {
+      "name": "Idukki",
+      "district": "Idukki",
+      "displayName": "Idukki",
+      "nameMl": "ഇടുക്കി",
+      "aliases": [],
+      "description": "Ghats plantation belt · Anamudi",
+      "descriptionMl": "പശ്ചിമഘട്ടത്തിലെ തോട്ടം മേഖല · ആനമുടി",
+      "count": 4,
+      "counts": {
+        "cafes": 1,
+        "roasters": 0,
+        "buyroasted": 0,
+        "farms": 2,
+        "education": 0,
+        "baristas": 1,
+        "equipment": 0
+      },
+      "coverageNote": "Editorial listings from Specialty Coffee Keralam."
+    },
+    {
+      "name": "Kottayam",
+      "district": "Kottayam",
+      "displayName": "Kottayam",
+      "nameMl": "കോട്ടയം",
+      "aliases": [],
+      "description": "Midlands · plantation trade town",
+      "descriptionMl": "ഇടനാട് · തോട്ടവിള വ്യാപാരകേന്ദ്രം",
+      "count": 0,
+      "counts": {
+        "cafes": 0,
+        "roasters": 0,
+        "buyroasted": 0,
+        "farms": 0,
+        "education": 0,
+        "baristas": 0,
+        "equipment": 0
+      },
+      "coverageNote": "No approved listing yet; suggest a place for review."
+    },
+    {
+      "name": "Alappuzha",
+      "district": "Alappuzha",
+      "displayName": "Alappuzha",
+      "nameMl": "ആലപ്പുഴ",
+      "aliases": [],
+      "description": "Backwaters · the flattest district",
+      "descriptionMl": "കായലുകളും തീരസമതലങ്ങളും",
+      "count": 0,
+      "counts": {
+        "cafes": 0,
+        "roasters": 0,
+        "buyroasted": 0,
+        "farms": 0,
+        "education": 0,
+        "baristas": 0,
+        "equipment": 0
+      },
+      "coverageNote": "No approved listing yet; suggest a place for review."
+    },
+    {
+      "name": "Pathanamthitta",
+      "district": "Pathanamthitta",
+      "displayName": "Pathanamthitta",
+      "nameMl": "പത്തനംതിട്ട",
+      "aliases": [],
+      "description": "Foothills · Konni–Ranni",
+      "descriptionMl": "മലയോരം · കോന്നി–റാന്നി",
+      "count": 0,
+      "counts": {
+        "cafes": 0,
+        "roasters": 0,
+        "buyroasted": 0,
+        "farms": 0,
+        "education": 0,
+        "baristas": 0,
+        "equipment": 0
+      },
+      "coverageNote": "No approved listing yet; suggest a place for review."
+    },
+    {
+      "name": "Kollam",
+      "district": "Kollam",
+      "displayName": "Kollam",
+      "nameMl": "കൊല്ലം",
+      "aliases": [],
+      "description": "Coast to the Punalur foothills",
+      "descriptionMl": "തീരത്തുനിന്ന് പുനലൂർ മലയോരത്തേക്ക്",
+      "count": 0,
+      "counts": {
+        "cafes": 0,
+        "roasters": 0,
+        "buyroasted": 0,
+        "farms": 0,
+        "education": 0,
+        "baristas": 0,
+        "equipment": 0
+      },
+      "coverageNote": "No approved listing yet; suggest a place for review."
+    },
+    {
+      "name": "Thiruvananthapuram",
+      "district": "Thiruvananthapuram",
+      "displayName": "Thiruvananthapuram (Trivandrum)",
+      "nameMl": "തിരുവനന്തപുരം",
+      "aliases": [
+        "Trivandrum",
+        "തിരുവനന്തപുരം"
+      ],
+      "description": "Capital · Ponmudi and Agasthyamalai behind it",
+      "descriptionMl": "തലസ്ഥാനനഗരം · പൊന്മുടിയും അഗസ്ത്യമലയും",
+      "count": 1,
+      "counts": {
+        "cafes": 1,
+        "roasters": 0,
+        "buyroasted": 0,
+        "farms": 0,
+        "education": 0,
+        "baristas": 0,
+        "equipment": 0
+      },
+      "coverageNote": "Editorial listings from Specialty Coffee Keralam."
+    }
+  ],
+  "categories": {
+    "cafes": "Specialty cafés",
+    "roasters": "Specialty roasters",
+    "buyroasted": "Buy roasted coffee",
+    "farms": "Farms & producers",
+    "education": "Coffee education",
+    "baristas": "Baristas & home brewers",
+    "equipment": "Coffee equipment"
+  },
+  "relationships": [
+    {
+      "from": "sukoru",
+      "to": "bermito",
+      "label": "Stocks roasted coffee from",
+      "label_ml": "വറുത്ത കാപ്പി ലഭിക്കുന്ന റോസ്റ്ററി",
+      "reverse": "Roasted coffee stocked at",
+      "reverse_ml": "വറുത്ത കാപ്പി വാങ്ങാവുന്ന ഇടം",
+      "note": "Stockist relationship confirmed by the site editor; ask the café about current beans.",
+      "note_ml": "ബന്ധം സൈറ്റ് എഡിറ്റർ സ്ഥിരീകരിച്ചതാണ്. നിലവിലെ കാപ്പിയുടെ ലഭ്യത കഫേയോട് അന്വേഷിക്കുക.",
+      "sourceType": "editor-confirmed",
+      "checked": "2026-10-14"
+    },
+    {
+      "from": "bermito",
+      "to": "terra-vagamon",
+      "label": "Roasts coffee from",
+      "label_ml": "ഈ തോട്ടത്തിലെ കാപ്പി വറുക്കുന്നു",
+      "reverse": "Coffee roasted by",
+      "reverse_ml": "കാപ്പി വറുക്കുന്ന റോസ്റ്ററി",
+      "note": "Terra Vagamon Excelsa Anoxic Naturals is a published lot. Availability changes by harvest.",
+      "note_ml": "ടെറ വാഗമൺ എക്സെൽസ അനോക്സിക് നാച്ചുറൽസ് പ്രസിദ്ധീകരിച്ച കാപ്പിയാണ്. വിളവിനനുസരിച്ച് ലഭ്യത മാറും.",
+      "source": "https://bermito.com/products/terravagamon-excelsa-anoxic-naturals",
+      "checked": "2026-10-14"
+    }
+  ],
+  "guides": [
+    {
+      "id": "kerala-guide-kerala-coffee-festival-2026",
+      "name": "Kerala Coffee Festival 2026 and Kozhikode’s Coffee Weekend",
+      "kind": "learning_resource",
+      "category": "Kerala coffee guide",
+      "state": "Kerala",
+      "url": "https://www.specialtycoffeekerala.com/blog/kerala-coffee-festival-2026/",
+      "notes": "An archive of the November 2026 festival programme and independently organised Kozhikode coffee events.",
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/blog/kerala-coffee-festival-2026/"
+      ],
+      "sourceNames": [
+        "Specialty Coffee Keralam"
+      ],
+      "checkedDate": "2026-11-15",
+      "evidenceLabel": "Kerala editorial source",
+      "status": "resource_available",
+      "calendarEligible": false,
+      "authorityId": "kerala-coffee-festival-2026"
+    },
+    {
+      "id": "kerala-guide-kerala-coffee-festivals-events",
+      "name": "Kerala Coffee Festivals & Events: Cuppings, Workshops & Community",
+      "kind": "learning_resource",
+      "category": "Kerala coffee guide",
+      "state": "Kerala",
+      "url": "https://www.specialtycoffeekerala.com/blog/kerala-coffee-festivals-events/",
+      "notes": "A guide to Kerala cuppings, workshops, festivals and community coffee gatherings.",
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/blog/kerala-coffee-festivals-events/"
+      ],
+      "sourceNames": [
+        "Specialty Coffee Keralam"
+      ],
+      "checkedDate": "2026-11-15",
+      "evidenceLabel": "Kerala editorial source",
+      "status": "resource_available",
+      "calendarEligible": false,
+      "authorityId": "kerala-coffee-festivals-events"
+    },
+    {
+      "id": "kerala-guide-kerala-coffee-guide",
+      "name": "Keralam Coffee Guide: Growing Regions, Producers & Culture",
+      "kind": "learning_resource",
+      "category": "Kerala coffee guide",
+      "state": "Kerala",
+      "url": "https://www.specialtycoffeekerala.com/blog/kerala-coffee-guide/",
+      "notes": "Learn about Kerala growing regions, coffee species, producers, roasters and community gatherings.",
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/blog/kerala-coffee-guide/"
+      ],
+      "sourceNames": [
+        "Specialty Coffee Keralam"
+      ],
+      "checkedDate": "2026-11-15",
+      "evidenceLabel": "Kerala editorial source",
+      "status": "resource_available",
+      "calendarEligible": false,
+      "authorityId": "kerala-coffee-guide"
+    },
+    {
+      "id": "kerala-guide-kerala-coffee-producers",
+      "name": "Keralam Coffee Producers: Meet the People Behind the Beans",
+      "kind": "learning_resource",
+      "category": "Kerala coffee guide",
+      "state": "Kerala",
+      "url": "https://www.specialtycoffeekerala.com/blog/kerala-coffee-producers/",
+      "notes": "Meet eleven Kerala producer stories, with sources distinguishing growers, processors and roasters.",
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/blog/kerala-coffee-producers/"
+      ],
+      "sourceNames": [
+        "Specialty Coffee Keralam"
+      ],
+      "checkedDate": "2026-11-15",
+      "evidenceLabel": "Kerala editorial source",
+      "status": "resource_available",
+      "calendarEligible": false,
+      "authorityId": "kerala-coffee-producers"
+    },
+    {
+      "id": "kerala-guide-kozhikode-specialty-coffee-culture",
+      "name": "Kozhikode’s Specialty Coffee Boom: Cafés, Roasters & Community",
+      "kind": "learning_resource",
+      "category": "Kerala coffee guide",
+      "state": "Kerala",
+      "url": "https://www.specialtycoffeekerala.com/blog/kozhikode-specialty-coffee-culture/",
+      "notes": "Explore Kozhikode cafés, roasters and the community around specialty coffee.",
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/blog/kozhikode-specialty-coffee-culture/"
+      ],
+      "sourceNames": [
+        "Specialty Coffee Keralam"
+      ],
+      "checkedDate": "2026-11-15",
+      "evidenceLabel": "Kerala editorial source",
+      "status": "resource_available",
+      "calendarEligible": false,
+      "authorityId": "kozhikode-specialty-coffee-culture"
+    },
+    {
+      "id": "kerala-guide-specialty-coffee-kochi",
+      "name": "Specialty coffee in Kochi: plan a thoughtful café visit",
+      "kind": "learning_resource",
+      "category": "Kerala coffee guide",
+      "state": "Kerala",
+      "url": "https://www.specialtycoffeekerala.com/blog/specialty-coffee-kochi/",
+      "notes": "Plan a café visit in Kochi and follow source links for branches, brewing and current visiting details.",
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/blog/specialty-coffee-kochi/"
+      ],
+      "sourceNames": [
+        "Specialty Coffee Keralam"
+      ],
+      "checkedDate": "2026-11-15",
+      "evidenceLabel": "Kerala editorial source",
+      "status": "resource_available",
+      "calendarEligible": false,
+      "authorityId": "specialty-coffee-kochi"
+    },
+    {
+      "id": "kerala-guide-wayanad-coffee-guide",
+      "name": "Wayanad coffee: meet the region behind the cup",
+      "kind": "learning_resource",
+      "category": "Kerala coffee guide",
+      "state": "Kerala",
+      "url": "https://www.specialtycoffeekerala.com/blog/wayanad-coffee-guide/",
+      "notes": "Explore Wayanad coffee growing, producers and ways to follow a coffee back to its origin.",
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/blog/wayanad-coffee-guide/"
+      ],
+      "sourceNames": [
+        "Specialty Coffee Keralam"
+      ],
+      "checkedDate": "2026-11-15",
+      "evidenceLabel": "Kerala editorial source",
+      "status": "resource_available",
+      "calendarEligible": false,
+      "authorityId": "wayanad-coffee-guide"
+    },
+    {
+      "id": "kerala-guide-what-is-specialty-coffee",
+      "name": "What is specialty coffee? A practical guide for Keralam",
+      "kind": "learning_resource",
+      "category": "Kerala coffee guide",
+      "state": "Kerala",
+      "url": "https://www.specialtycoffeekerala.com/blog/what-is-specialty-coffee/",
+      "notes": "An introduction to coffee origins, sensory quality and useful questions to ask when choosing a cup.",
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/blog/what-is-specialty-coffee/"
+      ],
+      "sourceNames": [
+        "Specialty Coffee Keralam"
+      ],
+      "checkedDate": "2026-11-15",
+      "evidenceLabel": "Kerala editorial source",
+      "status": "resource_available",
+      "calendarEligible": false,
+      "authorityId": "what-is-specialty-coffee"
+    }
+  ],
+  "places": [
+    {
+      "n": "BRWLAB",
+      "m": "Single-origin coffee, espresso, pour-over and cold brew.",
+      "w": "https://brwlab.in/",
+      "n_ml": "ബ്രൂലാബ്",
+      "m_ml": "ഒറ്റ ഉത്ഭവപ്രദേശത്തെ കാപ്പി, എസ്പ്രെസ്സോ, ഒഴിച്ചെടുക്കുന്ന കാപ്പി, തണുത്ത വെള്ളത്തിൽ തയ്യാറാക്കുന്ന കാപ്പി.",
+      "address": "Payyambalam Beach Road, Chalad, Kannur",
+      "address_ml": "പയ്യാമ്പലം ബീച്ച് റോഡ്, ചാലാട്, കണ്ണൂർ",
+      "visitNote": "Published location details differ. Confirm the current address with the café before visiting.",
+      "visitNote_ml": "പ്രസിദ്ധീകരിച്ച വിലാസങ്ങളിൽ വ്യത്യാസമുണ്ട്. പോകുന്നതിനുമുമ്പ് കാപ്പിശാലയുമായി ബന്ധപ്പെട്ട് നിലവിലെ വിലാസം ഉറപ്പാക്കുക.",
+      "locationSourceUrl": "https://www.tripadvisor.in/Restaurant_Review-g777115-d34649718-Reviews-Brwlab-Kannur_Kannur_District_Kerala.html",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=BRWLAB+Payyambalam+Beach+Road%2C+Chalad%2C+Kannur",
+      "checked": "2026-10-03",
+      "id": "brwlab",
+      "district": "Kannur",
+      "categories": [
+        "cafes"
+      ]
+    },
+    {
+      "n": "Wishlist Coffee",
+      "m": "Espresso, filter coffee and in-house bakes, with coffees from Wayanad and Chikmagalur.",
+      "w": "https://wishlist.coffee/",
+      "n_ml": "വിഷ്‌ലിസ്റ്റ് കോഫി",
+      "m_ml": "വയനാട്, ചിക്കമംഗളൂരു എന്നിവിടങ്ങളിലെ കാപ്പികൾ; എസ്പ്രെസ്സോ, ഫിൽട്ടർ കാപ്പി, സ്വന്തമായി തയ്യാറാക്കുന്ന പലഹാരങ്ങൾ.",
+      "address": "Green Land Nagar, opposite Leo Hospital Road, next to Laquire Restaurant, Kalpetta, Wayanad 673121",
+      "address_ml": "ഗ്രീൻ ലാൻഡ് നഗർ, ലിയോ ഹോസ്പിറ്റൽ റോഡിന് എതിർവശം, ലാക്വയർ റെസ്റ്റോറന്റിനു സമീപം, കൽപ്പറ്റ, വയനാട് 673121",
+      "locationSourceUrl": "https://www.tripadvisor.in/Restaurant_Review-g1232778-d34251346-Reviews-Wishlist_Coffee-Kalpetta_Wayanad_District_Kerala.html",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Wishlist+Coffee+Green+Land+Nagar%2C+opposite+Leo+Hospital+Road%2C+next+to+Laquire+Restaurant%2C+Kalpetta%2C+Wayanad+673121",
+      "checked": "2026-10-03",
+      "id": "wishlist-coffee",
+      "district": "Wayanad",
+      "categories": [
+        "cafes"
+      ]
+    },
+    {
+      "n": "Kelachandra Coffee — Brahmagiri Estate",
+      "m": "A private coffee estate at Thirunelly in the Wayanad highlands.",
+      "w": "https://kelachandracoffee.com/brahmagiri/",
+      "n_ml": "കേളചന്ദ്ര കോഫി — ബ്രഹ്മഗിരി എസ്റ്റേറ്റ്",
+      "m_ml": "വയനാട്ടിലെ തിരുനെല്ലിയിൽ സ്ഥിതിചെയ്യുന്ന സ്വകാര്യ കാപ്പിത്തോട്ടം.",
+      "id": "kelachandra-coffee-brahmagiri-estate",
+      "district": "Wayanad",
+      "categories": [
+        "farms"
+      ],
+      "visitNote": "Private estate; arrange access with the producer.",
+      "visitNote_ml": "സ്വകാര്യ തോട്ടം. പ്രവേശനത്തിന് ഉത്പാദകരുമായി മുൻകൂട്ടി ബന്ധപ്പെടുക."
+    },
+    {
+      "n": "Sanjay Garden / Bluhills Spices & Beans",
+      "m": "A Kunnampetta producer working with fine Robusta coffee.",
+      "w": "https://bluhillsbeans.in/",
+      "n_ml": "സഞ്ജയ് ഗാർഡൻ / ബ്ലൂഹിൽസ് സ്പൈസസ് ആൻഡ് ബീൻസ്",
+      "m_ml": "കുന്നമ്പറ്റയിൽ മികച്ച റോബസ്റ്റ കാപ്പി ഉത്പാദിപ്പിക്കുന്നു.",
+      "id": "sanjay-garden-bluhills-spices-beans",
+      "district": "Wayanad",
+      "categories": [
+        "farms"
+      ],
+      "visitNote": "Visits by prior arrangement.",
+      "visitNote_ml": "മുൻകൂട്ടി ക്രമീകരിച്ച സന്ദർശനം."
+    },
+    {
+      "n": "Black Baza Coffee — Smallholder Network",
+      "m": "A network of smallholder coffee producers across Wayanad.",
+      "w": "https://www.blackbazacoffee.com/blogs/origins-communities/wayanad-kerala",
+      "n_ml": "ബ്ലാക്ക് ബാസ കോഫി — ചെറുകിട കർഷക കൂട്ടായ്മ",
+      "m_ml": "വയനാട്ടിലെ ചെറുകിട കാപ്പി കർഷകരുടെ കൂട്ടായ്മ.",
+      "id": "black-baza-coffee-smallholder-network",
+      "district": "Wayanad",
+      "categories": [
+        "farms"
+      ],
+      "visitNote": "Regional producer network; this is not a single public farm location.",
+      "visitNote_ml": "പ്രാദേശിക കർഷക കൂട്ടായ്മയാണ്. സന്ദർശിക്കാവുന്ന ഒരൊറ്റ തോട്ടമല്ല."
+    },
+    {
+      "n": "Old Babbler Coffee",
+      "m": "Wayanad coffee sourced from selected estates and small-scale growers; check the current coffee for its producer and origin.",
+      "w": "https://www.oldbabbler.com",
+      "n_ml": "ഓൾഡ് ബാബ്ലർ കോഫി",
+      "m_ml": "വയനാട്ടിലെ തിരഞ്ഞെടുത്ത തോട്ടങ്ങളിൽ നിന്നും ചെറുകിട കർഷകരിൽ നിന്നും ശേഖരിക്കുന്ന കാപ്പി. ഓരോ കാപ്പിയുടെയും ഉത്പാദകനെയും ഉത്ഭവസ്ഥാനത്തെയും പരിശോധിക്കുക.",
+      "id": "old-babbler-coffee",
+      "district": "Wayanad",
+      "categories": [
+        "farms"
+      ],
+      "visitNote": "Contact the producer for coffee availability and visits.",
+      "visitNote_ml": "കാപ്പിയുടെ ലഭ്യതയും സന്ദർശനവും അറിയാൻ ഉത്പാദകരുമായി ബന്ധപ്പെടുക."
+    },
+    {
+      "id": "komban-kampini",
+      "n": "Komban Kampini / Vernacular",
+      "n_ml": "കൊമ്പൻ കമ്പനി / വെർണാകുലർ",
+      "district": "Wayanad",
+      "categories": [
+        "farms"
+      ],
+      "m": "A Wayanad processing initiative working with smallholder producers on fine Robusta and Canephora coffee.",
+      "m_ml": "വയനാട്ടിലെ ചെറുകിട കർഷകരുമായി ചേർന്ന് മികച്ച റോബസ്റ്റ / കനഫോറ കാപ്പിയുടെ സംസ്കരണത്തിൽ പ്രവർത്തിക്കുന്ന സംരംഭം.",
+      "w": "https://linktr.ee/vernacular.live",
+      "address": "Wayanad, Keralam",
+      "address_ml": "വയനാട്, കേരളം",
+      "visitNote": "Producer and processing initiative. Contact the team for the current location and visitor access.",
+      "visitNote_ml": "കാപ്പി ഉത്പാദനവും സംസ്കരണവും നടത്തുന്ന സംരംഭം. നിലവിലെ സ്ഥലവും സന്ദർശനവും അറിയാൻ ടീമുമായി ബന്ധപ്പെടുക.",
+      "checked": "2026-10-14",
+      "role": "Producer & processor",
+      "role_ml": "ഉത്പാദകരും സംസ്കരണവും",
+      "sources": [
+        {
+          "label": "Komban Kampini company profile",
+          "url": "https://in.linkedin.com/company/komban-kampini"
+        },
+        {
+          "label": "Vernacular links",
+          "url": "https://linktr.ee/vernacular.live"
+        }
+      ]
+    },
+    {
+      "n": "Sukoru Specialty Coffee",
+      "m": "Specialty coffee near Kozhikode Beach, with Bermito roasted beans available to buy.",
+      "w": "https://sukoru.coffee/",
+      "n_ml": "സുകോരു സ്പെഷ്യാലിറ്റി കോഫി",
+      "m_ml": "കോഴിക്കോട് ബീച്ചിനു സമീപത്തെ സ്പെഷ്യാൽറ്റി കാപ്പിശാല. ബെർമിറ്റോയുടെ വറുത്ത കാപ്പിക്കുരു വാങ്ങാം.",
+      "address": "English Parambil, near District Court, Kozhikode Beach, Kozhikode",
+      "address_ml": "ഇംഗ്ലീഷ് പറമ്പിൽ, ജില്ലാ കോടതിക്കു സമീപം, കോഴിക്കോട് ബീച്ച്, കോഴിക്കോട്",
+      "mapUrl": "https://maps.app.goo.gl/FkgBVuDVj9qhmLfd9?g_st=ic",
+      "phone": "+918138947979",
+      "hours": "Confirm current hours with Sukoru before visiting.",
+      "hours_ml": "സന്ദർശനത്തിന് മുമ്പ് നിലവിലെ പ്രവർത്തനസമയം സുകോരുവുമായി സ്ഥിരീകരിക്കുക.",
+      "locationSourceUrl": "https://sukoru.coffee/",
+      "checked": "2026-11-14",
+      "id": "sukoru",
+      "district": "Kozhikode",
+      "categories": [
+        "cafes",
+        "buyroasted"
+      ],
+      "editorNote": "Bermito stockist relationship confirmed by the site editor on 14 October 2026. Hours reviewed on 14 November 2026: public listings conflict, so visitors should confirm directly with Sukoru."
+    },
+    {
+      "n": "Bermito Coffee Roasters",
+      "m": "Kerala’s first specialty coffee roastery with its own roasting setup in the state. Small-batch light roasts from Kozhikode, expressive seasonal lots and delivery across India.",
+      "w": "https://bermito.com/",
+      "n_ml": "ബെർമിറ്റോ കോഫി റോസ്റ്റേഴ്സ്",
+      "m_ml": "കേരളത്തിൽ സ്വന്തമായി റോസ്റ്റിംഗ് സംവിധാനമുള്ള ആദ്യ സ്പെഷ്യാൽറ്റി കോഫി റോസ്റ്ററി. കോഴിക്കോട് ചെറിയ ബാച്ചുകളിൽ വറുക്കുന്ന ലൈറ്റ് റോസ്റ്റുകൾ, തനതായ രുചിയുള്ള സീസണൽ ലോട്ടുകൾ, ഇന്ത്യയിലുടനീളം വിതരണം.",
+      "id": "bermito",
+      "district": "Kozhikode",
+      "categories": [
+        "roasters",
+        "buyroasted"
+      ],
+      "address": "Kozhikode, Keralam",
+      "address_ml": "കോഴിക്കോട്, കേരളം",
+      "visitNote": "Contact the roastery before visiting. Coffee availability changes with each lot.",
+      "visitNote_ml": "സന്ദർശനത്തിന് മുമ്പ് റോസ്റ്ററിയുമായി ബന്ധപ്പെടുക. ലഭ്യമായ കാപ്പി വിളവിനനുസരിച്ച് മാറും.",
+      "checked": "2026-11-15",
+      "shopUrl": "https://bermito.com/",
+      "sources": [
+        {
+          "label": "Bermito — roastery",
+          "url": "https://bermito.com/pages/roastery"
+        },
+        {
+          "label": "Bermito — business contact",
+          "url": "https://bermito.com/pages/contact"
+        }
+      ],
+      "phone": "+919847599828",
+      "phoneDisplay": "+91 98475 99828",
+      "editorNote": "Founding-history description and own Kerala roasting setup confirmed by co-founder Vajid on 15 November 2026."
+    },
+    {
+      "id": "urban-hippie",
+      "n": "Urban Hippie Coffee Roasters",
+      "n_ml": "അർബൻ ഹിപ്പി കോഫി റോസ്റ്റേഴ്സ്",
+      "district": "Kozhikode",
+      "categories": [
+        "roasters",
+        "buyroasted"
+      ],
+      "m": "Koyan Althani’s roastery offers roasted-to-order coffee, wholesale supply and coffee training.",
+      "m_ml": "കോയൻ അൽതാനിയുടെ റോസ്റ്ററി. ഓർഡർ അനുസരിച്ച് വറുത്ത കാപ്പി, മൊത്തവിതരണം, കാപ്പി പരിശീലനം.",
+      "w": "https://www.urbanhippiecoffee.in/",
+      "shopUrl": "https://www.urbanhippiecoffee.in/",
+      "phone": "+919895474842",
+      "address": "Kozhikode (Calicut) · public visiting address unconfirmed",
+      "address_ml": "കോഴിക്കോട് · സന്ദർശിക്കാവുന്ന വിലാസം സ്ഥിരീകരിച്ചിട്ടില്ല",
+      "visitNote": "Contact before visiting. An exact Google Maps pin and walk-in access have not been verified.",
+      "visitNote_ml": "സന്ദർശനത്തിന് മുമ്പ് ബന്ധപ്പെടുക. കൃത്യമായ ഗൂഗിൾ മാപ്സ് സ്ഥാനവും നേരിട്ടെത്താനുള്ള സൗകര്യവും സ്ഥിരീകരിച്ചിട്ടില്ല.",
+      "status": "Contact before visiting",
+      "status_ml": "സന്ദർശനത്തിന് മുമ്പ് ബന്ധപ്പെടുക",
+      "checked": "2026-10-14",
+      "sources": [
+        {
+          "label": "About the roastery",
+          "url": "https://www.urbanhippiecoffee.in/about.html"
+        },
+        {
+          "label": "Contact",
+          "url": "https://www.urbanhippiecoffee.in/contact.html"
+        }
+      ],
+      "editorNote": "Kozhikode supplied by the site owner; roasting services and contact details checked against the official website. No exact location pin verified."
+    },
+    {
+      "n": "Brewmorphia Speciality Coffee",
+      "m": "Specialty coffee and matcha near Kozhikode Beach.",
+      "w": "https://brewmorphia.in/",
+      "n_ml": "ബ്രൂമോർഫിയ സ്പെഷ്യാലിറ്റി കോഫി",
+      "m_ml": "കോഴിക്കോട് ബീച്ചിനു സമീപം സ്പെഷ്യാൽറ്റി കാപ്പിയും മാച്ചയും.",
+      "address": "Silk Street, behind Beach Post Office, Mananchira, Kozhikode",
+      "address_ml": "സിൽക്ക് സ്ട്രീറ്റ്, ബീച്ച് തപാൽ ഓഫീസിനു പിന്നിൽ, മാനാഞ്ചിറ, കോഴിക്കോട്",
+      "mapUrl": "https://maps.app.goo.gl/DPR11avt6TMK5b6W7",
+      "locationSourceUrl": "https://brewmorphia.in/",
+      "checked": "2026-10-03",
+      "id": "brewmorphia-speciality-coffee",
+      "district": "Kozhikode",
+      "categories": [
+        "cafes"
+      ]
+    },
+    {
+      "n": "Cafficana Kozhikode",
+      "m": "Manual brews including V60, Chemex, AeroPress, French press and moka pot, alongside food.",
+      "w": "https://cafficana.com/",
+      "n_ml": "കഫിക്കാന കോഴിക്കോട്",
+      "m_ml": "വി അറുപത്, കെമെക്സ്, എയറോപ്രസ്, ഫ്രഞ്ച് പ്രസ്, മോക്ക പോട്ട് രീതികളിലെ കാപ്പികളും ഭക്ഷണവും.",
+      "address": "Kozhikode Bypass Road, near UL Cyber Park, Thondayad, Kozhikode",
+      "address_ml": "കോഴിക്കോട് ബൈപ്പാസ് റോഡ്, യു.എൽ. സൈബർ പാർക്കിനു സമീപം, തൊണ്ടയാട്, കോഴിക്കോട്",
+      "phone": "+917902889998",
+      "hours": "11:30 AM–11:30 PM",
+      "hours_ml": "രാവിലെ 11:30–രാത്രി 11:30",
+      "locationSourceUrl": "https://cafficana.com/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Cafficana+Kozhikode+Kozhikode+Bypass+Road%2C+near+UL+Cyber+Park%2C+Thondayad%2C+Kozhikode",
+      "checked": "2026-10-03",
+      "id": "cafficana-kozhikode",
+      "district": "Kozhikode",
+      "categories": [
+        "cafes"
+      ]
+    },
+    {
+      "n": "Underblu Specialty Coffee",
+      "m": "Independently operated specialty coffee in Kozhikode. Contact Underblu for its current location and service hours.",
+      "w": "https://www.underblu.in/",
+      "n_ml": "അണ്ടർബ്ലൂ സ്പെഷ്യാൽറ്റി കോഫി",
+      "m_ml": "കോഴിക്കോട്ടെ സ്വതന്ത്ര സ്പെഷ്യാൽറ്റി കാപ്പിശാല. നിലവിലെ സ്ഥലവും പ്രവർത്തനസമയവും അറിയാൻ അണ്ടർബ്ലൂവിനെ നേരിട്ട് ബന്ധപ്പെടുക.",
+      "address": "Kozhikode (Calicut) · current visiting address unconfirmed",
+      "address_ml": "കോഴിക്കോട് · നിലവിലെ സന്ദർശന വിലാസം സ്ഥിരീകരിച്ചിട്ടില്ല",
+      "visitNote": "Contact Underblu to confirm its current visiting address and service hours.",
+      "visitNote_ml": "നിലവിലെ വിലാസവും പ്രവർത്തനസമയവും അണ്ടർബ്ലൂവിനെ നേരിട്ട് ബന്ധപ്പെട്ട് സ്ഥിരീകരിക്കുക.",
+      "locationSourceUrl": "https://www.underblu.in/",
+      "checked": "2026-11-14",
+      "id": "underblu-specialty-coffee",
+      "district": "Kozhikode",
+      "categories": [
+        "cafes"
+      ],
+      "editorNote": "Independent operation confirmed by the site editor. Exact current visiting address remains unconfirmed."
+    },
+    {
+      "n": "Overdose Cafe",
+      "m": "Pour-over coffee, breakfast, bites and desserts.",
+      "w": "",
+      "n_ml": "ഓവർഡോസ് കഫേ",
+      "m_ml": "ഒഴിച്ചെടുക്കുന്ന കാപ്പി, പ്രഭാതഭക്ഷണം, ലഘുഭക്ഷണം, മധുരപലഹാരങ്ങൾ.",
+      "address": "Kuttichira, Kozhikode",
+      "address_ml": "കുറ്റിച്ചിറ, കോഴിക്കോട്",
+      "mapUrl": "https://maps.app.goo.gl/e5cCiFrJhbHj2m188",
+      "locationSourceUrl": "https://echai.ventures/grid/kozhikode/tours/cafes",
+      "checked": "2026-10-03",
+      "id": "overdose-cafe",
+      "district": "Kozhikode",
+      "categories": [
+        "cafes"
+      ]
+    },
+    {
+      "n": "Slolabs by Cafficana",
+      "m": "Coffee, patisserie and brunch by Cafficana.",
+      "w": "https://slolabs.in/",
+      "n_ml": "കഫിക്കാനയുടെ സ്ലോലാബ്സ്",
+      "m_ml": "കഫിക്കാനയുടെ കാപ്പി, പലഹാരങ്ങൾ, പ്രഭാത-ഉച്ചഭക്ഷണ വിഭവങ്ങൾ.",
+      "address": "62/1155, PT Usha Road, near Lakeshore Medical Centre, 4th Gate, Vellayil, Kozhikode 673032",
+      "address_ml": "62/1155, പി.ടി. ഉഷ റോഡ്, ലേക്ക്ഷോർ മെഡിക്കൽ സെന്ററിനു സമീപം, നാലാം ഗേറ്റ്, വെള്ളയിൽ, കോഴിക്കോട് 673032",
+      "locationSourceUrl": "https://www.calicutcafeteria.com/cafes-in-calicut/slolabs-by-cafficana",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Slolabs+by+Cafficana+62%2F1155%2C+PT+Usha+Road%2C+near+Lakeshore+Medical+Centre%2C+4th+Gate%2C+Vellayil%2C+Kozhikode+673032",
+      "checked": "2026-10-03",
+      "id": "slolabs-by-cafficana",
+      "district": "Kozhikode",
+      "categories": [
+        "cafes"
+      ]
+    },
+    {
+      "n": "Understory Cafe",
+      "m": "A café and social club in Manjeri.",
+      "w": "",
+      "n_ml": "അണ്ടർസ്റ്റോറി കഫേ",
+      "m_ml": "മഞ്ചേരിയിലെ കാപ്പിശാലയും കൂട്ടായ്മയും.",
+      "address": "Thurakkal Baputty Bypass Road, Patterkulam, Manjeri",
+      "address_ml": "തുറക്കൽ ബാപ്പുട്ടി ബൈപ്പാസ് റോഡ്, പട്ടർകുളം, മഞ്ചേരി",
+      "mapUrl": "https://maps.app.goo.gl/cvAJQD5CuF4JD3qz8",
+      "checked": "2026-10-03",
+      "id": "understory-cafe",
+      "district": "Malappuram",
+      "categories": [
+        "cafes"
+      ]
+    },
+    {
+      "n": "Haneen Cafe",
+      "m": "Espresso, frappes and food in Manjeri.",
+      "n_ml": "ഹനീൻ കഫേ",
+      "m_ml": "മഞ്ചേരിയിൽ എസ്പ്രെസ്സോ, തണുത്ത പാനീയങ്ങൾ, ഭക്ഷണം.",
+      "w": "https://www.instagram.com/haneencafe_/",
+      "checked": "2026-10-03",
+      "address": "Rajiv Gandhi Bypass, near Malabar Hospital, Manjeri",
+      "address_ml": "രാജീവ് ഗാന്ധി ബൈപ്പാസ്, മലബാർ ഹോസ്പിറ്റലിനു സമീപം, മഞ്ചേരി",
+      "locationSourceUrl": "https://www.zomato.com/manjeri/haneen-cafe-1-manjeri-locality/order",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Haneen+Cafe+Rajiv+Gandhi+Bypass%2C+near+Malabar+Hospital%2C+Manjeri",
+      "id": "haneen-cafe",
+      "district": "Malappuram",
+      "categories": [
+        "cafes"
+      ]
+    },
+    {
+      "n": "Brewell Coffee Lab",
+      "m": "Manjeri · learning, experimenting, coffee & beverage development",
+      "n_ml": "ബ്രൂവെൽ കോഫി ലാബ്",
+      "m_ml": "മഞ്ചേരി · കാപ്പി പഠനം, പരീക്ഷണങ്ങൾ, പാനീയ വികസനം",
+      "id": "brewell-coffee-lab",
+      "district": "Malappuram",
+      "categories": [
+        "education"
+      ],
+      "mapUrl": "https://maps.app.goo.gl/RoPvsB8kzQwJdzUt5"
+    },
+    {
+      "n": "Poabs Organic Estates — Seethargundu",
+      "m": "A biodynamic coffee estate in the Nelliyampathy hills.",
+      "w": "https://www.poabsestates.com/produce/coffee/",
+      "n_ml": "പോബ്സ് ഓർഗാനിക് എസ്റ്റേറ്റ്സ് — സീതാർകുണ്ട്",
+      "m_ml": "നെല്ലിയാമ്പതി മലനിരകളിലെ ബയോഡൈനാമിക് കാപ്പിത്തോട്ടം.",
+      "id": "poabs-seethargundu",
+      "district": "Palakkad",
+      "categories": [
+        "farms"
+      ],
+      "visitNote": "Estate visits require prior arrangement or confirmed event access.",
+      "visitNote_ml": "മുൻകൂട്ടി ക്രമീകരിച്ചോ സ്ഥിരീകരിച്ച പരിപാടിയുടെ ഭാഗമായോ സന്ദർശിക്കുക."
+    },
+    {
+      "n": "Silent Valley Estate",
+      "m": "Fine Robusta and specialty Arabica from Mukkali in the Attappadi hills.",
+      "w": "https://silentvalley.coffee",
+      "n_ml": "സൈലന്റ് വാലി എസ്റ്റേറ്റ്",
+      "m_ml": "അട്ടപ്പാടി മലനിരകളിലെ മുക്കാലിയിൽ നിന്നുള്ള മികച്ച റോബസ്റ്റയും സ്പെഷ്യാൽറ്റി അറബിക്കയും.",
+      "id": "silent-valley-estate",
+      "district": "Palakkad",
+      "categories": [
+        "farms"
+      ],
+      "visitNote": "Contact the estate for current lots and visitor access.",
+      "visitNote_ml": "ലഭ്യമായ കാപ്പിയും സന്ദർശനവും അറിയാൻ എസ്റ്റേറ്റുമായി ബന്ധപ്പെടുക."
+    },
+    {
+      "n": "90Million Coffee",
+      "m": "Specialty Arabica and manual brews, with croissants and in-house bakes.",
+      "w": "https://90million.in/",
+      "n_ml": "നൈന്റ്റി മില്യൺ കോഫി",
+      "m_ml": "സ്പെഷ്യാൽറ്റി അറബിക്കയും കൈകൊണ്ട് തയ്യാറാക്കുന്ന കാപ്പികളും; ക്രോസോന്റുകളും സ്വന്തമായി തയ്യാറാക്കുന്ന പലഹാരങ്ങളും.",
+      "address": "Edward Square, Stadium Link Road, Kaloor, Kochi 682025",
+      "address_ml": "എഡ്വേർഡ് സ്ക്വയർ, സ്റ്റേഡിയം ലിങ്ക് റോഡ്, കലൂർ, കൊച്ചി 682025",
+      "phone": "+918848719090",
+      "locationSourceUrl": "https://90million.in/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=90Million+Coffee+Edward+Square%2C+Stadium+Link+Road%2C+Kaloor%2C+Kochi+682025",
+      "checked": "2026-10-03",
+      "id": "90million-coffee",
+      "district": "Ernakulam",
+      "categories": [
+        "cafes"
+      ]
+    },
+    {
+      "n": "Cafficana Kochi",
+      "m": "A café with a manual brew bar in Panampilly Nagar.",
+      "w": "https://cafficana.com/",
+      "n_ml": "കഫിക്കാന കൊച്ചി",
+      "m_ml": "പനമ്പിള്ളി നഗറിൽ കൈകൊണ്ട് കാപ്പി തയ്യാറാക്കുന്ന കേന്ദ്രമുള്ള കാപ്പിശാല.",
+      "address": "56/3317, 5th Cross Road, opposite Mammootty Palam, Panampilly Nagar, Kochi 682036",
+      "address_ml": "56/3317, അഞ്ചാം ക്രോസ് റോഡ്, മമ്മൂട്ടി പാലത്തിന് എതിർവശം, പനമ്പിള്ളി നഗർ, കൊച്ചി 682036",
+      "locationSourceUrl": "https://www.district.in/dining/kochi/cafficana-panampilly-nagar",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Cafficana+Kochi+56%2F3317%2C+5th+Cross+Road%2C+opposite+Mammootty+Palam%2C+Panampilly+Nagar%2C+Kochi+682036",
+      "checked": "2026-10-03",
+      "id": "cafficana-kochi",
+      "district": "Ernakulam",
+      "categories": [
+        "cafes"
+      ]
+    },
+    {
+      "n": "Cafe Addict Kochi",
+      "m": "Specialty coffee, art and community in Edappally.",
+      "n_ml": "കഫേ അഡിക്ട് കൊച്ചി",
+      "m_ml": "ഇടപ്പള്ളിയിൽ സ്പെഷ്യാൽറ്റി കാപ്പി, കല, കൂട്ടായ്മ.",
+      "w": "https://cafeaddict.in/",
+      "checked": "2026-10-03",
+      "address": "31/256, Pookattupady Road, Unnichira, Edappally, Ernakulam 682021",
+      "address_ml": "31/256, പൂക്കാട്ടുപടി റോഡ്, ഉണിച്ചിറ, ഇടപ്പള്ളി, എറണാകുളം 682021",
+      "phone": "+917994100814",
+      "locationSourceUrl": "https://cafeaddict.in/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Cafe+Addict+Kochi+31%2F256%2C+Pookattupady+Road%2C+Unnichira%2C+Edappally%2C+Ernakulam+682021",
+      "id": "cafe-addict-kochi",
+      "district": "Ernakulam",
+      "categories": [
+        "cafes"
+      ]
+    },
+    {
+      "n": "Third Wave Coffee — Panampilly Nagar",
+      "m": "Specialty coffee and café food in Panampilly Nagar, with dine-in, takeaway and delivery.",
+      "n_ml": "തേർഡ് വേവ് കോഫി — പനമ്പിള്ളി നഗർ",
+      "m_ml": "പനമ്പിള്ളി നഗറിലെ സ്പെഷ്യാൽറ്റി കാപ്പിശാല. ഇരുന്ന് കഴിക്കാനും പൊതിഞ്ഞുവാങ്ങാനും ഡെലിവറിക്കും സൗകര്യമുണ്ട്.",
+      "w": "https://stores.thirdwavecoffeeroasters.com/store-pages/third-wave-coffee-panampilly-kochi",
+      "instagram": "https://www.instagram.com/thirdwavecoffeeindia/",
+      "checked": "2026-10-30",
+      "address": "Ground floor, 56/2988, HIG 36, Murikkummootil, Panampilly Nagar, Kochi",
+      "address_ml": "താഴത്തെ നില, 56/2988, എച്ച്.ഐ.ജി. 36, മുറിക്കുംമൂട്ടിൽ, പനമ്പിള്ളി നഗർ, കൊച്ചി",
+      "phone": "+919180101092",
+      "hours": "Daily, 8 AM–midnight",
+      "hours_ml": "ദിവസവും രാവിലെ 8–അർധരാത്രി 12",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Third+Wave+Coffee+%E2%80%94+Panampilly+Nagar+Ground+floor%2C+56%2F2988%2C+HIG+36%2C+Murikkummootil%2C+Panampilly+Nagar%2C+Kochi",
+      "locationSourceUrl": "https://stores.thirdwavecoffeeroasters.com/store-pages/third-wave-coffee-panampilly-kochi",
+      "id": "third-wave-coffee-panampilly-nagar",
+      "district": "Ernakulam",
+      "categories": [
+        "cafes"
+      ]
+    },
+    {
+      "n": "Third Wave Coffee — Noel Focus Mall, Kakkanad",
+      "m": "Specialty coffee and café food at Noel Focus Mall in Kakkanad, with dine-in, takeaway and delivery.",
+      "n_ml": "തേർഡ് വേവ് കോഫി — നോയൽ ഫോക്കസ് മാൾ, കാക്കനാട്",
+      "m_ml": "കാക്കനാട് നോയൽ ഫോക്കസ് മാളിലെ സ്പെഷ്യാൽറ്റി കാപ്പിശാല. ഇരുന്ന് കഴിക്കാനും പൊതിഞ്ഞുവാങ്ങാനും ഡെലിവറിക്കും സൗകര്യമുണ്ട്.",
+      "w": "https://stores.thirdwavecoffeeroasters.com/store-pages/third-wave-coffee-noel-mall-kochi",
+      "instagram": "https://www.instagram.com/thirdwavecoffeeindia/",
+      "checked": "2026-11-14",
+      "address": "Unit 2, door 18/1155, ground floor, Noel Focus Mall, Seaport–Airport Road, Chittethukara, Kakkanad",
+      "address_ml": "യൂണിറ്റ് 2, കെട്ടിടം 18/1155, താഴത്തെ നില, നോയൽ ഫോക്കസ് മാൾ, സീപോർട്ട്–എയർപോർട്ട് റോഡ്, ചിറ്റേത്തുകര, കാക്കനാട്",
+      "phone": "+919180101081",
+      "visitNote": "Hours are listed on the official store page. Call the branch to confirm before visiting.",
+      "visitNote_ml": "ഔദ്യോഗിക സ്റ്റോർ പേജിലെ പ്രവർത്തനസമയമാണ് നൽകിയിരിക്കുന്നത്. സന്ദർശനത്തിന് മുമ്പ് ശാഖയിൽ വിളിച്ച് സ്ഥിരീകരിക്കുക.",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Third+Wave+Coffee+Noel+Focus+Mall%2C+Kakkanad+Unit+2%2C+door+18%2F1155%2C+ground+floor%2C+Noel+Focus+Mall%2C+Seaport%E2%80%93Airport+Road%2C+Chittethukara%2C+Kakkanad",
+      "locationSourceUrl": "https://stores.thirdwavecoffeeroasters.com/store-pages/third-wave-coffee-noel-mall-kochi",
+      "id": "third-wave-coffee-noel-mall-kakkanad",
+      "district": "Ernakulam",
+      "categories": [
+        "cafes"
+      ],
+      "hours": "Daily, 10 AM–10 PM",
+      "hours_ml": "ദിവസവും രാവിലെ 10–രാത്രി 10"
+    },
+    {
+      "n": "CAPI Specialty Coffee Roasters",
+      "m": "A specialty roastery on Azad Road in Kaloor, Kochi, with tastings by appointment.",
+      "w": "https://capiroast.com/",
+      "n_ml": "കാപ്പി സ്പെഷ്യാലിറ്റി കോഫി റോസ്റ്റേഴ്സ്",
+      "m_ml": "കൊച്ചി കലൂരിലെ ആസാദ് റോഡിലുള്ള സ്പെഷ്യാൽറ്റി റോസ്റ്ററി. മുൻകൂട്ടി ക്രമീകരിച്ച രുചിപരിശോധനകൾ.",
+      "id": "capi",
+      "district": "Ernakulam",
+      "categories": [
+        "roasters"
+      ],
+      "visitNote": "Arrange a tasting with the roastery before visiting.",
+      "visitNote_ml": "സന്ദർശനത്തിന് മുമ്പ് റോസ്റ്ററിയുമായി രുചിപരിശോധന ക്രമീകരിക്കുക."
+    },
+    {
+      "n": "Pour Over Lab",
+      "m": "Kaloor · workshops, courses, experience space",
+      "w": "https://www.pouroverlab.in/",
+      "n_ml": "പോർ ഓവർ ലാബ്",
+      "m_ml": "കലൂർ · ശിൽപ്പശാലകൾ, പഠനപരിപാടികൾ, കാപ്പി അനുഭവങ്ങൾ",
+      "id": "pour-over-lab",
+      "district": "Ernakulam",
+      "categories": [
+        "education"
+      ]
+    },
+    {
+      "n": "The Brew School",
+      "m": "Kadavanthra · professional barista training",
+      "w": "https://thebrewschool.in/",
+      "n_ml": "ദി ബ്രൂ സ്കൂൾ",
+      "m_ml": "കടവന്ത്ര · തൊഴിൽപരമായ കാപ്പി തയ്യാറാക്കൽ പരിശീലനം",
+      "id": "the-brew-school",
+      "district": "Ernakulam",
+      "categories": [
+        "education"
+      ]
+    },
+    {
+      "n": "Erel Spices Experience Centre",
+      "m": "A spice and coffee experience centre with manual brewing and tasting experiences.",
+      "w": "https://erelspices.com/experience-center/",
+      "n_ml": "എറേൽ സ്പൈസസ് എക്സ്പീരിയൻസ് സെന്റർ",
+      "m_ml": "സുഗന്ധവ്യഞ്ജനങ്ങളും കാപ്പിയും പരിചയപ്പെടാനുള്ള കേന്ദ്രം; കൈകൊണ്ട് കാപ്പി തയ്യാറാക്കലും രുചിപരിശോധനയും.",
+      "address": "KP XVI/16, KK Road, Chelimada, Kumily, Idukki 685509",
+      "address_ml": "കെ.പി. 16/16, കെ.കെ. റോഡ്, ചെളിമട, കുമളി, ഇടുക്കി 685509",
+      "phone": "+917306537310",
+      "locationSourceUrl": "https://erelspices.com/experience-center/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Erel+Spices+Experience+Centre+KP+XVI%2F16%2C+KK+Road%2C+Chelimada%2C+Kumily%2C+Idukki+685509",
+      "checked": "2026-10-03",
+      "id": "erel-spices-experience-centre",
+      "district": "Idukki",
+      "categories": [
+        "cafes"
+      ]
+    },
+    {
+      "n": "Terra Vagamon Conservancy",
+      "m": "A forest-restoration and coffee project at Kanam Estate, Vagamon.",
+      "w": "https://www.instagram.com/terravagamon/",
+      "n_ml": "ടെറ വാഗമൺ കൺസർവൻസി",
+      "m_ml": "വാഗമണിലെ കാനം എസ്റ്റേറ്റിൽ വനപുനരുദ്ധാരണവും കാപ്പികൃഷിയും നടത്തുന്ന പദ്ധതി.",
+      "id": "terra-vagamon",
+      "district": "Idukki",
+      "categories": [
+        "farms"
+      ],
+      "visitNote": "Contact the conservancy before visiting. Exact visitor access needs confirmation.",
+      "visitNote_ml": "സന്ദർശനത്തിന് മുമ്പ് കൺസർവൻസിയുമായി ബന്ധപ്പെടുക."
+    },
+    {
+      "id": "windermere-estate",
+      "n": "Windermere Estate",
+      "n_ml": "വിൻഡർമിയർ എസ്റ്റേറ്റ്",
+      "district": "Idukki",
+      "categories": [
+        "farms"
+      ],
+      "m": "A coffee and cardamom estate in Pothamedu, Munnar, with plantation stays and walks.",
+      "m_ml": "മൂന്നാർ പോതമേട്ടിലെ കാപ്പിയും ഏലവും വളരുന്ന തോട്ടം. താമസവും തോട്ടത്തിലൂടെയുള്ള നടത്തവും ലഭ്യമാണ്.",
+      "w": "https://windermeremunnar.com/",
+      "address": "Pothamedu, Munnar 685612, Idukki",
+      "address_ml": "പോതമേട്, മൂന്നാർ 685612, ഇടുക്കി",
+      "visitNote": "Contact the estate to arrange a visit. Coffee-focused tours and access for non-residents need confirmation.",
+      "visitNote_ml": "സന്ദർശനം ക്രമീകരിക്കാൻ എസ്റ്റേറ്റുമായി ബന്ധപ്പെടുക. കാപ്പി സന്ദർശനവും താമസിക്കാത്തവരുടെ പ്രവേശനവും മുൻകൂട്ടി അന്വേഷിക്കുക.",
+      "checked": "2026-10-14",
+      "sources": [
+        {
+          "label": "Estate website",
+          "url": "https://windermeremunnar.com/"
+        }
+      ]
+    },
+    {
+      "n": "Thomas K V",
+      "m": "Kumily / Thekkady · barista at Araku Coffee, Bangalore · SCA Foundation in Sensory Skills · home brewer",
+      "w": "https://www.instagram.com/thomas__kv/",
+      "n_ml": "തോമസ് കെ. വി.",
+      "m_ml": "കുമളി / തേക്കടി · ബെംഗളൂരുവിലെ അരക്കു കോഫിയിൽ കാപ്പി തയ്യാറാക്കുന്നു · രുചിപരിശോധനയിൽ അടിസ്ഥാന പരിശീലനം നേടിയിട്ടുണ്ട്; വീട്ടിലും കാപ്പി തയ്യാറാക്കുന്നു",
+      "id": "thomas-k-v",
+      "district": "Idukki",
+      "categories": [
+        "baristas"
+      ]
+    },
+    {
+      "n": "Third Wave Coffee — Airport",
+      "m": "Coffee and café food inside Terminal 2 departures.",
+      "n_ml": "തേർഡ് വേവ് കോഫി — വിമാനത്താവളം",
+      "m_ml": "ടെർമിനൽ 2 പുറപ്പെടൽ മേഖലയിലെ കാപ്പിയും ഭക്ഷണവും.",
+      "w": "https://stores.thirdwavecoffeeroasters.com/store-pages/third-wave-coffee-trivandrum-airport-thiruvananthapuram",
+      "checked": "2026-10-03",
+      "address": "L1-60, Terminal 2 departures, Thiruvananthapuram International Airport, Airport Road, Chackai",
+      "address_ml": "എൽ 1–60, ടെർമിനൽ 2 പുറപ്പെടൽ മേഖല, തിരുവനന്തപുരം അന്താരാഷ്ട്ര വിമാനത്താവളം, എയർപോർട്ട് റോഡ്, ചാക്ക",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Third+Wave+Coffee+T2+Departure+Trivandrum&query_place_id=ChIJu3A_Cs67BTsRSJZbCUAz7rA",
+      "hours": "Daily, 24 hours",
+      "hours_ml": "ദിവസവും 24 മണിക്കൂറും",
+      "visitNote": "Inside airport departures. Airport access restrictions apply.",
+      "visitNote_ml": "വിമാനത്താവളത്തിലെ പുറപ്പെടൽ മേഖലയിലാണ്. വിമാനത്താവള പ്രവേശന നിബന്ധനകൾ ബാധകമാണ്.",
+      "locationSourceUrl": "https://stores.thirdwavecoffeeroasters.com/store-pages/third-wave-coffee-trivandrum-airport-thiruvananthapuram",
+      "id": "third-wave-coffee-airport",
+      "district": "Thiruvananthapuram",
+      "categories": [
+        "cafes"
+      ]
+    }
+  ],
+  "oldIdToNewId": {
+    "IND-df1c33a074cd": "90million-coffee",
+    "IND-df7c6e28f2e2": "bermito",
+    "IND-ab2bf4257522": "bermito",
+    "IND-4e411709d026": "brewmorphia-speciality-coffee",
+    "IND-94ad989bd6ae": "brwlab",
+    "IND-adf95beab5b4": "cafe-addict-kochi",
+    "IND-b204dcc9af21": "cafficana-kochi",
+    "IND-d71bf63144d3": "cafficana-kochi",
+    "IND-5f15afd0e48b": "cafficana-kozhikode",
+    "IND-1b7120e7b44f": "haneen-cafe",
+    "IND-3440c749415e": "overdose-cafe",
+    "IND-0cd7676b139d": "pour-over-lab",
+    "IND-784f699d777e": "pour-over-lab",
+    "IND-f2fe174bca10": "slolabs-by-cafficana",
+    "IND-9858ee7eccf3": "sukoru",
+    "IND-7aea20bfa097": "third-wave-coffee-airport",
+    "IND-64f11123fcb0": "third-wave-coffee-noel-mall-kakkanad",
+    "IND-3a3741153e82": "third-wave-coffee-panampilly-nagar",
+    "IND-5f7c9214bc8c": "underblu-specialty-coffee",
+    "IND-9424f567cb5d": "underblu-specialty-coffee",
+    "IND-812b4874923f": "understory-cafe",
+    "IND-a7a3c1e88a27": "wishlist-coffee",
+    "IND-844df91c3fc5": "thomas-k-v",
+    "IND-ec55840fbc7e": "brewell-coffee-lab",
+    "IND-a3b45de2a2fe": "the-brew-school",
+    "IND-517f22d27031": "erel-spices-experience-centre",
+    "IND-507fb2554847": "black-baza-coffee-smallholder-network",
+    "IND-88f19265e735": "kelachandra-coffee-brahmagiri-estate",
+    "IND-7fc6d1b251de": "komban-kampini",
+    "IND-e4c4bb771fc9": "old-babbler-coffee",
+    "IND-080c9f0ecbff": "poabs-seethargundu",
+    "IND-774255bd67ca": "sanjay-garden-bluhills-spices-beans",
+    "IND-9e2156a9abd4": "silent-valley-estate",
+    "IND-c9fb56608678": "terra-vagamon",
+    "IND-fdc6529bc658": "windermere-estate",
+    "IND-1d47065a0458": "capi",
+    "IND-c71459f255c8": "urban-hippie"
+  },
+  "counts": {
+    "places": 33,
+    "events": 11,
+    "guides": 8,
+    "districts": 14,
+    "categories": {
+      "cafes": 17,
+      "farms": 9,
+      "buyroasted": 3,
+      "roasters": 3,
+      "education": 3,
+      "baristas": 1
+    }
+  },
+  "faq": [
+    {
+      "q": "What is Specialty Coffee Keralam Map?",
+      "a": "Specialty Coffee Keralam Map (previously Specialty Coffee Kerala Map) is an independent map and discovery platform for Keralam's coffee community. It helps people discover specialty cafés, coffee roasters, farms, roasted coffee, coffee equipment, education and events across the state.",
+      "q_ml": "കേരള കാപ്പി ഭൂപടം എന്താണ്?",
+      "a_ml": "കേരളത്തിലെ കാപ്പിശാലകൾ, വറുക്കൽ കേന്ദ്രങ്ങൾ, തോട്ടങ്ങൾ, പരിശീലനകേന്ദ്രങ്ങൾ, ഉപകരണശാലകൾ, കാപ്പി വിദഗ്ധർ, പരിപാടികൾ എന്നിവ കണ്ടെത്താനുള്ള സ്വതന്ത്ര വിവരശേഖരമാണിത്."
+    },
+    {
+      "q": "What is specialty coffee?",
+      "a": "Specialty coffee is recognised for distinctive attributes such as flavour, origin, processing and the people behind it. Its value is not defined by a price or a single score alone.",
+      "q_ml": "മേന്മയേറിയ കാപ്പി എന്നതുകൊണ്ട് ഉദ്ദേശിക്കുന്നത് എന്താണ്?",
+      "a_ml": "രുചി, മണം, ഉത്ഭവസ്ഥലം, കൃഷിരീതി, സംസ്കരണം തുടങ്ങിയ പ്രത്യേകതകളാൽ കൂടുതൽ മൂല്യം നേടുന്ന കാപ്പിയെയാണ് ഇവിടെ ഉദ്ദേശിക്കുന്നത്. ഒരു വിലയോ മാർക്കോ മാത്രം അതിന്റെ ഗുണമേന്മ നിശ്ചയിക്കുന്നില്ല."
+    },
+    {
+      "q": "Does Keralam produce coffee?",
+      "a": "Yes. Keralam is one of India's major coffee-producing states. Coffee is mainly cultivated in small farms, with Robusta being the most widely grown variety.",
+      "q_ml": "കേരളത്തിൽ കാപ്പി കൃഷി ചെയ്യുന്നുണ്ടോ?",
+      "a_ml": "ഉണ്ട്. ഇന്ത്യയിലെ പ്രധാന കാപ്പി ഉത്പാദക സംസ്ഥാനങ്ങളിലൊന്നാണ് കേരളം. ചെറുകിട തോട്ടങ്ങളിൽ വ്യാപകമായി കൃഷി ചെയ്യുന്ന പ്രധാന ഇനം റോബസ്റ്റയാണ്."
+    },
+    {
+      "q": "Where is coffee grown in Keralam?",
+      "a": "Keralam's main coffee-growing regions include Wayanad, Idukki and Nelliyampathy in Palakkad. Wayanad is the largest coffee-growing region in the state.",
+      "q_ml": "കേരളത്തിൽ എവിടെയാണ് കാപ്പി കൃഷി ചെയ്യുന്നത്?",
+      "a_ml": "വയനാട്, ഇടുക്കി, പാലക്കാട്ടെ നെല്ലിയാമ്പതി എന്നിവ പ്രധാന കാപ്പിക്കൃഷി മേഖലകളാണ്. സംസ്ഥാനത്തെ ഏറ്റവും വലിയ കാപ്പിക്കൃഷി മേഖലയാണ് വയനാട്."
+    },
+    {
+      "q": "Which types of coffee are grown in Keralam?",
+      "a": "Robusta is the most widely grown coffee in Keralam, followed by smaller quantities of Arabica. Liberica and Excelsa are also cultivated in limited quantities in certain parts of the state.",
+      "q_ml": "കേരളത്തിൽ ഏതൊക്കെ കാപ്പിയിനങ്ങളാണ് വളരുന്നത്?",
+      "a_ml": "റോബസ്റ്റയാണ് പ്രധാന ഇനം. അറബിക്കയും കൃഷി ചെയ്യുന്നു. ചില പ്രദേശങ്ങളിൽ ലിബറിക്കയും എക്സൽസയും ചെറിയ അളവിൽ കാണാം."
+    },
+    {
+      "q": "What is special about Wayanad Robusta coffee?",
+      "a": "Wayanad is known for Robusta grown in shaded landscapes. Flavour varies with variety, processing, roast and brewing; a regional name alone does not promise a particular taste.",
+      "q_ml": "വയനാടൻ റോബസ്റ്റയുടെ പ്രത്യേകത എന്താണ്?",
+      "a_ml": "പശ്ചിമഘട്ടത്തിലെ തണലുള്ള തോട്ടങ്ങളിലാണ് വയനാടൻ റോബസ്റ്റ വളരുന്നത്. ഇനം, സംസ്കരണം, വറുക്കൽ, തയ്യാറാക്കൽ എന്നിവ അനുസരിച്ച് രുചി മാറും. ഒരേ പ്രദേശത്തുനിന്നുള്ള എല്ലാ കാപ്പിക്കും ഒരേ രുചിയാവണമെന്നില്ല."
+    },
+    {
+      "q": "How can I find specialty coffee shops near me in Keralam?",
+      "a": "Select your district on the Keralam Specialty Coffee Map to explore listed cafés and other coffee-related places. Open a listing to access its available website, Google Maps location or Instagram profile.",
+      "q_ml": "അടുത്തുള്ള കാപ്പിശാല എങ്ങനെ കണ്ടെത്താം?",
+      "a_ml": "ഭൂപടത്തിൽ നിങ്ങളുടെ ജില്ല തിരഞ്ഞെടുക്കുക. കാപ്പിശാലകളുടെ വിഭാഗം തുറന്നാൽ ചേർത്തിട്ടുള്ള ഇടങ്ങൾ കാണാം. ലഭ്യമായ വെബ്സൈറ്റ്, ഭൂപടക്കണ്ണി, സാമൂഹികമാധ്യമ പേജ് എന്നിവയിലൂടെ കൂടുതൽ അറിയാം."
+    },
+    {
+      "q": "Does the platform include only cafés?",
+      "a": "No. The platform includes specialty cafés, coffee roasters, farms and producers, roasted coffee brands, specialty coffee equipment businesses, coffee education, workshops and events across Keralam.",
+      "q_ml": "കാപ്പിശാലകൾ മാത്രമാണോ ഇതിലുള്ളത്?",
+      "a_ml": "അല്ല. കാപ്പി വറുക്കൽ കേന്ദ്രങ്ങൾ, തോട്ടങ്ങൾ, ഉത്പാദകർ, വറുത്ത കാപ്പി വിൽപ്പനശാലകൾ, ഉപകരണശാലകൾ, പരിശീലനം, കാപ്പി വിദഗ്ധർ, പരിപാടികൾ എന്നിവയും ഉൾപ്പെടുന്നു."
+    },
+    {
+      "q": "How are places selected for the map?",
+      "a": "We review available information such as official websites, social-media profiles, menus, photographs, location details and other evidence related to specialty coffee. Information can change, so visitors should confirm directly with the business before travelling.",
+      "q_ml": "ഇടങ്ങൾ എങ്ങനെയാണ് തിരഞ്ഞെടുക്കുന്നത്?",
+      "a_ml": "ഔദ്യോഗിക വെബ്സൈറ്റ്, സാമൂഹികമാധ്യമ പേജുകൾ, ഭക്ഷണപ്പട്ടിക, ചിത്രങ്ങൾ, വിലാസം തുടങ്ങിയ വിവരങ്ങൾ പരിശോധിക്കുന്നു. വിവരങ്ങൾ മാറാനിടയുള്ളതിനാൽ പോകുന്നതിനുമുമ്പ് സ്ഥാപനവുമായി ബന്ധപ്പെടുക."
+    },
+    {
+      "q": "Is a listing a certification or recommendation?",
+      "a": "No. Specialty Coffee Keralam is a discovery directory, not a ranking or certification system. Inclusion does not represent an endorsement, award or guarantee of quality.",
+      "q_ml": "പട്ടികയിൽ ഉൾപ്പെടുന്നത് ഗുണമേന്മാ സാക്ഷ്യപത്രമാണോ?",
+      "a_ml": "അല്ല. ഇടങ്ങൾ കണ്ടെത്താനുള്ള വിവരശേഖരമാണിത്. ഉൾപ്പെടുത്തിയിരിക്കുന്നതുകൊണ്ട് മാത്രം അംഗീകാരമോ പുരസ്കാരമോ ഗുണമേന്മയുടെ ഉറപ്പോ ലഭിക്കുന്നില്ല."
+    },
+    {
+      "q": "How can I add a coffee-related place or business?",
+      "a": "Use the “Add a Place” option to submit a café, roastery, farm, producer, roasted coffee brand, coffee equipment business or coffee education centre. Every submission will be reviewed before it is added.",
+      "q_ml": "ഒരു ഇടത്തിന്റെ വിവരം എങ്ങനെ ചേർക്കാം?",
+      "a_ml": "ഞങ്ങളെക്കുറിച്ച് എന്ന ഭാഗത്തെ ഒരു ഇടം ചേർക്കുക എന്ന സൗകര്യം ഉപയോഗിക്കുക. ആവശ്യമായ വിവരങ്ങൾ അയച്ചാൽ പരിശോധിച്ചശേഷം ചേർക്കാം."
+    },
+    {
+      "q": "How can I correct information on an existing listing?",
+      "a": "Submit the updated details through the “Add a Place” form and clearly mention that it is a correction. Include an official website, Google Maps link or Instagram profile wherever possible.",
+      "q_ml": "നിലവിലുള്ള വിവരത്തിലെ തെറ്റ് എങ്ങനെ തിരുത്താം?",
+      "a_ml": "ഒരു ഇടം ചേർക്കുക എന്ന അപേക്ഷയിലൂടെ ശരിയായ വിവരം അയയ്ക്കുക. തിരുത്തലാണെന്ന് വ്യക്തമായി എഴുതുക. ഔദ്യോഗിക വെബ്സൈറ്റോ ഭൂപടക്കണ്ണിയോ കൂടി നൽകുന്നത് സഹായിക്കും."
+    },
+    {
+      "q": "Can I visit the coffee farms shown on the map?",
+      "a": "Some farms may welcome visitors, while others are working farms without public access. Check the individual listing and contact the farm directly before planning your visit.",
+      "q_ml": "ഭൂപടത്തിലുള്ള തോട്ടങ്ങൾ സന്ദർശിക്കാമോ?",
+      "a_ml": "ചില തോട്ടങ്ങളിൽ സന്ദർശകരെ അനുവദിക്കും; ചിലത് പൊതുജനങ്ങൾക്ക് പ്രവേശനമില്ലാത്ത സ്വകാര്യ തോട്ടങ്ങളാണ്. പോകുന്നതിനുമുമ്പ് ബന്ധപ്പെട്ടവരുടെ അനുമതി വാങ്ങുക."
+    },
+    {
+      "q": "Where can I find coffee events and workshops in Keralam?",
+      "a": "Visit the Events section to discover upcoming coffee workshops, tastings, competitions, festivals and community gatherings in Keralam.",
+      "q_ml": "കാപ്പി പരിപാടികളും ശിൽപ്പശാലകളും എവിടെ കാണാം?",
+      "a_ml": "പരിപാടികൾ എന്ന ഭാഗത്ത് വരാനിരിക്കുന്ന രുചിപരിശോധനകൾ, ശിൽപ്പശാലകൾ, മത്സരങ്ങൾ, മേളകൾ, കൂട്ടായ്മകൾ എന്നിവയുടെ വിവരങ്ങൾ ലഭിക്കും."
+    },
+    {
+      "q": "Can I purchase roasted coffee or equipment through this website?",
+      "a": "Specialty Coffee Keralam is a discovery platform, not an online shop. Roasted coffee and equipment listings may direct you to the seller's official website, Google Maps page or Instagram profile, where you can contact or purchase from them directly.",
+      "q_ml": "ഈ വെബ്സൈറ്റിൽനിന്ന് കാപ്പിയോ ഉപകരണങ്ങളോ വാങ്ങാമോ?",
+      "a_ml": "നേരിട്ട് വാങ്ങാനാവില്ല. വിൽപ്പനക്കാരെ കണ്ടെത്താനുള്ള വിവരങ്ങളാണ് ഇവിടെ നൽകുന്നത്. ലഭ്യമായ കണ്ണിയിലൂടെ വിൽപ്പനക്കാരുമായി നേരിട്ട് ബന്ധപ്പെടാം."
+    }
+  ],
+  "peopleReferences": [
+    {
+      "name": "Lex Hamood",
+      "role": "Home brewer, content creator and journal reviewer",
+      "url": "https://www.specialtycoffeekerala.com/about/lex-hamood/"
+    }
+  ],
+  "communityIds": [
+    "kerala-origins"
+  ],
+  "eventIds": [
+    "nas-jaseem-sukoru-takeover",
+    "omakase-naser-kozhikode-2026",
+    "bake-expo-2026",
+    "hario-v60-brewers-cup-calicut-2026",
+    "kerala-coffee-festival-2026",
+    "kerala-origins-kochi-2026",
+    "bean-curious-calicut-2026",
+    "kerala-masters-pour-over-2026",
+    "beyond-the-cup-kochi-2026",
+    "coffee-talk-roast-brew-kochi-2026",
+    "kerala-origins-calicut-2026"
+  ],
+  "reconciliation": {
+    "originalKeralaRecords": 76,
+    "matchedResearchRecords": 37,
+    "uniqueApprovedPlaces": 33,
+    "unmatchedDirectoryLeads": 39,
+    "researchArchive": "kerala-research-archive.json",
+    "oldIdToNewId": {
+      "IND-df1c33a074cd": "90million-coffee",
+      "IND-df7c6e28f2e2": "bermito",
+      "IND-ab2bf4257522": "bermito",
+      "IND-4e411709d026": "brewmorphia-speciality-coffee",
+      "IND-94ad989bd6ae": "brwlab",
+      "IND-adf95beab5b4": "cafe-addict-kochi",
+      "IND-b204dcc9af21": "cafficana-kochi",
+      "IND-d71bf63144d3": "cafficana-kochi",
+      "IND-5f15afd0e48b": "cafficana-kozhikode",
+      "IND-1b7120e7b44f": "haneen-cafe",
+      "IND-3440c749415e": "overdose-cafe",
+      "IND-0cd7676b139d": "pour-over-lab",
+      "IND-784f699d777e": "pour-over-lab",
+      "IND-f2fe174bca10": "slolabs-by-cafficana",
+      "IND-9858ee7eccf3": "sukoru",
+      "IND-7aea20bfa097": "third-wave-coffee-airport",
+      "IND-64f11123fcb0": "third-wave-coffee-noel-mall-kakkanad",
+      "IND-3a3741153e82": "third-wave-coffee-panampilly-nagar",
+      "IND-5f7c9214bc8c": "underblu-specialty-coffee",
+      "IND-9424f567cb5d": "underblu-specialty-coffee",
+      "IND-812b4874923f": "understory-cafe",
+      "IND-a7a3c1e88a27": "wishlist-coffee",
+      "IND-844df91c3fc5": "thomas-k-v",
+      "IND-ec55840fbc7e": "brewell-coffee-lab",
+      "IND-a3b45de2a2fe": "the-brew-school",
+      "IND-517f22d27031": "erel-spices-experience-centre",
+      "IND-507fb2554847": "black-baza-coffee-smallholder-network",
+      "IND-88f19265e735": "kelachandra-coffee-brahmagiri-estate",
+      "IND-7fc6d1b251de": "komban-kampini",
+      "IND-e4c4bb771fc9": "old-babbler-coffee",
+      "IND-080c9f0ecbff": "poabs-seethargundu",
+      "IND-774255bd67ca": "sanjay-garden-bluhills-spices-beans",
+      "IND-9e2156a9abd4": "silent-valley-estate",
+      "IND-c9fb56608678": "terra-vagamon",
+      "IND-fdc6529bc658": "windermere-estate",
+      "IND-1d47065a0458": "capi",
+      "IND-c71459f255c8": "urban-hippie"
+    },
+    "matchedRecords": [
+      {
+        "previousId": "IND-df1c33a074cd",
+        "previousName": "90Million Coffee",
+        "authorityId": "90million-coffee"
+      },
+      {
+        "previousId": "IND-df7c6e28f2e2",
+        "previousName": "Bermito Coffee Roasters",
+        "authorityId": "bermito"
+      },
+      {
+        "previousId": "IND-ab2bf4257522",
+        "previousName": "Bermito Coffee Roasters",
+        "authorityId": "bermito"
+      },
+      {
+        "previousId": "IND-4e411709d026",
+        "previousName": "Brewmorphia Speciality Coffee",
+        "authorityId": "brewmorphia-speciality-coffee"
+      },
+      {
+        "previousId": "IND-94ad989bd6ae",
+        "previousName": "BRWLAB",
+        "authorityId": "brwlab"
+      },
+      {
+        "previousId": "IND-adf95beab5b4",
+        "previousName": "Cafe Addict Kochi",
+        "authorityId": "cafe-addict-kochi"
+      },
+      {
+        "previousId": "IND-b204dcc9af21",
+        "previousName": "Cafficana",
+        "authorityId": "cafficana-kochi"
+      },
+      {
+        "previousId": "IND-d71bf63144d3",
+        "previousName": "Cafficana Kochi",
+        "authorityId": "cafficana-kochi"
+      },
+      {
+        "previousId": "IND-5f15afd0e48b",
+        "previousName": "Cafficana Kozhikode",
+        "authorityId": "cafficana-kozhikode"
+      },
+      {
+        "previousId": "IND-1b7120e7b44f",
+        "previousName": "Haneen Cafe",
+        "authorityId": "haneen-cafe"
+      },
+      {
+        "previousId": "IND-3440c749415e",
+        "previousName": "Overdose Cafe",
+        "authorityId": "overdose-cafe"
+      },
+      {
+        "previousId": "IND-0cd7676b139d",
+        "previousName": "POUR OVER LAB",
+        "authorityId": "pour-over-lab"
+      },
+      {
+        "previousId": "IND-784f699d777e",
+        "previousName": "Pour Over Lab",
+        "authorityId": "pour-over-lab"
+      },
+      {
+        "previousId": "IND-f2fe174bca10",
+        "previousName": "Slolabs by Cafficana",
+        "authorityId": "slolabs-by-cafficana"
+      },
+      {
+        "previousId": "IND-9858ee7eccf3",
+        "previousName": "Sukoru Specialty Coffee",
+        "authorityId": "sukoru"
+      },
+      {
+        "previousId": "IND-7aea20bfa097",
+        "previousName": "Third Wave Coffee — Airport",
+        "authorityId": "third-wave-coffee-airport"
+      },
+      {
+        "previousId": "IND-64f11123fcb0",
+        "previousName": "Third Wave Coffee — Noel Focus Mall, Kakkanad",
+        "authorityId": "third-wave-coffee-noel-mall-kakkanad"
+      },
+      {
+        "previousId": "IND-3a3741153e82",
+        "previousName": "Third Wave Coffee — Panampilly Nagar",
+        "authorityId": "third-wave-coffee-panampilly-nagar"
+      },
+      {
+        "previousId": "IND-5f7c9214bc8c",
+        "previousName": "Underblu Coffee",
+        "authorityId": "underblu-specialty-coffee"
+      },
+      {
+        "previousId": "IND-9424f567cb5d",
+        "previousName": "Underblu Specialty Coffee",
+        "authorityId": "underblu-specialty-coffee"
+      },
+      {
+        "previousId": "IND-812b4874923f",
+        "previousName": "Understory Cafe",
+        "authorityId": "understory-cafe"
+      },
+      {
+        "previousId": "IND-a7a3c1e88a27",
+        "previousName": "Wishlist Coffee",
+        "authorityId": "wishlist-coffee"
+      },
+      {
+        "previousId": "IND-844df91c3fc5",
+        "previousName": "Thomas K V",
+        "authorityId": "thomas-k-v"
+      },
+      {
+        "previousId": "IND-ec55840fbc7e",
+        "previousName": "Brewell Coffee Lab",
+        "authorityId": "brewell-coffee-lab"
+      },
+      {
+        "previousId": "IND-a3b45de2a2fe",
+        "previousName": "The Brew School",
+        "authorityId": "the-brew-school"
+      },
+      {
+        "previousId": "IND-517f22d27031",
+        "previousName": "Erel Spices Experience Centre",
+        "authorityId": "erel-spices-experience-centre"
+      },
+      {
+        "previousId": "IND-507fb2554847",
+        "previousName": "Black Baza Coffee — Smallholder Network",
+        "authorityId": "black-baza-coffee-smallholder-network"
+      },
+      {
+        "previousId": "IND-88f19265e735",
+        "previousName": "Kelachandra Coffee — Brahmagiri Estate",
+        "authorityId": "kelachandra-coffee-brahmagiri-estate"
+      },
+      {
+        "previousId": "IND-7fc6d1b251de",
+        "previousName": "Komban Kampini / Vernacular",
+        "authorityId": "komban-kampini"
+      },
+      {
+        "previousId": "IND-e4c4bb771fc9",
+        "previousName": "Old Babbler Coffee",
+        "authorityId": "old-babbler-coffee"
+      },
+      {
+        "previousId": "IND-080c9f0ecbff",
+        "previousName": "Poabs Organic Estates — Seethargundu",
+        "authorityId": "poabs-seethargundu"
+      },
+      {
+        "previousId": "IND-774255bd67ca",
+        "previousName": "Sanjay Garden / Bluhills Spices & Beans",
+        "authorityId": "sanjay-garden-bluhills-spices-beans"
+      },
+      {
+        "previousId": "IND-9e2156a9abd4",
+        "previousName": "Silent Valley Estate",
+        "authorityId": "silent-valley-estate"
+      },
+      {
+        "previousId": "IND-c9fb56608678",
+        "previousName": "Terra Vagamon Conservancy",
+        "authorityId": "terra-vagamon"
+      },
+      {
+        "previousId": "IND-fdc6529bc658",
+        "previousName": "Windermere Estate",
+        "authorityId": "windermere-estate"
+      },
+      {
+        "previousId": "IND-1d47065a0458",
+        "previousName": "CAPI Specialty Coffee Roasters",
+        "authorityId": "capi"
+      },
+      {
+        "previousId": "IND-c71459f255c8",
+        "previousName": "Urban Hippie Coffee Roasters",
+        "authorityId": "urban-hippie"
+      }
+    ],
+    "researchLeads": [
+      {
+        "previousId": "IND-77972f148fef",
+        "name": "Buna Kaapi",
+        "leadId": "kerala-review-IND-77972f148fef"
+      },
+      {
+        "previousId": "IND-cd03a0044cd0",
+        "name": "Cafe Addict — Thrissur",
+        "leadId": "kerala-review-IND-cd03a0044cd0"
+      },
+      {
+        "previousId": "IND-4e528ca07f5e",
+        "name": "Cafe Paradiso Espresso Coffee Bar",
+        "leadId": "kerala-review-IND-4e528ca07f5e"
+      },
+      {
+        "previousId": "IND-4d37c0b64b5f",
+        "name": "Epic Poetry Cafe & Patisserie",
+        "leadId": "kerala-review-IND-4d37c0b64b5f"
+      },
+      {
+        "previousId": "IND-d329b91867d1",
+        "name": "FFox coffee",
+        "leadId": "kerala-review-IND-d329b91867d1"
+      },
+      {
+        "previousId": "IND-eaf7199ef73a",
+        "name": "Kaapi Street",
+        "leadId": "kerala-review-IND-eaf7199ef73a"
+      },
+      {
+        "previousId": "IND-0c0b86c679f2",
+        "name": "Kashi Art Cafe",
+        "leadId": "kerala-review-IND-0c0b86c679f2"
+      },
+      {
+        "previousId": "IND-8eab82f9f7c5",
+        "name": "Kochi Kapital Kafe",
+        "leadId": "kerala-review-IND-8eab82f9f7c5"
+      },
+      {
+        "previousId": "IND-29905f4a0724",
+        "name": "Pepper House",
+        "leadId": "kerala-review-IND-29905f4a0724"
+      },
+      {
+        "previousId": "IND-808e12016597",
+        "name": "Trouvaille",
+        "leadId": "kerala-review-IND-808e12016597"
+      },
+      {
+        "previousId": "IND-2a1c317ea628",
+        "name": "Turf Cafe",
+        "leadId": "kerala-review-IND-2a1c317ea628"
+      },
+      {
+        "previousId": "IND-b11e05a13e1b",
+        "name": "Beans of Bodhi",
+        "leadId": "kerala-review-IND-b11e05a13e1b"
+      },
+      {
+        "previousId": "IND-b535a7e027d8",
+        "name": "Castle Coffee",
+        "leadId": "kerala-review-IND-b535a7e027d8"
+      },
+      {
+        "previousId": "IND-53511e8038e2",
+        "name": "Elements Homestead Products",
+        "leadId": "kerala-review-IND-53511e8038e2"
+      },
+      {
+        "previousId": "IND-86f5cf998aaf",
+        "name": "Saji Coffee Works",
+        "leadId": "kerala-review-IND-86f5cf998aaf"
+      },
+      {
+        "previousId": "IND-5a9cf52e2ec2",
+        "name": "Kerala Coffee Collective",
+        "leadId": "kerala-review-IND-5a9cf52e2ec2"
+      },
+      {
+        "previousId": "IND-d065612d4049",
+        "name": "Kerala Origins",
+        "leadId": "kerala-review-IND-d065612d4049"
+      },
+      {
+        "previousId": "IND-d7e4d8b7ff52",
+        "name": "Let’s Brew Kochi",
+        "leadId": "kerala-review-IND-d7e4d8b7ff52"
+      },
+      {
+        "previousId": "IND-d017e2be3e3d",
+        "name": "Regional Coffee Research Station — Chundale",
+        "leadId": "kerala-review-IND-d017e2be3e3d"
+      },
+      {
+        "previousId": "IND-34acd4c27f34",
+        "name": "17AD Coffee",
+        "leadId": "kerala-review-IND-34acd4c27f34"
+      },
+      {
+        "previousId": "IND-1d2aff0c85f4",
+        "name": "Bluhills Spices & Beans",
+        "leadId": "kerala-review-IND-1d2aff0c85f4"
+      },
+      {
+        "previousId": "IND-2ba98b2d9f28",
+        "name": "Mountain Brewed Coffee",
+        "leadId": "kerala-review-IND-2ba98b2d9f28"
+      },
+      {
+        "previousId": "IND-4d56244f101a",
+        "name": "Shop Wayanad (Wayanad Spices & Natural Products)",
+        "leadId": "kerala-review-IND-4d56244f101a"
+      },
+      {
+        "previousId": "IND-de25e344a98e",
+        "name": "Wayanadcraft",
+        "leadId": "kerala-review-IND-de25e344a98e"
+      },
+      {
+        "previousId": "IND-942ff6eff3bd",
+        "name": "Krishnagiri Estate",
+        "leadId": "kerala-review-IND-942ff6eff3bd"
+      },
+      {
+        "previousId": "IND-40f26a54f45b",
+        "name": "Kuruvinakunnel Estate",
+        "leadId": "kerala-review-IND-40f26a54f45b"
+      },
+      {
+        "previousId": "IND-7eeb666a792f",
+        "name": "On Ground Farm",
+        "leadId": "kerala-review-IND-7eeb666a792f"
+      },
+      {
+        "previousId": "IND-1f4222ce2ea9",
+        "name": "Pampadumpara Estate",
+        "leadId": "kerala-review-IND-1f4222ce2ea9"
+      },
+      {
+        "previousId": "IND-d9ca80c7839d",
+        "name": "Puliyarmala Estate",
+        "leadId": "kerala-review-IND-d9ca80c7839d"
+      },
+      {
+        "previousId": "IND-906d25e85a07",
+        "name": "Rosegarden Group of Farming Community",
+        "leadId": "kerala-review-IND-906d25e85a07"
+      },
+      {
+        "previousId": "IND-0bbe76887afc",
+        "name": "Thumpassery Estate",
+        "leadId": "kerala-review-IND-0bbe76887afc"
+      },
+      {
+        "previousId": "IND-60e91b7b3748",
+        "name": "Woodlands Estate",
+        "leadId": "kerala-review-IND-60e91b7b3748"
+      },
+      {
+        "previousId": "IND-ca8fc1d40846",
+        "name": "Beans of Bodhi",
+        "leadId": "kerala-review-IND-ca8fc1d40846"
+      },
+      {
+        "previousId": "IND-7023a65a2e2e",
+        "name": "FFox Coffee",
+        "leadId": "kerala-review-IND-7023a65a2e2e"
+      },
+      {
+        "previousId": "IND-832dfb3fa488",
+        "name": "KoffyKraft",
+        "leadId": "kerala-review-IND-832dfb3fa488"
+      },
+      {
+        "previousId": "IND-27416bf4b418",
+        "name": "SeasonSync",
+        "leadId": "kerala-review-IND-27416bf4b418"
+      },
+      {
+        "previousId": "IND-b59aa34a1909",
+        "name": "Wild Ghats Coffee",
+        "leadId": "kerala-review-IND-b59aa34a1909"
+      },
+      {
+        "previousId": "IND-982a530ee8ed",
+        "name": "Fair Trade Alliance Kerala",
+        "leadId": "kerala-review-IND-982a530ee8ed"
+      },
+      {
+        "previousId": "IND-f709e1cc6e81",
+        "name": "Plantrich Agritech",
+        "leadId": "kerala-review-IND-f709e1cc6e81"
+      }
+    ]
+  },
+  "methods": {
+    "deduplication": "One place, one authority ID; multiple categories do not increase total places.",
+    "sourcePriority": "User-approved Kerala source overrides third-party descriptions, categories and visiting details.",
+    "relationships": "Stockist, roasted-lot and event collaboration connections stay separate.",
+    "emptyDistricts": "No approved listing yet; not evidence that coffee businesses do not exist.",
+    "events": "Asia/Kolkata calendar dates; all current Kerala records are past archives."
+  }
+}
