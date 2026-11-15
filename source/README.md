@@ -1,0 +1,48 @@
+# Specialty Coffee India
+
+A static, source-linked coffee field guide. The original India terrain map is retained, with a clickable fallback and a selector covering all 36 states and union territories. The expanded directory covers cafés, roasters, farms, products, equipment, events, communities, education and experiences.
+
+## Build and validation
+
+Node.js 22 or newer is sufficient. No package installation is required.
+
+```sh
+node scripts/build.mjs
+node scripts/check.mjs
+```
+
+The build writes `dist/`, including 50 page routes, route-specific metadata, a sitemap and source-linked static previews. The browser application replaces each preview with the full searchable collection. Serve `dist/` with a static HTTP server; opening HTML directly with `file://` will not support JSON loading. `vercel.json` selects the build command and `dist` output.
+
+Checks validate source counts and IDs, price units, provenance URLs, geography, all state/district coverage rows, event eligibility, local route/asset references, JavaScript syntax and escaping of untrusted query/listing text. Browser checks are still needed after UI changes, especially mobile navigation, filters, map selection, dialogs, saved lists and calendar downloads. Form validation can be checked without sending a test message.
+
+## Source structure
+
+- `index.html`: shared page shell, navigation, dialogs and initial homepage.
+- `assets/site.css`: responsive presentation.
+- `assets/app.js`: client-side routing, search, filters, pagination, detail dialogs, saved lists, CSV downloads, event calendar and suggestion form.
+- `map.html`, `assets/map/`: original Three.js terrain, map data, parent-page bridge and fallback geometry. Elevation attribution: ETOPO 2022, NOAA NCEI. The terrain omits some island geometry; the state selector and directory cover every current state/UT.
+- `data/*.json`: checked research snapshots, maintained independently of UI code. The complete original research is also supplied as `data/research.json.gz` for download.
+- `scripts/build.mjs`: static page previews and metadata generation.
+- `scripts/check.mjs`, `scripts/check-rendering.mjs`: repeatable validation.
+
+## Data maintenance
+
+The initial collection was checked on 15 November 2026. It contains 1,034 directory candidates, including 76 Kerala entries; 5,219 coffee-product observations; 1,607 equipment observations; 18 event records; 19 communities; 24 learning/publication records; 1,368 additional business leads; and all 412 original Arpan list entries. These are collection counts, not counts of verified operating businesses or unique coffees.
+
+Update the relevant section JSON while preserving stable IDs, source URLs, evidence labels and checked/snapshot dates. Update `manifest.json`, state/district totals in `coverage.json`, and source coverage in `sources.json` together. When a refreshed collection legitimately changes the baseline counts, update the explicit expectations in `scripts/check.mjs` after reviewing the new data. Run build and checks before release.
+
+Do not infer districts, coordinates, specialty quality or current operation from a brand name. A roastery location is not a coffee’s farm origin. Keep estate-linked retail brands separate from physical farms. Preserve pack/price units and snapshot dates; product catalogues overlap and prices are not live.
+
+Original website records remain in `legacy.json` and related archives, with unverified labels; they are not merged into the main directory. Broad leads remain separate. Three overseas venues remain in Arpan’s original list but are excluded from the India directory. Empty districts are research gaps.
+
+For events, set `calendarEligible` only when an organiser-supported schedule exists, retaining verification and conflict notes. The client computes upcoming/past status against India’s current date. Calendar downloads are all-day date reminders, with supplied session times in the description; they do not invent start times or confirm ticket availability. Static event previews refresh when the site is rebuilt.
+
+## Suggestions, saved lists and privacy
+
+Suggestions use the original public Formspree endpoint `https://formspree.io/f/xrpzgeky`, carrying `site=india`. Submission sends the entered name, category, location, public link, email and notes to Formspree. The site shows success only after a successful response and keeps entered details after a failure. Endpoint ownership, inbox access and delivery must be maintained by the site owner; sending/receipt was not tested by submitting a message. There is no moderation dashboard or automatic insertion into the published data: review suggestions and update the JSON before rebuilding.
+
+Saved IDs are stored only in the visitor’s browser `localStorage`. They do not require an account and do not sync between devices. Clearing browser storage removes them. CSV and calendar exports are created in the visitor’s browser. Public catalogue/source links open the original websites; community links may open third-party services. Fonts are requested from Google Fonts. No account system, analytics or payment flow has been added.
+
+## Publication
+
+Keep existing repository/hosting configuration. The repository’s existing Git integration can deploy reviewed changes using the configured Vercel build. Confirm the intended branch and hosting target before publishing, then verify the deployed pages. `dist/`, local preview settings and QA screenshots are ignored by Git; do not publish credentials, raw browser captures or private contributor metadata.

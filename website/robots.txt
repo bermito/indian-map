@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /map.html
+Sitemap: https://www.specialtycoffeeindia.blog/sitemap.xml
