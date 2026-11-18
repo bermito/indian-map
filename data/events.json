@@ -31,7 +31,8 @@
     ],
     "sourceRawDate": "2026-11-22",
     "sourceRawTime": "7:00 PM",
-    "calendarEligible": true
+    "calendarEligible": true,
+    "scheduleCheckedDate": "2026-11-18"
   },
   {
     "id": "event-497903ebc7d1",
@@ -226,7 +227,8 @@
     "notes": "Official Coffee Board schedule lists 30 November–4 December 2026. Start time not stated; booking availability not verified.",
     "checkedDate": "2026-11-15",
     "venue": "Coffee Board, 1 Dr. B. R. Ambedkar Veedhi, Bengaluru 560001",
-    "calendarEligible": true
+    "calendarEligible": true,
+    "scheduleCheckedDate": "2026-11-18"
   },
   {
     "id": "nas-jaseem-sukoru-takeover",
@@ -702,5 +704,341 @@
     "organizerUrl": "https://bermito.com/",
     "time": "14:00–17:00",
     "city": "Kozhikode"
+  },
+  {
+    "id": "blue-tokai-shillong-cupping-shillong-2026-11-20",
+    "name": "Blue Tokai coffee cupping — Shillong",
+    "kind": "event",
+    "category": "Workshop",
+    "organiser": "Blue Tokai Coffee Roasters",
+    "city": "Shillong",
+    "state": "Meghalaya",
+    "venue": "Kynjai Winery",
+    "mapUrl": "https://maps.google.com/?q=25.560556%2C91.899391",
+    "date": "2026-11-20",
+    "time": "11:00–13:00",
+    "timezone": "Asia/Kolkata",
+    "url": "https://bluetokaicoffee.com/products/coffee-cupping-a-specialty-coffee-experience-in-shillong",
+    "sourceUrls": [
+      "https://bluetokaicoffee.com/products/coffee-cupping-a-specialty-coffee-experience-in-shillong",
+      "https://bluetokaicoffee.com/pages/coffee-workshop-events"
+    ],
+    "sourceNames": [
+      "Blue Tokai Coffee Roasters"
+    ],
+    "status": "upcoming_organiser_confirmed",
+    "verification": "official_schedule_observed",
+    "evidenceLabel": "Organiser schedule checked",
+    "notes": "A guided tasting at Kynjai Winery covers the aroma, acidity and texture of coffee.",
+    "checkedDate": "2026-11-18",
+    "calendarEligible": true
+  },
+  {
+    "id": "blue-tokai-taste-coffee-differently-mumbai-2026-11-21",
+    "name": "Taste Coffee Differently — Mumbai",
+    "kind": "event",
+    "category": "Workshop",
+    "organiser": "Blue Tokai Coffee Roasters",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "venue": "Blue Tokai, Borivali",
+    "mapUrl": "https://maps.app.goo.gl/YGanuc6CduHyXG8H8",
+    "date": "2026-11-21",
+    "time": "11:00–13:00",
+    "timezone": "Asia/Kolkata",
+    "url": "https://bluetokaicoffee.com/products/taste-coffee-differently-coffee-cupping-workshop",
+    "sourceUrls": [
+      "https://bluetokaicoffee.com/products/taste-coffee-differently-coffee-cupping-workshop",
+      "https://bluetokaicoffee.com/pages/coffee-workshop-events"
+    ],
+    "sourceNames": [
+      "Blue Tokai Coffee Roasters"
+    ],
+    "status": "upcoming_organiser_confirmed",
+    "verification": "official_schedule_observed",
+    "evidenceLabel": "Organiser schedule checked",
+    "notes": "Blue Tokai leads a guided coffee cupping at this café.",
+    "checkedDate": "2026-11-18",
+    "calendarEligible": true
+  },
+  {
+    "id": "blue-tokai-taste-coffee-differently-bengaluru-2026-11-21",
+    "name": "Taste Coffee Differently — Bengaluru",
+    "kind": "event",
+    "category": "Workshop",
+    "organiser": "Blue Tokai Coffee Roasters",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "venue": "Blue Tokai, AECS Layout",
+    "mapUrl": "https://maps.app.goo.gl/nHTWTQSupNRJrabQ6",
+    "date": "2026-11-21",
+    "time": "11:00–13:00",
+    "timezone": "Asia/Kolkata",
+    "url": "https://bluetokaicoffee.com/products/taste-coffee-differently-coffee-cupping-workshop",
+    "sourceUrls": [
+      "https://bluetokaicoffee.com/products/taste-coffee-differently-coffee-cupping-workshop",
+      "https://bluetokaicoffee.com/pages/coffee-workshop-events"
+    ],
+    "sourceNames": [
+      "Blue Tokai Coffee Roasters"
+    ],
+    "status": "upcoming_organiser_confirmed",
+    "verification": "official_schedule_observed",
+    "evidenceLabel": "Organiser schedule checked",
+    "notes": "Blue Tokai leads a guided coffee cupping at this café.",
+    "checkedDate": "2026-11-18",
+    "calendarEligible": true
+  },
+  {
+    "id": "blue-tokai-taste-coffee-differently-new-delhi-2026-11-21",
+    "name": "Taste Coffee Differently — New Delhi",
+    "kind": "event",
+    "category": "Workshop",
+    "organiser": "Blue Tokai Coffee Roasters",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "venue": "Blue Tokai, Panchsheel Park",
+    "mapUrl": "https://maps.app.goo.gl/YmUq75VEHtG9SL7D9",
+    "date": "2026-11-21",
+    "time": "11:00–13:00",
+    "timezone": "Asia/Kolkata",
+    "url": "https://bluetokaicoffee.com/products/taste-coffee-differently-coffee-cupping-workshop",
+    "sourceUrls": [
+      "https://bluetokaicoffee.com/products/taste-coffee-differently-coffee-cupping-workshop",
+      "https://bluetokaicoffee.com/pages/coffee-workshop-events"
+    ],
+    "sourceNames": [
+      "Blue Tokai Coffee Roasters"
+    ],
+    "status": "upcoming_organiser_confirmed",
+    "verification": "official_schedule_observed",
+    "evidenceLabel": "Organiser schedule checked",
+    "notes": "Blue Tokai leads a guided coffee cupping at this café.",
+    "checkedDate": "2026-11-18",
+    "calendarEligible": true
+  },
+  {
+    "id": "blue-tokai-taste-coffee-differently-pune-2026-11-21",
+    "name": "Taste Coffee Differently — Pune",
+    "kind": "event",
+    "category": "Workshop",
+    "organiser": "Blue Tokai Coffee Roasters",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "venue": "Blue Tokai, Baner",
+    "mapUrl": "https://maps.app.goo.gl/jsJhoAHc6UbpNqPcA",
+    "date": "2026-11-21",
+    "time": "11:00–13:00",
+    "timezone": "Asia/Kolkata",
+    "url": "https://bluetokaicoffee.com/products/taste-coffee-differently-coffee-cupping-workshop",
+    "sourceUrls": [
+      "https://bluetokaicoffee.com/products/taste-coffee-differently-coffee-cupping-workshop",
+      "https://bluetokaicoffee.com/pages/coffee-workshop-events"
+    ],
+    "sourceNames": [
+      "Blue Tokai Coffee Roasters"
+    ],
+    "status": "upcoming_organiser_confirmed",
+    "verification": "official_schedule_observed",
+    "evidenceLabel": "Organiser schedule checked",
+    "notes": "Blue Tokai leads a guided coffee cupping at this café.",
+    "checkedDate": "2026-11-18",
+    "calendarEligible": true
+  },
+  {
+    "id": "blue-tokai-master-the-pour-mumbai-2026-12-05",
+    "name": "Master the Pour — Mumbai",
+    "kind": "event",
+    "category": "Workshop",
+    "organiser": "Blue Tokai Coffee Roasters",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "venue": "Blue Tokai, Ashok Nagar",
+    "mapUrl": "https://share.google/L672iMw6LSht6jKUf",
+    "date": "2026-12-05",
+    "time": "11:00–13:00",
+    "timezone": "Asia/Kolkata",
+    "url": "https://bluetokaicoffee.com/products/master-the-pour-manual-brewing-workshop-1",
+    "sourceUrls": [
+      "https://bluetokaicoffee.com/products/master-the-pour-manual-brewing-workshop-1",
+      "https://bluetokaicoffee.com/pages/coffee-workshop-events"
+    ],
+    "sourceNames": [
+      "Blue Tokai Coffee Roasters"
+    ],
+    "status": "upcoming_organiser_confirmed",
+    "verification": "official_schedule_observed",
+    "evidenceLabel": "Organiser schedule checked",
+    "notes": "A hands-on manual brewing workshop on grind size, water temperature and technique.",
+    "checkedDate": "2026-11-18",
+    "calendarEligible": true
+  },
+  {
+    "id": "blue-tokai-master-the-pour-bengaluru-2026-12-05",
+    "name": "Master the Pour — Bengaluru",
+    "kind": "event",
+    "category": "Workshop",
+    "organiser": "Blue Tokai Coffee Roasters",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "venue": "Blue Tokai, WTC",
+    "mapUrl": "https://share.google/s0WggAX5dOWZk6n4z",
+    "date": "2026-12-05",
+    "time": "11:00–13:00",
+    "timezone": "Asia/Kolkata",
+    "url": "https://bluetokaicoffee.com/products/master-the-pour-manual-brewing-workshop-1",
+    "sourceUrls": [
+      "https://bluetokaicoffee.com/products/master-the-pour-manual-brewing-workshop-1",
+      "https://bluetokaicoffee.com/pages/coffee-workshop-events"
+    ],
+    "sourceNames": [
+      "Blue Tokai Coffee Roasters"
+    ],
+    "status": "upcoming_organiser_confirmed",
+    "verification": "official_schedule_observed",
+    "evidenceLabel": "Organiser schedule checked",
+    "notes": "A hands-on manual brewing workshop on grind size, water temperature and technique.",
+    "checkedDate": "2026-11-18",
+    "calendarEligible": true
+  },
+  {
+    "id": "blue-tokai-master-the-pour-new-delhi-2026-12-05",
+    "name": "Master the Pour — New Delhi",
+    "kind": "event",
+    "category": "Workshop",
+    "organiser": "Blue Tokai Coffee Roasters",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "venue": "Blue Tokai, Vasant Vihar",
+    "mapUrl": "https://share.google/1GvoqFgK6QLjNZMho",
+    "date": "2026-12-05",
+    "time": "11:00–13:00",
+    "timezone": "Asia/Kolkata",
+    "url": "https://bluetokaicoffee.com/products/master-the-pour-manual-brewing-workshop-1",
+    "sourceUrls": [
+      "https://bluetokaicoffee.com/products/master-the-pour-manual-brewing-workshop-1",
+      "https://bluetokaicoffee.com/pages/coffee-workshop-events"
+    ],
+    "sourceNames": [
+      "Blue Tokai Coffee Roasters"
+    ],
+    "status": "upcoming_organiser_confirmed",
+    "verification": "official_schedule_observed",
+    "evidenceLabel": "Organiser schedule checked",
+    "notes": "A hands-on manual brewing workshop on grind size, water temperature and technique.",
+    "checkedDate": "2026-11-18",
+    "calendarEligible": true
+  },
+  {
+    "id": "blue-tokai-master-the-pour-pune-2026-12-05",
+    "name": "Master the Pour — Pune",
+    "kind": "event",
+    "category": "Workshop",
+    "organiser": "Blue Tokai Coffee Roasters",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "venue": "Blue Tokai, Koregaon Park",
+    "mapUrl": "https://share.google/mzm56wIaVlwnhvuiP",
+    "date": "2026-12-05",
+    "time": "11:00–13:00",
+    "timezone": "Asia/Kolkata",
+    "url": "https://bluetokaicoffee.com/products/master-the-pour-manual-brewing-workshop-1",
+    "sourceUrls": [
+      "https://bluetokaicoffee.com/products/master-the-pour-manual-brewing-workshop-1",
+      "https://bluetokaicoffee.com/pages/coffee-workshop-events"
+    ],
+    "sourceNames": [
+      "Blue Tokai Coffee Roasters"
+    ],
+    "status": "upcoming_organiser_confirmed",
+    "verification": "official_schedule_observed",
+    "evidenceLabel": "Organiser schedule checked",
+    "notes": "A hands-on manual brewing workshop on grind size, water temperature and technique.",
+    "checkedDate": "2026-11-18",
+    "calendarEligible": true
+  },
+  {
+    "id": "blue-tokai-master-the-pour-hyderabad-2026-12-05",
+    "name": "Master the Pour — Hyderabad",
+    "kind": "event",
+    "category": "Workshop",
+    "organiser": "Blue Tokai Coffee Roasters",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "venue": "Blue Tokai, Banjara Hills",
+    "mapUrl": "https://share.google/AAdtSVpaIHuKqkchS",
+    "date": "2026-12-05",
+    "time": "11:00–13:00",
+    "timezone": "Asia/Kolkata",
+    "url": "https://bluetokaicoffee.com/products/master-the-pour-manual-brewing-workshop-1",
+    "sourceUrls": [
+      "https://bluetokaicoffee.com/products/master-the-pour-manual-brewing-workshop-1",
+      "https://bluetokaicoffee.com/pages/coffee-workshop-events"
+    ],
+    "sourceNames": [
+      "Blue Tokai Coffee Roasters"
+    ],
+    "status": "upcoming_organiser_confirmed",
+    "verification": "official_schedule_observed",
+    "evidenceLabel": "Organiser schedule checked",
+    "notes": "A hands-on manual brewing workshop on grind size, water temperature and technique.",
+    "checkedDate": "2026-11-18",
+    "calendarEligible": true
+  },
+  {
+    "id": "blue-tokai-roastery-tour-bengaluru-2026-12-06",
+    "name": "Inside the Roastery — Bengaluru",
+    "kind": "event",
+    "category": "Roastery tour",
+    "organiser": "Blue Tokai Coffee Roasters",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "venue": "Blue Tokai, Seetharampalya",
+    "mapUrl": "https://maps.app.goo.gl/q3VGCKvFEgLos9PB6",
+    "date": "2026-12-06",
+    "time": "11:00–13:00",
+    "timezone": "Asia/Kolkata",
+    "url": "https://bluetokaicoffee.com/products/inside-the-roastery-blue-tokai-roastery-tour",
+    "sourceUrls": [
+      "https://bluetokaicoffee.com/products/inside-the-roastery-blue-tokai-roastery-tour",
+      "https://bluetokaicoffee.com/pages/coffee-workshop-events"
+    ],
+    "sourceNames": [
+      "Blue Tokai Coffee Roasters"
+    ],
+    "status": "upcoming_organiser_confirmed",
+    "verification": "official_schedule_observed",
+    "evidenceLabel": "Organiser schedule checked",
+    "notes": "The Blue Tokai team takes visitors through the stages of roasting a batch of coffee.",
+    "checkedDate": "2026-11-18",
+    "calendarEligible": true
+  },
+  {
+    "id": "blue-tokai-roastery-tour-gurugram-2026-12-06",
+    "name": "Inside the Roastery — Gurugram",
+    "kind": "event",
+    "category": "Roastery tour",
+    "organiser": "Blue Tokai Coffee Roasters",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "venue": "Blue Tokai, Udyog Vihar, Phase II, Plot 320",
+    "mapUrl": "https://maps.app.goo.gl/wVgbQaTLTi4RQKKj9",
+    "date": "2026-12-06",
+    "time": "11:00–13:00",
+    "timezone": "Asia/Kolkata",
+    "url": "https://bluetokaicoffee.com/products/inside-the-roastery-blue-tokai-roastery-tour",
+    "sourceUrls": [
+      "https://bluetokaicoffee.com/products/inside-the-roastery-blue-tokai-roastery-tour",
+      "https://bluetokaicoffee.com/pages/coffee-workshop-events"
+    ],
+    "sourceNames": [
+      "Blue Tokai Coffee Roasters"
+    ],
+    "status": "upcoming_organiser_confirmed",
+    "verification": "official_schedule_observed",
+    "evidenceLabel": "Organiser schedule checked",
+    "notes": "The Blue Tokai team takes visitors through the stages of roasting a batch of coffee.",
+    "checkedDate": "2026-11-18",
+    "calendarEligible": true
   }
 ]

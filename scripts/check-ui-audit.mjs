@@ -18,13 +18,51 @@ const fetch=async url=>{
  requests.push(url);const name=url.split('/').at(-1).replace(/\.json$/,'');
  return {ok:!failedDatasets.has(name),json:async()=>read(name),text:async()=>fs.readFileSync('.'+url,'utf8')};
 };
-const ctx=vm.createContext({createAtlas,findPage,schemaFor,renderJournalTeasers,document,location,console,URL,URLSearchParams,FormData,Blob,setTimeout,clearTimeout,fetch,localStorage:{getItem(){return null},setItem(){}},window:{addEventListener(){},scrollTo(){}},history:{replaceState(){},pushState(){}}});
+const ctx=vm.createContext({createAtlas,findPage,schemaFor,renderJournalTeasers,document,location,console,URL,URLSearchParams,FormData,Blob,TextEncoder,setTimeout,clearTimeout,fetch,localStorage:{getItem(){return null},setItem(){}},window:{addEventListener(){},scrollTo(){}},history:{replaceState(){},pushState(){}}});
 let src=fs.readFileSync('assets/app.js','utf8').replace(/^import .*?;$/gm, '').replace(/\nboot\(\)\.catch[\s\S]*$/,'');
-src+='\nglobalThis.probe={eventPage,recordCard,price,listing,applyFilters,refreshSavedView,renderCalendar,showCalendarDay,savedPage,updateRouteMetadata,getFiltered:()=>filtered,setRoute:v=>{route=v},setSaved:v=>{saved=new Set(v)},setCore:(m,c,d,a,geography)=>{manifest=m;coverage=c;directory=d;current=d;keralaAuthority=a;atlas=createAtlas(directory, geography);d.forEach(remember)},setLocation:v=>Object.assign(location,v)};';
+src+='\nglobalThis.probe={calendarFile,calendarButton,prepareRoute,documentRoute,upcomingEvent,cityValues,eventPage,recordCard,price,listing,applyFilters,refreshSavedView,renderCalendar,showCalendarDay,savedPage,updateRouteMetadata,getFiltered:()=>filtered,setRoute:v=>{route=v},setSaved:v=>{saved=new Set(v)},setCore:(m,c,d,a,geography)=>{manifest=m;coverage=c;directory=d;current=d;keralaAuthority=a;atlas=createAtlas(directory, geography);d.forEach(remember)},setLocation:v=>Object.assign(location,v)};';
 vm.runInContext(src,ctx);
 const probe=ctx.probe,core=read('directory');
 probe.setCore(read('manifest'),read('coverage'),core,read('kerala-authority'),read('districts'));
 function at(path){const u=new URL(path,location.origin);probe.setLocation({href:u.href,pathname:u.pathname,search:u.search})}
+
+await probe.prepareRoute('home');
+assert.deepEqual(requests,['/data/coverage.json'],'Home boot must not download the full directory');
+await probe.prepareRoute('events');
+assert.equal(requests.length,1,'Navigation should reuse state coverage');
+assert.equal(probe.documentRoute('/journal/'),true);
+assert.equal(probe.documentRoute('/journal/a-story/'),true);
+assert.equal(probe.documentRoute('/explore/all/'),true);
+assert.equal(probe.documentRoute('/explore/'),false);
+assert.equal(probe.upcomingEvent({date:'2000-01-01',calendarEligible:true}),false);
+assert.equal(probe.upcomingEvent({date:'2099-01-01',calendarEligible:true}),true);
+const eventArchive=read('events');
+const sessions=eventArchive.filter(event=>event.calendarEligible&&event.time==='11:00–13:00'&&event.timezone==='Asia/Kolkata');
+assert.equal(sessions.length,12);
+for(const event of sessions) {
+ const file=probe.calendarFile(event);
+ const date=event.date.replaceAll('-','');
+ assert.ok(file.includes('DTSTART:'+date+'T053000Z\r\nDTEND:'+date+'T073000Z'));
+ assert.ok(file.split('\r\n').every(line=>Buffer.byteLength(line,'utf8')<=75),'Folded ICS lines must fit 75 octets');
+}
+const base={...sessions[0],date:'2099-01-01',endDate:undefined};
+assert.match(probe.calendarButton(base,'text-button'),/Add session to calendar/);
+assert.match(probe.calendarFile({...base,time:'01:00–02:30'}),/DTSTART:20981231T193000Z\r\nDTEND:20981231T210000Z/,'Early local sessions cross the UTC year boundary');
+assert.match(probe.calendarFile({...base,time:'23:00–06:00'}),/DTSTART:20990101T173000Z\r\nDTEND:20990102T003000Z/,'Overnight sessions end on the next local date');
+const multi=eventArchive.find(event=>event.time==='15:00; 19:00');
+assert.match(probe.calendarFile(multi),/DTSTART;VALUE=DATE:20261121\r\nDTEND;VALUE=DATE:20261122/);
+assert.match(probe.calendarButton({...multi,date:base.date},'text-button'),/Download date reminder/);
+const noTime=eventArchive.find(event=>event.calendarEligible&&!event.time);
+assert.match(probe.calendarFile(noTime),/DTSTART;VALUE=DATE:20261130\r\nDTEND;VALUE=DATE:20261205/);
+assert.match(probe.calendarFile({...base,time:'19:00'}),/DTSTART;VALUE=DATE/,'A single start time cannot establish a range');
+
+const localCities=probe.cityValues(core,'Kerala','Ernakulam');
+assert.ok(localCities.includes('Kochi')&&!localCities.includes('Kozhikode'),'City choices must respect the selected district');
+probe.applyFilters(new URLSearchParams('q=cafe+kochi'));
+const cafeMatches=probe.getFiltered().map(r=>r.id);
+assert.ok(cafeMatches.includes(core.find(r=>r.name==='90Million Coffee').id),'Search must match a category in one field and a city in another');
+probe.applyFilters(new URLSearchParams('q=Kochi+café'));
+assert.deepEqual(probe.getFiltered().map(r=>r.id),cafeMatches,'Term order and accents must not change results');
 
 assert.match(probe.recordCard({id:'guide-test',name:'Guide',kind:'learning_resource',geographicScope:'India',notes:'Practical brewing lessons.'}),/Practical brewing lessons\./,'Learning summaries must be visible');
 assert.match(probe.recordCard({id:'community-test',name:'Coffee circle',kind:'community',geographicScope:'India',notes:'A public coffee community.'}),/Across India/,'National resources need an accurate scope label');
@@ -68,6 +106,8 @@ if(!read('equipment').some(r=>r.state)){
  assert.equal(probe.getFiltered().length,read('equipment').length,'An obsolete state query must not empty a nationwide equipment catalogue');
 }
 
+at('/states/lakshadweep/');probe.updateRouteMetadata();
+assert.equal(nodes.get('meta[name="robots"]').attributes.content,'noindex,follow','Empty state pages must keep their static robots directive');
 at('/legacy/');probe.updateRouteMetadata();
 assert.equal(nodes.get('meta[name="robots"]').attributes.content,'noindex,follow');
 at('/states/kerala/?district=Kozhikode');probe.updateRouteMetadata();

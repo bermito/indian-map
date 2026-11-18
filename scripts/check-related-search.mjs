@@ -14,12 +14,13 @@ const doc={
 };
 class MutationObserver {constructor(fn){observed=fn} observe(){}}
 const context=vm.createContext({document:doc,location:{pathname:'/states/kerala/'},window:{addEventListener(){}},MutationObserver,URLSearchParams,Promise,console,
- fetch:async u=>({ok:true,json:async()=>JSON.parse(fs.readFileSync('data/'+u.split('/').at(-1),'utf8'))}),
+ fetch(){throw new Error('Directory typing must not fetch other catalogues')},
  setTimeout(fn){pending.push(fn);return pending.length},clearTimeout(){pending=[]}
 });
 vm.runInContext(fs.readFileSync('assets/related-search.js','utf8'),context);
 await pending.pop()();
-assert.match(panel.innerHTML,/1 related research leads/);
+assert.match(panel.innerHTML,/href="\/leads\/\?q=/);
+assert.match(panel.innerHTML,/href="\/arpan\/\?q=/);
 assert.match(panel.innerHTML,/q=Kuruvinakunnel&amp;state=Kerala/);
 assert.match(panel.innerHTML,/awaiting verification/);
 query='<img src=x>'; observed(); await pending.pop()();

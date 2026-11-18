@@ -31,3 +31,5 @@ assert.equal(ctx.probe.getSaved().length,2,'Saved old/new duplicates must collap
 assert.ok(ctx.probe.getSaved().includes(first[1])&&ctx.probe.getSaved().includes('unrelated-id'),'Saved migration must preserve corrected and unrelated records');
 console.log('Runtime rendering, Kerala filters, event archives and saved migration probes passed.');
 await import('./check-ui-audit.mjs');
+await import('./check-map-loader.mjs');
+await import('./check-related-search.mjs');

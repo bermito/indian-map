@@ -19,7 +19,7 @@ Vercel builds from the repository root and serves `dist`. All paths are relative
 ## Editing the guide
 
 - `index.html`, `assets/site.css`, `map.html` and `assets/map/` define the shared layout and map. The state selector includes islands. If WebGL is unavailable, the page displays an interactive outline.
-- `assets/journal.mjs` contains the journal copy, related atlas links, source URLs and photo credits. Photos are served locally from `assets/journal-images/`. Each credit links to the original and the licence.
+- `assets/journal.mjs` groups stories by topic. The ten new guides are in the three `stories-*.mjs` modules. Article sources and related atlas links travel with each story. New photo credits are in `assets/guide-photos.mjs`. Photos are served locally from `assets/journal-images/`. Each credit links to the original and the licence.
 - `assets/atlas-pages.mjs` builds district and profile pages. `data/districts.json` holds the administrative district snapshot, its source and checksum, and the evidence attached to individual listings. Preserve stable listing IDs when editing.
 - `assets/app.js` supports filters, search, downloads, saved entries, calendars and corrections. The build also generates readable HTML for journal articles, district pages and profiles.
 - `data/directory.json` holds the core profiles. Source collections, including Arpan’s map and additional unconfirmed leads, retain their original provenance in separate files. Evidence in `districts.json` supplements the baseline location fields at build and run time. The downloadable research archive is the original collection snapshot.
@@ -29,6 +29,8 @@ Vercel builds from the repository root and serves `dist`. All paths are relative
 
 The guide contains 993 core listings. 363 can be placed in 54 of the 790 districts in this edition. The remaining 630 are searchable at their known level of geography. An empty district is open for contributions. It makes no claim about the number of coffee businesses operating there.
 
-The catalogue contains 5,163 coffee observations and 1,641 equipment observations. The site also includes 21 event records, 34 education resources, 19 community records and seven original journal articles. Confirm opening times, visits, product availability and future event details with their sources.
+The catalogue contains 5,163 coffee observations and 1,641 equipment observations. The site also includes 33 event records, 34 education resources, 19 community records and 17 original journal articles. Confirm opening times, visits, product availability and future event details with their sources.
+
+See `SITE-AUDIT.md` for the current audit and `EDITORIAL-RESEARCH.md` for the ten reference articles and reader questions.
 
 `INDIA-WEBSITE-AUDIT.md` and `AUDIT-17-NOV-2026.txt` document earlier versions. `validation.json` records the current build checks.

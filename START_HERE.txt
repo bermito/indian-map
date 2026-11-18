@@ -13,3 +13,5 @@ To build locally with Node.js 22 or newer:
 Open http://localhost:8000/ to browse. Use /journal/ for the stories. Try /states/nagaland/districts/kohima/ and /places/tsiese-coffee-estate/ to see the district and producer pages.
 
 The checked website source includes 993 core profiles and 790 district pages. The current evidence places 363 profiles in 54 districts. Another 630 profiles are available through the directory while their district is being checked.
+
+The Journal now includes 17 stories across four topics. The ten new guides each credit their sources and link back to the directory. EDITORIAL-RESEARCH.md records the reader question and publisher behind each one. SITE-AUDIT.md reports the public baseline, the repairs in this package and the remaining coverage gaps.

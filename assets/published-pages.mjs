@@ -1,7 +1,6 @@
 import { journalStories, renderJournalIndex, renderJournalArticle } from './journal.mjs';
 
-export const origin = 'https://www.specialtycoffeeindia.blog';
-const site = { '@type': 'WebSite', name: 'Specialty Coffee India', url: origin + '/' };
+export { origin, schemaFor } from './page-schema.mjs';
 const journalPages = [
   {
     path: '/journal/',
@@ -16,6 +15,7 @@ const journalPages = [
     description: story.description,
     html: () => renderJournalArticle(story.slug),
     date: story.date,
+    dateModified: story.updated,
     image: story.image,
     imageAlt: story.imageAlt,
     type: 'BlogPosting'
@@ -31,25 +31,4 @@ export function findPage(pathname, atlas) {
 
 export function allPages(atlas) {
   return [...journalPages, ...atlas.pages];
-}
-
-export function schemaFor(page) {
-  const url = origin + page.path;
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': page.type === 'BlogPosting' ? 'BlogPosting' : page.path.startsWith('/places/') ? 'WebPage' : 'CollectionPage',
-    name: page.title,
-    description: page.description,
-    url,
-    inLanguage: 'en-IN',
-    isPartOf: site
-  };
-  if (schema['@type'] === 'BlogPosting') {
-    schema.headline = page.title;
-    if (page.image) schema.image = origin + page.image;
-    schema.datePublished = page.date;
-    schema.mainEntityOfPage = url;
-    schema.publisher = { '@type': 'Organization', name: site.name, url: site.url };
-  }
-  return schema;
 }

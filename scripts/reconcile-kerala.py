@@ -158,10 +158,21 @@ write('sources',sources)
 manifest=read('manifest')
 for key in ['directory','events','learn','communities','leads','sources']:manifest['counts'][key]=len(read(key))
 all_dir=read('directory')
+district_data=read('districts')
+district_names={state: {district['name'] for district in rows} for state, rows in district_data['states'].items()}
+def has_district(record):
+ district=record.get('district') or district_data['evidence'].get(record['id'],{}).get('district')
+ return district in district_names.get(record.get('state'),set())
+
 manifest.update({'keralaCount':33,'keralaIds':[r['id'] for r in directory],'researchDirectoryCount':1034,'researchKeralaCount':76,
- 'statesWithEntries':len({r['state'] for r in all_dir if r.get('state')}),'districtsUnresolved':sum(not r.get('district') for r in all_dir),
+ 'statesWithEntries':len({r['state'] for r in all_dir if r.get('state')}),'districtsUnresolved':sum(not has_district(r) for r in all_dir),
  'keralaAuthority':{'file':'kerala-authority.json','source':site,'commit':meta['commit'],'approvedPlaces':33,'preservedDirectoryLeads':39,'editorialUpdateDate':meta['editorialUpdate']['date']}})
-manifest['files'].update({'kerala-authority':'kerala-authority.json','kerala-research-archive':'kerala-research-archive.json','kerala-reconciliation':'kerala-reconciliation.json'})
+schedule_date=manifest.get('eventScheduleCheckedDate',manifest['checkedDate'])
+manifest['upcomingConfirmedEventsAtSnapshot']=sum(
+ bool(r.get('calendarEligible') and r.get('status')!='completed' and (r.get('endDate') or r.get('date') or '')>=schedule_date)
+ for r in read('events')
+)
+manifest['files'].update({'districts':'districts.json','kerala-authority':'kerala-authority.json','kerala-research-archive':'kerala-research-archive.json','kerala-reconciliation':'kerala-reconciliation.json'})
 notice='Kerala follows the corrected Specialty Coffee Keralam directory: 33 unique editorial listings. Other Kerala research is preserved as leads, with former records retained in the source archive.'
 manifest['notices']=[n for n in manifest['notices'] if not n.startswith('Kerala follows')]+[notice]
 write('manifest',manifest)

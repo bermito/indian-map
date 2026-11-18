@@ -260,5 +260,15 @@
     "status": "Producer estate profile",
     "notes": "The producer identifies Sugudvani Village, Mallandur, in Chikmagalur District. The atlas uses the district administration’s spelling, Chikkamagaluru.",
     "checked_date": "2026-11-18"
+  },
+  {
+    "source_id": "S27-BLUE-TOKAI-EVENTS",
+    "name": "Blue Tokai Coffee Roasters — workshops and roastery tours",
+    "url": "https://bluetokaicoffee.com/pages/coffee-workshop-events",
+    "expected": 12,
+    "collected": 12,
+    "status": "Organiser schedule and four event pages checked",
+    "notes": "Twelve date-and-venue combinations in the 20 November to 6 December 2026 programme. Each has its own local listing and a link to the organiser’s event page.",
+    "checked_date": "2026-11-18"
   }
 ]

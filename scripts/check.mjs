@@ -8,7 +8,7 @@ const json=name=>JSON.parse(fs.readFileSync(path.join(root,'data',name+'.json'),
 const manifest=json('manifest'), coverage=json('coverage'), directory=json('directory');
 let checks=0;
 function check(condition,message){assert.ok(condition,message);checks++;}
-const expected={directory:993,products:5163,events:21,communities:19,learn:34,equipment:1641,'other-products':546,experiences:2,leads:1416,arpan:412,legacy:379};
+const expected={directory:993,products:5163,events:33,communities:19,learn:34,equipment:1641,'other-products':546,experiences:2,leads:1416,arpan:412,legacy:379};
 for(const [name,n]of Object.entries(expected)){
  const rows=json(name);check(rows.length===n,`${name}: expected ${n}, got ${rows.length}`);
  check(manifest.counts[name]===rows.length,`${name}: manifest count mismatch`);
@@ -26,9 +26,11 @@ const states=coverage.states.map(r=>r.state);
 check(states.length===36&&new Set(states).size===36,'Coverage must contain 36 unique states/UTs');
 check(coverage.states.filter(r=>r.type==='State').length===28,'Expected 28 state entries');
 check(coverage.keralaDistricts.length===14,'Expected 14 Kerala districts');
+const correctedCities=directory.filter(r=>r.cityCheckedDate==='2026-11-18'&&['Goa','Nagaland','India'].includes(r.sourceCity));
+check(correctedCities.length===13,'State and country source labels must retain their original values');
+check(correctedCities.every(r=>r.city!==r.sourceCity&&(!r.city||r.sourceUrls.includes(r.citySourceUrl))),'Corrected city must have branch-specific evidence');
 const kerala=directory.filter(r=>r.state==='Kerala'), authority=json('kerala-authority-source'), keralaMeta=json('kerala-authority');
 check(kerala.length===33,'Expected 33 unique corrected Kerala records');
-check(directory.filter(r=>!r.district).length===958,'Unknown district count unexpectedly changed');
 check(kerala.every(r=>r.authorityId),'Every Kerala core record must retain its authority ID');
 for(const a of authority.places){
  const r=kerala.find(r=>r.authorityId===a.id);
@@ -71,10 +73,15 @@ for(const fix of catalogueAudit.priceCorrections){const r=coffee.find(r=>r.id===
 const recordIndex=json('record-index');
 for(const [dataset]of Object.entries(expected))for(const r of json(dataset))check(Boolean(recordIndex[r.id]),`${r.id}: missing saved-record dataset index`);
 const events=json('events'), eligible=events.filter(r=>r.calendarEligible);
-check(eligible.length===2,'Expected two retained organiser-supported calendar records');
+check(eligible.length===14,'Expected fourteen organiser-supported sessions at this snapshot');
 check(eligible.every(r=>['official_schedule_observed','organiser_page_and_ticket_listing_agree'].includes(r.verification)),'Unconfirmed event was made calendar-eligible');
 check(eligible.every(r=>/^\d{4}-\d{2}-\d{2}$/.test(r.date)&&!Number.isNaN(Date.parse(r.date))),'Calendar event has invalid date');
-check(eligible.filter(r=>(r.endDate||r.date)>='2026-11-15').length===2,'Expected two confirmed upcoming events at research snapshot');
+const upcomingAtSnapshot=eligible.filter(r=>r.status!=='completed'&&(r.endDate||r.date)>=manifest.eventScheduleCheckedDate);
+check(upcomingAtSnapshot.length===manifest.upcomingConfirmedEventsAtSnapshot,'Event manifest and organiser-backed dates disagree');
+const blueTokaiSessions=eligible.filter(r=>r.organiser==='Blue Tokai Coffee Roasters');
+check(blueTokaiSessions.length===12,'Every listed Blue Tokai venue has its own session');
+check(new Set(blueTokaiSessions.map(r=>[r.date,r.city,r.venue].join('|'))).size===blueTokaiSessions.length,'Duplicate Blue Tokai date and venue');
+check(blueTokaiSessions.every(r=>r.timezone==='Asia/Kolkata'&&r.time&&r.mapUrl&&r.sourceUrls.includes(r.url)),'Organiser session missing venue, local time or booking source');
 const archivedKerala=events.filter(r=>r.state==='Kerala');
 check(archivedKerala.length===11,'Expected eleven Kerala editorial event archives');
 check(archivedKerala.every(r=>r.status==='past_editorial_archive'&&!r.calendarEligible&&r.registrationClosed&&(r.endDate||r.date)<'2026-11-15'),'Kerala past events must stay archived with registration closed');

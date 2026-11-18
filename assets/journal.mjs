@@ -1,4 +1,9 @@
 // The browser and static site builder use the same editorial copy and links.
+import brewingStories from './stories-brewing.mjs';
+import buyingStories from './stories-buying.mjs';
+import fieldStories from './stories-field.mjs';
+import guidePhotos from './guide-photos.mjs';
+
 const editionDate = '2026-11-18';
 const regions = ['Coffee Board of India · Coffee-growing regions', 'https://coffeeboard.gov.in/coffee-regions-india.html'];
 const gi = ['Ministry of Commerce & Industry · Regional coffee names', 'https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=1569831&lang=2&reg=48'];
@@ -6,6 +11,7 @@ const bySa = 'https://creativecommons.org/licenses/by-sa/4.0/';
 const ccZero = 'https://creativecommons.org/publicdomain/zero/1.0/';
 
 const photos = {
+  ...guidePhotos,
   kohima: {
     file: 'kohima.webp', width: 1200, height: 800,
     alt: 'Clusters of houses spread over the green hills of Kohima beneath clouds.',
@@ -62,7 +68,7 @@ const photos = {
   }
 };
 
-export const journalStories = [
+const originalStories = [
   {
     slug: 'wayanad-beyond-the-bag', title: 'Whose coffee is in a bag of Wayanad Robusta?',
     category: 'At origin · Wayanad', description: 'An estate in Thirunelly and a smallholder processing initiative offer two ways to follow a Wayanad coffee back to its source.',
@@ -73,7 +79,7 @@ export const journalStories = [
       ['Take the question to the counter', 'Ask the barista to show you the bag for the coffee in your cup. Write down the grower or group, process and roaster. If the producer is missing, the roaster may still have the detail in its lot notes. Keeping those three names together makes it much easier to find that coffee again.', 'Use the Wayanad district guide to look up the names afterward. Brahmagiri is a private working estate. Contact the producer first if you are hoping to visit.']
     ],
     sources: [gi, ['Kelachandra Coffee · Brahmagiri Estate', 'https://kelachandracoffee.com/brahmagiri/'], ['Specialty Coffee Keralam · Komban Kampini', 'https://www.specialtycoffeekerala.com/places/komban-kampini/']],
-    atlas: [['Brahmagiri Estate', '/places/kelachandra-coffee-brahmagiri-estate/'], ['Komban Kampini', '/places/komban-kampini/'], ['Wayanad farms and producers', '/states/kerala/districts/wayanad/?kind=farms'], ['Wayanad cafés', '/states/kerala/districts/wayanad/?kind=cafes']]
+    atlas: [['Brahmagiri Estate', '/places/kelachandra-coffee-brahmagiri-estate/'], ['Komban Kampini', '/places/komban-kampini/'], ['Wayanad farms and producers', '/states/kerala/?district=Wayanad&kind=farms'], ['Wayanad cafés', '/states/kerala/?district=Wayanad&kind=cafes']]
   },
   {
     slug: 'chikmagalur-and-bababudangiris', title: 'Two names on a Karnataka coffee bag',
@@ -147,11 +153,51 @@ export const journalStories = [
     sources: [['Tsiese Coffee Estate · Estate and grower profile', 'https://www.tsiesecoffee.com/estate'], ['Tsiese Coffee · Producer contact', 'https://www.tsiesecoffee.com/contact']],
     atlas: [['Tsiese Coffee Estate', '/places/tsiese-coffee-estate/'], ['Kohima district', '/states/nagaland/districts/kohima/'], ['Cafés in Kohima', '/states/nagaland/?city=Kohima&kind=cafes']]
   }
-].map(story => ({
-  ...story,
-  date: editionDate,
-  image: '/assets/journal-images/' + photos[story.photo].file,
-  imageAlt: photos[story.photo].alt
+];
+
+const storiesBySlug = new Map(
+  [...originalStories, ...brewingStories, ...buyingStories, ...fieldStories].map(story => [story.slug, story])
+);
+
+const topics = [
+  { id: 'brewing', label: 'Brew at home', slugs: [
+    'channi-french-press-filter-coffee-grind',
+    'south-indian-filter-coffee-decoction',
+    'cold-brew-or-iced-coffee-with-milk',
+    'moka-pot-sputtering-bitter-coffee',
+    'a-first-v60'
+  ] },
+  { id: 'buying', label: 'Buying coffee', slugs: [
+    'choosing-coffee-for-milk-or-black',
+    'coffee-tasting-notes-or-added-flavour',
+    'storing-coffee-beans-and-ground-coffee-in-india',
+    'arabica-robusta-south-indian-filter-coffee'
+  ] },
+  { id: 'origins', label: 'Farms & origins', slugs: [
+    'wayanad-beyond-the-bag',
+    'washed-natural-honey-indian-coffee',
+    'chikmagalur-and-bababudangiris',
+    'araku-and-koraput',
+    'tsiesema-nagaland'
+  ] },
+  { id: 'community', label: 'Cafés & community', slugs: [
+    'first-coffee-cupping-india',
+    'bengaluru-coffee-by-neighbourhood',
+    'kerala-origins-two-tables'
+  ] }
+];
+
+export const journalStories = topics.flatMap(topic => topic.slugs.map(slug => {
+  const story = storiesBySlug.get(slug);
+  if (!story) throw new Error('Unknown journal story in ' + topic.id + ': ' + slug);
+  const photo = photos[story.photo];
+  return {
+    ...story,
+    topic: topic.id,
+    date: story.date || editionDate,
+    image: '/assets/journal-images/' + photo.file,
+    imageAlt: photo.alt
+  };
 }));
 
 const escapeHtml = value => String(value).replace(/[&<>"']/g, ch => (
@@ -181,20 +227,29 @@ function linkList(links) {
 }
 
 export function renderJournalIndex() {
-  return `<section class="ij-index"><header class="ij-heading"><p class="ij-kicker">Journal</p><h1>The Indian coffee journal.</h1><p>Meet the growers, find a café and bring a new coffee home. Each story leads back to the places and people on the map.</p></header><div class="ij-grid">${journalStories.map(story => storyCard(story)).join('')}</div></section>`;
+  const contents = topics.map(topic => `<a href="#${topic.id}">${escapeHtml(topic.label)}</a>`).join('');
+  const shelves = topics.map(topic => {
+    const cards = journalStories.filter(story => story.topic === topic.id).map(story => storyCard(story, 'h3')).join('');
+    return `<section class="ij-shelf" aria-labelledby="${topic.id}"><h2 id="${topic.id}">${escapeHtml(topic.label)}</h2><div class="ij-grid">${cards}</div></section>`;
+  }).join('');
+  return `<section class="ij-index"><header class="ij-heading"><p class="ij-kicker">Journal</p><h1>The Indian coffee journal.</h1><p>Choose a grind for your channi, trace a Wayanad coffee to its grower, or find out what happens at your first cupping.</p></header><nav class="ij-topics" aria-label="Journal topics">${contents}</nav>${shelves}</section>`;
 }
 
 export function renderJournalTeasers(limit = 3) {
-  return `<section class="ij-index ij-home" aria-labelledby="ij-home-title"><header class="ij-home-heading"><div><p class="ij-kicker">Journal</p><h2 id="ij-home-title">From the coffee journal.</h2></div><a href="/journal/">All stories →</a></header><div class="ij-grid">${journalStories.slice(0, limit).map(story => storyCard(story, 'h3')).join('')}</div></section>`;
+  const coverStories = ['south-indian-filter-coffee-decoction', 'wayanad-beyond-the-bag', 'first-coffee-cupping-india'];
+  const selected = coverStories.map(slug => journalStories.find(story => story.slug === slug));
+  const homepageStories = [...selected, ...journalStories.filter(story => !selected.includes(story))];
+  return `<section class="ij-index ij-home" aria-labelledby="ij-home-title"><header class="ij-home-heading"><div><p class="ij-kicker">Journal</p><h2 id="ij-home-title">From the coffee journal.</h2></div><a href="/journal/">All stories →</a></header><div class="ij-grid">${homepageStories.slice(0, limit).map(story => storyCard(story, 'h3')).join('')}</div></section>`;
 }
 
 export function renderJournalArticle(slug) {
   const story = journalStories.find(item => item.slug === slug);
   if (!story) return '';
+  const topic = topics.find(item => item.id === story.topic);
   const contents = story.sections.map(([title], index) => `<li><a href="#${sectionId(index)}">${escapeHtml(title)}</a></li>`).join('');
   const body = story.sections.map(([title, ...paragraphs], index) => {
     const picture = index === 0 ? photos[story.photo] : index === 1 ? photos[story.extraPhoto] : undefined;
     return `<section id="${sectionId(index)}"><h2>${escapeHtml(title)}</h2>${paragraphs.map(p => '<p>' + escapeHtml(p) + '</p>').join('')}${picture ? photoFigure(picture) : ''}</section>`;
   }).join('');
-  return `<article class="ij-article"><nav class="ij-breadcrumbs" aria-label="Breadcrumb"><a href="/">Map</a><span aria-hidden="true">/</span><a href="/journal/">Journal</a></nav><header class="ij-heading"><p class="ij-kicker">${escapeHtml(story.category)}</p><h1>${escapeHtml(story.title)}</h1><p>${escapeHtml(story.description)}</p><div class="ij-date">Published <time datetime="${story.date}">${formatDate(story.date)}</time></div></header><nav class="ij-toc" aria-label="In this story"><h2 class="ij-kicker">In this story</h2><ol>${contents}</ol></nav><div class="ij-body">${body}<aside class="ij-atlas"><h2>Explore the atlas</h2><ul>${linkList(story.atlas)}</ul></aside><section class="ij-sources"><h2>Sources and further reading</h2><ul>${linkList(story.sources)}</ul></section><a class="ij-back" href="/journal/">← All journal stories</a></div></article>`;
+  return `<article class="ij-article"><nav class="ij-breadcrumbs" aria-label="Breadcrumb"><a href="/">Map</a><span aria-hidden="true">/</span><a href="/journal/">Journal</a><span aria-hidden="true">/</span><a href="/journal/#${topic.id}">${escapeHtml(topic.label)}</a></nav><header class="ij-heading"><p class="ij-kicker">${escapeHtml(story.category)}</p><h1>${escapeHtml(story.title)}</h1><p>${escapeHtml(story.description)}</p><div class="ij-date">By Specialty Coffee India · Published <time datetime="${story.date}">${formatDate(story.date)}</time></div></header><nav class="ij-toc" aria-label="In this story"><h2 class="ij-kicker">In this story</h2><ol>${contents}</ol></nav><div class="ij-body">${body}<aside class="ij-atlas"><h2>Explore the atlas</h2><ul>${linkList(story.atlas)}</ul></aside><section class="ij-sources"><h2>Sources and further reading</h2><ul>${linkList(story.sources)}</ul></section><a class="ij-back" href="/journal/">← All journal stories</a></div></article>`;
 }

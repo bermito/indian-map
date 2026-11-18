@@ -7,7 +7,7 @@ const nf=n=>n.toLocaleString("en-IN");
      ========================================================================== */
   if(typeof THREE==='undefined'||typeof IDX==='undefined'){ window.CoffeeMap.fallback(); return; }
   let renderer;
-  try{ renderer=new THREE.WebGLRenderer({antialias:true,alpha:false}); }
+  try{ renderer=new THREE.WebGLRenderer(window.CoffeeMap.rendererOptions); }
   catch(err){ window.CoffeeMap.fallback(); return; }
 
   const PAPER=0xffffff;
@@ -141,7 +141,11 @@ const nf=n=>n.toLocaleString("en-IN");
   function buildFine(d){
     const rec=D[d];
     if(rec.fine!==undefined) return rec.fine;
-    if(typeof FINE==='undefined'||!FINE[NAMES[d]]){ rec.fine=null; return null; }
+    if(typeof FINE==='undefined'){
+      window.CoffeeMap.loadDetail().then(loaded => { if(loaded && d===selected) setDetail(d,true); });
+      return null;
+    }
+    if(!FINE[NAMES[d]]){ rec.fine=null; return null; }
     const F=FINE[NAMES[d]], bin=atob(F.d), len=bin.length;
     let cnt=0;
     for(let i=0;i<len;i++) if(bin.charCodeAt(i)) cnt++;
@@ -303,10 +307,14 @@ const nf=n=>n.toLocaleString("en-IN");
   window.addEventListener('resize',resize); resize();
 
   const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let inView=true;
+  if('IntersectionObserver' in window) {
+    new IntersectionObserver(([entry]) => { inView=entry.isIntersecting; }).observe(renderer.domElement);
+  }
   let t=0;
   function frame(){
     requestAnimationFrame(frame);
-    if(document.hidden)return;
+    if(document.hidden||!inView)return;
     t+=0.006; idle+=1;
     const open=selected>=0;
 

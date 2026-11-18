@@ -16,3 +16,8 @@
 .atlas-district-nav summary span{font: .75rem var(--mono);margin-left:.5rem}
 .atlas-district-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,12rem),1fr));gap:0 1.25rem}
 .atlas-district-nav p{font-size:.83rem;line-height:1.5;margin:1rem 0}
+
+.atlas-letter-index{display:flex;flex-wrap:wrap;gap:.25rem;margin:1.5rem 0}
+.atlas-letter-index a{display:grid;place-items:center;min-width:2.6rem;min-height:2.75rem;border:1px solid var(--line);font: .875rem var(--mono);text-decoration:none}
+.atlas-letter-index a:hover,.atlas-letter-index a:focus-visible{background:var(--ink);color:#fff}
+.atlas-place-body h2[id^="group-"]{scroll-margin-top:1rem}

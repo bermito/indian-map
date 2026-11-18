@@ -78,10 +78,40 @@ function renderProfile(record, recordsById, districtExists, options = {}) {
     +'<ul class="atlas-source-list">'+sourceList(record)+'</ul><button type="button" class="text-button" data-correction="'+escapeText(id)+'">Suggest a correction ↗</button></section></div></article>';
 }
 
+function profileIndex(directory) {
+  const groups = new Map();
+  const ordered = [...directory].sort((a, b) => a.name.localeCompare(b.name, 'en-IN', { sensitivity: 'base' }));
+  for (const row of ordered) {
+    const first = row.name.trim().normalize('NFKD').charAt(0).toUpperCase();
+    const letter = /^[A-Z]$/.test(first) ? first : '#';
+    if (!groups.has(letter)) groups.set(letter, []);
+    groups.get(letter).push(row);
+  }
+  const id = key => key === '#' ? 'other' : key;
+  const letters = [...groups.keys()].sort();
+  const jumps = letters.map(key => '<a href="#group-' + id(key) + '">' + key + '</a>').join(' ');
+  const lists = letters.map(key => {
+    const items = groups.get(key).map(row => {
+      const location = [...new Set([row.city, row.state].filter(Boolean))].join(', ');
+      return '<li><a href="' + placePath(row) + '"><span>' + escapeText(row.name) +
+        '</span><small>' + escapeText([row.category, location].filter(Boolean).join(' · ')) + '</small></a></li>';
+    }).join('');
+    return '<section aria-labelledby="group-' + id(key) + '"><h2 id="group-' + id(key) + '">' +
+      (key === '#' ? 'Numbers and other names' : key) + '</h2><ul class="atlas-places-list">' +
+      items + '</ul></section>';
+  }).join('');
+  return '<section class="page-intro">' + trail([['India', '/'], ['Directory', '/explore/'], ['A–Z']]) +
+    '<h1>All coffee profiles A–Z</h1><p class="lede">Browse ' + directory.length.toLocaleString('en-IN') +
+    ' profiles, including entries whose districts are still being checked. <a href="/explore/">Search and filter the directory</a>.</p></section>' +
+    '<div class="atlas-place-body"><nav class="atlas-letter-index" aria-label="Jump to a letter">' + jumps + '</nav>' + lists + '</div>';
+}
+
 export function createAtlas(directory, districtData) {
   const routes = new Map();
   const recordsById = new Map(directory.map(record => [record.id,record]));
   const states = districtData?.states || {};
+  const nameCounts = new Map();
+  for (const row of directory) nameCounts.set(row.name, (nameCounts.get(row.name) || 0) + 1);
   const groups = new Map();
   const names = new Map(Object.entries(states).map(([state,rows]) => [state,new Set(rows.map(row=>row.name))]));
   for (const record of directory) {
@@ -101,7 +131,10 @@ export function createAtlas(directory, districtData) {
     }
     const path = placePath(record);
     const location = [...new Set([record.city,record.district,record.state].filter(Boolean))].join(', ');
-    routes.set(path, {path, title:record.name, description:record.description ||
+    const branch = [record.city || record.district || record.state, categories[record.kind] || record.category].filter(Boolean);
+    const searchTitle = nameCounts.get(record.name) > 1 && branch.length
+      ? record.name + ' · ' + branch.join(' · ') : record.name;
+    routes.set(path, {path, title:record.name, searchTitle, description:record.description ||
       [record.name, record.category, location].filter(Boolean).join(' · ')+'. See the listing and its sources.',
       type:'WebPage',record, noindex:false, html:options=>renderProfile(record,recordsById,hasDistrict,options)});
   }
@@ -131,8 +164,14 @@ export function createAtlas(directory, districtData) {
       +'<div class="atlas-place-body">'+[...byKind].map(([kind,items]) =>
         '<section><h2>'+escapeText(categories[kind]||kind)+'</h2><ul class="atlas-places-list">'+items.map(r=>'<li><a href="'+placePath(r)+'"><span>'+escapeText(r.name)+'</span><small>'+escapeText(r.city || r.category)+'</small></a></li>').join('')+'</ul></section>').join('')
       +'<section><h2>Explore '+escapeText(state)+'</h2><p>Find more cafés, roasters and producers in the state directory, including places whose district is still being checked.</p><div class="hero-actions"><a class="button secondary" href="'+statePath(state)+'">All '+escapeText(state)+' listings</a><button type="button" class="button secondary" data-action="submit" data-state-name="'+escapeText(state)+'" data-district-name="'+escapeText(name)+'">Suggest a place</button></div></section></div>';
-    routes.set(path,{path,title,description,type:'CollectionPage',state,district:name,noindex:!rows.length,html});
+    routes.set(path,{path,title,searchTitle:title+', '+state,description,type:'CollectionPage',state,district:name,noindex:!rows.length,html});
   }
+  const indexPath = '/explore/all/';
+  routes.set(indexPath, {
+    path: indexPath, title: 'All coffee profiles A–Z', type: 'CollectionPage', noindex: false,
+    description: 'Browse the full alphabetical directory of coffee cafés, roasters, estates and people across India.',
+    html: () => profileIndex(directory)
+  });
   return {
     pages:[...routes.values()], resolve:path => routes.get(path.replace(/\/+$/,'')+'/'),
     profilePath:record => recordsById.has(record.id) ? placePath(record) : '',

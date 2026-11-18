@@ -64,6 +64,14 @@ for item in all_rows:
         note(item, 'reviewNeeded', 'The source names a retailer. The actual coffee roaster is not independently established by this field.')
 
 by_id = {r['id']: r for r in all_rows}
+for correction in rules['titleCorrections']:
+    item = by_id[correction['id']]
+    if item['name'] == correction['importedName']:
+        preserve(item, ['name'])
+        item['name'] = correction['name']
+        item['nameSourceUrl'] = correction['sourceUrl']
+        item['nameCheckedDate'] = correction['checkedDate']
+
 for correction in rules['priceCorrections']:
     item = by_id[correction['id']]
     if item.get('priceStatus') != 'official_seller_price_checked' or item.get('priceSourceUrl') != correction['url']:
