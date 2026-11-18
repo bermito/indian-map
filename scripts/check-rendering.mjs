@@ -1,9 +1,12 @@
+import { createAtlas } from '../assets/atlas-pages.mjs';
+import { findPage, schemaFor } from '../assets/published-pages.mjs';
+import { renderJournalTeasers } from '../assets/journal.mjs';
 import fs from 'node:fs';import vm from 'node:vm';import assert from 'node:assert/strict';
 const nodes=new Map();function element(k){if(!nodes.has(k))nodes.set(k,{innerHTML:'',textContent:'',open:false,addEventListener(){},setAttribute(){},removeAttribute(){},showModal(){this.open=true},close(){this.open=false},classList:{add(){},remove(){},toggle(){}},querySelector(){return null},querySelectorAll(){return []}});return nodes.get(k)}
 const location={href:'https://example.test/events/?view=%3Cimg%20src=x%20onerror=alert(1)%3E',pathname:'/events/',search:'?view=%3Cimg%20src=x%20onerror=alert(1)%3E',origin:'https://example.test'};
 const document={querySelector:element,querySelectorAll:()=>[],addEventListener(){},body:element('body')};
-const ctx=vm.createContext({document,location,console,URL,URLSearchParams,FormData,Blob,setTimeout,clearTimeout,fetch:async url=>({ok:true,json:async()=>JSON.parse(fs.readFileSync('data/'+url.split('/').at(-1),'utf8'))}),localStorage:{getItem(){return null},setItem(){}},window:{addEventListener(){},scrollTo(){}},history:{replaceState(){},pushState(){}}});
-let src=fs.readFileSync('assets/app.js','utf8').replace(/\nboot\(\)\.catch[\s\S]*$/,'');
+const ctx=vm.createContext({createAtlas,findPage,schemaFor,renderJournalTeasers,document,location,console,URL,URLSearchParams,FormData,Blob,setTimeout,clearTimeout,fetch:async url=>({ok:true,json:async()=>JSON.parse(fs.readFileSync('data/'+url.split('/').at(-1),'utf8'))}),localStorage:{getItem(){return null},setItem(){}},window:{addEventListener(){},scrollTo(){}},history:{replaceState(){},pushState(){}}});
+let src=fs.readFileSync('assets/app.js','utf8').replace(/^import .*?;$/gm, '').replace(/\nboot\(\)\.catch[\s\S]*$/,'');
 src+='\nglobalThis.probe={eventPage,recordCard,detail,applyFilters,migrateSavedIds,getFiltered:()=>filtered,setSaved:v=>{saved=new Set(v)},getSaved:()=>[...saved],setCore:(m,c,d,a)=>{manifest=m;coverage=c;directory=d;current=d;keralaAuthority=a},setLocation:v=>Object.assign(location,v)};';vm.runInContext(src,ctx);
 ctx.probe.setCore(JSON.parse(fs.readFileSync('data/manifest.json')),JSON.parse(fs.readFileSync('data/coverage.json')),JSON.parse(fs.readFileSync('data/directory.json')),JSON.parse(fs.readFileSync('data/kerala-authority.json')));
 await ctx.probe.eventPage();

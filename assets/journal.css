@@ -1,0 +1,121 @@
+/* The journal uses the Keralam edition's measure, image grid, and green rules. */
+.ij-index, .ij-article {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 60px 36px 100px;
+  color: #102519;
+  overflow-wrap: anywhere;
+}
+.ij-index h1, .ij-article h1, .ij-home-heading h2 {
+  margin: 0 0 24px;
+  max-width: 850px;
+  font-size: clamp(36px, 5vw, 66px);
+  font-weight: 550;
+  line-height: 1.04;
+  letter-spacing: -.045em;
+  text-wrap: balance;
+}
+.ij-heading > p:not(.ij-kicker) {
+  max-width: 680px;
+  margin: 0;
+  color: #526556;
+  font-size: clamp(17px, 2vw, 20px);
+  line-height: 1.65;
+}
+.ij-index .ij-kicker, .ij-article .ij-kicker {
+  display: block;
+  font: 500 11px/1.7 'IBM Plex Mono', monospace;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: #00752c;
+  margin: 0 0 15px;
+}
+.ij-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 48px 30px;
+  margin-top: 56px;
+}
+.ij-card {
+  min-width: 0;
+  border-top: 2px solid #00a83f;
+  padding-top: 20px;
+}
+.ij-card .ij-card-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+.ij-card .ij-card-link:focus-visible, .ij-home-heading a:focus-visible,
+.ij-article a:focus-visible {
+  outline: 2px solid #00752c;
+  outline-offset: 4px;
+}
+.ij-image {
+  aspect-ratio: 3/2;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #e9f1e9;
+  margin-bottom: 19px;
+}
+.ij-image img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.ij-card .ij-kicker { margin-bottom: 8px; }
+.ij-card h2, .ij-card h3 {
+  margin: 0 0 9px;
+  font-size: clamp(23px, 2.25vw, 29px);
+  letter-spacing: -.026em;
+  line-height: 1.2;
+  font-weight: 550;
+}
+.ij-card p { font-size: 15px; line-height: 1.65; color: #526556; margin: 0 0 10px; }
+.ij-card .ij-date, .ij-article .ij-date {
+  font: 400 11px/1.65 'IBM Plex Mono', monospace;
+  color: #526556;
+}
+.ij-article .ij-date { margin-top: 20px; }
+.ij-read {
+  margin-top: auto;
+  padding-top: 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.ij-card-link:hover h2, .ij-card-link:hover h3, .ij-card-link:hover .ij-read,
+.ij-home-heading a:hover, .ij-article a:hover { color: #00752c; }
+.ij-home { padding-top: clamp(44px, 6vw, 80px); padding-bottom: clamp(44px, 6vw, 80px); }
+.ij-home-heading { display: flex; flex-wrap: wrap; gap: 15px 25px; align-items: end; justify-content: space-between; }
+.ij-home-heading h2 { font-size: clamp(34px, 4.2vw, 52px); margin: 0; }
+.ij-home-heading a, .ij-back { font-size: 15px; font-weight: 600; text-underline-offset: 4px; }
+.ij-home .ij-grid { margin-top: 30px; }
+.ij-article { max-width: 860px; }
+.ij-breadcrumbs { display: flex; gap: 12px; margin-bottom: 32px; color: #526556; font-size: 13px; }
+.ij-breadcrumbs a, .ij-toc a { text-decoration: none; }
+.ij-toc { border-top: 2px solid #00a83f; border-bottom: 1px solid #d7e3d8; padding: 19px 0 21px; margin: 32px 0 38px; }
+.ij-toc ol, .ij-atlas ul, .ij-sources ul { padding-left: 23px; margin: 0; }
+.ij-toc li, .ij-atlas li, .ij-sources li { padding: 3px 0 3px 3px; line-height: 1.65; }
+.ij-body section[id] { scroll-margin-top: 84px; }
+.ij-body section + section { margin-top: 40px; }
+.ij-body h2 { font-size: clamp(24px, 3vw, 29px); letter-spacing: -.025em; font-weight: 550; line-height: 1.25; margin: 0 0 14px; }
+.ij-body p { font-size: clamp(17px, 1.6vw, 18px); line-height: 1.8; margin: 0 0 18px; }
+.ij-photo { margin: 26px 0 34px; }
+.ij-photo img { width: 100%; height: auto; max-height: 640px; object-fit: contain; background: #f0f4ee; display: block; border-radius: 4px; }
+.ij-photo figcaption { margin: 9px 0 0; font-size: 13px; line-height: 1.65; color: #526556; }
+.ij-photo small { display: block; margin-top: 2px; font-size: 11px; }
+.ij-article :is(figcaption, .ij-atlas, .ij-sources) a { text-decoration: underline; text-underline-offset: 3px; }
+.ij-atlas { background: #f3f8f3; border-left: 3px solid #00a83f; padding: 22px 25px; margin: 32px 0; }
+.ij-atlas h2, .ij-sources h2 { font-size: 20px; }
+.ij-sources { border-top: 1px solid #d7e3d8; padding-top: 24px; font-size: 14px; }
+.ij-back { display: inline-block; margin-top: 34px; }
+@media (max-width: 850px) and (min-width: 621px) {
+  .ij-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 620px) {
+  .ij-index, .ij-article { padding: 40px 20px 60px; }
+  .ij-grid { grid-template-columns: 1fr; gap: 36px; margin-top: 35px; }
+  .ij-card { padding-top: 17px; }
+  .ij-article .ij-heading h1 { font-size: clamp(34px, 9vw, 48px); }
+  .ij-atlas { padding: 18px 16px; }
+}

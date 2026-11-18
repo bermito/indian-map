@@ -236,8 +236,29 @@
     "expected": 33,
     "collected": 33,
     "status": "User-approved editorial authority for Kerala",
-    "checked_date": "2026-11-15",
-    "notes": "Current runtime bundle matches the corrected Library export. 14 districts, 33 unique places, 11 archived events, 8 guides. Older upstream content JSON is stale.",
-    "commit": "63889f1ace9b987bf2f4b2251f40276a13fde001"
+    "checked_date": "2026-11-18",
+    "notes": "Kerala editorial directory with 33 places across 14 district pages, 11 archived events and 9 journal guides. Five Kozhikode contacts and visiting notes were updated in the 18 November editorial export.",
+    "commit": "63889f1ace9b987bf2f4b2251f40276a13fde001",
+    "editorialUpdateDate": "2026-11-18"
+  },
+  {
+    "source_id": "S25-TSIESE",
+    "name": "Tsiese Coffee Estate",
+    "url": "https://www.tsiesecoffee.com/estate",
+    "expected": 1,
+    "collected": 1,
+    "status": "Producer estate profile",
+    "notes": "The estate names Tsiesema village. The Kohima district administration lists Tsiesema under Chiephobozou.",
+    "checked_date": "2026-11-18"
+  },
+  {
+    "source_id": "S26-GARIGEKHAN",
+    "name": "Kelachandra Coffee — Garigekhan Estate",
+    "url": "https://kelachandracoffee.com/garigekhan/",
+    "expected": 1,
+    "collected": 1,
+    "status": "Producer estate profile",
+    "notes": "The producer identifies Sugudvani Village, Mallandur, in Chikmagalur District. The atlas uses the district administration’s spelling, Chikkamagaluru.",
+    "checked_date": "2026-11-18"
   }
 ]

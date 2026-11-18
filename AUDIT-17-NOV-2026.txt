@@ -1,0 +1,16 @@
+SPECIALTY COFFEE INDIA — AUDIT
+17 November 2026
+
+The live site is now updated, contrary to the earlier 15 November finding: directory and Kerala routes are working. The 15 November root-upload problem was fixed in repository commit 6312660.
+
+The India homepage had a different editorial theme from the map-first Specialty Coffee Keralam site. The proposed update brings the India home closer: white map-first layout, matching green accents and typography, compact wordmark and navigation, retaining the India map and current sections. Desktop and 390px mobile layouts were inspected. The browser rendered a fallback; the actual 3D WebGL map could not be visually verified in this environment.
+
+Search visibility: main directory has 991 records and displays 24 per page. Research leads (1,416) and Arpan's list (412) are separate and may overlap. Records including Kuruvinakunnel Estate, On Ground Farm, Woodlands Estate, KoffyKraft and Kerala Origins appear as research leads rather than main listings. They are not independently verified by this update. Related-search links now show matching leads/Arpan results separately when searching three or more characters; test example Kuruvinakunnel works.
+
+Coverage: 958 non-Kerala records lack a district; 129 directory records lack a state and are absent from state-filtered views; 192 lack city. Eight of the 36 states/UTs have no core entries. Only 21 main farms, 3 education and 1 person record are classified nationally; these numbers do not establish actual numbers in India. Source collections have gaps and duplication. Thirty possible duplicate roaster-name groups need review. All 14 Kerala districts remain visible; six have no approved Kerala core listings.
+
+SEO: venue details open in dialogs without individual internal profile URLs. Static directory previews expose only 12 listings without JavaScript. Dedicated district pages, profile URLs, crawlable pagination and clearer descriptions would improve discovery. The sitemap/index status should be checked in Search Console; this audit did not access that account.
+
+Other improvements: verify each state and district, opening status, location, specialty criteria and original sources; add missing farms, cafés, roasters, people, training, meetups and events through a transparent review workflow; clean duplicates while keeping branches distinct; keep product prices dated and source-linked; add accessible map navigation and current event coverage.
+
+Tests: 48,097 existing automated assertions, related-search tests, desktop map selection, Kerala related-search link and 390px mobile state selection passed locally. No forms were submitted. No publication was made.

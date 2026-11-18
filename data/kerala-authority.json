@@ -18,7 +18,13 @@
       "README.md",
       "seo-generate.js"
     ],
-    "libraryBundleMatches": true
+    "libraryBundleMatches": true,
+    "editorialUpdate": {
+      "date": "2026-11-18",
+      "source": "Specialty Coffee Keralam editorial export",
+      "runtimeSha256": "77f5959843e46122c4ee5f24ec1ac86270f19472a56f61f095182446c9b2b4e2",
+      "scope": "Public business contact details and visiting notes in the five updated Kozhikode profiles, plus the selection standards guide."
+    }
   },
   "districts": [
     {
@@ -508,6 +514,26 @@
       "status": "resource_available",
       "calendarEligible": false,
       "authorityId": "what-is-specialty-coffee"
+    },
+    {
+      "id": "kerala-guide-how-we-choose-specialty-coffee-kerala",
+      "name": "Beyond the Cup: How We Map Specialty Coffee in Kerala",
+      "kind": "learning_resource",
+      "category": "Kerala coffee guide",
+      "state": "Kerala",
+      "url": "https://www.specialtycoffeekerala.com/blog/how-we-choose-specialty-coffee-kerala/",
+      "notes": "How the Kerala editors evaluate a café’s coffee programme, brewing equipment and producer relationships, with examples from Kozhikode.",
+      "sourceUrls": [
+        "https://www.specialtycoffeekerala.com/blog/how-we-choose-specialty-coffee-kerala/"
+      ],
+      "sourceNames": [
+        "Specialty Coffee Keralam"
+      ],
+      "checkedDate": "2026-11-18",
+      "evidenceLabel": "Kerala editorial source",
+      "status": "resource_available",
+      "calendarEligible": false,
+      "authorityId": "how-we-choose-specialty-coffee-kerala"
     }
   ],
   "places": [
@@ -642,8 +668,6 @@
       "address_ml": "ഇംഗ്ലീഷ് പറമ്പിൽ, ജില്ലാ കോടതിക്കു സമീപം, കോഴിക്കോട് ബീച്ച്, കോഴിക്കോട്",
       "mapUrl": "https://maps.app.goo.gl/FkgBVuDVj9qhmLfd9?g_st=ic",
       "phone": "+918138947979",
-      "hours": "Confirm current hours with Sukoru before visiting.",
-      "hours_ml": "സന്ദർശനത്തിന് മുമ്പ് നിലവിലെ പ്രവർത്തനസമയം സുകോരുവുമായി സ്ഥിരീകരിക്കുക.",
       "locationSourceUrl": "https://sukoru.coffee/",
       "checked": "2026-11-14",
       "id": "sukoru",
@@ -652,7 +676,13 @@
         "cafes",
         "buyroasted"
       ],
-      "editorNote": "Bermito stockist relationship confirmed by the site editor on 14 October 2026. Hours reviewed on 14 November 2026: public listings conflict, so visitors should confirm directly with Sukoru."
+      "editorNote": "Bermito stockist relationship confirmed by the site editor on 14 October 2026. Hours reviewed on 14 November 2026: public listings conflict, so visitors should confirm directly with Sukoru.",
+      "visitNote": "Call for today’s hours or to ask which Bermito beans are on the shelf.",
+      "instagram": "https://www.instagram.com/sukoruconceptstore/",
+      "email": "info@sukoru.coffee",
+      "visitNote_ml": "ഇന്നത്തെ പ്രവർത്തനസമയവും കടയിൽ ലഭ്യമായ ബെർമിറ്റോ കാപ്പിക്കുരു ഏതൊക്കെയെന്നും വിളിച്ച് അന്വേഷിക്കാം.",
+      "contactChecked": "2026-11-18",
+      "phoneDisplay": "+91 81389 47979"
     },
     {
       "n": "Bermito Coffee Roasters",
@@ -668,8 +698,8 @@
       ],
       "address": "Kozhikode, Keralam",
       "address_ml": "കോഴിക്കോട്, കേരളം",
-      "visitNote": "Contact the roastery before visiting. Coffee availability changes with each lot.",
-      "visitNote_ml": "സന്ദർശനത്തിന് മുമ്പ് റോസ്റ്ററിയുമായി ബന്ധപ്പെടുക. ലഭ്യമായ കാപ്പി വിളവിനനുസരിച്ച് മാറും.",
+      "visitNote": "Order beans online for delivery across India. If you’d like to visit the Kozhikode roastery, call first to arrange it.",
+      "visitNote_ml": "ഇന്ത്യയിലെവിടേക്കും കാപ്പിക്കുരു ഓൺലൈനായി ഓർഡർ ചെയ്യാം. കോഴിക്കോട് റോസ്റ്ററി സന്ദർശിക്കാൻ ആഗ്രഹിക്കുന്നെങ്കിൽ ആദ്യം വിളിച്ച് അന്വേഷിക്കുക.",
       "checked": "2026-11-15",
       "shopUrl": "https://bermito.com/",
       "sources": [
@@ -684,7 +714,10 @@
       ],
       "phone": "+919847599828",
       "phoneDisplay": "+91 98475 99828",
-      "editorNote": "Founding-history description and own Kerala roasting setup confirmed by co-founder Vajid on 15 November 2026."
+      "editorNote": "Founding-history description and own Kerala roasting setup confirmed by co-founder Vajid on 15 November 2026.",
+      "instagram": "https://www.instagram.com/bermitoindia/",
+      "email": "hello@bermito.com",
+      "contactChecked": "2026-11-18"
     },
     {
       "id": "urban-hippie",
@@ -702,8 +735,8 @@
       "phone": "+919895474842",
       "address": "Kozhikode (Calicut) · public visiting address unconfirmed",
       "address_ml": "കോഴിക്കോട് · സന്ദർശിക്കാവുന്ന വിലാസം സ്ഥിരീകരിച്ചിട്ടില്ല",
-      "visitNote": "Contact before visiting. An exact Google Maps pin and walk-in access have not been verified.",
-      "visitNote_ml": "സന്ദർശനത്തിന് മുമ്പ് ബന്ധപ്പെടുക. കൃത്യമായ ഗൂഗിൾ മാപ്സ് സ്ഥാനവും നേരിട്ടെത്താനുള്ള സൗകര്യവും സ്ഥിരീകരിച്ചിട്ടില്ല.",
+      "visitNote": "Contact the roastery to order beans or ask about training. There’s no confirmed walk-in address.",
+      "visitNote_ml": "കാപ്പിക്കുരു ഓർഡർ ചെയ്യാനോ പരിശീലനത്തെക്കുറിച്ച് അറിയാനോ റോസ്റ്ററിയുമായി ബന്ധപ്പെടുക. നേരിട്ടെത്താവുന്ന വിലാസം സ്ഥിരീകരിച്ചിട്ടില്ല.",
       "status": "Contact before visiting",
       "status_ml": "സന്ദർശനത്തിന് മുമ്പ് ബന്ധപ്പെടുക",
       "checked": "2026-10-14",
@@ -717,7 +750,11 @@
           "url": "https://www.urbanhippiecoffee.in/contact.html"
         }
       ],
-      "editorNote": "Kozhikode supplied by the site owner; roasting services and contact details checked against the official website. No exact location pin verified."
+      "editorNote": "Kozhikode supplied by the site owner; roasting services and contact details checked against the official website. No exact location pin verified.",
+      "instagram": "https://www.instagram.com/koyanalthani/",
+      "email": "koyanalthani@gmail.com",
+      "contactChecked": "2026-11-18",
+      "phoneDisplay": "+91 98954 74842"
     },
     {
       "n": "Brewmorphia Speciality Coffee",
@@ -734,7 +771,12 @@
       "district": "Kozhikode",
       "categories": [
         "cafes"
-      ]
+      ],
+      "visitNote": "Use the café’s map pin for directions to Silk Street. For today’s hours, message Brewmorphia directly.",
+      "instagram": "https://www.instagram.com/brewmorphia/",
+      "email": "brewmorphia@gmail.com",
+      "visitNote_ml": "സിൽക്ക് സ്ട്രീറ്റിലെ കഫേയിലേക്ക് എത്താൻ താഴെയുള്ള ഗൂഗിൾ മാപ്സ് ലിങ്ക് ഉപയോഗിക്കാം. ഇന്നത്തെ പ്രവർത്തനസമയം അറിയാൻ ബ്രൂമോർഫിയയ്ക്ക് സന്ദേശം അയയ്ക്കുക.",
+      "contactChecked": "2026-11-18"
     },
     {
       "n": "Cafficana Kozhikode",
@@ -764,8 +806,8 @@
       "m_ml": "കോഴിക്കോട്ടെ സ്വതന്ത്ര സ്പെഷ്യാൽറ്റി കാപ്പിശാല. നിലവിലെ സ്ഥലവും പ്രവർത്തനസമയവും അറിയാൻ അണ്ടർബ്ലൂവിനെ നേരിട്ട് ബന്ധപ്പെടുക.",
       "address": "Kozhikode (Calicut) · current visiting address unconfirmed",
       "address_ml": "കോഴിക്കോട് · നിലവിലെ സന്ദർശന വിലാസം സ്ഥിരീകരിച്ചിട്ടില്ല",
-      "visitNote": "Contact Underblu to confirm its current visiting address and service hours.",
-      "visitNote_ml": "നിലവിലെ വിലാസവും പ്രവർത്തനസമയവും അണ്ടർബ്ലൂവിനെ നേരിട്ട് ബന്ധപ്പെട്ട് സ്ഥിരീകരിക്കുക.",
+      "visitNote": "Underblu’s website lists a Convent Road space as coming soon. Message the team for the current location and hours before you travel.",
+      "visitNote_ml": "കോൺവെന്റ് റോഡിലെ പുതിയ ഇടം ഉടൻ തുറക്കുമെന്നാണ് അണ്ടർബ്ലൂവിന്റെ വെബ്സൈറ്റിൽ പറയുന്നത്. പോകുംമുമ്പ് ഇപ്പോഴത്തെ സ്ഥലവും പ്രവർത്തനസമയവും നേരിട്ട് അന്വേഷിക്കുക.",
       "locationSourceUrl": "https://www.underblu.in/",
       "checked": "2026-11-14",
       "id": "underblu-specialty-coffee",
@@ -773,7 +815,10 @@
       "categories": [
         "cafes"
       ],
-      "editorNote": "Independent operation confirmed by the site editor. Exact current visiting address remains unconfirmed."
+      "editorNote": "Independent operation confirmed by the site editor. Exact current visiting address remains unconfirmed.",
+      "instagram": "https://www.instagram.com/underblu.in/",
+      "email": "underblucoffee@gmail.com",
+      "contactChecked": "2026-11-18"
     },
     {
       "n": "Overdose Cafe",
@@ -1148,7 +1193,7 @@
   "counts": {
     "places": 33,
     "events": 11,
-    "guides": 8,
+    "guides": 9,
     "districts": 14,
     "categories": {
       "cafes": 17,

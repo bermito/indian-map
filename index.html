@@ -6,48 +6,60 @@
   <title>Specialty Coffee India — Find your next cup</title>
   <meta name="description" content="Explore India's coffee by state and district. Find cafés, roasters, coffee farms, beans, equipment, events and communities, with sources behind every listing.">
   <meta name="theme-color" content="#08210f">
-  <link rel="canonical" href="https://specialtycoffeeindia.blog/">
+  <link rel="canonical" href="https://www.specialtycoffeeindia.blog/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Specialty Coffee India — Find your next cup">
   <meta property="og:description" content="An open field guide to India's coffee. Explore cafés, roasters, farms, beans, events and communities.">
   <meta property="og:site_name" content="Specialty Coffee India">
-  <meta property="og:url" content="https://specialtycoffeeindia.blog/">
+  <meta property="og:url" content="https://www.specialtycoffeeindia.blog/">
   <meta property="og:locale" content="en_IN">
-  <meta property="og:image" content="https://specialtycoffeeindia.blog/og-image.png">
+  <meta property="og:image" content="https://www.specialtycoffeeindia.blog/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/manifest.webmanifest">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preload" href="/assets/fonts/inter-tight-400-700-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/site.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Specialty Coffee India","url":"https://specialtycoffeeindia.blog/","inLanguage":"en-IN","description":"A field guide to coffee cafés, roasters, farms, products, learning and communities across India."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Specialty Coffee India","url":"https://www.specialtycoffeeindia.blog/","inLanguage":"en-IN","description":"A field guide to coffee cafés, roasters, farms, products, learning and communities across India."}</script>
+  <script src="/assets/related-search.js" defer></script>
   <script type="module" src="/assets/app.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#app">Skip to content</a>
   <header class="site-header">
-    <a class="brand" href="/" aria-label="Specialty Coffee India home">
-      <svg class="brand-mark" viewBox="0 0 42 42" aria-hidden="true"><path d="M31 8c8 6 6 18-2 25S10 36 6 28 7 12 15 7s12-2 16 1Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M28 7c-1 7-12 7-11 15s-3 11-7 12" fill="none" stroke="currentColor" stroke-width="2"/></svg>
-      <span>SPECIALTY COFFEE<span class="brand-country">INDIA<span class="brand-dot">●</span></span></span>
-    </a>
-    <button class="menu-toggle" id="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span></button>
+    <a class="brand" href="/" aria-label="Specialty Coffee India home"><span>Specialty Coffee India <span class="brand-map">Map</span></span></a>
     <nav id="main-nav" class="main-nav" aria-label="Main navigation">
-      <a href="/explore/">Directory</a><a href="/coffee/">Coffee</a><a href="/events/">Events</a><a href="/community/">Community</a><a href="/learn/">Learn</a>
-      <a href="/saved/" class="nav-saved"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 3h10v14l-5-3-5 3V3Z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>Saved<span id="saved-count" class="saved-count"></span></a>
+      <a href="/">Map</a>
+      <a href="/explore/">Directory</a>
+      <a href="/journal/">Journal</a>
+      <a href="/events/">Events</a>
+      <a href="/sources/">About</a>
+      <a href="/saved/" class="nav-saved">Saved<span id="saved-count" class="saved-count"></span></a>
     </nav>
   </header>
-  <main id="app" tabindex="-1">
-    <section class="hero loading-home" aria-busy="true">
-      <div class="hero-copy"><p class="eyebrow"><span class="status-dot"></span> A field guide to Indian coffee</p><h1>A country.<br>A thousand<br><em>coffee stories.</em></h1><p class="lede">From the farms that grow it to the people who brew it. Find your next coffee, somewhere in India.</p><div class="hero-actions"><a class="button" href="/explore/">Explore the directory <span aria-hidden="true">↗</span></a><a class="button ghost" href="/states/kerala/">Start in Kerala <span aria-hidden="true">→</span></a></div></div>
-      <div class="loading-map"><div class="loading-map-orbit"></div><span class="eyebrow">Opening the coffee atlas</span></div>
+  <template id="atlas-stage-template">
+    <section class="atlas-hero" aria-labelledby="atlas-title">
+      <div class="atlas-map"><iframe src="/map.html" title="Interactive India coffee terrain map" id="india-map" loading="eager"></iframe></div>
+      <div class="atlas-intro"><h1 id="atlas-title">Specialty Coffee in India</h1><p>Find your next cup, state by state.</p><a href="#states">Browse all states <span aria-hidden="true">↓</span></a></div>
     </section>
-    <noscript><div class="notice">JavaScript is needed for the interactive directory and map. You can still explore the original <a href="https://maps.app.goo.gl/42fvemKZJdEVZEKY6?g_st=i">café map by Arpan</a>.</div></noscript>
+  </template>
+  <main id="app" tabindex="-1">
+    <!--atlas-stage-->
+    <noscript><section class="section"><h2>Explore Indian coffee by state</h2><p><a href="/explore/">Open the directory</a> or <a href="/journal/">read the coffee journal</a>.</p></section></noscript>
   </main>
   <footer class="site-footer">
-    <div class="footer-top"><a class="footer-brand" href="/">Good coffee.<br>Closer to you.</a><div class="footer-links"><a href="/explore/">Explore India</a><a href="/states/kerala/">Explore Kerala</a><a href="/equipment/">Equipment</a><a href="/experiences/">Experiences</a><a href="/more/">Subscriptions &amp; more</a><a href="/sources/">Sources &amp; coverage</a><button type="button" data-action="submit">Suggest a place ↗</button></div></div>
-    <form id="newsletter-form" class="newsletter-form"><input type="hidden" name="site" value="india"><input type="hidden" name="type" value="newsletter"><label for="newsletter-email">Stay in the coffee loop.</label><div><input id="newsletter-email" name="email" type="email" required placeholder="Your email address" autocomplete="email"><button class="button secondary" type="submit">Subscribe</button></div><p id="newsletter-status" role="status"></p></form><div class="footer-bottom"><p>Specialty Coffee India <span aria-hidden="true">·</span> An independent coffee field guide.</p><p>Discoveries from coffee people, directories and producers. <a href="/sources/">See our sources.</a></p></div>
+    <div class="footer-top">
+      <div class="footer-identity"><a class="footer-brand" href="/">Specialty Coffee India <span class="brand-map">Map</span></a><p>An independent guide to India’s coffee places and people.</p></div>
+      <nav class="footer-links" aria-label="Explore the guide">
+        <a href="/explore/">Directory</a><a href="/journal/">Journal</a><a href="/events/">Events</a><a href="/states/kerala/">Kerala guide</a>
+        <a href="/coffee/">Coffee beans</a><a href="/equipment/">Equipment</a><a href="/more/">Subscriptions &amp; more</a><a href="/experiences/">Estate visits</a>
+        <a href="/community/">Community</a><a href="/learn/">Coffee education</a><a href="/sources/">Sources &amp; coverage</a><button type="button" data-action="submit">Suggest a place ↗</button>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <a href="https://www.specialtycoffeekerala.com/">Visit Specialty Coffee Keralam ↗</a>
+      <form id="newsletter-form" class="newsletter-form"><input type="hidden" name="site" value="india"><input type="hidden" name="type" value="newsletter"><label for="newsletter-email">Get coffee updates by email</label><div><input id="newsletter-email" name="email" type="email" required placeholder="Email address" autocomplete="email"><button class="button secondary" type="submit">Subscribe</button></div><p id="newsletter-status" role="status"></p></form>
+    </div>
   </footer>
   <dialog id="detail-dialog" class="detail-dialog" aria-label="Listing details"><button type="button" id="detail-close" class="dialog-close" aria-label="Close listing details">×</button><div id="detail-content"></div></dialog>
   <dialog id="submit-dialog" class="submit-dialog" aria-labelledby="submit-title"><button type="button" class="dialog-close" data-close-dialog aria-label="Close suggestion form">×</button><div class="dialog-inner"><p class="eyebrow">Keep the field guide growing</p><h2 id="submit-title">Know a good place?</h2><p class="dialog-intro">Suggest a café, roaster, farm, event or resource. Include a public link so the details can be checked.</p><form id="suggest-form">

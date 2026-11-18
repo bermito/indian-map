@@ -1,0 +1,18 @@
+.atlas-place-body,.atlas-district-nav{width:min(100% - 2.5rem,68rem);margin:2rem auto 4rem;color:var(--ink)}
+.atlas-place-body{max-width:54rem}
+.atlas-place-body section+section{border-top:1px solid var(--line);padding-top:1.75rem;margin-top:2rem}
+.atlas-place-body section h2{font-size:clamp(1.5rem,4vw,2rem);line-height:1.16;margin:0 0 1rem;letter-spacing:-.035em}
+.atlas-place-body section p{line-height:1.55;margin:.65rem 0;max-width:65ch}
+.atlas-place-body .fact-grid dd,.atlas-place-body a,.atlas-district-grid a{overflow-wrap:anywhere}
+.atlas-place-body ul{padding-left:1.2rem;line-height:1.65}
+.atlas-place-body li a,.atlas-district-nav p a{text-decoration:underline;text-underline-offset:.17em}
+.atlas-place-body .atlas-places-list{list-style:none;padding:0}
+.atlas-places-list li a,.atlas-district-grid a{display:flex;align-items:center;justify-content:space-between;gap:1rem;border-top:1px solid var(--line);padding:.8rem 0;min-height:44px;text-decoration:none}
+.atlas-places-list li a:hover,.atlas-district-grid a:hover{text-decoration:underline}
+.atlas-places-list li a small,.atlas-district-grid small{font-size:.8rem;color:var(--muted)}
+.atlas-district-nav{margin:1.25rem auto}
+.atlas-district-nav details{padding:0 1rem;border:1px solid var(--line);background:white;border-radius:4px}
+.atlas-district-nav summary{cursor:pointer;font-weight:600;padding:1rem 0}
+.atlas-district-nav summary span{font: .75rem var(--mono);margin-left:.5rem}
+.atlas-district-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,12rem),1fr));gap:0 1.25rem}
+.atlas-district-nav p{font-size:.83rem;line-height:1.5;margin:1rem 0}

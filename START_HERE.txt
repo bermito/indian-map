@@ -1,15 +1,15 @@
-SPECIALTY COFFEE INDIA — COMPLETE ROOT UPLOAD PACKAGE
-15 November 2026
+Specialty Coffee India
+18 November 2026
 
-This revised ZIP has ONE complete project directly inside it.
-Extract it, then upload all extracted files and folders to the ROOT of bermito/indian-map, alongside the existing root README. Replace index.html and vercel.json. The assets/, data/ and scripts/ folders must be complete.
+This package contains the complete source at its top level. Extract the ZIP before uploading. Place index.html, vercel.json, assets/, data/ and scripts/ directly at the root of bermito/indian-map. The site's Vercel project builds from that root and serves dist/.
 
-After extraction you should immediately see index.html, vercel.json, package.json, README.md, assets/, data/ and scripts/. There is no website/ or source/ wrapper folder in this package.
+To build locally with Node.js 22 or newer:
+  node scripts/build.mjs
+  node scripts/check.mjs
+  node scripts/check-atlas-journal.mjs
+  node scripts/check-related-search.mjs
+  python3 -m http.server 8000 --directory dist
 
-Vercel configuration: repository root; build command node scripts/build.mjs; output directory dist. No package installation is required. Run node scripts/check.mjs after building.
+Open http://localhost:8000/ to browse. Use /journal/ for the stories. Try /states/nagaland/districts/kohima/ and /places/tsiese-coffee-estate/ to see the district and producer pages.
 
-The previous nested uploads left the original root homepage active. The new source/ upload was also missing essential scripts/styles/map assets. This package fixes that file structure. It does not change the live website automatically.
-
-Read INDIA-WEBSITE-AUDIT.md for the full audit. The nationwide district research remains incomplete: all 958 non-Kerala directory records lack districts, and eight state/UT pages have no core entries. Reviewed catalogue and interface bugs have been corrected without inventing missing information.
-
-validation.json records the local checks. The package was extracted into a clean folder and built/tested there. Keep all files together. Do not open index.html using file://; interactive loading requires an HTTP server.
+The checked website source includes 993 core profiles and 790 district pages. The current evidence places 363 profiles in 54 districts. Another 630 profiles are available through the directory while their district is being checked.

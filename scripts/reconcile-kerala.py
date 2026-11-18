@@ -48,8 +48,11 @@ for p in source['places']:
  'hasPin':False,'geographyNote':'District and visiting details follow the corrected Kerala source. No coordinates inferred.',
  'sourceAuthority':{'name':LABEL,'url':site,'commit':meta['commit'],'checkedDate':checked},
  'previousResearchIds':[x['id'] for x in matched[p['id']]]}
+ if p.get('contactChecked'):
+  r['sourceAuthority']['contactUpdate']=p['contactChecked']
+  r['authorityImportedDate']=p['contactChecked']
  if p['district'] in city:r['city']=city[p['district']]
- for k in ['address','address_ml','mapUrl','phone','phoneDisplay','hours','hours_ml','visitNote','visitNote_ml','editorNote','shopUrl','instagram','role','role_ml','locationSourceUrl']:
+ for k in ['address','address_ml','mapUrl','phone','phoneDisplay','email','contactChecked','hours','hours_ml','visitNote','visitNote_ml','editorNote','shopUrl','instagram','role','role_ml','locationSourceUrl']:
   if p.get(k):r[k]=p[k]
  for old,new in [('address_ml','addressMl'),('hours_ml','hoursMl'),('visitNote_ml','visitNoteMl')]:
   if p.get(old):r[new]=p[old]
@@ -149,15 +152,15 @@ for row in coverage['states']:
 coverage['keralaDistricts']=[{'district':d['name'],'displayName':d['displayName'],'aliases':d['aliases'],'entries':d['count'],**d['counts'],'notes':d['coverageNote']} for d in districts]
 write('coverage',coverage)
 sources=[r for r in read('sources') if r.get('source_id')!='S24-KERALA']
-sources.append({'source_id':'S24-KERALA','name':LABEL+' — corrected authoritative source','url':site,'expected':33,'collected':33,'status':'User-approved editorial authority for Kerala','checked_date':checked,
- 'notes':'Current runtime bundle matches the corrected Library export. 14 districts, 33 unique places, 11 archived events, 8 guides. Older upstream content JSON is stale.','commit':meta['commit']})
+sources.append({'source_id':'S24-KERALA','name':LABEL+' — corrected authoritative source','url':site,'expected':33,'collected':33,'status':'User-approved editorial authority for Kerala','checked_date':meta['editorialUpdate']['date'],'editorialUpdateDate':meta['editorialUpdate']['date'],
+ 'notes':f"Kerala editorial directory with {len(directory)} places across {len(districts)} district pages, {len(events)} archived events and {len(source['guides'])} journal guides. Five Kozhikode contacts and visiting notes were updated in the 18 November editorial export.",'commit':meta['commit']})
 write('sources',sources)
 manifest=read('manifest')
 for key in ['directory','events','learn','communities','leads','sources']:manifest['counts'][key]=len(read(key))
 all_dir=read('directory')
 manifest.update({'keralaCount':33,'keralaIds':[r['id'] for r in directory],'researchDirectoryCount':1034,'researchKeralaCount':76,
  'statesWithEntries':len({r['state'] for r in all_dir if r.get('state')}),'districtsUnresolved':sum(not r.get('district') for r in all_dir),
- 'keralaAuthority':{'file':'kerala-authority.json','source':site,'commit':meta['commit'],'approvedPlaces':33,'preservedDirectoryLeads':39}})
+ 'keralaAuthority':{'file':'kerala-authority.json','source':site,'commit':meta['commit'],'approvedPlaces':33,'preservedDirectoryLeads':39,'editorialUpdateDate':meta['editorialUpdate']['date']}})
 manifest['files'].update({'kerala-authority':'kerala-authority.json','kerala-research-archive':'kerala-research-archive.json','kerala-reconciliation':'kerala-reconciliation.json'})
 notice='Kerala follows the corrected Specialty Coffee Keralam directory: 33 unique editorial listings. Other Kerala research is preserved as leads, with former records retained in the source archive.'
 manifest['notices']=[n for n in manifest['notices'] if not n.startswith('Kerala follows')]+[notice]

@@ -8,7 +8,7 @@ const json=name=>JSON.parse(fs.readFileSync(path.join(root,'data',name+'.json'),
 const manifest=json('manifest'), coverage=json('coverage'), directory=json('directory');
 let checks=0;
 function check(condition,message){assert.ok(condition,message);checks++;}
-const expected={directory:991,products:5163,events:21,communities:19,learn:33,equipment:1641,'other-products':546,experiences:2,leads:1416,arpan:412,legacy:379};
+const expected={directory:993,products:5163,events:21,communities:19,learn:34,equipment:1641,'other-products':546,experiences:2,leads:1416,arpan:412,legacy:379};
 for(const [name,n]of Object.entries(expected)){
  const rows=json(name);check(rows.length===n,`${name}: expected ${n}, got ${rows.length}`);
  check(manifest.counts[name]===rows.length,`${name}: manifest count mismatch`);
@@ -33,7 +33,7 @@ check(kerala.every(r=>r.authorityId),'Every Kerala core record must retain its a
 for(const a of authority.places){
  const r=kerala.find(r=>r.authorityId===a.id);
  check(Boolean(r),`Missing approved Kerala place ${a.id}`);
- for(const [dest,src]of [['name','n'],['district','district'],['description','m'],['mapUrl','mapUrl'],['hours','hours'],['visitNote','visitNote'],['editorNote','editorNote']])check((r[dest]||'')===(a[src]||''),`${a.id}: corrected ${dest} changed`);
+ for(const [dest,src]of [['name','n'],['district','district'],['description','m'],['mapUrl','mapUrl'],['hours','hours'],['visitNote','visitNote'],['editorNote','editorNote'],['phone','phone'],['email','email'],['instagram','instagram'],['contactChecked','contactChecked']])check((r[dest]||'')===(a[src]||''),`${a.id}: corrected ${dest} changed`);
  check(!r.hasPin,`${a.id}: coordinates must not be inferred from an old observation`);
 }
 check(kerala.filter(r=>r.kind==='roasters').length===3,'Expected three corrected Kerala roaster entries');
@@ -97,7 +97,7 @@ for(const file of files.filter(f=>f.endsWith('.html'))){
 }
 check(!broken.length,'Broken local references:\n'+broken.join('\n'));
 const keralaHtml=fs.readFileSync(path.join(root,'dist/states/kerala/index.html'),'utf8');
-for(const d of coverage.keralaDistricts)check(keralaHtml.includes('/states/kerala/?district='+encodeURIComponent(d.district)),`Static Kerala preview lacks ${d.district} link`);
+for(const d of coverage.keralaDistricts)check(keralaHtml.includes('/states/kerala/districts/'+slug(d.district)+'/'),`Static Kerala preview lacks ${d.district} link`);
 for(const r of kerala)check(keralaHtml.includes(r.name.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;')),`Static Kerala preview lacks ${r.name}`);
 for(const file of walk(path.join(root,'assets')).filter(f=>f.endsWith('.js')))execFileSync(process.execPath,['--check',file],{stdio:'pipe'});
 checks++;

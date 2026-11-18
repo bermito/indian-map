@@ -795,5 +795,25 @@
     "status": "resource_available",
     "calendarEligible": false,
     "authorityId": "what-is-specialty-coffee"
+  },
+  {
+    "id": "kerala-guide-how-we-choose-specialty-coffee-kerala",
+    "name": "Beyond the Cup: How We Map Specialty Coffee in Kerala",
+    "kind": "learning_resource",
+    "category": "Kerala coffee guide",
+    "state": "Kerala",
+    "url": "https://www.specialtycoffeekerala.com/blog/how-we-choose-specialty-coffee-kerala/",
+    "notes": "How the Kerala editors evaluate a café’s coffee programme, brewing equipment and producer relationships, with examples from Kozhikode.",
+    "sourceUrls": [
+      "https://www.specialtycoffeekerala.com/blog/how-we-choose-specialty-coffee-kerala/"
+    ],
+    "sourceNames": [
+      "Specialty Coffee Keralam"
+    ],
+    "checkedDate": "2026-11-18",
+    "evidenceLabel": "Kerala editorial source",
+    "status": "resource_available",
+    "calendarEligible": false,
+    "authorityId": "how-we-choose-specialty-coffee-kerala"
   }
 ]

@@ -1,12 +1,12 @@
 {
   "passed": true,
-  "checks": 48097,
+  "checks": 50033,
   "counts": {
-    "directory": 991,
+    "directory": 993,
     "products": 5163,
     "events": 21,
     "communities": 19,
-    "learn": 33,
+    "learn": 34,
     "equipment": 1641,
     "other-products": 546,
     "experiences": 2,
@@ -19,18 +19,21 @@
   "calendarEligible": 2,
   "overseasPreserved": 3,
   "brokenLocalReferences": [],
-  "generatedAt": "2026-11-15T10:46:58.802Z",
-  "browserAudit": {
-    "cataloguePriceRepair": true,
-    "missingPriceNotFree": true,
-    "savedOnlyRemoval": true,
-    "multiEventDateChooser": true,
-    "noindexRemovedOnPublicNavigation": true,
-    "emptyDistrictExplanation": true,
-    "mobileWidth": 390,
-    "horizontalOverflow": false,
-    "formsSubmitted": false,
-    "published": false
-  },
-  "remoteAuditHead": "e0c30c7da7bedee8227bad49b60577db161e0bc0"
+  "generatedAt": "2026-11-18T04:54:43.023Z",
+  "edition": "2026-11-18",
+  "journalArticles": 7,
+  "districtPages": 790,
+  "districtsWithListings": 54,
+  "listingsWithDistrict": 363,
+  "listingsAwaitingDistrict": 630,
+  "staticPageRoutes": 1841,
+  "profileRoutes": 993,
+  "relatedSearchChecks": "passed",
+  "routeAndSitemapChecks": "passed",
+  "browserChecks": [
+    "desktop state selector to district to producer",
+    "article to producer",
+    "homepage, journal and story in a 390 pixel frame",
+    "WebGL fallback map"
+  ]
 }

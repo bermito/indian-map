@@ -1,3 +1,6 @@
+import { createAtlas } from '../assets/atlas-pages.mjs';
+import { findPage, schemaFor } from '../assets/published-pages.mjs';
+import { renderJournalTeasers } from '../assets/journal.mjs';
 import fs from 'node:fs';
 import vm from 'node:vm';
 import assert from 'node:assert/strict';
@@ -15,12 +18,12 @@ const fetch=async url=>{
  requests.push(url);const name=url.split('/').at(-1).replace(/\.json$/,'');
  return {ok:!failedDatasets.has(name),json:async()=>read(name),text:async()=>fs.readFileSync('.'+url,'utf8')};
 };
-const ctx=vm.createContext({document,location,console,URL,URLSearchParams,FormData,Blob,setTimeout,clearTimeout,fetch,localStorage:{getItem(){return null},setItem(){}},window:{addEventListener(){},scrollTo(){}},history:{replaceState(){},pushState(){}}});
-let src=fs.readFileSync('assets/app.js','utf8').replace(/\nboot\(\)\.catch[\s\S]*$/,'');
-src+='\nglobalThis.probe={eventPage,recordCard,price,listing,applyFilters,refreshSavedView,renderCalendar,showCalendarDay,savedPage,updateRouteMetadata,getFiltered:()=>filtered,setRoute:v=>{route=v},setSaved:v=>{saved=new Set(v)},setCore:(m,c,d,a)=>{manifest=m;coverage=c;directory=d;current=d;keralaAuthority=a;d.forEach(remember)},setLocation:v=>Object.assign(location,v)};';
+const ctx=vm.createContext({createAtlas,findPage,schemaFor,renderJournalTeasers,document,location,console,URL,URLSearchParams,FormData,Blob,setTimeout,clearTimeout,fetch,localStorage:{getItem(){return null},setItem(){}},window:{addEventListener(){},scrollTo(){}},history:{replaceState(){},pushState(){}}});
+let src=fs.readFileSync('assets/app.js','utf8').replace(/^import .*?;$/gm, '').replace(/\nboot\(\)\.catch[\s\S]*$/,'');
+src+='\nglobalThis.probe={eventPage,recordCard,price,listing,applyFilters,refreshSavedView,renderCalendar,showCalendarDay,savedPage,updateRouteMetadata,getFiltered:()=>filtered,setRoute:v=>{route=v},setSaved:v=>{saved=new Set(v)},setCore:(m,c,d,a,geography)=>{manifest=m;coverage=c;directory=d;current=d;keralaAuthority=a;atlas=createAtlas(directory, geography);d.forEach(remember)},setLocation:v=>Object.assign(location,v)};';
 vm.runInContext(src,ctx);
 const probe=ctx.probe,core=read('directory');
-probe.setCore(read('manifest'),read('coverage'),core,read('kerala-authority'));
+probe.setCore(read('manifest'),read('coverage'),core,read('kerala-authority'),read('districts'));
 function at(path){const u=new URL(path,location.origin);probe.setLocation({href:u.href,pathname:u.pathname,search:u.search})}
 
 assert.match(probe.recordCard({id:'guide-test',name:'Guide',kind:'learning_resource',geographicScope:'India',notes:'Practical brewing lessons.'}),/Practical brewing lessons\./,'Learning summaries must be visible');
@@ -57,8 +60,8 @@ failedDatasets.clear();await probe.savedPage();
 assert.ok(!nodes.get('#app').innerHTML.includes('Some saved finds could not load'),'Retry must recover the failed dataset');
 
 at('/states/karnataka/');probe.setRoute('states');await probe.listing('explore','Karnataka');
-assert.match(nodes.get('#app').innerHTML,/District information is still being checked/);
-assert.ok(!nodes.get('#app').innerHTML.includes('select name="district"'),'An empty district selector must be hidden');
+assert.match(nodes.get('#app').innerHTML,/Browse Karnataka by district/);
+assert.ok(nodes.get('#app').innerHTML.includes('select name="district"'),'Karnataka supports district selection');
 if(!read('equipment').some(r=>r.state)){
  at('/equipment/?state=Kerala');probe.setRoute('equipment');await probe.listing('equipment');
  assert.ok(!nodes.get('#app').innerHTML.includes('select name="state"'),'Catalogues with no location data must not offer state filters');
